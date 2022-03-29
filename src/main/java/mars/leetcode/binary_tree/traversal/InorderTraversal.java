@@ -1,4 +1,6 @@
-package mars.leetcode.binary_tree;
+package mars.leetcode.binary_tree.traversal;
+
+import mars.leetcode.binary_tree.TreeNode;
 
 import java.util.*;
 
