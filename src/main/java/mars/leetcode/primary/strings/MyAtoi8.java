@@ -1,14 +1,69 @@
 package mars.leetcode.primary.strings;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class MyAtoi8 {
     /**
      * leetCode:
      * 确定有限状态机（deterministic finite automaton, DFA）
      */
-    public int myAtoi(String s) {
-
-        return 0;
+    public int myAtoi(String str) {
+        Automaton automaton = new Automaton();
+        int length = str.length();
+        for (int i = 0; i < length; ++i) {
+            if(!automaton.get(str.charAt(i))){
+                return (int) (automaton.sign * automaton.ans);
+            }
+        }
+        return (int) (automaton.sign * automaton.ans);
     }
+
+    class Automaton {
+        int sign = 1; //默认为正
+        long ans; // 防止溢出;
+        private String state = "start";
+        private Map<String, String[]> table = new HashMap<>() {{
+            put("start", new String[]{"start", "signed", "number", "end"});
+            put("signed", new String[]{"end", "end", "number", "end"});
+            put("number", new String[]{"end", "end", "number", "end"});
+            put("end", new String[]{"end", "end", "end", "end"});
+        }};
+
+
+        public boolean get(char c) {
+            state = table.get(state)[getCol(c)];
+            if ("number".equals(state)) {
+                ans = ans * 10 + c - '0';
+                if (sign == 1 && ans > (long) Integer.MAX_VALUE) {
+                    ans = Integer.MAX_VALUE;
+                    return false;
+                } else if (sign != 1 && ans >  -(long)Integer.MIN_VALUE) {
+                    ans = Integer.MIN_VALUE;
+                    return false;
+                }
+            } else if ("signed".equals(state)) {
+                sign = c == '-' ? -1 : 1;
+            }else  if("end".equals(state)){
+                return false;
+            }
+            return true;
+        }
+
+        private int getCol(char c) {
+            if (c == ' ') {
+                return 0;
+            }
+            if (c == '+' || c == '-') {
+                return 1;
+            }
+            if (Character.isDigit(c)) {
+                return 2;
+            }
+            return 3;
+        }
+    }
+
     /**
      * 转换数字，用整数类型接收更方便
      * 溢出的条件
@@ -39,11 +94,11 @@ public class MyAtoi8 {
                 return Integer.MAX_VALUE;
             }
 
-            if (res < Integer.MIN_VALUE / 10 || res == Integer.MIN_VALUE / 10 && digit >= -(Integer.MIN_VALUE % 10) ){
+            if (res < Integer.MIN_VALUE / 10 || res == Integer.MIN_VALUE / 10 && digit >= -(Integer.MIN_VALUE % 10)) {
                 return Integer.MIN_VALUE;
             }
             // 每一步都把符号位乘进去
-            res = res * 10 + digit *sign;
+            res = res * 10 + digit * sign;
             i++;
         }
         return res;
@@ -101,13 +156,13 @@ public class MyAtoi8 {
 
     public static void main(String[] args) {
         MyAtoi8 atoi8 = new MyAtoi8();
-        //System.out.println(atoi8.myAtoi("-+12"));
-        //System.out.println(atoi8.myAtoi("-21474836469"));
-        //System.out.println(atoi8.myAtoi("42"));
-        //System.out.println(atoi8.myAtoi("   -42"));
-        //System.out.println(atoi8.myAtoi("   -4"));
-        //System.out.println(atoi8.myAtoi( "4193 with words"));
-        //System.out.println(atoi8.myAtoi( "2147483648"));
-        System.out.println(atoi8.myAtoi( "-2147483649"));
+        System.out.println(atoi8.myAtoi("-+12") );
+        System.out.println(atoi8.myAtoi("-21474836469"));
+        System.out.println(atoi8.myAtoi("42"));
+        System.out.println(atoi8.myAtoi("   -42"));
+        System.out.println(atoi8.myAtoi("   -4"));
+        System.out.println(atoi8.myAtoi( "4193 with words"));
+        System.out.println(atoi8.myAtoi( "2147483648"));
+        System.out.println(atoi8.myAtoi("-2147483649"));
     }
 }

@@ -2,10 +2,49 @@ package mars.leetcode.binary_tree.build_tree;
 
 import mars.leetcode.binary_tree.TreeNode;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
-public class KnowPreorderAndPostorder {
+public class KnowPreorderAndPostorder105 {
+    /**
+     * 迭代版本
+     * 前序：中左右，
+     * 中序：左中右
+     * @param inorder
+     * @return
+     */
+    public TreeNode buildTree(int[] preorder, int[] inorder) {
+        //用一个栈 stack 来维护「当前节点的所有还没有考虑过右儿子的祖先节点」
+        Deque<TreeNode> stack = new LinkedList<>();
+        //用一个指针 index 指向中序遍历的某个位置，初始值为 0
+        int inorderIndex = 0;
+        //前序遍历第一个结点为根结点
+        TreeNode root = new TreeNode(preorder[0]);
+        stack.push(root);
+
+        for(int i = 1; i < preorder.length; i++){
+
+            TreeNode node = stack.peek();
+            //最左节点不为栈顶节点，则下一个结点比为栈顶节点的左子
+            if(inorder[inorderIndex] != node.val){
+                node.left = new TreeNode(preorder[i]);
+                stack.push(node.left);
+            }else{//最左节点为栈顶节点，则下一个结点比为栈中某一个结点的右子结点
+                for(; !stack.isEmpty() && stack.peek().val == inorder[inorderIndex]; inorderIndex++){
+                    node =  stack.pop();
+                }
+                node.right = new TreeNode(preorder[i]);
+                stack.push(node.right);
+            }
+
+        }
+        return  root;
+    }
+
+
+
+
+
+
     Map<Integer, Integer> idxMap = new HashMap();
 
     /**
@@ -16,7 +55,7 @@ public class KnowPreorderAndPostorder {
      * @param inorder
      * @return
      */
-    public TreeNode buildTree(int[] preorder, int[] inorder) {
+    public TreeNode buildTree2(int[] preorder, int[] inorder) {
         // 建立（元素，下标）键值对的哈希表
         int idx = 0;
         for (Integer val : inorder) {
