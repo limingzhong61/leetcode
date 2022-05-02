@@ -1,4 +1,4 @@
-package mars.my;
+package mars.my.matrix;
 
 public class MatrixPow {
 
