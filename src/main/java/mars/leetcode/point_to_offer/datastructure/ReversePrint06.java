@@ -1,8 +1,7 @@
-package mars.leetcode.point_to_offer;
+package mars.leetcode.point_to_offer.datastructure;
 
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 //Definition for singly-linked list.

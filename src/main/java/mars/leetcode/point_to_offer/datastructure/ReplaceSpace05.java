@@ -1,4 +1,4 @@
-package mars.leetcode.point_to_offer;
+package mars.leetcode.point_to_offer.datastructure;
 
 public class ReplaceSpace05 {
     public String replaceSpace(String s) {
