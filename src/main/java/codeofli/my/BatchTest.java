@@ -1,6 +1,7 @@
 package codeofli.my;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class BatchTest {
@@ -127,7 +128,7 @@ public class BatchTest {
 
     public static void main(String[] args) {
         BatchTest isNumber20 = new BatchTest();
-        Map<String, Boolean> testMap = new HashMap<>() {{
+        Map<String, Boolean> testMap = new LinkedHashMap<>() {{
             put("0", true);
             put("e", false);
             put(".", false);

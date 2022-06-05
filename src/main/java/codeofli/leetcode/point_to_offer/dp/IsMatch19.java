@@ -2,11 +2,48 @@ package codeofli.leetcode.point_to_offer.dp;
 
 import codeofli.my.matrix.Matrix;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class IsMatch19 {
+    /**
+     * dp:
+     * dp[0][0] = true： 代表两个空字符串能够匹配。
+     */
+    public boolean isMatch(String s, String p) {
+        int n = s.length() + 1;
+        int m = p.length() + 1;
+        boolean[][] dp = new boolean[n][m];
+        //空串默认为true;
+        dp[0][0] = true;
+        // 初始化首行
+        /**
+         * dp[0][j] = dp[0][j - 2] 且 p[j - 1] = '*'： 首行 s 为空字符串，
+         * 因此当 p 的偶数位为 * 时才能够匹配（即让 p 的奇数位出现 0 次，保持 p 是空字符串）。
+         * 因此，循环遍历字符串 p ，步长为 2（即只看偶数位）。
+         */
+        for (int j = 2; j < m; j += 2) {
+            dp[0][j] = dp[0][j - 2] && p.charAt(j - 1) == '*';
+        }
+
+
+        for (int i = 1; i < n; i++) {
+            for (int j = 1; j < m; j++) {
+                //判断p的第j位是不是*，是*则判断前一位与i是否相等，相等则可以匹配0次或者多次
+                if (p.charAt(j - 1) == '*') {
+                    //可以让*匹配空串
+                    if (dp[i][j - 2]) dp[i][j] = true;                                           // 1.
+                    //其他两者情况
+                    else if (dp[i - 1][j] && s.charAt(i - 1) == p.charAt(j - 2)) dp[i][j] = true; // 2.
+                    else if (dp[i - 1][j] && p.charAt(j - 2) == '.') dp[i][j] = true;             // 3.
+                } else {//不是'*'，则只需要看上一位i和上一位j是否匹配,如aab和aa.
+                    if (dp[i - 1][j - 1] && s.charAt(i - 1) == p.charAt(j - 1)) dp[i][j] = true;  // 1.
+                    else if (dp[i - 1][j - 1] && p.charAt(j - 1) == '.') dp[i][j] = true;         // 2.
+                }
+            }
+        }
+        return dp[n - 1][m- 1];
+    }
+
     /**
      * 思路： 记忆化搜索
      * 遇到".*" 或者s[i] == p[j] && p[j+1] == '*'有两种走法
@@ -14,8 +51,9 @@ public class IsMatch19 {
      * "abcd" ".*d"
      * "aaa" "ab*a*c*a"
      */
-    static int[][] dp = new int[21][31];
-    public boolean isMatch(String s, String p) {
+    int[][] dp = new int[21][31];
+
+    public boolean isMatch2(String s, String p) {
         return recur(0, 0, s, p);
     }
 
@@ -25,11 +63,11 @@ public class IsMatch19 {
             if (p.charAt(j) == '.') {
                 //".*"
                 if (j < p.length() - 1 && p.charAt(j + 1) == '*') {
-                    if (dp[i+1][j] == 0) {
+                    if (dp[i + 1][j] == 0) {
                         dp[i + 1][j] = recur(i + 1, j, s, p) ? 1 : -1;
                     }
                     if (dp[i][j + 2] == 0) {
-                        dp[i][j + 2] = recur(i, j+2, s, p) ? 1 : -1;
+                        dp[i][j + 2] = recur(i, j + 2, s, p) ? 1 : -1;
                     }
                     dp[i][j] = (dp[i + 1][j] == 1 || dp[i][j + 2] == 1) ? 1 : -1;
                     return dp[i][j] == 1;
@@ -41,11 +79,11 @@ public class IsMatch19 {
                 //"[]*"
                 if (j < p.length() - 1 && p.charAt(j + 1) == '*') {
                     if (s.charAt(i) == p.charAt(j)) {
-                        if (dp[i+1][j] == 0) {
+                        if (dp[i + 1][j] == 0) {
                             dp[i + 1][j] = recur(i + 1, j, s, p) ? 1 : -1;
                         }
                         if (dp[i][j + 2] == 0) {
-                            dp[i][j + 2] = recur(i, j+2, s, p) ? 1 : -1;
+                            dp[i][j + 2] = recur(i, j + 2, s, p) ? 1 : -1;
                         }
                         dp[i][j] = (dp[i + 1][j] == 1 || dp[i][j + 2] == 1) ? 1 : -1;
                         return dp[i][j] == 1;
@@ -56,13 +94,14 @@ public class IsMatch19 {
                     i++;
                     j++;
                 } else {
+                    dp[i][j] = -1;
                     return false;
                 }
             }
         }
         //可能以"([]*){n}"结尾
-        if(dp[i][j] != 0){
-            return  dp[i][j] == 1;
+        if (dp[i][j] != 0) {
+            return dp[i][j] == 1;
         }
         int tempJ = j;
         while (j < p.length() - 1 && p.charAt(j + 1) == '*') {
@@ -115,51 +154,13 @@ public class IsMatch19 {
     //    return s.length() == i && j == p.length();
     //}
 
-    /**
-     * 思路： 模拟匹配,失败，无法解决下列式子
-     * //"aaa"
-     * "ab*a*c*a"
-     */
-    public boolean isMatch1(String s, String p) {
-        int i = 0, j = 0;
-        while (i < s.length() && j < p.length()) {
-            if (p.charAt(j) == '.') {
-                //".*"直接无敌,匹配s全部
-                if (j < p.length() - 1 && p.charAt(j + 1) == '*') {
-                    //只要“.*”后面没有字符就能成功匹配
-                    return j + 2 == p.length();
-                } else {
-                    i++;
-                    j++;
-                }
-            } else {
 
-                char nowChar = p.charAt(j);
-                //"[]*"
-
-                if (j < p.length() - 1 && p.charAt(j + 1) == '*') {
-                    while (i < s.length() && s.charAt(i) == nowChar) {
-                        i++;
-                    }
-                    // 防止出现 s=“aaab”, p="a*ab"
-                    j += 2;
-                    while (j < p.length() && p.charAt(j) == nowChar) {
-                        j++;
-                    }
-                } else if (s.charAt(i) == p.charAt(j)) {
-                    i++;
-                    j++;
-                } else {
-                    return false;
-                }
-            }
-        }
-        return s.length() == i && j == p.length();
-    }
+    //public boolean
 
     public static void main(String[] args) {
         IsMatch19 isMatch19 = new IsMatch19();
-        Map<String[], Boolean> testMap = new HashMap<>() {{
+
+        Map<String[], Boolean> testMap = new LinkedHashMap<>() {{
             put(new String[]{"aa", "a"}, false);
             put(new String[]{"aa", "a*"}, true);
             put(new String[]{"ab", ".*"}, true);
@@ -174,7 +175,7 @@ public class IsMatch19 {
             put(new String[]{"abcd", ".*d"}, true);
             put(new String[]{"", "c*c*"}, true);
             put(new String[]{"aaabaaaababcbccbaab", "c*c*.*c*a*..*c*"}, true);
-            put(new String[]{"aab","c*a*b"}, true);
+            put(new String[]{"aab", "c*a*b"}, true);
 
         }};
         for (Map.Entry<String[], Boolean> testCase : testMap.entrySet()) {
@@ -183,9 +184,10 @@ public class IsMatch19 {
                 System.out.println(Arrays.toString(testCase.getKey()));
                 System.out.println("计算结果值：" + isMatch19.isMatch(testCase.getKey()[0], testCase.getKey()[1]));
                 System.out.println("真实结果值：" + testCase.getValue());
-                Matrix.printMatrix(dp,testCase.getKey()[0].length()+1,testCase.getKey()[1].length()+1);
-                Matrix.setZero(dp);
+                Matrix.printMatrix(isMatch19.dp, testCase.getKey()[0].length() + 1, testCase.getKey()[1].length() + 1);
+
             }
+            Matrix.setZero(isMatch19.dp);
         }
     }
 }
