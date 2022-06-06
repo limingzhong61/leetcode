@@ -1,4 +1,4 @@
-package codeofli.leetcode.point_to_offer.datastructure;
+package codeofli.leetcode.point_to_offer.data_structure;
 
 
 import java.util.ArrayList;
