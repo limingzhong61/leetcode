@@ -6,16 +6,13 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class EncodeTree297 {
+    /**
+     * 提示: 输入输出格式与 LeetCode 目前使用的方式一致.。
+     * 你并非必须采取这种方式，你也可以采用其他的方法解决这个问题。
+     * 思路：层次遍历
+     */
+    public  class MySolution {
 
-    class MySolution {
-        /**
-         * 提示: 输入输出格式与 LeetCode 目前使用的方式一致.。
-         * 你并非必须采取这种方式，你也可以采用其他的方法解决这个问题。
-         * 思路：层次遍历
-         *
-         * @param root
-         * @return
-         */
         // Encodes a tree to a single string.
         public String serialize(TreeNode root) {
             StringBuilder sb = new StringBuilder();
@@ -25,8 +22,8 @@ public class EncodeTree297 {
             int nullValue = 2022; //补充结点的值
             while (!queue.isEmpty()) {
                 int size = queue.size();
-                System.out.println(sb);
-                System.out.println(queue.size());
+                //System.out.println(sb);
+                //System.out.println(queue.size());
                 for (int i = 0; i < size; i++) {
                     root = queue.poll();
                     if (root.val == nullValue) { //补充结点，之前为null
@@ -46,7 +43,7 @@ public class EncodeTree297 {
             }
             sb.deleteCharAt(sb.length() - 1);
             sb.append("]");
-            System.out.println(sb);
+            //System.out.println(sb);
             return sb.toString();
         }
 
@@ -71,7 +68,7 @@ public class EncodeTree297 {
                 int levelSize = 1 << (depth - 1);
                 start = nextStart;
                 nextStart = start + levelSize;
-                System.out.println("start：" + start + ",nextStart:" + nextStart);
+                //System.out.println("start：" + start + ",nextStart:" + nextStart);
                 for (int j = start; j < nextStart; j++) {
                     if ("null".equals(split[j])) {
                         continue;
@@ -93,7 +90,7 @@ public class EncodeTree297 {
     }
 
     /**
-     * 自动义编码格式，如dfs遍历的格式
+     * 自定义编码格式，如dfs遍历的格式
      * 前序遍历，中左右
      */
     public class LeetCodeDfsSolution {

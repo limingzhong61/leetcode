@@ -1,5 +1,7 @@
 package codeofli.leetcode.binary_tree;
 
+import codeofli.leetcode.binary_tree.summary.EncodeTree297;
+
 public class TreeNode {
     public int val;
     public TreeNode left;
