@@ -1,6 +1,6 @@
 package codeofli.my.leetcode;
 
-import codeofli.leetcode.binary_tree.TreeNode;
+import codeofli.leetcode.point_to_offer.search_and_recur.TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -72,7 +72,7 @@ public  class EncodeTree {
             int levelSize = 1 << (depth - 1);
             start = nextStart;
             nextStart = start + levelSize;
-            System.out.println("start：" + start + ",nextStart:" + nextStart);
+            //System.out.println("start：" + start + ",nextStart:" + nextStart);
             for (int j = start; j < nextStart; j++) {
                 if ("null".equals(split[j])) {
                     continue;
