@@ -1,6 +1,6 @@
 package codeofli.my.leetcode;
 
-import codeofli.leetcode.point_to_offer.search_and_recur.Node;
+import codeofli.leetcode.graph_parse_ds.search_and_recur.Node;
 
 import java.util.LinkedList;
 import java.util.Queue;
