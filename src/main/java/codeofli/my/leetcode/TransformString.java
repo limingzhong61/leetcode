@@ -26,7 +26,6 @@ public class TransformString {
     }
 
     /**
-     *
      * @param original 输入格式：[[5,3],[4,0],[2,1]]
      * @return
      */
@@ -35,14 +34,35 @@ public class TransformString {
             return new int[0][0];
         }
         //先统一为：[5,3],[4,0],[2,1],
-        String[] split = (original.substring(1,original.length()-1)+",").split("],");
+        String[] split = (original.substring(1, original.length() - 1) + ",").split("],");
 
         int[][] matrix = new int[split.length][];
         int index = 0;
-        for(String s : split){
+        for (String s : split) {
             matrix[index++] = toIntArray(s.substring(1));
         }
-        return  matrix;
+        return matrix;
+    }
+
+    /**
+     * @param matrix ： 二维数组
+     * @return 输出格式：[[5,3],[4,0],[2,1]]
+     */
+    public static String matrixToStr(int[][] matrix) {
+        if (matrix == null || matrix.length == 0) {
+            return "[]";
+        }
+        StringBuilder sb = new StringBuilder();
+        sb.append("[");
+        for (int i = 0; i < matrix.length; i++) {
+            sb.append("[");
+            for (int j = 0; j < matrix[i].length; j++) {
+                sb.append(matrix[i][j]).append(',');
+            }
+            sb.deleteCharAt(sb.length() - 1).append("],");
+        }
+        sb.deleteCharAt(sb.length() - 1).append("]");
+        return sb.toString();
     }
 
     public static void main(String[] args) {
