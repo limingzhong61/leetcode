@@ -25,6 +25,6 @@ public class MergeTwoLists25 {
 
     public static void main(String[] args) {
         MergeTwoLists25 mergeTwoLists25 = new MergeTwoLists25();
-        mergeTwoLists25.mergeTwoLists(LinkedList.StrToLinkedList("1->2->4"),LinkedList.StrToLinkedList("1->3->4"));
+        //mergeTwoLists25.mergeTwoLists(LinkedList.StrToLinkedList("1->2->4"),LinkedList.StrToLinkedList("1->3->4"));
     }
 }

@@ -68,4 +68,47 @@ public class TransformString {
     public static void main(String[] args) {
         System.out.println(ArrayToJavaForm("[[\"A\",\"B\",\"C\",\"E\"],[\"S\",\"F\",\"E\",\"S\"],[\"A\",\"D\",\"E\",\"E\"]]"));
     }
+
+    /**
+     *
+     * @param original 格式
+     *                  [
+     *   ["1","1","1","1","0"],
+     *   ["1","1","0","1","0"],
+     *   ["1","1","0","0","0"],
+     *   ["0","0","0","0","0"]
+     * ]
+     * @return
+     */
+    public static char[][] toCharMatrix(String original) {
+        if ("".equals(original)) {
+            return new char[0][0];
+        }
+        //可能中间存在换行符
+        original = original.replaceAll("\n","").replaceAll("\"","");
+        //先统一为：[5,3],[4,0],[2,1],
+        String[] split = (original.substring(1, original.length() - 1) + ",").split("],");
+
+        char[][] matrix = new char[split.length][];
+        int index = 0;
+        for (String s : split) {
+            matrix[index++] = toCharArray(s.substring(1));
+        }
+        return matrix;
+    }
+
+    public static char[] toCharArray(String original) {
+        String s = original.replaceAll("\\[", "").
+                replaceAll("\\]", "").
+                replaceAll(" ", "");
+        if ("".equals(s)) {
+            return new char[0];
+        }
+        String[] split = s.split(",");
+        char[] nums = new char[split.length];
+        for (int i = 0; i < split.length; i++) {
+            nums[i] = split[i].charAt(0);
+        }
+        return nums;
+    }
 }

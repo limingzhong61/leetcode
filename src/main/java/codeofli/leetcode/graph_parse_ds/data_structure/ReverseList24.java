@@ -1,21 +1,40 @@
 package codeofli.leetcode.graph_parse_ds.data_structure;
 
 
-public class ReverseList24 {
+import codeofli.my.leetcode.LinkedList;
+import codeofli.my.leetcode.ListNode;
 
+public class ReverseList24 {
     /**
      * my: 递归逆置
      */
     public ListNode reverseList(ListNode head) {
-        if(head == null || head.next == null){
+        return recur(head, null);
+    }
+
+    private ListNode recur(ListNode head, ListNode prev) {
+        if (head == null) {
+            return prev;
+        }
+        ListNode ans = recur(head.next, head);
+        head.next = prev;
+        return ans;
+    }
+
+    /**
+     * my: 递归逆置
+     */
+    public ListNode reverseList3(ListNode head) {
+        if (head == null || head.next == null) {
             return head;
         }
-        ListNode next = reverseList(head.next);
+        ListNode next = reverseList3(head.next);
         //防止产生环
         head.next.next = head;
         head.next = null;
         return next;
     }
+
     /**
      * my: 头插法逆置
      */
@@ -23,7 +42,7 @@ public class ReverseList24 {
         ListNode dummyHead = new ListNode(-1);
         dummyHead.next = null;
         //ListNode cur = head;
-        while(head != null){
+        while (head != null) {
             ListNode temp = head.next;
             head.next = dummyHead.next;
             dummyHead.next = head;
@@ -39,12 +58,17 @@ public class ReverseList24 {
     public ListNode reverseList2(ListNode head) {
         ListNode prev = null;
         ListNode cur = head;
-        while(cur != null){
+        while (cur != null) {
             ListNode next = cur.next;
             cur.next = prev;
             prev = cur;
             cur = next;
         }
         return prev;
+    }
+
+    public static void main(String[] args) {
+        ReverseList24 reverseList24 = new ReverseList24();
+        System.out.println(LinkedList.LinkedListToStr(reverseList24.reverseList(LinkedList.StrToLinkedList("1->2->3"))));
     }
 }

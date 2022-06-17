@@ -1,11 +1,11 @@
-package codeofli.leetcode.graph_parse_ds.data_structure;
+package codeofli.my.leetcode;
 //Definition for singly-linked list.
 //Definition for singly-linked list.
 public class ListNode {
-    int val;
-    ListNode next;
+   public int val;
+   public ListNode next;
 
-    ListNode(int x) {
+   public ListNode(int x) {
         val = x;
     }
 }
