@@ -1,4 +1,4 @@
-package codeofli.my.binary_tree;
+package codeofli.my.solution_template.binary_tree;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

@@ -1,4 +1,4 @@
-package codeofli.my;
+package codeofli.my.just_fun;
 
 import java.util.*;
 

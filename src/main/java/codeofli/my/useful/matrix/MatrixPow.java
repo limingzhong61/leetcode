@@ -1,4 +1,4 @@
-package codeofli.my.matrix;
+package codeofli.my.useful.matrix;
 
 public class MatrixPow {
 

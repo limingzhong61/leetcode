@@ -1,6 +1,6 @@
-package codeofli.my;
+package codeofli.my.swap;
 
-public class ArraySwapUtil {
+public class MatrixSwapUtil {
 
     public  void  swap(int[][] matrix,int i,int j,int a,int b){
         int temp = matrix[i][j];

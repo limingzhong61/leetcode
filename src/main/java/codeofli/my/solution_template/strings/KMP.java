@@ -1,4 +1,4 @@
-package codeofli.my.strings;
+package codeofli.my.solution_template.strings;
 
 public class KMP {
     public int index(String source, String pattern) {

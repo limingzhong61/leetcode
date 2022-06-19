@@ -13,7 +13,10 @@ public class TransformString {
     public static int[] toIntArray(String original) {
         String s = original.replaceAll("\\[", "").
                 replaceAll("\\]", "").
-                replaceAll(" ", "");
+                // 有可能有空格
+                replaceAll("\\s+", "").
+                        // 特殊的空格
+                replaceAll(" ", "");
         if ("".equals(s)) {
             return new int[0];
         }

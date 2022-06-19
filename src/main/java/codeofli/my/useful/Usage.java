@@ -1,4 +1,4 @@
-package codeofli.my.search;
+package codeofli.my.useful;
 
 public class Usage {
     //move code

@@ -1,4 +1,4 @@
-package codeofli.leetcode.graph;
+package codeofli.leetcode.graph_theory;
 
 import codeofli.my.leetcode.TransformString;
 

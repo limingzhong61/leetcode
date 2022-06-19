@@ -1,4 +1,4 @@
-package codeofli.my.sort;
+package codeofli.my.solution_template.sort;
 
 /**
  * 解题代码，并非正确代码
