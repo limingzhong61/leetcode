@@ -23,16 +23,16 @@ public class BFS {
         return maxArea;
     }
 
-    public int bfs(int i, int j, int[][] grid){
+    public int bfs(int x, int y, int[][] grid){
         int cnt = 0;
         //右下左上（顺时针）移动数组
         int[][] next = new int[][]{
                 {0, 1}, {1, 0},{-1,0},{0,-1}
         };
         Queue<int[]> queue = new LinkedList<>();
-        queue.add(new int[]{i,j});
+        queue.add(new int[]{x,y});
         int m = grid.length,n = grid[0].length;
-        grid[i][j] = 2; //标记访问
+        grid[x][y] = 2; //标记访问
         while (!queue.isEmpty()){
             int[] point = queue.poll();
             cnt++;
