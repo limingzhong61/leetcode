@@ -5,26 +5,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-//Definition for a binary tree node.
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode() {
-    }
-
-    TreeNode(int val) {
-        this.val = val;
-    }
-
-    TreeNode(int val, TreeNode left, TreeNode right) {
-        this.val = val;
-        this.left = left;
-        this.right = right;
-    }
-}
-
 public class FindFrequentTreeSum508 {
     Map<Integer,Integer> map = new HashMap<>();
     public int[] findFrequentTreeSum(TreeNode root) {

@@ -35,10 +35,12 @@ public class BFS {
         grid[x][y] = 2; //标记访问
         while (!queue.isEmpty()){
             int[] point = queue.poll();
+            x = point[0];
+            y = point[1];
             cnt++;
-            for(int k = 0; k < 4; k++){
-                int nextX = point[0] + next[k][0];
-                int nextY = point[1] + next[k][1];
+            for(int[] item : next){
+                int nextX = x + item[0];
+                int nextY = y + item[1];
                 if(nextX >= 0 && nextX < m && nextY >= 0 && nextY < n
                         && grid[nextX][nextY] == 1){
                     grid[nextX][nextY] = 2; //标记访问

@@ -22,6 +22,8 @@ public class Matrix {
             }
             System.out.println();
         }
+        //空行的打印，便于观察
+        System.out.println();
     }
 
     public static void printMatrix(int[][] a,int row,int col) {

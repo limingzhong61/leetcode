@@ -29,9 +29,9 @@ public class DFS {
                 {0, 1}, {1, 0}, {-1, 0}, {0, -1}
         };
         boolean res = true;
-        for (int k = 0; k < 4; k++) {
-            int nextX = x + next[k][0];
-            int nextY = y + next[k][1];
+        for (int[] item : next) {
+            int nextX = x + item[0];
+            int nextY = y + item[1];
 
             if (nextX >= 0 && nextX < m && nextY >= 0 && nextY < n
                     && grid[nextX][nextY] == 0) {
