@@ -1,6 +1,6 @@
 package codeofli.leetcode.graph_theory;
 
-import codeofli.my.leetcode.TransformString;
+import codeofli.my.leetcode.TransformUtil;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -52,9 +52,9 @@ public class CountSubIslands1905 {
 
     public static void main(String[] args) {
         CountSubIslands1905 countSubIslands1905 = new CountSubIslands1905();
-        System.out.println(countSubIslands1905.countSubIslands(TransformString.
+        System.out.println(countSubIslands1905.countSubIslands(TransformUtil.
                         toIntMatrix("[[1,1,1,0,0],[0,1,1,1,1],[0,0,0,0,0],[1,0,0,0,0],[1,1,0,1,1]]"),
-                TransformString.toIntMatrix(
+                TransformUtil.toIntMatrix(
                         "[[1,1,1,0,0],[0,0,1,1,1],[0,1,0,0,0],[1,0,1,1,0],[0,1,0,1,0]]")));
     }
 }

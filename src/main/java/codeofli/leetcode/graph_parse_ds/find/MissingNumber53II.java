@@ -1,6 +1,6 @@
 package codeofli.leetcode.graph_parse_ds.find;
 
-import codeofli.my.leetcode.TransformString;
+import codeofli.my.leetcode.TransformUtil;
 
 public class MissingNumber53II {
     /**
@@ -41,14 +41,14 @@ public class MissingNumber53II {
     public static void main(String[] args) {
         MissingNumber53II missingNumber53II = new MissingNumber53II();
 
-        System.out.println(missingNumber53II.missingNumber(TransformString.toIntArray("[0,1,3]")));
-        System.out.println(missingNumber53II.missingNumber(TransformString.toIntArray("[0,1,3]")) == 2);
+        System.out.println(missingNumber53II.missingNumber(TransformUtil.toIntArray("[0,1,3]")));
+        System.out.println(missingNumber53II.missingNumber(TransformUtil.toIntArray("[0,1,3]")) == 2);
 
-        System.out.println(missingNumber53II.missingNumber(TransformString.toIntArray("[0,1,2,3,4,5,6,7,9]")));
-        System.out.println(missingNumber53II.missingNumber(TransformString.toIntArray("[0,1,2,3,4,5,6,7,9]")) == 8);
+        System.out.println(missingNumber53II.missingNumber(TransformUtil.toIntArray("[0,1,2,3,4,5,6,7,9]")));
+        System.out.println(missingNumber53II.missingNumber(TransformUtil.toIntArray("[0,1,2,3,4,5,6,7,9]")) == 8);
 
-        System.out.println(missingNumber53II.missingNumber(TransformString.toIntArray("[0]")));
-        System.out.println(missingNumber53II.missingNumber(TransformString.toIntArray("[0]")) == 1);
+        System.out.println(missingNumber53II.missingNumber(TransformUtil.toIntArray("[0]")));
+        System.out.println(missingNumber53II.missingNumber(TransformUtil.toIntArray("[0]")) == 1);
 
     }
 }

@@ -2,7 +2,7 @@ package codeofli.my.leetcode;
 
 import java.util.stream.Stream;
 
-public class TransformString {
+public class TransformUtil {
 
     public static String ArrayToJavaForm(String original) {
         return original.replaceAll("\\[", "{").
@@ -14,9 +14,9 @@ public class TransformString {
         String s = original.replaceAll("\\[", "").
                 replaceAll("\\]", "").
                 // 有可能有空格
-                replaceAll("\\s+", "").
-                        // 特殊的空格
-                replaceAll(" ", "");
+                        replaceAll("\\s+", "").
+                // 特殊的空格
+                        replaceAll(" ", "");
         if ("".equals(s)) {
             return new int[0];
         }
@@ -73,14 +73,13 @@ public class TransformString {
     }
 
     /**
-     *
      * @param original 格式
-     *                  [
-     *   ["1","1","1","1","0"],
-     *   ["1","1","0","1","0"],
-     *   ["1","1","0","0","0"],
-     *   ["0","0","0","0","0"]
-     * ]
+     *                 [
+     *                 ["1","1","1","1","0"],
+     *                 ["1","1","0","1","0"],
+     *                 ["1","1","0","0","0"],
+     *                 ["0","0","0","0","0"]
+     *                 ]
      * @return
      */
     public static char[][] toCharMatrix(String original) {
@@ -88,7 +87,7 @@ public class TransformString {
             return new char[0][0];
         }
         //可能中间存在换行符
-        original = original.replaceAll("\n","").replaceAll("\"","");
+        original = original.replaceAll("\n", "").replaceAll("\"", "");
         //先统一为：[5,3],[4,0],[2,1],
         String[] split = (original.substring(1, original.length() - 1) + ",").split("],");
 
@@ -113,5 +112,22 @@ public class TransformString {
             nums[i] = split[i].charAt(0);
         }
         return nums;
+    }
+
+    /**
+     *
+     * @param original 输入格式："[\"foo\",\"bar\"]"
+     * @return
+     */
+    public static String[] toStringArray(String original) {
+        String s = original.replaceAll("\\[", "").
+                replaceAll("\\]", "").
+                replaceAll(" ", "")
+                .replaceAll("\"", "");
+        if ("".equals(s)) {
+            return new String[0];
+        }
+        String[] split = s.split(",");
+        return split;
     }
 }

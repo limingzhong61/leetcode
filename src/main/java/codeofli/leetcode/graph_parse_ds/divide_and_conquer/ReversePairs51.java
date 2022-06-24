@@ -1,6 +1,6 @@
 package codeofli.leetcode.graph_parse_ds.divide_and_conquer;
 
-import codeofli.my.leetcode.TransformString;
+import codeofli.my.leetcode.TransformUtil;
 
 public class ReversePairs51 {
     /**
@@ -56,9 +56,9 @@ public class ReversePairs51 {
 
     public static void main(String[] args) {
         ReversePairs51 reversePairs51 = new ReversePairs51();
-        System.out.println(reversePairs51.reversePairs(TransformString.toIntArray("[7,5,6,4]")));
-        System.out.println(reversePairs51.reversePairs(TransformString.toIntArray("[7,5,6,4]")) == 5);
-        System.out.println(reversePairs51.reversePairs(TransformString.toIntArray("[1,3,2,3,1]")));
-        System.out.println(reversePairs51.reversePairs(TransformString.toIntArray("[1,3,2,3,1]")) == 4);
+        System.out.println(reversePairs51.reversePairs(TransformUtil.toIntArray("[7,5,6,4]")));
+        System.out.println(reversePairs51.reversePairs(TransformUtil.toIntArray("[7,5,6,4]")) == 5);
+        System.out.println(reversePairs51.reversePairs(TransformUtil.toIntArray("[1,3,2,3,1]")));
+        System.out.println(reversePairs51.reversePairs(TransformUtil.toIntArray("[1,3,2,3,1]")) == 4);
     }
 }

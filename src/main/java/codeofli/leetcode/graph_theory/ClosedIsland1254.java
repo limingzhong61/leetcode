@@ -1,7 +1,6 @@
 package codeofli.leetcode.graph_theory;
 
-import codeofli.my.leetcode.TransformString;
-import codeofli.my.useful.matrix.Matrix;
+import codeofli.my.leetcode.TransformUtil;
 
 public class ClosedIsland1254 {
     /**
@@ -73,9 +72,9 @@ public class ClosedIsland1254 {
 
     private static void testCase(ClosedIsland1254 closedIsland1254, String s, int i) {
         System.out.println(closedIsland1254.closedIsland
-                (TransformString.toIntMatrix(s)));
+                (TransformUtil.toIntMatrix(s)));
         System.out.println(closedIsland1254.closedIsland
-                (TransformString.toIntMatrix(s)) == i);
+                (TransformUtil.toIntMatrix(s)) == i);
     }
 
 

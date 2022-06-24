@@ -1,6 +1,6 @@
 package codeofli.leetcode.graph_parse_ds.math;
 
-import codeofli.my.leetcode.TransformString;
+import codeofli.my.leetcode.TransformUtil;
 
 import java.util.*;
 
@@ -70,16 +70,16 @@ public class FindContinuousSequence57II {
     public static void main(String[] args) {
         FindContinuousSequence57II findContinuousSequence = new FindContinuousSequence57II();
 
-        System.out.println(TransformString.matrixToStr(findContinuousSequence.findContinuousSequence(9)));
-        System.out.println(TransformString.matrixToStr(findContinuousSequence.findContinuousSequence(9))
+        System.out.println(TransformUtil.matrixToStr(findContinuousSequence.findContinuousSequence(9)));
+        System.out.println(TransformUtil.matrixToStr(findContinuousSequence.findContinuousSequence(9))
                 .equals("[[2,3,4],[4,5]]"));
 
-        System.out.println(TransformString.matrixToStr(findContinuousSequence.findContinuousSequence(15)));
-        System.out.println(TransformString.matrixToStr(findContinuousSequence.findContinuousSequence(15))
+        System.out.println(TransformUtil.matrixToStr(findContinuousSequence.findContinuousSequence(15)));
+        System.out.println(TransformUtil.matrixToStr(findContinuousSequence.findContinuousSequence(15))
                 .equals("[[1,2,3,4,5],[4,5,6],[7,8]]"));
 
-        System.out.println(TransformString.matrixToStr(findContinuousSequence.findContinuousSequence(10)));
-        System.out.println(TransformString.matrixToStr(findContinuousSequence.findContinuousSequence(10))
+        System.out.println(TransformUtil.matrixToStr(findContinuousSequence.findContinuousSequence(10)));
+        System.out.println(TransformUtil.matrixToStr(findContinuousSequence.findContinuousSequence(10))
                 .equals("[[1,2,3,4]]"));
     }
 

@@ -1,6 +1,6 @@
 package codeofli.leetcode.graph_parse_ds.math;
 
-import codeofli.my.leetcode.TransformString;
+import codeofli.my.leetcode.TransformUtil;
 
 import java.util.Arrays;
 
@@ -65,12 +65,12 @@ public class ConstructArr66 {
     public static void main(String[] args) {
         ConstructArr66 constructArr66 = new ConstructArr66();
 
-        System.out.println(Arrays.toString(constructArr66.constructArr(TransformString.toIntArray("[1,2,3,4,5]"))));
-        System.out.println(Arrays.equals(constructArr66.constructArr(TransformString.toIntArray("[1,2,3,4,5]")),
-            TransformString.toIntArray("[120,60,40,30,24]")));
+        System.out.println(Arrays.toString(constructArr66.constructArr(TransformUtil.toIntArray("[1,2,3,4,5]"))));
+        System.out.println(Arrays.equals(constructArr66.constructArr(TransformUtil.toIntArray("[1,2,3,4,5]")),
+            TransformUtil.toIntArray("[120,60,40,30,24]")));
 
-        System.out.println(Arrays.toString(constructArr66.constructArr(TransformString.toIntArray("[1, 2, 0, 4, 5]"))));
-        System.out.println(Arrays.equals(constructArr66.constructArr(TransformString.toIntArray("[1, 2, 0, 4, 5]")),
-            TransformString.toIntArray("[0,0,40,0,0]")));
+        System.out.println(Arrays.toString(constructArr66.constructArr(TransformUtil.toIntArray("[1, 2, 0, 4, 5]"))));
+        System.out.println(Arrays.equals(constructArr66.constructArr(TransformUtil.toIntArray("[1, 2, 0, 4, 5]")),
+            TransformUtil.toIntArray("[0,0,40,0,0]")));
     }
 }

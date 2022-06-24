@@ -1,7 +1,6 @@
 package codeofli.leetcode.graph_theory;
 
-import codeofli.my.leetcode.TransformString;
-import codeofli.my.useful.matrix.Matrix;
+import codeofli.my.leetcode.TransformUtil;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -69,14 +68,14 @@ public class ShortestBridge934 {
     public static void main(String[] args) {
         ShortestBridge934 shortestBridge934 = new ShortestBridge934();
 
-        System.out.println(shortestBridge934.shortestBridge(TransformString.toIntMatrix(
+        System.out.println(shortestBridge934.shortestBridge(TransformUtil.toIntMatrix(
                 "[[0,1,0],[0,0,0],[0,0,1]]")));
-        System.out.println(shortestBridge934.shortestBridge(TransformString.toIntMatrix(
+        System.out.println(shortestBridge934.shortestBridge(TransformUtil.toIntMatrix(
                 "[[0,1,0],[0,0,0],[0,0,1]]")) == 2);
 
-        System.out.println(shortestBridge934.shortestBridge(TransformString.toIntMatrix(
+        System.out.println(shortestBridge934.shortestBridge(TransformUtil.toIntMatrix(
                 "[[1,1,1,1,1],[1,0,0,0,1],[1,0,1,0,1],[1,0,0,0,1],[1,1,1,1,1]]")));
-        System.out.println(shortestBridge934.shortestBridge(TransformString.toIntMatrix(
+        System.out.println(shortestBridge934.shortestBridge(TransformUtil.toIntMatrix(
                 "[[1,1,1,1,1],[1,0,0,0,1],[1,0,1,0,1],[1,0,0,0,1],[1,1,1,1,1]]")) == 1);
 
         //Matrix.printMatrix(TransformString.toIntMatrix(

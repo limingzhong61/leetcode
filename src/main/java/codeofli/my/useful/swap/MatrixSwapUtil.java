@@ -1,4 +1,4 @@
-package codeofli.my.swap;
+package codeofli.my.useful.swap;
 
 public class MatrixSwapUtil {
 

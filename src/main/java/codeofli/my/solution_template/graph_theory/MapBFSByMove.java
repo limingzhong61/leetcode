@@ -1,12 +1,12 @@
 package codeofli.my.solution_template.graph_theory;
 
 import codeofli.leetcode.graph_theory.MaxAreaOfIsland695;
-import codeofli.my.leetcode.TransformString;
+import codeofli.my.leetcode.TransformUtil;
 
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class BFS {
+public class MapBFSByMove {
     public int maxAreaOfIsland(int[][] grid) {
         if(grid.length == 0 || grid[0].length == 0){
             return 0;
@@ -23,6 +23,13 @@ public class BFS {
         return maxArea;
     }
 
+    /**
+     * 地图 ： 上下左右移动版
+     * @param x
+     * @param y
+     * @param grid 地图
+     * @return
+     */
     public int bfs(int x, int y, int[][] grid){
         int cnt = 0;
         //右下左上（顺时针）移动数组
@@ -57,21 +64,21 @@ public class BFS {
         //System.out.println(ints[0][0]);
         MaxAreaOfIsland695 maxAreaOfIsland695 = new MaxAreaOfIsland695();
         System.out.println(maxAreaOfIsland695.maxAreaOfIsland
-                (TransformString.toIntMatrix("[[0,0,1,0,0,0,0,1,0,0,0,0,0]," +
+                (TransformUtil.toIntMatrix("[[0,0,1,0,0,0,0,1,0,0,0,0,0]," +
                         "[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,1,1,0,1,0,0,0,0,0,0,0,0]," +
                         "[0,1,0,0,1,1,0,0,1,0,1,0,0],[0,1,0,0,1,1,0,0,1,1,1,0,0]," +
                         "[0,0,0,0,0,0,0,0,0,0,1,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0]," +
                         "[0,0,0,0,0,0,0,1,1,0,0,0,0]]\n")));
         System.out.println(maxAreaOfIsland695.maxAreaOfIsland
-                (TransformString.toIntMatrix("[[0,0,1,0,0,0,0,1,0,0,0,0,0]," +
+                (TransformUtil.toIntMatrix("[[0,0,1,0,0,0,0,1,0,0,0,0,0]," +
                         "[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,1,1,0,1,0,0,0,0,0,0,0,0]," +
                         "[0,1,0,0,1,1,0,0,1,0,1,0,0],[0,1,0,0,1,1,0,0,1,1,1,0,0]," +
                         "[0,0,0,0,0,0,0,0,0,0,1,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0]," +
                         "[0,0,0,0,0,0,0,1,1,0,0,0,0]]\n")) == 6);
 
         System.out.println(maxAreaOfIsland695.maxAreaOfIsland
-                (TransformString.toIntMatrix("[[0,0,0,0,0,0,0,0]]")));
+                (TransformUtil.toIntMatrix("[[0,0,0,0,0,0,0,0]]")));
         System.out.println(maxAreaOfIsland695.maxAreaOfIsland
-                (TransformString.toIntMatrix("[[0,0,0,0,0,0,0,0]]")) == 0);
+                (TransformUtil.toIntMatrix("[[0,0,0,0,0,0,0,0]]")) == 0);
     }
 }

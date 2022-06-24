@@ -1,11 +1,9 @@
 package codeofli.leetcode.graph_parse_ds.sort;
 
-import codeofli.my.leetcode.TransformString;
+import codeofli.my.leetcode.TransformUtil;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -127,24 +125,24 @@ public class MinNumber {
     public static void main(String[] args) {
         MinNumber minNumber = new MinNumber();
 
-        System.out.println(minNumber.minNumber(TransformString.toIntArray("[10,2]")));
-        System.out.println(minNumber.minNumber(TransformString.toIntArray("[10,2]")).equals("102") );
+        System.out.println(minNumber.minNumber(TransformUtil.toIntArray("[10,2]")));
+        System.out.println(minNumber.minNumber(TransformUtil.toIntArray("[10,2]")).equals("102") );
 
-        System.out.println(minNumber.minNumber(TransformString.toIntArray("[3,30,34,5,9]")));
-        System.out.println(minNumber.minNumber(TransformString.toIntArray("[3,30,34,5,9]")).equals("3033459"));
+        System.out.println(minNumber.minNumber(TransformUtil.toIntArray("[3,30,34,5,9]")));
+        System.out.println(minNumber.minNumber(TransformUtil.toIntArray("[3,30,34,5,9]")).equals("3033459"));
 
-        System.out.println(minNumber.minNumber(TransformString.toIntArray("[3,30,34,5,9,0]")));
-        System.out.println(minNumber.minNumber(TransformString.toIntArray("[3,30,34,5,9,0]")).equals("03033459"));
+        System.out.println(minNumber.minNumber(TransformUtil.toIntArray("[3,30,34,5,9,0]")));
+        System.out.println(minNumber.minNumber(TransformUtil.toIntArray("[3,30,34,5,9,0]")).equals("03033459"));
 
-        System.out.println(minNumber.minNumber(TransformString.toIntArray("[0,0,10,100,303]")));
-        System.out.println(minNumber.minNumber(TransformString.toIntArray("[0,0]")).equals("00"));
+        System.out.println(minNumber.minNumber(TransformUtil.toIntArray("[0,0,10,100,303]")));
+        System.out.println(minNumber.minNumber(TransformUtil.toIntArray("[0,0]")).equals("00"));
 
-        System.out.println(minNumber.minNumber(TransformString.toIntArray("[121,12]")));
-        System.out.println(minNumber.minNumber(TransformString.toIntArray("[121,12] ")).equals("12112"));
+        System.out.println(minNumber.minNumber(TransformUtil.toIntArray("[121,12]")));
+        System.out.println(minNumber.minNumber(TransformUtil.toIntArray("[121,12] ")).equals("12112"));
 
-        System.out.println(minNumber.minNumber(TransformString.toIntArray("[824,938,1399,5607,6973,5703,9609,4398,8247]")));
+        System.out.println(minNumber.minNumber(TransformUtil.toIntArray("[824,938,1399,5607,6973,5703,9609,4398,8247]")));
         System.out.println(minNumber.minNumber
-                (TransformString.toIntArray("[824,938,1399,5607,6973,5703,9609,4398,8247] ")).equals(
+                (TransformUtil.toIntArray("[824,938,1399,5607,6973,5703,9609,4398,8247] ")).equals(
                 "1399439856075703697382478249389609"));
     }
 

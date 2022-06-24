@@ -1,11 +1,25 @@
 package codeofli.leetcode.graph_parse_ds.dp;
 
 public class Fib10 {
+    /**
+     * dp:滚动数组优化
+     */
+    public int fib(int n) {
+        if (n == 0) return 0;          // 若求 f(0) 则直接返回 0
+        final int MOD = 1000000007;
+        int p = 0,q = 1;
+        for (int i = 2; i <= n; i++){
+            int tempQ = q;
+            q = (p + q) % MOD;
+            p = tempQ;
+        }
+        return q;
+    }
 
     /**
      * dp
      */
-    public int fib(int n) {
+    public int fib2(int n) {
         if (n == 0) return 0;          // 若求 f(0) 则直接返回 0
         int dp[] = new int[n+1];
         final int MOD = 1000000007;

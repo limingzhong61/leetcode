@@ -1,6 +1,6 @@
 package codeofli.leetcode.content;
 
-import codeofli.my.leetcode.TransformString;
+import codeofli.my.leetcode.TransformUtil;
 
 import java.util.Arrays;
 
@@ -37,8 +37,8 @@ public class minPathCost {
 
     public static void main(String[] args) {
         minPathCost minPathCost = new minPathCost();
-        TransformString.toIntMatrix("[[5,3],[4,0],[2,1]]");
-        System.out.println(minPathCost.minPathCost(TransformString.toIntMatrix("[[5,3],[4,0],[2,1]]")
-                , TransformString.toIntMatrix("[[9,8],[1,5],[10,12],[18,6],[2,4],[14,3]]")));
+        TransformUtil.toIntMatrix("[[5,3],[4,0],[2,1]]");
+        System.out.println(minPathCost.minPathCost(TransformUtil.toIntMatrix("[[5,3],[4,0],[2,1]]")
+                , TransformUtil.toIntMatrix("[[9,8],[1,5],[10,12],[18,6],[2,4],[14,3]]")));
     }
 }

@@ -1,6 +1,6 @@
 package codeofli.leetcode.graph_theory;
 
-import codeofli.my.leetcode.TransformString;
+import codeofli.my.leetcode.TransformUtil;
 
 import java.util.ArrayDeque;
 import java.util.Arrays;
@@ -115,13 +115,13 @@ public class MaxDistance1162 {
 
     public static void main(String[] args) {
         MaxDistance1162 maxDistance1162 = new MaxDistance1162();
-        System.out.println(maxDistance1162.maxDistance(TransformString.toIntMatrix("\n" +
+        System.out.println(maxDistance1162.maxDistance(TransformUtil.toIntMatrix("\n" +
                 "[[1,0,1],[0,0,0],[1,0,1]]")) == 2);
 
-        System.out.println(maxDistance1162.maxDistance(TransformString.toIntMatrix(
+        System.out.println(maxDistance1162.maxDistance(TransformUtil.toIntMatrix(
                 "[[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]]")) == -1);
 
-        System.out.println(maxDistance1162.maxDistance(TransformString.toIntMatrix(
+        System.out.println(maxDistance1162.maxDistance(TransformUtil.toIntMatrix(
                 "[[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1]]")) == -1);
     }
 }

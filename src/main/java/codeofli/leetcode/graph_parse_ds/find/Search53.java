@@ -1,6 +1,6 @@
 package codeofli.leetcode.graph_parse_ds.find;
 
-import codeofli.my.leetcode.TransformString;
+import codeofli.my.leetcode.TransformUtil;
 
 public class Search53 {
     /**
@@ -58,13 +58,13 @@ public class Search53 {
         //System.out.println(search53.search(TransformString.toIntArray(" [5,7,7,8,8,10]"), 8));
         //System.out.println(search53.search(TransformString.toIntArray(" [5,7,7,8,8,10]"), 8) == 2);
 
-        System.out.println(search53.search(TransformString.toIntArray(" [8,8]"), 8));
-        System.out.println(search53.search(TransformString.toIntArray(" [8,8]"), 8) == 2);
+        System.out.println(search53.search(TransformUtil.toIntArray(" [8,8]"), 8));
+        System.out.println(search53.search(TransformUtil.toIntArray(" [8,8]"), 8) == 2);
 
-        System.out.println(search53.search(TransformString.toIntArray("[1]"), 1));
-        System.out.println(search53.search(TransformString.toIntArray("[1]"), 1) == 1);
+        System.out.println(search53.search(TransformUtil.toIntArray("[1]"), 1));
+        System.out.println(search53.search(TransformUtil.toIntArray("[1]"), 1) == 1);
 
-        System.out.println(search53.search(TransformString.toIntArray("[2,2]"), 2));
-        System.out.println(search53.search(TransformString.toIntArray("[2,2]"), 2) == 2);
+        System.out.println(search53.search(TransformUtil.toIntArray("[2,2]"), 2));
+        System.out.println(search53.search(TransformUtil.toIntArray("[2,2]"), 2) == 2);
     }
 }
