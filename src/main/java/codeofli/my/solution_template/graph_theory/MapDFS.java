@@ -2,7 +2,7 @@ package codeofli.my.solution_template.graph_theory;
 
 import codeofli.my.leetcode.TransformUtil;
 
-public class DFS {
+public class MapDFS {
     /**
      * 如果为0的岛屿没有点在边界上，则可统计为孤立岛屿
      */
@@ -45,7 +45,7 @@ public class DFS {
     }
 
     public static void main(String[] args) {
-        DFS closedIsland1254 = new DFS();
+        MapDFS closedIsland1254 = new MapDFS();
         //
         testCase(closedIsland1254, "[[0,0,1,0,0],[0,1,0,1,0],[0,1,1,1,0]]", 1);
 
@@ -70,7 +70,7 @@ public class DFS {
 
     }
 
-    private static void testCase(DFS closedIsland1254, String s, int i) {
+    private static void testCase(MapDFS closedIsland1254, String s, int i) {
         System.out.println(closedIsland1254.closedIsland
                 (TransformUtil.toIntMatrix(s)));
         System.out.println(closedIsland1254.closedIsland

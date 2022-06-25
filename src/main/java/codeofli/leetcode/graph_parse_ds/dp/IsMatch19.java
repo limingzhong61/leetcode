@@ -1,6 +1,6 @@
 package codeofli.leetcode.graph_parse_ds.dp;
 
-import codeofli.my.useful.matrix.Matrix;
+import codeofli.my.useful.matrix.MatrixUtil;
 
 import java.util.*;
 
@@ -184,10 +184,10 @@ public class IsMatch19 {
                 System.out.println(Arrays.toString(testCase.getKey()));
                 System.out.println("计算结果值：" + isMatch19.isMatch(testCase.getKey()[0], testCase.getKey()[1]));
                 System.out.println("真实结果值：" + testCase.getValue());
-                Matrix.printMatrix(isMatch19.dp, testCase.getKey()[0].length() + 1, testCase.getKey()[1].length() + 1);
+                MatrixUtil.printMatrix(isMatch19.dp, testCase.getKey()[0].length() + 1, testCase.getKey()[1].length() + 1);
 
             }
-            Matrix.setZero(isMatch19.dp);
+            MatrixUtil.setZero(isMatch19.dp);
         }
     }
 }

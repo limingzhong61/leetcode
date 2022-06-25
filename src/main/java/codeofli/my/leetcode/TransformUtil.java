@@ -1,5 +1,7 @@
 package codeofli.my.leetcode;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.Stream;
 
 public class TransformUtil {
@@ -129,5 +131,23 @@ public class TransformUtil {
         }
         String[] split = s.split(",");
         return split;
+    }
+
+    public static ArrayList<Integer> toArrayList(String original) {
+        int[] ints = toIntArray(original);
+        return getArrayList(ints);
+    }
+
+    /**
+     * int[] -> ArrayList<Integer>
+     * @param ints int[]
+     * @return
+     */
+    private static ArrayList<Integer> getArrayList(int[] ints) {
+        ArrayList<Integer> list = new ArrayList<>(ints.length);
+        for(int item : ints){
+            list.add(item);
+        }
+        return list;
     }
 }

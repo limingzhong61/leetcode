@@ -1,4 +1,4 @@
-package codeofli.leetcode.introduction_to_algorithms.binary_search;
+package codeofli.leetcode.algorithms.introduction.binary_search;
 
 public class SortedSquares977 {
     /*先全部平方，肯定是两端在两遍最大

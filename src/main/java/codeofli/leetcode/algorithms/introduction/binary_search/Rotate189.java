@@ -1,4 +1,4 @@
-package codeofli.leetcode.introduction_to_algorithms.binary_search;
+package codeofli.leetcode.algorithms.introduction.binary_search;
 
 import java.util.Arrays;
 
