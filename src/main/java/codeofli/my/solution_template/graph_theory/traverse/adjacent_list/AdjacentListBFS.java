@@ -1,4 +1,4 @@
-package codeofli.my.solution_template.graph_theory.adjacent_list;
+package codeofli.my.solution_template.graph_theory.traverse.adjacent_list;
 
 import java.util.LinkedList;
 import java.util.List;

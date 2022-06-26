@@ -1,7 +1,6 @@
-package codeofli.my.solution_template.graph_theory.adjacent_matrix;
+package codeofli.my.solution_template.graph_theory.traverse.adjacent_matrix;
 
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Queue;
 
 public class AdjacentMatrixBFS {

@@ -1,4 +1,4 @@
-package codeofli.my.solution_template.graph_theory;
+package codeofli.my.solution_template.graph_theory.traverse.adjacent_matrix;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;

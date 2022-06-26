@@ -38,8 +38,13 @@ public class TransformUtil {
         if ("".equals(original)) {
             return new int[0][0];
         }
+
+        String substring = original.substring(1, original.length() - 1);
+        if("".equals(substring)){
+            return new int[0][0];
+        }
         //先统一为：[5,3],[4,0],[2,1],
-        String[] split = (original.substring(1, original.length() - 1) + ",").split("],");
+        String[] split = (substring + ",").split("],");
 
         int[][] matrix = new int[split.length][];
         int index = 0;
