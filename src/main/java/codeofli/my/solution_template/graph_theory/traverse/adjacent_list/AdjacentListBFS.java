@@ -12,9 +12,10 @@ public class AdjacentListBFS {
         //2 <= n <= 1000
         int maxArea = 0;
         int n = rooms.size();
-        boolean[] visited = new boolean[n];
+
 
         //BFS
+        boolean[] visited = new boolean[n];
         Queue<Integer> queue = new LinkedList<>();
         queue.add(0);
         visited[0] = true; //标记访问
