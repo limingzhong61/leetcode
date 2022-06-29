@@ -142,6 +142,25 @@ public class TransformUtil {
         int[] ints = toIntArray(original);
         return getArrayList(ints);
     }
+    public static ArrayList<List<Integer>> toDoubleArrayList(String original) {
+        ArrayList<List<Integer>> res = new ArrayList<>();
+        if ("".equals(original)) {
+            return res;
+        }
+
+        String substring = original.substring(1, original.length() - 1);
+        if("".equals(substring)){
+            return res;
+        }
+        //先统一为：[5,3],[4,0],[2,1],
+        String[] split = (substring + ",").split("],");
+        for(var item : split){
+            int[] ints = toIntArray(item);
+            res.add(getArrayList(ints));
+        }
+
+        return res;
+    }
 
     /**
      * int[] -> ArrayList<Integer>
@@ -154,5 +173,23 @@ public class TransformUtil {
             list.add(item);
         }
         return list;
+    }
+
+    /**
+     * String[] -> ArrayList<String>
+     * @param strings String[]
+     * @return
+     */
+    private static ArrayList<String> ToArrayList(String[] strings) {
+        ArrayList<String> list = new ArrayList<>(strings.length);
+        for(String item : strings){
+            list.add(item);
+        }
+        return list;
+    }
+
+    public static ArrayList<String> toStringArrayList(String s) {
+        String[] strings = toStringArray(s);
+        return ToArrayList(strings);
     }
 }
