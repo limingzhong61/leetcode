@@ -8,6 +8,22 @@ public class LinkedList {
      * @param s ,格式：“1->2->4”
      * @return
      */
+    public static ListNode StrToLinkedList2(String s){
+        s = s.replace("[", "").replace("]", "");
+        s = s.replace("[", "").replace("]", "");
+        String[] split = s.split(",");
+        ListNode head = new ListNode(Integer.parseInt(split[0]));
+        ListNode cur = head;
+        for(int i = 1; i < split.length; i++){
+            cur.next = new ListNode(Integer.parseInt(split[i]));
+            cur = cur.next;
+        }
+        return head;
+    }
+    /**
+     * @param s ,格式：“1->2->4”
+     * @return
+     */
    public static ListNode StrToLinkedList(String s){
         String[] split = s.split("->");
         ListNode head = new ListNode(Integer.parseInt(split[0]));
