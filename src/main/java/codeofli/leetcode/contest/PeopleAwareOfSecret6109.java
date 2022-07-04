@@ -1,4 +1,4 @@
-package codeofli.leetcode.content;
+package codeofli.leetcode.contest;
 
 public class PeopleAwareOfSecret6109 {
     /**

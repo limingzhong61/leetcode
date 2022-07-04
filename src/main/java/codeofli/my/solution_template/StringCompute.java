@@ -1,7 +1,7 @@
 package codeofli.my.solution_template;
 
 import codeofli.my.leetcode.TransformUtil;
-import codeofli.my.useful.equals.EqualsUtil;
+import codeofli.my.util.equals.EqualsUtil;
 
 import java.util.ArrayList;
 import java.util.List;

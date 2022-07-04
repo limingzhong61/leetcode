@@ -1,8 +1,8 @@
-package codeofli.leetcode.content;
+package codeofli.leetcode.contest;
 
 import codeofli.my.leetcode.LinkedList;
 import codeofli.my.leetcode.ListNode;
-import codeofli.my.useful.matrix.MatrixUtil;
+import codeofli.my.util.matrix.MatrixUtil;
 //Definition for singly-linked list.
 // class ListNode {
 //    int val;

@@ -1,10 +1,6 @@
-package codeofli.leetcode.content;
+package codeofli.leetcode.contest;
 
-import codeofli.leetcode.graph_theory.MaxAreaOfIsland695;
-
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Map;
 
 public class MinimumNumbers5218 {
     public int minimumNumbers(int num, int k) {

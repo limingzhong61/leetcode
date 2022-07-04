@@ -1,7 +1,7 @@
 package codeofli.leetcode.graph_theory;
 
 import codeofli.my.leetcode.TransformUtil;
-import codeofli.my.useful.matrix.MatrixUtil;
+import codeofli.my.util.matrix.MatrixUtil;
 
 import java.util.LinkedList;
 import java.util.Queue;

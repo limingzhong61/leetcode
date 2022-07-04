@@ -1,6 +1,6 @@
 package codeofli.leetcode.graph_parse_ds.dp;
 
-import codeofli.my.useful.matrix.MatrixUtil;
+import codeofli.my.util.matrix.MatrixUtil;
 
 import java.util.*;
 

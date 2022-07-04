@@ -1,4 +1,4 @@
-package codeofli.leetcode.content;
+package codeofli.leetcode.contest;
 
 public class GreatestLetter5242 {
     public String greatestLetter(String s) {
