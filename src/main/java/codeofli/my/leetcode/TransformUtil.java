@@ -192,4 +192,27 @@ public class TransformUtil {
         String[] strings = toStringArray(s);
         return ToArrayList(strings);
     }
+
+    /**
+     * input format: [true,true,true,false,false]
+     * @param original
+     * @return
+     */
+    public static boolean[] toBoolArray(String original) {
+        String s = original.replaceAll("\\[", "").
+                replaceAll("\\]", "").
+                // 有可能有空格
+                        replaceAll("\\s+", "").
+                // 特殊的空格
+                        replaceAll(" ", "");
+        if ("".equals(s)) {
+            return new boolean[0];
+        }
+        String[] split = s.split(",");
+        boolean[] nums = new boolean[split.length];
+        for (int i = 0; i < split.length; i++) {
+            nums[i] = Boolean.parseBoolean(split[i]);
+        }
+        return nums;
+    }
 }

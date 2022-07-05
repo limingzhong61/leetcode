@@ -1,16 +1,16 @@
-package codeofli.leetcode.primary.tree;
+package codeofli.leetcode.data_structure.binary_tree.bst;
 
-import codeofli.leetcode.data_structure.binary_tree.binary_tree.TreeNode;
+
+import codeofli.leetcode.data_structure.binary_tree.TreeNode;
 
 import java.util.Deque;
 import java.util.LinkedList;
 
-public class IsValidBST {
+public class IsValidBST98 {
     /**
      * my: 递归版
      * 注意：结点应该在整棵树上符合bst规律
      * 思路： 利用中序遍历,二叉排序树有序
-     *
      * @param root
      * @return
      */

@@ -1,6 +1,5 @@
 package codeofli.leetcode.data_structure.binary_tree;
 
-import TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;

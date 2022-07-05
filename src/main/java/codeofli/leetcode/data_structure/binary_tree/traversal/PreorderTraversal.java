@@ -1,7 +1,8 @@
 package codeofli.leetcode.data_structure.binary_tree.traversal;
 
 
-import codeofli.leetcode.data_structure.binary_tree.binary_tree.TreeNode;
+
+import codeofli.leetcode.data_structure.binary_tree.TreeNode;
 
 import java.util.ArrayList;
 import java.util.Deque;

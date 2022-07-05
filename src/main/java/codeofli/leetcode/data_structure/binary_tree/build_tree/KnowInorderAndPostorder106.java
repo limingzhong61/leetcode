@@ -1,6 +1,7 @@
 package codeofli.leetcode.data_structure.binary_tree.build_tree;
 
-import codeofli.leetcode.data_structure.binary_tree.binary_tree.TreeNode;
+
+import codeofli.leetcode.data_structure.binary_tree.TreeNode;
 
 import java.util.HashMap;
 import java.util.Map;
