@@ -1,4 +1,4 @@
-package codeofli.leetcode.primary.dp;
+package codeofli.leetcode.dp.intro;
 
 public class Rob198 {
 
