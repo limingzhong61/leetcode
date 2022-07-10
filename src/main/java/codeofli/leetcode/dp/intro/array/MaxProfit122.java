@@ -1,6 +1,28 @@
-package codeofli.leetcode.primary.arrays;
+package codeofli.leetcode.dp.intro.array;
+
+import codeofli.my.leetcode.TransformUtil;
 
 public class MaxProfit122 {
+    /**
+     * mySolution:
+     * f1[i]表示i天所能不持有股票(卖出)的最大收益
+     * f2[i]表示i天所能持有股票(买入)的最大收益
+     */
+    public int maxProfit(int[] prices) {
+        //maxProfits[i] 表示当前阶段的最大利润
+        int n = prices.length;
+        int[] f1 = new int[n];
+        int[] f2 = new int[n];
+        f1[0] = 0;
+        f2[0] = -prices[0];
+        int maxProfit = 0;
+        for(int i = 1; i < n; i++){
+            f1[i] = Math.max(f1[i-1],f2[i-1]+prices[i]);
+            f2[i] = Math.max(f2[i-1],f1[i-1]-prices[i]);
+            maxProfit = Math.max(f1[i],maxProfit);
+        }
+        return maxProfit;
+    }
     /**
      * mySolution:
      * //maxProfits[i] 表示当前阶段的最大利润
@@ -71,12 +93,17 @@ public class MaxProfit122 {
      * @param prices
      * @return
      */
-    public int maxProfit(int[] prices) {
+    public int maxProfit3(int[] prices) {
         int ans = 0;
         int n = prices.length;
         for (int i = 1; i < n; ++i) {
             ans += Math.max(0, prices[i] - prices[i - 1]);
         }
         return ans;
+    }
+
+    public static void main(String[] args) {
+        MaxProfit122 maxProfit122 = new MaxProfit122();
+        System.out.println(maxProfit122.maxProfit(TransformUtil.toIntArray("[7,1,5,3,6,4]")));
     }
 }

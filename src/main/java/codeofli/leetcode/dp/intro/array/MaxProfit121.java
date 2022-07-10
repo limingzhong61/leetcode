@@ -1,4 +1,4 @@
-package codeofli.leetcode.dp.intro;
+package codeofli.leetcode.dp.intro.array;
 
 public class MaxProfit121 {
     /**
