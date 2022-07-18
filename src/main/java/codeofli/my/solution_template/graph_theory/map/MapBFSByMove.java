@@ -1,4 +1,4 @@
-package codeofli.my.solution_template.graph_theory;
+package codeofli.my.solution_template.graph_theory.map;
 
 import codeofli.leetcode.graph_theory.MaxAreaOfIsland695;
 import codeofli.my.leetcode.TransformUtil;
@@ -8,15 +8,15 @@ import java.util.Queue;
 
 public class MapBFSByMove {
     public int maxAreaOfIsland(int[][] grid) {
-        if(grid.length == 0 || grid[0].length == 0){
+        if (grid.length == 0 || grid[0].length == 0) {
             return 0;
         }
         int maxArea = 0;
-        int m = grid.length,n = grid[0].length;
-        for(int i = 0; i < m; i++){
-            for(int j = 0; j < n;j++){
-                if(grid[i][j] == 1){
-                    maxArea = Math.max(maxArea, bfs(i,j,grid));
+        int m = grid.length, n = grid[0].length;
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (grid[i][j] == 1) {
+                    maxArea = Math.max(maxArea, bfs(grid, i, j));
                 }
             }
         }
@@ -25,33 +25,34 @@ public class MapBFSByMove {
 
     /**
      * 地图 ： 上下左右移动版
+     *
      * @param x
      * @param y
      * @param grid 地图
      * @return
      */
-    public int bfs(int x, int y, int[][] grid){
+    public int bfs(int[][] grid, int x, int y) {
         int cnt = 0;
         //右下左上（顺时针）移动数组
         int[][] next = new int[][]{
-                {0, 1}, {1, 0},{-1,0},{0,-1}
+                {0, 1}, {1, 0}, {-1, 0}, {0, -1}
         };
         Queue<int[]> queue = new LinkedList<>();
-        queue.add(new int[]{x,y});
-        int m = grid.length,n = grid[0].length;
+        queue.add(new int[]{x, y});
+        int m = grid.length, n = grid[0].length;
         grid[x][y] = 2; //标记访问
-        while (!queue.isEmpty()){
+        while (!queue.isEmpty()) {
             int[] point = queue.poll();
             x = point[0];
             y = point[1];
             cnt++;
-            for(int[] item : next){
+            for (int[] item : next) {
                 int nextX = x + item[0];
                 int nextY = y + item[1];
-                if(nextX >= 0 && nextX < m && nextY >= 0 && nextY < n
-                        && grid[nextX][nextY] == 1){
+                if (nextX >= 0 && nextX < m && nextY >= 0 && nextY < n
+                        && grid[nextX][nextY] == 1) {
                     grid[nextX][nextY] = 2; //标记访问
-                    queue.add(new int[]{nextX,nextY});
+                    queue.add(new int[]{nextX, nextY});
                 }
             }
         }
