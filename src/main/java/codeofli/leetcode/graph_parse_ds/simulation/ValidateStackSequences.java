@@ -1,6 +1,6 @@
 package codeofli.leetcode.graph_parse_ds.simulation;
 
-import codeofli.my.leetcode.TransformUtil;
+import codeofli.my.leetcode.StringTransformUtil;
 
 import java.util.Deque;
 import java.util.LinkedList;
@@ -23,9 +23,9 @@ public class ValidateStackSequences {
         ValidateStackSequences validateStackSequences = new ValidateStackSequences();
 
         System.out.println(validateStackSequences.validateStackSequences(
-                TransformUtil.toIntArray("[1,2,3,4,5]"), TransformUtil.toIntArray("[4,5,3,2,1]")));
+                StringTransformUtil.toIntArray("[1,2,3,4,5]"), StringTransformUtil.toIntArray("[4,5,3,2,1]")));
 
         System.out.println(validateStackSequences.validateStackSequences(
-                TransformUtil.toIntArray("[1,2,3,4,5]"), TransformUtil.toIntArray(" [4,3,5,1,2]")));
+                StringTransformUtil.toIntArray("[1,2,3,4,5]"), StringTransformUtil.toIntArray(" [4,3,5,1,2]")));
     }
 }

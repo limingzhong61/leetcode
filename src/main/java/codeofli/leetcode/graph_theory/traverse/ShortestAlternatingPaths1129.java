@@ -1,6 +1,6 @@
 package codeofli.leetcode.graph_theory.traverse;
 
-import codeofli.my.leetcode.TransformUtil;
+import codeofli.my.leetcode.StringTransformUtil;
 
 import java.util.*;
 
@@ -66,13 +66,13 @@ public class ShortestAlternatingPaths1129 {
         ShortestAlternatingPaths1129 shortestAlternatingPaths1129 = new ShortestAlternatingPaths1129();
 
         System.out.println(Arrays.toString(shortestAlternatingPaths1129.shortestAlternatingPaths(3,
-                TransformUtil.toIntMatrix("[[0,1],[1,2]]"), TransformUtil.toIntMatrix("[]"))));
+                StringTransformUtil.toIntMatrix("[[0,1],[1,2]]"), StringTransformUtil.toIntMatrix("[]"))));
         System.out.println(Arrays.equals(shortestAlternatingPaths1129.shortestAlternatingPaths(3,
-                TransformUtil.toIntMatrix("[[0,1],[1,2]]"), TransformUtil.toIntMatrix("[]")),TransformUtil.toIntArray("[0,1,-1]")));
+                StringTransformUtil.toIntMatrix("[[0,1],[1,2]]"), StringTransformUtil.toIntMatrix("[]")), StringTransformUtil.toIntArray("[0,1,-1]")));
 
         System.out.println(Arrays.toString(shortestAlternatingPaths1129.shortestAlternatingPaths(5,
-                TransformUtil.toIntMatrix("[[0,1],[1,2],[2,3],[3,4]]"), TransformUtil.toIntMatrix("[[1,2],[2,3],[3,1]]"))));
+                StringTransformUtil.toIntMatrix("[[0,1],[1,2],[2,3],[3,4]]"), StringTransformUtil.toIntMatrix("[[1,2],[2,3],[3,1]]"))));
         System.out.println(Arrays.equals(shortestAlternatingPaths1129.shortestAlternatingPaths(5,
-                TransformUtil.toIntMatrix("[[0,1],[1,2],[2,3],[3,4]]"), TransformUtil.toIntMatrix("[[1,2],[2,3],[3,1]]")), TransformUtil.toIntArray("[0,1,2,3,7]")));
+                StringTransformUtil.toIntMatrix("[[0,1],[1,2],[2,3],[3,4]]"), StringTransformUtil.toIntMatrix("[[1,2],[2,3],[3,1]]")), StringTransformUtil.toIntArray("[0,1,2,3,7]")));
     }
 }

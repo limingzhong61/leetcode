@@ -1,6 +1,6 @@
 package codeofli.leetcode.dp.intro.array;
 
-import codeofli.my.leetcode.TransformUtil;
+import codeofli.my.leetcode.StringTransformUtil;
 
 public class MaxProfit714 {
     public int maxProfit(int[] prices, int fee) {
@@ -17,11 +17,11 @@ public class MaxProfit714 {
 
     public static void main(String[] args) {
         MaxProfit714 maxProfit714 = new MaxProfit714();
-        System.out.println(maxProfit714.maxProfit(TransformUtil.toIntArray("[1, 3, 2, 8, 4, 9]"), 2));
-        System.out.println(maxProfit714.maxProfit(TransformUtil.toIntArray("[1, 3, 2, 8, 4, 9]"), 2) == 8);
+        System.out.println(maxProfit714.maxProfit(StringTransformUtil.toIntArray("[1, 3, 2, 8, 4, 9]"), 2));
+        System.out.println(maxProfit714.maxProfit(StringTransformUtil.toIntArray("[1, 3, 2, 8, 4, 9]"), 2) == 8);
 
-        System.out.println(maxProfit714.maxProfit(TransformUtil.toIntArray("[1,3,7,5,10,3]"), 3));
-        System.out.println(maxProfit714.maxProfit(TransformUtil.toIntArray("[1,3,7,5,10,3]"), 3) == 6);
+        System.out.println(maxProfit714.maxProfit(StringTransformUtil.toIntArray("[1,3,7,5,10,3]"), 3));
+        System.out.println(maxProfit714.maxProfit(StringTransformUtil.toIntArray("[1,3,7,5,10,3]"), 3) == 6);
 
     }
 }

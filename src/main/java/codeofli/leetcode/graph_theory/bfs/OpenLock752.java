@@ -1,6 +1,6 @@
 package codeofli.leetcode.graph_theory.bfs;
 
-import codeofli.my.leetcode.TransformUtil;
+import codeofli.my.leetcode.StringTransformUtil;
 
 import java.util.*;
 
@@ -76,9 +76,9 @@ public class OpenLock752 {
     }
 
     private static void testCase(OpenLock752 openLock752, String s, String s2, int i) {
-        System.out.println(openLock752.openLock(TransformUtil.toStringArray(s),
+        System.out.println(openLock752.openLock(StringTransformUtil.toStringArray(s),
                 s2));
-        System.out.println(openLock752.openLock(TransformUtil.toStringArray(s),
+        System.out.println(openLock752.openLock(StringTransformUtil.toStringArray(s),
                 s2) == i);
     }
 }

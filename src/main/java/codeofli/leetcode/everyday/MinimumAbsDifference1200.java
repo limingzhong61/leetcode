@@ -1,6 +1,6 @@
 package codeofli.leetcode.everyday;
 
-import codeofli.my.leetcode.TransformUtil;
+import codeofli.my.leetcode.StringTransformUtil;
 
 import java.util.*;
 
@@ -37,9 +37,9 @@ public class MinimumAbsDifference1200 {
     }
 
     private static void testCase(MinimumAbsDifference1200 minimumAbsDifference1200, String s1, String s2) {
-        System.out.println(DoubleListToStr(minimumAbsDifference1200.minimumAbsDifference(TransformUtil.toIntArray(s1))));
+        System.out.println(DoubleListToStr(minimumAbsDifference1200.minimumAbsDifference(StringTransformUtil.toIntArray(s1))));
         System.out.println(DoubleListEquals(minimumAbsDifference1200.minimumAbsDifference(
-                TransformUtil.toIntArray(s1)), TransformUtil.toDoubleArrayList(s2)));
+                StringTransformUtil.toIntArray(s1)), StringTransformUtil.toDoubleArrayList(s2)));
     }
 
     public static boolean DoubleListEquals(List<List<Integer>> doubleList1, List<List<Integer>> doubleList2) {

@@ -1,6 +1,6 @@
 package codeofli.leetcode.dp.intro;
 
-import codeofli.my.leetcode.TransformUtil;
+import codeofli.my.leetcode.StringTransformUtil;
 
 import java.util.Arrays;
 
@@ -26,6 +26,6 @@ public class Jump45 {
 
     public static void main(String[] args) {
         Jump45 jump45 = new Jump45();
-        System.out.println(jump45.jump(TransformUtil.toIntArray("[2,3,1,1,4]")));
+        System.out.println(jump45.jump(StringTransformUtil.toIntArray("[2,3,1,1,4]")));
     }
 }

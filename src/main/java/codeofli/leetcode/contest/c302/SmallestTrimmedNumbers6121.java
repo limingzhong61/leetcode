@@ -1,11 +1,9 @@
 package codeofli.leetcode.contest.c302;
 
-import codeofli.my.leetcode.TransformUtil;
+import codeofli.my.leetcode.StringTransformUtil;
 
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.PriorityQueue;
-import java.util.Queue;
 
 public class SmallestTrimmedNumbers6121 {
     /**
@@ -71,9 +69,9 @@ public class SmallestTrimmedNumbers6121 {
     }
 
     private static void testCase(SmallestTrimmedNumbers6121 smallestTrimmedNumbers6121, String original, String original1, String original2) {
-        System.out.println(Arrays.toString(smallestTrimmedNumbers6121.smallestTrimmedNumbers(TransformUtil.toStringArray(original),
-                TransformUtil.toIntMatrix(original1))));
-        System.out.println(Arrays.equals(smallestTrimmedNumbers6121.smallestTrimmedNumbers(TransformUtil.toStringArray(original),
-                TransformUtil.toIntMatrix(original1)),TransformUtil.toIntArray(original2)));
+        System.out.println(Arrays.toString(smallestTrimmedNumbers6121.smallestTrimmedNumbers(StringTransformUtil.toStringArray(original),
+                StringTransformUtil.toIntMatrix(original1))));
+        System.out.println(Arrays.equals(smallestTrimmedNumbers6121.smallestTrimmedNumbers(StringTransformUtil.toStringArray(original),
+                StringTransformUtil.toIntMatrix(original1)), StringTransformUtil.toIntArray(original2)));
     }
 }

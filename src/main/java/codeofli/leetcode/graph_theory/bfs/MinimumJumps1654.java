@@ -1,6 +1,6 @@
 package codeofli.leetcode.graph_theory.bfs;
 
-import codeofli.my.leetcode.TransformUtil;
+import codeofli.my.leetcode.StringTransformUtil;
 
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -69,9 +69,9 @@ public class MinimumJumps1654 {
     }
 
     private static void testCase(MinimumJumps1654 minimumJumps1654, String s, int i, int i2, int i3, int i4) {
-        System.out.println(minimumJumps1654.minimumJumps(TransformUtil.
+        System.out.println(minimumJumps1654.minimumJumps(StringTransformUtil.
                 toIntArray(s), i, i2, i3));
-        System.out.println(minimumJumps1654.minimumJumps(TransformUtil.
+        System.out.println(minimumJumps1654.minimumJumps(StringTransformUtil.
                 toIntArray(s), i, i2, i3) == i4);
     }
 }

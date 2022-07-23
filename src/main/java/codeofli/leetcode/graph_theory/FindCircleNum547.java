@@ -1,6 +1,6 @@
 package codeofli.leetcode.graph_theory;
 
-import codeofli.my.leetcode.TransformUtil;
+import codeofli.my.leetcode.StringTransformUtil;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -101,10 +101,10 @@ public class FindCircleNum547 {
 
     public static void main(String[] args) {
         FindCircleNum547 findCircleNum547 = new FindCircleNum547();
-        System.out.println(findCircleNum547.findCircleNum(TransformUtil.toIntMatrix("[[1,1,0],[1,1,0],[0,0,1]]")));
-        System.out.println(findCircleNum547.findCircleNum(TransformUtil.toIntMatrix("[[1,1,0],[1,1,0],[0,0,1]]")) == 2);
+        System.out.println(findCircleNum547.findCircleNum(StringTransformUtil.toIntMatrix("[[1,1,0],[1,1,0],[0,0,1]]")));
+        System.out.println(findCircleNum547.findCircleNum(StringTransformUtil.toIntMatrix("[[1,1,0],[1,1,0],[0,0,1]]")) == 2);
 
-        System.out.println(findCircleNum547.findCircleNum(TransformUtil.toIntMatrix("[[1,0,0],[0,1,0],[0,0,1]]")));
-        System.out.println(findCircleNum547.findCircleNum(TransformUtil.toIntMatrix("[[1,0,0],[0,1,0],[0,0,1]]")) == 3);
+        System.out.println(findCircleNum547.findCircleNum(StringTransformUtil.toIntMatrix("[[1,0,0],[0,1,0],[0,0,1]]")));
+        System.out.println(findCircleNum547.findCircleNum(StringTransformUtil.toIntMatrix("[[1,0,0],[0,1,0],[0,0,1]]")) == 3);
     }
 }

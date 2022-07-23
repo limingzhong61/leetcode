@@ -1,6 +1,6 @@
 package codeofli.leetcode.everyday;
 
-import codeofli.my.leetcode.TransformUtil;
+import codeofli.my.leetcode.StringTransformUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +26,6 @@ public class ShiftGrid1260 {
 
     public static void main(String[] args) {
         ShiftGrid1260 shiftGrid1260 = new ShiftGrid1260();
-        System.out.println(shiftGrid1260.shiftGrid(TransformUtil.toIntMatrix("[[1,2,3],[4,5,6],[7,8,9]]"), 1));
+        System.out.println(shiftGrid1260.shiftGrid(StringTransformUtil.toIntMatrix("[[1,2,3],[4,5,6],[7,8,9]]"), 1));
     }
 }

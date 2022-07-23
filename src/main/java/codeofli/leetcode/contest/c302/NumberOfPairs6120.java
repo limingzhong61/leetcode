@@ -1,6 +1,6 @@
 package codeofli.leetcode.contest.c302;
 
-import codeofli.my.leetcode.TransformUtil;
+import codeofli.my.leetcode.StringTransformUtil;
 
 import java.util.Arrays;
 
@@ -34,6 +34,6 @@ public class NumberOfPairs6120 {
 
     public static void main(String[] args) {
         NumberOfPairs6120 numberOfPairs = new NumberOfPairs6120();
-        System.out.println(Arrays.toString(numberOfPairs.numberOfPairs(TransformUtil.toIntArray("[1,3,2,1,3,2,2]"))));
+        System.out.println(Arrays.toString(numberOfPairs.numberOfPairs(StringTransformUtil.toIntArray("[1,3,2,1,3,2,2]"))));
     }
 }

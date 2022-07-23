@@ -1,6 +1,6 @@
 package codeofli.my.solution_template;
 
-import codeofli.my.leetcode.TransformUtil;
+import codeofli.my.leetcode.StringTransformUtil;
 import codeofli.my.util.equals.EqualsUtil;
 
 import java.util.ArrayList;
@@ -67,6 +67,6 @@ public class StringCompute {
     private static void testCase(StringCompute diffWaysToCompute241, String s, String s2) {
         System.out.println(diffWaysToCompute241.diffWaysToCompute(s));
         System.out.println(EqualsUtil.EqualIgnoreOrder(diffWaysToCompute241.diffWaysToCompute(s),
-                TransformUtil.toArrayList(s2)));
+                StringTransformUtil.toArrayList(s2)));
     }
 }

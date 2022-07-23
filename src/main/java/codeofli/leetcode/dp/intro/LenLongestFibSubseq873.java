@@ -1,6 +1,6 @@
 package codeofli.leetcode.dp.intro;
 
-import codeofli.my.leetcode.TransformUtil;
+import codeofli.my.leetcode.StringTransformUtil;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -77,7 +77,7 @@ public class LenLongestFibSubseq873 {
     }
 
     private static void testCase(LenLongestFibSubseq873 lenLongestFibSubseq873, String s, int i) {
-        System.out.println(lenLongestFibSubseq873.lenLongestFibSubseq(TransformUtil.toIntArray(s)));
-        System.out.println(lenLongestFibSubseq873.lenLongestFibSubseq(TransformUtil.toIntArray(s)) == i);
+        System.out.println(lenLongestFibSubseq873.lenLongestFibSubseq(StringTransformUtil.toIntArray(s)));
+        System.out.println(lenLongestFibSubseq873.lenLongestFibSubseq(StringTransformUtil.toIntArray(s)) == i);
     }
 }

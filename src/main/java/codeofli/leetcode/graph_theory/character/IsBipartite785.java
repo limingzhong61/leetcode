@@ -1,8 +1,7 @@
 package codeofli.leetcode.graph_theory.character;
 
-import codeofli.my.leetcode.TransformUtil;
+import codeofli.my.leetcode.StringTransformUtil;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
@@ -47,11 +46,11 @@ public class IsBipartite785 {
     public static void main(String[] args) {
         IsBipartite785 isBipartite785 = new IsBipartite785();
 
-        System.out.println(isBipartite785.isBipartite(TransformUtil.toIntMatrix("[[1,2,3],[0,2],[0,1,3],[0,2]]")));
-        System.out.println((String.valueOf(isBipartite785.isBipartite(TransformUtil.toIntMatrix(
+        System.out.println(isBipartite785.isBipartite(StringTransformUtil.toIntMatrix("[[1,2,3],[0,2],[0,1,3],[0,2]]")));
+        System.out.println((String.valueOf(isBipartite785.isBipartite(StringTransformUtil.toIntMatrix(
                 "[[1,2,3],[0,2],[0,1,3],[0,2]]")) == false).toUpperCase(Locale.ROOT)));
-        System.out.println(isBipartite785.isBipartite(TransformUtil.toIntMatrix("[[1,3],[0,2],[1,3],[0,2]]")));
-        System.out.println((String.valueOf(isBipartite785.isBipartite(TransformUtil.toIntMatrix(
+        System.out.println(isBipartite785.isBipartite(StringTransformUtil.toIntMatrix("[[1,3],[0,2],[1,3],[0,2]]")));
+        System.out.println((String.valueOf(isBipartite785.isBipartite(StringTransformUtil.toIntMatrix(
                 "[[1,3],[0,2],[1,3],[0,2]]")) == true).toUpperCase(Locale.ROOT)));
     }
 }

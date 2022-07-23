@@ -1,6 +1,6 @@
 package codeofli.leetcode.dp.intro.array;
 
-import codeofli.my.leetcode.TransformUtil;
+import codeofli.my.leetcode.StringTransformUtil;
 
 public class MaxProfit122 {
     /**
@@ -104,6 +104,6 @@ public class MaxProfit122 {
 
     public static void main(String[] args) {
         MaxProfit122 maxProfit122 = new MaxProfit122();
-        System.out.println(maxProfit122.maxProfit(TransformUtil.toIntArray("[7,1,5,3,6,4]")));
+        System.out.println(maxProfit122.maxProfit(StringTransformUtil.toIntArray("[7,1,5,3,6,4]")));
     }
 }

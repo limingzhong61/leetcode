@@ -1,6 +1,6 @@
 package codeofli.leetcode.contest;
 
-import codeofli.my.leetcode.TransformUtil;
+import codeofli.my.leetcode.StringTransformUtil;
 
 public class CalculateTax {
     public double calculateTax(int[][] brackets, int income) {
@@ -27,7 +27,7 @@ public class CalculateTax {
 
     public static void main(String[] args) {
         CalculateTax calculateTax = new CalculateTax();
-        calculateTax.calculateTax(TransformUtil.toIntMatrix("[[3,50],[7,10],[12,25]]"), 10);
+        calculateTax.calculateTax(StringTransformUtil.toIntMatrix("[[3,50],[7,10],[12,25]]"), 10);
     }
 
 }

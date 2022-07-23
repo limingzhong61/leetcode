@@ -1,6 +1,6 @@
 package codeofli.leetcode.graph_parse_ds.math;
 
-import codeofli.my.leetcode.TransformUtil;
+import codeofli.my.leetcode.StringTransformUtil;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -51,7 +51,7 @@ public class MajorityElement39 {
 
     public static void main(String[] args) {
         MajorityElement39 majorityElement = new MajorityElement39();
-        System.out.println(majorityElement.majorityElement(TransformUtil.toIntArray("[1, 2, 3, 2, 2, 2, 5, 4, 2]")));
+        System.out.println(majorityElement.majorityElement(StringTransformUtil.toIntArray("[1, 2, 3, 2, 2, 2, 5, 4, 2]")));
 
     }
 }

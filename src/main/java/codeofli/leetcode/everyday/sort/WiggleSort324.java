@@ -1,6 +1,6 @@
 package codeofli.leetcode.everyday.sort;
 
-import codeofli.my.leetcode.TransformUtil;
+import codeofli.my.leetcode.StringTransformUtil;
 
 import java.util.Arrays;
 
@@ -45,7 +45,7 @@ public class WiggleSort324 {
     }
 
     private static void testCase(WiggleSort324 wiggleSort324, String s) {
-        int[] nums1 = TransformUtil.toIntArray(s);
+        int[] nums1 = StringTransformUtil.toIntArray(s);
         wiggleSort324.wiggleSort(nums1);
         System.out.println(Arrays.toString(nums1));
     }

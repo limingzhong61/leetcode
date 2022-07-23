@@ -1,6 +1,6 @@
 package codeofli.leetcode.everyday;
 
-import codeofli.my.leetcode.TransformUtil;
+import codeofli.my.leetcode.StringTransformUtil;
 
 import java.util.Arrays;
 
@@ -206,7 +206,7 @@ public class CherryPickup741 {
 
     private static void testCase(CherryPickup741 cherryPickup741, String s, int i) {
 
-        System.out.println(cherryPickup741.cherryPickup(TransformUtil.toIntMatrix(s)));
-        System.out.println(cherryPickup741.cherryPickup(TransformUtil.toIntMatrix(s)) == i);
+        System.out.println(cherryPickup741.cherryPickup(StringTransformUtil.toIntMatrix(s)));
+        System.out.println(cherryPickup741.cherryPickup(StringTransformUtil.toIntMatrix(s)) == i);
     }
 }

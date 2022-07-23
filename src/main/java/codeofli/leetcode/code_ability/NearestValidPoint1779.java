@@ -1,6 +1,6 @@
 package codeofli.leetcode.code_ability;
 
-import codeofli.my.leetcode.TransformUtil;
+import codeofli.my.leetcode.StringTransformUtil;
 
 public class NearestValidPoint1779 {
     /**
@@ -31,8 +31,8 @@ public class NearestValidPoint1779 {
 
     public static void main(String[] args) {
         NearestValidPoint1779 nearestValidPoint = new NearestValidPoint1779();
-        System.out.println(nearestValidPoint.nearestValidPoint(3, 4, TransformUtil.toIntMatrix("[[1,2],[3,1],[2,4],[2,3],[4,4]]")));
-        System.out.println(nearestValidPoint.nearestValidPoint(3, 4, TransformUtil.toIntMatrix("[[1,2],[3,1],[2,4],[2,3],[4,4]]")) == 2);
+        System.out.println(nearestValidPoint.nearestValidPoint(3, 4, StringTransformUtil.toIntMatrix("[[1,2],[3,1],[2,4],[2,3],[4,4]]")));
+        System.out.println(nearestValidPoint.nearestValidPoint(3, 4, StringTransformUtil.toIntMatrix("[[1,2],[3,1],[2,4],[2,3],[4,4]]")) == 2);
 
     }
 }

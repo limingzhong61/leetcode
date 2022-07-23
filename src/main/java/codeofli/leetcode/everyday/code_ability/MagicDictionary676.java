@@ -1,6 +1,6 @@
 package codeofli.leetcode.everyday.code_ability;
 
-import codeofli.my.leetcode.TransformUtil;
+import codeofli.my.leetcode.StringTransformUtil;
 
 import java.util.*;
 
@@ -154,14 +154,14 @@ public class MagicDictionary676 {
         //testCase("[\"hello\",\"hallo\",\"leetcode\"]", TransformUtil.toStringArrayList("[\"hello\"]"));
         testCase("[[\"hello\",\"hallo\",\"leetcode\",\"judge\", \"judgg\"]]",
                 //
-                TransformUtil.toStringArrayList("[\"hello\" ,  \"hallo\" ,  \"hell\" ,  \"leetcodd\" ,  \"judge\" ,\"juggg\"]"));
+                StringTransformUtil.toStringArrayList("[\"hello\" ,  \"hallo\" ,  \"hell\" ,  \"leetcodd\" ,  \"judge\" ,\"juggg\"]"));
 //
 //[[], ,
     }
 
     private static void testCase(String str, List<String> list) {
         MagicDictionary magicDictionary = new MagicDictionary();
-        magicDictionary.buildDict(TransformUtil.toStringArray(str));
+        magicDictionary.buildDict(StringTransformUtil.toStringArray(str));
         //    [[], [["hello","hallo","leetcode"]], ["hello"], ["hallo"], ["hell"], ["leetcodd"]]
         for (var s : list) {
 

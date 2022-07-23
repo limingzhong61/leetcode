@@ -1,6 +1,6 @@
 package codeofli.leetcode.graph_parse_ds.bit_operation;
 
-import codeofli.my.leetcode.TransformUtil;
+import codeofli.my.leetcode.StringTransformUtil;
 
 public class SingleNumber56II {
     /**
@@ -27,6 +27,6 @@ public class SingleNumber56II {
 
     public static void main(String[] args) {
         SingleNumber56II singleNumber56II = new SingleNumber56II();
-        System.out.println(singleNumber56II.singleNumber(TransformUtil.toIntArray("[3,4,3,3]")));
+        System.out.println(singleNumber56II.singleNumber(StringTransformUtil.toIntArray("[3,4,3,3]")));
     }
 }

@@ -1,6 +1,6 @@
 package codeofli.leetcode.everyday.string;
 
-import codeofli.my.leetcode.TransformUtil;
+import codeofli.my.leetcode.StringTransformUtil;
 
 public class FindLUSlength522 {
     /**
@@ -58,9 +58,9 @@ public class FindLUSlength522 {
     }
 
     private static void testCase(FindLUSlength522 findLUSlength522, String s, int i) {
-        System.out.println(findLUSlength522.findLUSlength(TransformUtil.
+        System.out.println(findLUSlength522.findLUSlength(StringTransformUtil.
                 toStringArray(s)));
-        System.out.println(findLUSlength522.findLUSlength(TransformUtil.
+        System.out.println(findLUSlength522.findLUSlength(StringTransformUtil.
                 toStringArray(s)) == i);
     }
 }

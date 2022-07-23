@@ -1,6 +1,6 @@
 package codeofli.leetcode.dp.intro;
 
-import codeofli.my.leetcode.TransformUtil;
+import codeofli.my.leetcode.StringTransformUtil;
 
 public class MaxSubArray53 {
 
@@ -40,7 +40,7 @@ public class MaxSubArray53 {
         System.out.println(maxSubArray53.maxSubArray(new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4}));
         System.out.println(maxSubArray53.maxSubArray(new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4}) == 6);
 
-        System.out.println(maxSubArray53.maxSubArray(TransformUtil.toIntArray("[-2,1]")));
-        System.out.println(maxSubArray53.maxSubArray(TransformUtil.toIntArray("[-2,1]")) == 1);
+        System.out.println(maxSubArray53.maxSubArray(StringTransformUtil.toIntArray("[-2,1]")));
+        System.out.println(maxSubArray53.maxSubArray(StringTransformUtil.toIntArray("[-2,1]")) == 1);
     }
 }

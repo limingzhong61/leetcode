@@ -1,6 +1,6 @@
 package codeofli.leetcode.graph_theory;
 
-import codeofli.my.leetcode.TransformUtil;
+import codeofli.my.leetcode.StringTransformUtil;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -38,6 +38,6 @@ public class FloodFill733 {
 
     public static void main(String[] args) {
         FloodFill733 floodFill733 = new FloodFill733();
-        System.out.println(floodFill733.floodFill(TransformUtil.toIntMatrix("[[1,1,1],[1,1,0],[1,0,1]]"), 1, 1, 2));
+        System.out.println(floodFill733.floodFill(StringTransformUtil.toIntMatrix("[[1,1,1],[1,1,0],[1,0,1]]"), 1, 1, 2));
     }
 }

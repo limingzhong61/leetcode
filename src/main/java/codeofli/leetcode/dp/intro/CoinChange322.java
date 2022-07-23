@@ -1,6 +1,6 @@
 package codeofli.leetcode.dp.intro;
 
-import codeofli.my.leetcode.TransformUtil;
+import codeofli.my.leetcode.StringTransformUtil;
 
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -93,7 +93,7 @@ public class CoinChange322 {
     }
 
     private static void testCase(CoinChange322 coinChange322, String original, int amount, int x) {
-        System.out.println(coinChange322.coinChange(TransformUtil.toIntArray(original), amount));
-        System.out.println(coinChange322.coinChange(TransformUtil.toIntArray(original), amount) == x);
+        System.out.println(coinChange322.coinChange(StringTransformUtil.toIntArray(original), amount));
+        System.out.println(coinChange322.coinChange(StringTransformUtil.toIntArray(original), amount) == x);
     }
 }

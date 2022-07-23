@@ -1,6 +1,6 @@
 package codeofli.leetcode.everyday;
 
-import codeofli.my.leetcode.TransformUtil;
+import codeofli.my.leetcode.StringTransformUtil;
 
 import java.util.*;
 
@@ -102,9 +102,9 @@ public class MyCalendar729 {
     }
 
     private static void testCase(MyCalendar myCalendar, String s, String s2) {
-        int[][] matrix2 = TransformUtil.toIntMatrix(s);
+        int[][] matrix2 = StringTransformUtil.toIntMatrix(s);
         boolean[] res = new boolean[matrix2.length - 1];
-        boolean[] ans = TransformUtil.toBoolArray(s2);
+        boolean[] ans = StringTransformUtil.toBoolArray(s2);
         for (int i = 1; i < matrix2.length; i++) {
             res[i - 1] = myCalendar.book(matrix2[i][0], matrix2[i][1]);
             if (res[i - 1] != ans[i - 1]) {

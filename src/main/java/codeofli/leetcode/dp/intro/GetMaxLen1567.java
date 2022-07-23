@@ -1,6 +1,6 @@
 package codeofli.leetcode.dp.intro;
 
-import codeofli.my.leetcode.TransformUtil;
+import codeofli.my.leetcode.StringTransformUtil;
 
 public class GetMaxLen1567 {
     /**
@@ -45,7 +45,7 @@ public class GetMaxLen1567 {
     }
 
     private static void testCase(GetMaxLen1567 getMaxLen1567, String s, int i) {
-        System.out.println(getMaxLen1567.getMaxLen(TransformUtil.toIntArray(s)));
-        System.out.println(getMaxLen1567.getMaxLen(TransformUtil.toIntArray(s)) == i);
+        System.out.println(getMaxLen1567.getMaxLen(StringTransformUtil.toIntArray(s)));
+        System.out.println(getMaxLen1567.getMaxLen(StringTransformUtil.toIntArray(s)) == i);
     }
 }

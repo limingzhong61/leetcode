@@ -1,6 +1,6 @@
 package codeofli.leetcode.contest.c302;
 
-import codeofli.my.leetcode.TransformUtil;
+import codeofli.my.leetcode.StringTransformUtil;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -35,7 +35,7 @@ public class MaximumSum6164 {
 
     public static void main(String[] args) {
         MaximumSum6164 maximumSum6164 = new MaximumSum6164();
-        System.out.println(maximumSum6164.maximumSum(TransformUtil.toIntArray("[18,43,36,13,7]")));
-        System.out.println(maximumSum6164.maximumSum(TransformUtil.toIntArray("[10,12,19,14]")));
+        System.out.println(maximumSum6164.maximumSum(StringTransformUtil.toIntArray("[18,43,36,13,7]")));
+        System.out.println(maximumSum6164.maximumSum(StringTransformUtil.toIntArray("[10,12,19,14]")));
     }
 }

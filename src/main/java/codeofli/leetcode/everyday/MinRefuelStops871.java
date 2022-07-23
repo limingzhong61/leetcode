@@ -1,6 +1,6 @@
 package codeofli.leetcode.everyday;
 
-import codeofli.my.leetcode.TransformUtil;
+import codeofli.my.leetcode.StringTransformUtil;
 
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -134,7 +134,7 @@ public class MinRefuelStops871 {
     }
 
     private static void testCase(MinRefuelStops871 minRefuelStops871, int i, int startFuel, String s, int i2) {
-        System.out.println(minRefuelStops871.minRefuelStops(i, startFuel, TransformUtil.toIntMatrix(s)));
-        System.out.println(minRefuelStops871.minRefuelStops(i, startFuel, TransformUtil.toIntMatrix(s)) == i2);
+        System.out.println(minRefuelStops871.minRefuelStops(i, startFuel, StringTransformUtil.toIntMatrix(s)));
+        System.out.println(minRefuelStops871.minRefuelStops(i, startFuel, StringTransformUtil.toIntMatrix(s)) == i2);
     }
 }

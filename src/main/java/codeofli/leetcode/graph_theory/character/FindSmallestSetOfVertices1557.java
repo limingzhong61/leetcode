@@ -1,6 +1,6 @@
 package codeofli.leetcode.graph_theory.character;
 
-import codeofli.my.leetcode.TransformUtil;
+import codeofli.my.leetcode.StringTransformUtil;
 
 import java.util.*;
 
@@ -29,13 +29,13 @@ public class FindSmallestSetOfVertices1557 {
         FindSmallestSetOfVertices1557 findSmallestSetOfVertices1557 = new FindSmallestSetOfVertices1557();
 
         System.out.println(findSmallestSetOfVertices1557.findSmallestSetOfVertices(6,
-                TransformUtil.toDoubleArrayList("[[0,1],[0,2],[2,5],[3,4],[4,2]]")));
+                StringTransformUtil.toDoubleArrayList("[[0,1],[0,2],[2,5],[3,4],[4,2]]")));
         System.out.println(findSmallestSetOfVertices1557.findSmallestSetOfVertices(6,
-                TransformUtil.toDoubleArrayList("[[0,1],[0,2],[2,5],[3,4],[4,2]]")).equals(TransformUtil.toArrayList("[0,3]")));
+                StringTransformUtil.toDoubleArrayList("[[0,1],[0,2],[2,5],[3,4],[4,2]]")).equals(StringTransformUtil.toArrayList("[0,3]")));
 
         System.out.println(findSmallestSetOfVertices1557.findSmallestSetOfVertices(5,
-                TransformUtil.toDoubleArrayList("[[0,1],[2,1],[3,1],[1,4],[2,4]]")));
+                StringTransformUtil.toDoubleArrayList("[[0,1],[2,1],[3,1],[1,4],[2,4]]")));
         System.out.println(findSmallestSetOfVertices1557.findSmallestSetOfVertices(5,
-                TransformUtil.toDoubleArrayList("[[0,1],[2,1],[3,1],[1,4],[2,4]]")).equals(TransformUtil.toArrayList("[0,2,3]")));
+                StringTransformUtil.toDoubleArrayList("[[0,1],[2,1],[3,1],[1,4],[2,4]]")).equals(StringTransformUtil.toArrayList("[0,2,3]")));
     }
 }

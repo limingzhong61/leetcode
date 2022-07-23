@@ -1,6 +1,6 @@
 package codeofli.leetcode.graph_theory;
 
-import codeofli.my.leetcode.TransformUtil;
+import codeofli.my.leetcode.StringTransformUtil;
 
 public class NumIslands200 {
     public int numIslands(char[][] grid) {
@@ -34,26 +34,26 @@ public class NumIslands200 {
 
     public static void main(String[] args) {
         NumIslands200 numIslands200 = new NumIslands200();
-        System.out.println(numIslands200.numIslands(TransformUtil.toCharMatrix("[\n" +
+        System.out.println(numIslands200.numIslands(StringTransformUtil.toCharMatrix("[\n" +
                 "  [\"1\",\"1\",\"1\",\"1\",\"0\"],\n" +
                 "  [\"1\",\"1\",\"0\",\"1\",\"0\"],\n" +
                 "  [\"1\",\"1\",\"0\",\"0\",\"0\"],\n" +
                 "  [\"0\",\"0\",\"0\",\"0\",\"0\"]\n" +
                 "]")));
-        System.out.println(numIslands200.numIslands(TransformUtil.toCharMatrix("[\n" +
+        System.out.println(numIslands200.numIslands(StringTransformUtil.toCharMatrix("[\n" +
                 "  [\"1\",\"1\",\"1\",\"1\",\"0\"],\n" +
                 "  [\"1\",\"1\",\"0\",\"1\",\"0\"],\n" +
                 "  [\"1\",\"1\",\"0\",\"0\",\"0\"],\n" +
                 "  [\"0\",\"0\",\"0\",\"0\",\"0\"]\n" +
                 "]")) == 1);
 
-        System.out.println(numIslands200.numIslands(TransformUtil.toCharMatrix("[\n" +
+        System.out.println(numIslands200.numIslands(StringTransformUtil.toCharMatrix("[\n" +
                 "  [\"1\",\"1\",\"0\",\"0\",\"0\"],\n" +
                 "  [\"1\",\"1\",\"0\",\"0\",\"0\"],\n" +
                 "  [\"0\",\"0\",\"1\",\"0\",\"0\"],\n" +
                 "  [\"0\",\"0\",\"0\",\"1\",\"1\"]\n" +
                 "]")));
-        System.out.println(numIslands200.numIslands(TransformUtil.toCharMatrix("[\n" +
+        System.out.println(numIslands200.numIslands(StringTransformUtil.toCharMatrix("[\n" +
                 "  [\"1\",\"1\",\"0\",\"0\",\"0\"],\n" +
                 "  [\"1\",\"1\",\"0\",\"0\",\"0\"],\n" +
                 "  [\"0\",\"0\",\"1\",\"0\",\"0\"],\n" +

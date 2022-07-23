@@ -1,10 +1,9 @@
 package codeofli.leetcode.dp.intro;
 
-import codeofli.my.leetcode.TransformUtil;
+import codeofli.my.leetcode.StringTransformUtil;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 import java.util.TreeMap;
 
 public class DeleteAndEarn740 {
@@ -78,7 +77,7 @@ public class DeleteAndEarn740 {
 
     public static void main(String[] args) {
         DeleteAndEarn740 deleteAndEarn740 = new DeleteAndEarn740();
-        System.out.println(deleteAndEarn740.deleteAndEarn(TransformUtil.toIntArray("[3,4,2]")));
-        System.out.println(deleteAndEarn740.deleteAndEarn(TransformUtil.toIntArray("[2,2,3,3,3,4]")));
+        System.out.println(deleteAndEarn740.deleteAndEarn(StringTransformUtil.toIntArray("[3,4,2]")));
+        System.out.println(deleteAndEarn740.deleteAndEarn(StringTransformUtil.toIntArray("[2,2,3,3,3,4]")));
     }
 }

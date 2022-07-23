@@ -1,6 +1,6 @@
 package codeofli.leetcode.graph_parse_ds.simulation;
 
-import codeofli.my.leetcode.TransformUtil;
+import codeofli.my.leetcode.StringTransformUtil;
 
 import java.util.Arrays;
 
@@ -102,26 +102,26 @@ public class SpiralOrder29 {
         SpiralOrder29 spiralOrder29 = new SpiralOrder29();
 
         System.out.println(Arrays.toString(spiralOrder29.spiralOrder(
-                TransformUtil.toIntMatrix(" [[1,2,3],[4,5,6],[7,8,9]]"))));
+                StringTransformUtil.toIntMatrix(" [[1,2,3],[4,5,6],[7,8,9]]"))));
         System.out.println(Arrays.equals(spiralOrder29.spiralOrder(
-                TransformUtil.toIntMatrix(" [[1,2,3],[4,5,6],[7,8,9]]")), TransformUtil.toIntArray("[1,2,3,6,9,8,7,4,5]")));
+                StringTransformUtil.toIntMatrix(" [[1,2,3],[4,5,6],[7,8,9]]")), StringTransformUtil.toIntArray("[1,2,3,6,9,8,7,4,5]")));
 
         System.out.println(Arrays.toString(spiralOrder29.spiralOrder(
-                TransformUtil.toIntMatrix("  [[1,2,3,4],[5,6,7,8],[9,10,11,12]]"))));
+                StringTransformUtil.toIntMatrix("  [[1,2,3,4],[5,6,7,8],[9,10,11,12]]"))));
         System.out.println(Arrays.equals(spiralOrder29.spiralOrder(
-                TransformUtil.toIntMatrix(" [[1,2,3,4],[5,6,7,8],[9,10,11,12]]")),
-                TransformUtil.toIntArray("[1,2,3,4,8,12,11,10,9,5,6,7]")));
+                StringTransformUtil.toIntMatrix(" [[1,2,3,4],[5,6,7,8],[9,10,11,12]]")),
+                StringTransformUtil.toIntArray("[1,2,3,4,8,12,11,10,9,5,6,7]")));
 
         System.out.println(Arrays.toString(spiralOrder29.spiralOrder(
-                TransformUtil.toIntMatrix("  [[]]"))));
+                StringTransformUtil.toIntMatrix("  [[]]"))));
         System.out.println(Arrays.equals(spiralOrder29.spiralOrder(
-                TransformUtil.toIntMatrix("[[]]")),
-                TransformUtil.toIntArray("[]")));
+                StringTransformUtil.toIntMatrix("[[]]")),
+                StringTransformUtil.toIntArray("[]")));
 
         System.out.println(Arrays.toString(spiralOrder29.spiralOrder(
-                TransformUtil.toIntMatrix("[]"))));
+                StringTransformUtil.toIntMatrix("[]"))));
         System.out.println(Arrays.equals(spiralOrder29.spiralOrder(
-                TransformUtil.toIntMatrix("[]")),
-                TransformUtil.toIntArray("[]")));
+                StringTransformUtil.toIntMatrix("[]")),
+                StringTransformUtil.toIntArray("[]")));
     }
 }

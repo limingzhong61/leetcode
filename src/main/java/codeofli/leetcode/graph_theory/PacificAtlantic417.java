@@ -1,6 +1,6 @@
 package codeofli.leetcode.graph_theory;
 
-import codeofli.my.leetcode.TransformUtil;
+import codeofli.my.leetcode.StringTransformUtil;
 
 import java.util.*;
 
@@ -156,6 +156,6 @@ public class PacificAtlantic417 {
 
     public static void main(String[] args) {
         PacificAtlantic417 pacificAtlantic417 = new PacificAtlantic417();
-        System.out.println(pacificAtlantic417.pacificAtlantic(TransformUtil.toIntMatrix("[[2,1],[1,2]]")));
+        System.out.println(pacificAtlantic417.pacificAtlantic(StringTransformUtil.toIntMatrix("[[2,1],[1,2]]")));
     }
 }

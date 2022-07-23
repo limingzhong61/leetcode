@@ -1,6 +1,6 @@
 package codeofli.leetcode.graph_parse_ds.divide_and_conquer;
 
-import codeofli.my.leetcode.TransformUtil;
+import codeofli.my.leetcode.StringTransformUtil;
 
 import java.util.Deque;
 import java.util.LinkedList;
@@ -100,29 +100,29 @@ public class VerifyPostorder33 {
 
     public static void main(String[] args) {
         VerifyPostorder33 verifyPostorder33 = new VerifyPostorder33();
-        System.out.println(verifyPostorder33.verifyPostorder(TransformUtil.toIntArray("[1,6,3,2,5]")));
+        System.out.println(verifyPostorder33.verifyPostorder(StringTransformUtil.toIntArray("[1,6,3,2,5]")));
         System.out.println(String.valueOf(
-                        verifyPostorder33.verifyPostorder(TransformUtil.toIntArray("[1,6,3,2,5]")) == false
+                        verifyPostorder33.verifyPostorder(StringTransformUtil.toIntArray("[1,6,3,2,5]")) == false
                 ).toUpperCase(Locale.ROOT));
-        System.out.println(verifyPostorder33.verifyPostorder(TransformUtil.toIntArray("[1,3,2,6,5]")));
+        System.out.println(verifyPostorder33.verifyPostorder(StringTransformUtil.toIntArray("[1,3,2,6,5]")));
         System.out.println(String.valueOf(
-                        verifyPostorder33.verifyPostorder(TransformUtil.toIntArray("[1,3,2,6,5]")) == true
+                        verifyPostorder33.verifyPostorder(StringTransformUtil.toIntArray("[1,3,2,6,5]")) == true
                 ).toUpperCase(Locale.ROOT));
-        System.out.println(verifyPostorder33.verifyPostorder(TransformUtil.toIntArray("[1,2,5,10,6,9,4,3]")));
+        System.out.println(verifyPostorder33.verifyPostorder(StringTransformUtil.toIntArray("[1,2,5,10,6,9,4,3]")));
         System.out.println(String.valueOf(
-                        verifyPostorder33.verifyPostorder(TransformUtil.toIntArray("[1,2,5,10,6,9,4,3]")) == false
+                        verifyPostorder33.verifyPostorder(StringTransformUtil.toIntArray("[1,2,5,10,6,9,4,3]")) == false
                 ).toUpperCase(Locale.ROOT));
-        System.out.println(verifyPostorder33.verifyPostorder(TransformUtil.toIntArray("[4, 6, 7, 5]")));
+        System.out.println(verifyPostorder33.verifyPostorder(StringTransformUtil.toIntArray("[4, 6, 7, 5]")));
         System.out.println(String.valueOf(
-                        verifyPostorder33.verifyPostorder(TransformUtil.toIntArray("[4, 6, 7, 5]")) == true
+                        verifyPostorder33.verifyPostorder(StringTransformUtil.toIntArray("[4, 6, 7, 5]")) == true
                 ).toUpperCase(Locale.ROOT));
-        System.out.println(verifyPostorder33.verifyPostorder(TransformUtil.toIntArray("[5, 4, 3, 2, 1]")));
+        System.out.println(verifyPostorder33.verifyPostorder(StringTransformUtil.toIntArray("[5, 4, 3, 2, 1]")));
         System.out.println(String.valueOf(
-                        verifyPostorder33.verifyPostorder(TransformUtil.toIntArray("[5, 4, 3, 2, 1]")) == true
+                        verifyPostorder33.verifyPostorder(StringTransformUtil.toIntArray("[5, 4, 3, 2, 1]")) == true
                 ).toUpperCase(Locale.ROOT));
-        System.out.println(verifyPostorder33.verifyPostorder(TransformUtil.toIntArray("[]")));
+        System.out.println(verifyPostorder33.verifyPostorder(StringTransformUtil.toIntArray("[]")));
         System.out.println(String.valueOf(
-                        verifyPostorder33.verifyPostorder(TransformUtil.toIntArray("[]")) == true
+                        verifyPostorder33.verifyPostorder(StringTransformUtil.toIntArray("[]")) == true
                 ).toUpperCase(Locale.ROOT));
     }
 }

@@ -1,6 +1,6 @@
 package codeofli.leetcode.everyday.code_ability;
 
-import codeofli.my.leetcode.TransformUtil;
+import codeofli.my.leetcode.StringTransformUtil;
 import codeofli.my.util.equals.EqualsUtil;
 
 import java.util.*;
@@ -66,6 +66,6 @@ public class DiffWaysToCompute241 {
     private static void testCase(DiffWaysToCompute241 diffWaysToCompute241, String s, String s2) {
         System.out.println(diffWaysToCompute241.diffWaysToCompute(s));
         System.out.println(EqualsUtil.EqualIgnoreOrder(diffWaysToCompute241.diffWaysToCompute(s),
-                TransformUtil.toArrayList(s2)));
+                StringTransformUtil.toArrayList(s2)));
     }
 }

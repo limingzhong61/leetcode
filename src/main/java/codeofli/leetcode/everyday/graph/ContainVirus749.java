@@ -1,8 +1,6 @@
 package codeofli.leetcode.everyday.graph;
 
-import codeofli.leetcode.contest.c302.SmallestTrimmedNumbers6121;
-import codeofli.my.leetcode.TransformUtil;
-import codeofli.my.util.matrix.MatrixUtil;
+import codeofli.my.leetcode.StringTransformUtil;
 
 import java.util.*;
 
@@ -281,9 +279,9 @@ public class ContainVirus749 {
     }
 
     private static void testCase(ContainVirus749 containVirus749, String original, int x) {
-        System.out.println(containVirus749.containVirus(TransformUtil.toIntMatrix(
+        System.out.println(containVirus749.containVirus(StringTransformUtil.toIntMatrix(
                 original)));
-        System.out.println(containVirus749.containVirus(TransformUtil.toIntMatrix(
+        System.out.println(containVirus749.containVirus(StringTransformUtil.toIntMatrix(
                 original)) == x);
     }
 }

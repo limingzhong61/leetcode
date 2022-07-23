@@ -1,6 +1,6 @@
 package codeofli.leetcode.everyday;
 
-import codeofli.my.leetcode.TransformUtil;
+import codeofli.my.leetcode.StringTransformUtil;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -63,19 +63,19 @@ public class FindPairs532 {
     public static void main(String[] args) {
         FindPairs532 findPairs532 = new FindPairs532();
         //
-        System.out.println(findPairs532.findPairs(TransformUtil.toIntArray("[3, 1, 4, 1, 5]"), 2));
-        System.out.println(findPairs532.findPairs(TransformUtil.toIntArray("[3, 1, 4, 1, 5]"), 2) == 2);
+        System.out.println(findPairs532.findPairs(StringTransformUtil.toIntArray("[3, 1, 4, 1, 5]"), 2));
+        System.out.println(findPairs532.findPairs(StringTransformUtil.toIntArray("[3, 1, 4, 1, 5]"), 2) == 2);
 
-        System.out.println(findPairs532.findPairs(TransformUtil.toIntArray("[1, 2, 3, 4, 5]"), 1));
-        System.out.println(findPairs532.findPairs(TransformUtil.toIntArray("[1, 2, 3, 4, 5]"), 1) == 4);
+        System.out.println(findPairs532.findPairs(StringTransformUtil.toIntArray("[1, 2, 3, 4, 5]"), 1));
+        System.out.println(findPairs532.findPairs(StringTransformUtil.toIntArray("[1, 2, 3, 4, 5]"), 1) == 4);
 
-        System.out.println(findPairs532.findPairs(TransformUtil.toIntArray("[1, 3, 1, 5, 4]"), 0));
-        System.out.println(findPairs532.findPairs(TransformUtil.toIntArray("[1, 3, 1, 5, 4]"), 0) == 1);
+        System.out.println(findPairs532.findPairs(StringTransformUtil.toIntArray("[1, 3, 1, 5, 4]"), 0));
+        System.out.println(findPairs532.findPairs(StringTransformUtil.toIntArray("[1, 3, 1, 5, 4]"), 0) == 1);
 
-        System.out.println(findPairs532.findPairs(TransformUtil.toIntArray("[1,2,3,4,5]"), 0));
-        System.out.println(findPairs532.findPairs(TransformUtil.toIntArray("[1,2,3,4,5]"), 0) == 0);
+        System.out.println(findPairs532.findPairs(StringTransformUtil.toIntArray("[1,2,3,4,5]"), 0));
+        System.out.println(findPairs532.findPairs(StringTransformUtil.toIntArray("[1,2,3,4,5]"), 0) == 0);
 
-        System.out.println(findPairs532.findPairs(TransformUtil.toIntArray("[1,1,1,2,2]"), 0));
-        System.out.println(findPairs532.findPairs(TransformUtil.toIntArray("[1,1,1,2,2]"), 0) == 2);
+        System.out.println(findPairs532.findPairs(StringTransformUtil.toIntArray("[1,1,1,2,2]"), 0));
+        System.out.println(findPairs532.findPairs(StringTransformUtil.toIntArray("[1,1,1,2,2]"), 0) == 2);
     }
 }

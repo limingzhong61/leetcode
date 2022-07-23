@@ -2,9 +2,8 @@ package codeofli.my.leetcode;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Stream;
 
-public class TransformUtil {
+public class StringTransformUtil {
 
     public static String ArrayToJavaForm(String original) {
         return original.replaceAll("\\[", "{").

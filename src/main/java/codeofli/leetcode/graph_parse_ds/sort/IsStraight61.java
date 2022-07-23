@@ -1,6 +1,6 @@
 package codeofli.leetcode.graph_parse_ds.sort;
 
-import codeofli.my.leetcode.TransformUtil;
+import codeofli.my.leetcode.StringTransformUtil;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -51,19 +51,19 @@ public class IsStraight61 {
     public static void main(String[] args) {
         IsStraight61 isStraight61 = new IsStraight61();
 
-        System.out.println(isStraight61.isStraight(TransformUtil.toIntArray("[1,2,3,4,5]")));
+        System.out.println(isStraight61.isStraight(StringTransformUtil.toIntArray("[1,2,3,4,5]")));
         System.out.println(String.valueOf(
-                isStraight61.isStraight(TransformUtil.toIntArray("[1,2,3,4,5]")
+                isStraight61.isStraight(StringTransformUtil.toIntArray("[1,2,3,4,5]")
                 ) == true).toUpperCase(Locale.ROOT));
 
-        System.out.println(isStraight61.isStraight(TransformUtil.toIntArray("[0,0,1,2,5]")));
+        System.out.println(isStraight61.isStraight(StringTransformUtil.toIntArray("[0,0,1,2,5]")));
         System.out.println(String.valueOf(
-                isStraight61.isStraight(TransformUtil.toIntArray("[0,0,1,2,5]")
+                isStraight61.isStraight(StringTransformUtil.toIntArray("[0,0,1,2,5]")
                 ) == true).toUpperCase(Locale.ROOT));
 
-        System.out.println(isStraight61.isStraight(TransformUtil.toIntArray("[0,0,2,2,5]")));
+        System.out.println(isStraight61.isStraight(StringTransformUtil.toIntArray("[0,0,2,2,5]")));
         System.out.println(String.valueOf(
-                isStraight61.isStraight(TransformUtil.toIntArray("[0,0,2,2,5]")
+                isStraight61.isStraight(StringTransformUtil.toIntArray("[0,0,2,2,5]")
                 ) == false).toUpperCase(Locale.ROOT));
     }
 }

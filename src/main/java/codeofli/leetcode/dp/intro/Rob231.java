@@ -1,6 +1,6 @@
 package codeofli.leetcode.dp.intro;
 
-import codeofli.my.leetcode.TransformUtil;
+import codeofli.my.leetcode.StringTransformUtil;
 
 public class Rob231 {
     /**
@@ -48,7 +48,7 @@ public class Rob231 {
     }
 
     private static void testCase(Rob231 rob231, String s, int i) {
-        System.out.println(rob231.rob(TransformUtil.toIntArray(s)));
-        System.out.println(rob231.rob(TransformUtil.toIntArray(s)) == i);
+        System.out.println(rob231.rob(StringTransformUtil.toIntArray(s)));
+        System.out.println(rob231.rob(StringTransformUtil.toIntArray(s)) == i);
     }
 }

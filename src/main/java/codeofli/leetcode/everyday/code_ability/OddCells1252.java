@@ -1,6 +1,6 @@
 package codeofli.leetcode.everyday.code_ability;
 
-import codeofli.my.leetcode.TransformUtil;
+import codeofli.my.leetcode.StringTransformUtil;
 
 public class OddCells1252 {
     /**
@@ -79,7 +79,7 @@ public class OddCells1252 {
 
     public static void main(String[] args) {
         OddCells1252 oddCells1252 = new OddCells1252();
-        System.out.println(oddCells1252.oddCells(2, 3, TransformUtil.toIntMatrix("[[0,1],[1,1]]")));
-        System.out.println(oddCells1252.oddCells(2, 3, TransformUtil.toIntMatrix("[[0,1],[1,1]]")) == 6);
+        System.out.println(oddCells1252.oddCells(2, 3, StringTransformUtil.toIntMatrix("[[0,1],[1,1]]")));
+        System.out.println(oddCells1252.oddCells(2, 3, StringTransformUtil.toIntMatrix("[[0,1],[1,1]]")) == 6);
     }
 }

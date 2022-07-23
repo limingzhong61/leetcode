@@ -1,6 +1,6 @@
 package codeofli.leetcode.graph_parse_ds.two_pointer;
 
-import codeofli.my.leetcode.TransformUtil;
+import codeofli.my.leetcode.StringTransformUtil;
 
 import java.util.Arrays;
 
@@ -22,7 +22,7 @@ public class Exchange21 {
 
     public static void main(String[] args) {
         Exchange21 exchange21 = new Exchange21();
-        System.out.println(Arrays.toString(exchange21.exchange(TransformUtil.toIntArray("[1,2,3,4]"))));
-        System.out.println(Arrays.toString(exchange21.exchange(TransformUtil.toIntArray("[1,3,2,4]"))));
+        System.out.println(Arrays.toString(exchange21.exchange(StringTransformUtil.toIntArray("[1,2,3,4]"))));
+        System.out.println(Arrays.toString(exchange21.exchange(StringTransformUtil.toIntArray("[1,3,2,4]"))));
     }
 }
