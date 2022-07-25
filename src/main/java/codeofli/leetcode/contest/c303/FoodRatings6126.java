@@ -2,16 +2,68 @@ package codeofli.leetcode.contest.c303;
 
 import codeofli.my.leetcode.StringTransformUtil;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.TreeMap;
+import java.util.*;
 
 public class FoodRatings6126 {
+    static class FoodRating{
+        String food;
+        int rating;
+        FoodRating(String food,int rating){
+            this.food = food;
+            this.rating = rating;
+        }
+    }
+
+    /**
+     * 用(评分，食物）排序
+     */
+    static class FoodRatings {
+        /**
+         * 有序+动态查找 平衡树-红黑树
+         */
+        // <烹饪方式,(评分，食物)>
+        HashMap<String, TreeSet<FoodRating>> cuisineRatingMap;
+        //<食物,(评分，食物)>
+        HashMap<String, FoodRating> foodRatingMap;
+        //<食物，烹饪方式>
+        HashMap<String, String> cuiMap;
+        public FoodRatings(String[] foods, String[] cuisines, int[] ratings) {
+            cuisineRatingMap = new HashMap<>();
+            foodRatingMap = new HashMap<>();
+            cuiMap = new HashMap<>();
+            for(int i = 0; i < foods.length; i++){
+                TreeSet<FoodRating> treeSet = cuisineRatingMap.getOrDefault(cuisines[i], new TreeSet<FoodRating>((a, b) -> {
+                    if(a.rating == b.rating){
+                        return a.food.compareTo(b.food);
+                    }
+                    return b.rating - a.rating;
+                }));
+                FoodRating foodRating = new FoodRating(foods[i], ratings[i]);
+                treeSet.add(foodRating);
+                foodRatingMap.put(foods[i], foodRating);
+                cuiMap.put(foods[i], cuisines[i]);
+                cuisineRatingMap.put(cuisines[i], treeSet);
+            }
+        }
+
+        public void changeRating(String food, int newRating) {
+            FoodRating foodRating = foodRatingMap.get(food);
+            TreeSet<FoodRating> treeSet = cuisineRatingMap.get(cuiMap.get(food));
+            treeSet.remove(foodRating);
+            foodRatingMap.remove(foodRating);
+            FoodRating foodRating1 = new FoodRating(food, newRating);
+            foodRatingMap.put(food,foodRating1);
+            treeSet.add(foodRating1);
+        }
+
+        public String highestRated(String cuisine) {
+            return cuisineRatingMap.get(cuisine).first().food;
+        }
+    }
     /**
      * 1 <= n <= 2 * 104
      */
-    static class FoodRatings {
+    static class FoodRatings2 {
         /**
          * 有序+动态查找 平衡树-红黑树
          */
@@ -19,7 +71,7 @@ public class FoodRatings6126 {
         HashMap<String, Integer> rateMap;
         HashMap<String, String> cuiMap;
 
-        public FoodRatings(String[] foods, String[] cuisines, int[] ratings) {
+        public FoodRatings2(String[] foods, String[] cuisines, int[] ratings) {
             // <cuiName,treeMap>
             cuisinesMap = new HashMap<>();
             //<food,rate>
@@ -87,4 +139,5 @@ public class FoodRatings6126 {
             }
         }
     }
+
 }
