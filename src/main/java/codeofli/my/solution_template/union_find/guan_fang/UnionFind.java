@@ -1,4 +1,7 @@
-package codeofli.my.solution_template.graph_theory.guan_fang;
+package codeofli.my.solution_template.union_find.guan_fang;
+
+import codeofli.leetcode.graph_theory.LargestComponentSize952;
+import codeofli.my.leetcode.StringTransformUtil;
 
 import java.util.Arrays;
 
@@ -47,5 +50,7 @@ class UnionFind {
         y = findset(y);
         return x == y;
     }
+
+
 }
 

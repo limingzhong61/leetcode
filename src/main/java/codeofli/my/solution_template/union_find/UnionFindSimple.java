@@ -1,15 +1,15 @@
-package codeofli.my.solution_template.graph_theory;
-
+package codeofli.my.solution_template.union_find;
 /**
- * 并查集模板
+ * 并查集-简单实现模板
+ * 此模板没有size数组记录每个根结点的结点数。(size数组可以删除，代码实现更简单，但是运行速度会变慢)
  * @author LiMingzhong
  *
  */
-public class UnionFind {
+public class UnionFindSimple {
     private int count; //记录连通分量
     private int[] parent; //节点x的根节点是parent[x]
 
-    public UnionFind(int n) {
+    public UnionFindSimple(int n) {
         //一开始互不相通
         this.count = n;
         //一开始，每个节点是自己的父节点
@@ -68,4 +68,3 @@ public class UnionFind {
     //    return x;
     //}
 }
-
