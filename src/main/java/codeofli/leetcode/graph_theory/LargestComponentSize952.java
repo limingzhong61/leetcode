@@ -106,8 +106,8 @@ public class LargestComponentSize952 {
         }
 
 
-        ////返回某个节点x的根节点
-        //private int find(int x) {
+        //返回某个节点x的根节点
+        //public int find(int x) {
         //    //根节点的parent[x]==x
         //    while (parent[x] != x) {
         //        x = parent[x];
