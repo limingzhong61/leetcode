@@ -1,9 +1,9 @@
 package codeofli.leetcode.linkedList;
 
 //Definition for singly-linked list.
-class ListNode {
+public class ListNode {
     int val;
-    ListNode next;
+    public ListNode next;
 
     ListNode(int x) {
         val = x;

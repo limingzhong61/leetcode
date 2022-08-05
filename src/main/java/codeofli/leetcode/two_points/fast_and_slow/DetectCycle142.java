@@ -1,11 +1,14 @@
-package codeofli.leetcode.linkedList;
+package codeofli.leetcode.two_points.fast_and_slow;
 
+
+import codeofli.leetcode.linkedList.ListNode;
 
 import java.util.*;
 
 public class DetectCycle142 {
     /**
      * leetcode:快慢指针
+     * 从相遇点到入环点的距离加上 n-1圈的环长，恰好等于从链表头部到入环点的距离。
      */
     public ListNode detectCycle(ListNode head) {
         ListNode slow = head,fast = head;
