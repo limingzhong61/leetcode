@@ -1,17 +1,20 @@
-package codeofli.my.math;
+package codeofli.leetcode.other;
 
 import java.util.Arrays;
 
-public class Digit {
-
-    public static int getNumberDigitSum(int num){
-        int sum = 0;
-        //因为0不计入统计，故不用处理num == 0的情况
-        while (num != 0) {
-            sum += num % 10;
-            num /= 10;
+public class IsPalindrome9 {
+    public boolean isPalindrome(int x) {
+        if(x < 0){// 负数因为有负号，都不是
+            return  false;
         }
-        return sum;
+
+        int[] digits = getNumberDigitArray(x);
+        for(int i = 0,j = digits.length -1; i < j; i++,j--){
+            if(digits[i] != digits[j]){
+                return false;
+            }
+        }
+        return  true;
     }
 
     /**

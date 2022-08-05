@@ -1,8 +1,8 @@
-package codeofli.leetcode.graph_parse_ds.data_structure;
+package codeofli.leetcode.data_structure;
 
 
+import codeofli.leetcode.data_structure.linked_list.ListNode;
 import codeofli.my.leetcode.LinkedList;
-import codeofli.my.leetcode.ListNode;
 
 public class ReverseList24 {
     /**

@@ -1,5 +1,7 @@
 package codeofli.my.leetcode;
 
+import codeofli.leetcode.data_structure.linked_list.ListNode;
+
 /**
  * 链表
  */

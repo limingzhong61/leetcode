@@ -1,11 +1,13 @@
 package codeofli.my.leetcode;
 
+import codeofli.leetcode.data_structure.linked_list.ListNode;
+
 /**
  * 链表
  */
 public class LinkedList {
     /**
-     * @param s ,格式：“1->2->4”
+     * @param s ,格式：“[1,2,3,4,5]”
      * @return
      */
     public static ListNode StrToLinkedList2(String s){

@@ -1,4 +1,4 @@
-package codeofli.leetcode.graph_parse_ds.data_structure;
+package codeofli.leetcode.data_structure;
 
 import java.util.Deque;
 import java.util.LinkedList;

@@ -1,4 +1,4 @@
-package codeofli.leetcode.primary.linked_list;
+package codeofli.leetcode.data_structure.linked_list;
 
 public class ReverseList206 {
     /**
@@ -8,7 +8,7 @@ public class ReverseList206 {
         //逆置后，head.next = null;
         return reverse(head,null);
     }
-    public ListNode reverse(ListNode head,ListNode preNode){
+    public ListNode reverse(ListNode head, ListNode preNode){
         if(head == null){ //preNode 为尾结点
             return preNode;
         }

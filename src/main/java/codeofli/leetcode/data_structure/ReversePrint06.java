@@ -1,7 +1,7 @@
-package codeofli.leetcode.graph_parse_ds.data_structure;
+package codeofli.leetcode.data_structure;
 
 
-import codeofli.my.leetcode.ListNode;
+import codeofli.leetcode.data_structure.linked_list.ListNode;
 
 import java.util.ArrayList;
 import java.util.List;

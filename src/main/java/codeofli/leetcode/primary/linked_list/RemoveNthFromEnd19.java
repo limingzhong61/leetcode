@@ -1,5 +1,7 @@
 package codeofli.leetcode.primary.linked_list;
 
+import codeofli.leetcode.data_structure.linked_list.ListNode;
+
 public class RemoveNthFromEnd19 {
 
     /**
