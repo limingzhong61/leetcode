@@ -1,6 +1,6 @@
 package codeofli.leetcode.graph_theory.traverse;
 
-import codeofli.my.leetcode.StringTransformUtil;
+import codeofli.my.leetcode.TransformUtil;
 
 import java.util.*;
 
@@ -52,11 +52,11 @@ public class ShortestPathLength847 {
     public static void main(String[] args) {
         ShortestPathLength847 shortestPathLength847 = new ShortestPathLength847();
 
-        System.out.println(shortestPathLength847.shortestPathLength(StringTransformUtil.toIntMatrix("[[1,2,3],[0],[0],[0]]")));
-        System.out.println(shortestPathLength847.shortestPathLength(StringTransformUtil.toIntMatrix("[[1,2,3],[0],[0],[0]]")) == 4);
+        System.out.println(shortestPathLength847.shortestPathLength(TransformUtil.toIntMatrix("[[1,2,3],[0],[0],[0]]")));
+        System.out.println(shortestPathLength847.shortestPathLength(TransformUtil.toIntMatrix("[[1,2,3],[0],[0],[0]]")) == 4);
 
-        System.out.println(shortestPathLength847.shortestPathLength(StringTransformUtil.toIntMatrix(" [[1],[0,2,4],[1,3,4],[2],[1,2]]")));
-        System.out.println(shortestPathLength847.shortestPathLength(StringTransformUtil.toIntMatrix(" [[1],[0,2,4],[1,3,4],[2],[1,2]]")) == 4);
+        System.out.println(shortestPathLength847.shortestPathLength(TransformUtil.toIntMatrix(" [[1],[0,2,4],[1,3,4],[2],[1,2]]")));
+        System.out.println(shortestPathLength847.shortestPathLength(TransformUtil.toIntMatrix(" [[1],[0,2,4],[1,3,4],[2],[1,2]]")) == 4);
     }
 
 

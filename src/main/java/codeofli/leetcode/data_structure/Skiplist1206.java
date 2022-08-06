@@ -1,11 +1,9 @@
 package codeofli.leetcode.data_structure;
 
-import codeofli.my.leetcode.StringTransformUtil;
+import codeofli.my.leetcode.TransformUtil;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class Skiplist1206 {
     /**
@@ -193,9 +191,9 @@ public class Skiplist1206 {
     }
 
     public static void main(String[] args) {
-        String[] opts = StringTransformUtil.toStringArray("[\"Skiplist\",\"add\",\"add\",\"add\",\"add\"" +
+        String[] opts = TransformUtil.toStringArray("[\"Skiplist\",\"add\",\"add\",\"add\",\"add\"" +
                 ",\"search\",\"erase\",\"search\",\"search\",\"search\"]");
-        int[] vals = StringTransformUtil.toIntArray("[[-1],[0],[5],[2],[1],[0],[5],[2],[3],[2]]");
+        int[] vals = TransformUtil.toIntArray("[[-1],[0],[5],[2],[1],[0],[5],[2],[3],[2]]");
         Skiplist skiplist = new Skiplist();
         for (int i = 1; i < opts.length; i++) {
             if ("add".equals(opts[i])) {

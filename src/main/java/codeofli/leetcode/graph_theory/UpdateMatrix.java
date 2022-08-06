@@ -1,6 +1,6 @@
 package codeofli.leetcode.graph_theory;
 
-import codeofli.my.leetcode.StringTransformUtil;
+import codeofli.my.leetcode.TransformUtil;
 import codeofli.my.util.matrix.MatrixUtil;
 
 import java.util.LinkedList;
@@ -46,11 +46,11 @@ public class UpdateMatrix {
 
         public static void main (String[]args){
             UpdateMatrix updateMatrix = new UpdateMatrix();
-            MatrixUtil.printMatrix(updateMatrix.updateMatrix(StringTransformUtil.toIntMatrix("[[0,0,0],[0,1,0],[1,1,1]]")));
+            MatrixUtil.printMatrix(updateMatrix.updateMatrix(TransformUtil.toIntMatrix("[[0,0,0],[0,1,0],[1,1,1]]")));
 
-            MatrixUtil.printMatrix(updateMatrix.updateMatrix(StringTransformUtil.toIntMatrix("[[0,0,0],[1,1,1],[1,1,1]]")));
+            MatrixUtil.printMatrix(updateMatrix.updateMatrix(TransformUtil.toIntMatrix("[[0,0,0],[1,1,1],[1,1,1]]")));
 
-            MatrixUtil.printMatrix(updateMatrix.updateMatrix(StringTransformUtil.toIntMatrix("[[1,1,0,0,1,0,0,1,1,0],[1,0,0,1,0,1,1,1,1,1],[1,1,1,0,0,1,1,1,1,0],[0,1,1,1,0,1,1,1,1,1]," +
+            MatrixUtil.printMatrix(updateMatrix.updateMatrix(TransformUtil.toIntMatrix("[[1,1,0,0,1,0,0,1,1,0],[1,0,0,1,0,1,1,1,1,1],[1,1,1,0,0,1,1,1,1,0],[0,1,1,1,0,1,1,1,1,1]," +
                     "[0,0,1,1,1,1,1,1,1,0],[1,1,1,1,1,1,0,1,1,1],[0,1,1,1,1,1,1,0,0,1],[1,1,1,1,1,0,0,1,1,1],[0,1,0,1,1,0,1,1,1,1],[1,1,1,0,1,0,1,1,1,1]]")));
         }
     }

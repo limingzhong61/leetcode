@@ -1,6 +1,6 @@
 package codeofli.leetcode.everyday.slide_window;
 
-import codeofli.my.leetcode.StringTransformUtil;
+import codeofli.my.leetcode.TransformUtil;
 
 
 public class MovingAverageII41 {
@@ -28,7 +28,7 @@ public class MovingAverageII41 {
     }
 
     public static void main(String[] args) {
-        int[] array = StringTransformUtil.toIntArray(" [[3], [1], [10], [3], [5]]");
+        int[] array = TransformUtil.toIntArray(" [[3], [1], [10], [3], [5]]");
         MovingAverage movingAverage = new MovingAverage(array[0]);
         for (int i = 1; i < array.length; i++) {
             System.out.println("" + movingAverage.next(array[i]));

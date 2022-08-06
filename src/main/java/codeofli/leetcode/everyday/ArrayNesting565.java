@@ -1,6 +1,6 @@
 package codeofli.leetcode.everyday;
 
-import codeofli.my.leetcode.StringTransformUtil;
+import codeofli.my.leetcode.TransformUtil;
 
 public class ArrayNesting565 {
     /**
@@ -27,7 +27,7 @@ public class ArrayNesting565 {
 
     public static void main(String[] args) {
         ArrayNesting565 arrayNesting565 = new ArrayNesting565();
-        System.out.println(arrayNesting565.arrayNesting(StringTransformUtil.toIntArray(" [5,4,0,3,1,6,2]")));
-        System.out.println(arrayNesting565.arrayNesting(StringTransformUtil.toIntArray(" [5,4,0,3,1,6,2]")) == 4);
+        System.out.println(arrayNesting565.arrayNesting(TransformUtil.toIntArray(" [5,4,0,3,1,6,2]")));
+        System.out.println(arrayNesting565.arrayNesting(TransformUtil.toIntArray(" [5,4,0,3,1,6,2]")) == 4);
     }
 }

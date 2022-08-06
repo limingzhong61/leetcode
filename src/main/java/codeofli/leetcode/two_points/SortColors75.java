@@ -1,6 +1,6 @@
 package codeofli.leetcode.two_points;
 
-import codeofli.my.leetcode.StringTransformUtil;
+import codeofli.my.leetcode.TransformUtil;
 
 import java.util.Arrays;
 
@@ -76,7 +76,7 @@ public class SortColors75 {
 
     public static void main(String[] args) {
         SortColors75 sortColors75 = new SortColors75();
-        int[] array = StringTransformUtil.toIntArray("[2,0,2,1,1,0]");
+        int[] array = TransformUtil.toIntArray("[2,0,2,1,1,0]");
         //int[] array = StringTransformUtil.toIntArray("[2,0,1]");
         sortColors75.sortColors(array);
         System.out.println(Arrays.toString(array));

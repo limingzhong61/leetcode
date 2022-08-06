@@ -1,6 +1,6 @@
 package codeofli.leetcode.graph_theory;
 
-import codeofli.my.leetcode.StringTransformUtil;
+import codeofli.my.leetcode.TransformUtil;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -51,15 +51,15 @@ public class ShortestPathBinaryMatrix1091 {
 
     public static void main(String[] args) {
         ShortestPathBinaryMatrix1091 shortestPathBinaryMatrix = new ShortestPathBinaryMatrix1091();
-        System.out.println(shortestPathBinaryMatrix.shortestPathBinaryMatrix(StringTransformUtil.toIntMatrix(
+        System.out.println(shortestPathBinaryMatrix.shortestPathBinaryMatrix(TransformUtil.toIntMatrix(
                 "[[0,0,1,0],[1,0,1,0],[1,1,0,1],[0,0,0,0]]")));
-        System.out.println(shortestPathBinaryMatrix.shortestPathBinaryMatrix(StringTransformUtil.toIntMatrix(
+        System.out.println(shortestPathBinaryMatrix.shortestPathBinaryMatrix(TransformUtil.toIntMatrix(
                 "[[0,0,1,0],[1,0,1,0],[1,1,0,1],[0,0,0,0]]")) == 4);
 
-        System.out.println(shortestPathBinaryMatrix.shortestPathBinaryMatrix(StringTransformUtil.toIntMatrix(
+        System.out.println(shortestPathBinaryMatrix.shortestPathBinaryMatrix(TransformUtil.toIntMatrix(
                 "\n" +
                         "[[0,1],[1,0]]")));
-        System.out.println(shortestPathBinaryMatrix.shortestPathBinaryMatrix(StringTransformUtil.toIntMatrix(
+        System.out.println(shortestPathBinaryMatrix.shortestPathBinaryMatrix(TransformUtil.toIntMatrix(
                 "\n" +
                         "[[0,1],[1,0]]")) == 2);
         //Matrix.printMatrix(TransformString.toIntMatrix(

@@ -1,6 +1,6 @@
 package codeofli.leetcode.everyday;
 
-import codeofli.my.leetcode.StringTransformUtil;
+import codeofli.my.leetcode.TransformUtil;
 
 import java.util.*;
 
@@ -55,14 +55,14 @@ public class SequenceReconstruction115 {
 
     public static void main(String[] args) {
         SequenceReconstruction115 sequenceReconstruction = new SequenceReconstruction115();
-        System.out.println(sequenceReconstruction.sequenceReconstruction115(StringTransformUtil.toIntArray("[1,2,3]"),
-                StringTransformUtil.toIntMatrix("[[1,2],[1,3]]")));
-        System.out.println(sequenceReconstruction.sequenceReconstruction115(StringTransformUtil.toIntArray("[1,2,3]"),
-                StringTransformUtil.toIntMatrix("[[1,2]]")));
-        System.out.println(sequenceReconstruction.sequenceReconstruction115(StringTransformUtil.toIntArray("[1,2]"),
-                StringTransformUtil.toIntMatrix("[[1,2]]")));
-        System.out.println(sequenceReconstruction.sequenceReconstruction115(StringTransformUtil.toIntArray("[1,2,3]"),
-                StringTransformUtil.toIntMatrix("[[1,2],[2,3]]")));
+        System.out.println(sequenceReconstruction.sequenceReconstruction115(TransformUtil.toIntArray("[1,2,3]"),
+                TransformUtil.toIntMatrix("[[1,2],[1,3]]")));
+        System.out.println(sequenceReconstruction.sequenceReconstruction115(TransformUtil.toIntArray("[1,2,3]"),
+                TransformUtil.toIntMatrix("[[1,2]]")));
+        System.out.println(sequenceReconstruction.sequenceReconstruction115(TransformUtil.toIntArray("[1,2]"),
+                TransformUtil.toIntMatrix("[[1,2]]")));
+        System.out.println(sequenceReconstruction.sequenceReconstruction115(TransformUtil.toIntArray("[1,2,3]"),
+                TransformUtil.toIntMatrix("[[1,2],[2,3]]")));
 
     }
 }

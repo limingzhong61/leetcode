@@ -1,6 +1,6 @@
 package codeofli.leetcode.two_points;
 
-import codeofli.my.leetcode.StringTransformUtil;
+import codeofli.my.leetcode.TransformUtil;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -26,9 +26,9 @@ public class SubarraySum560 {
 
     public static void main(String[] args) {
         SubarraySum560 subarraySum560 = new SubarraySum560();
-        System.out.println(subarraySum560.subarraySum(StringTransformUtil.toIntArray("[1,1,1]"), 2));
-        System.out.println(subarraySum560.subarraySum(StringTransformUtil.toIntArray("[1,1,1]"), 2) == 2);
-        System.out.println(subarraySum560.subarraySum(StringTransformUtil.toIntArray("[-1,-1,1]"), 0));
-        System.out.println(subarraySum560.subarraySum(StringTransformUtil.toIntArray("[-1,-1,1]"), 0) == 1);
+        System.out.println(subarraySum560.subarraySum(TransformUtil.toIntArray("[1,1,1]"), 2));
+        System.out.println(subarraySum560.subarraySum(TransformUtil.toIntArray("[1,1,1]"), 2) == 2);
+        System.out.println(subarraySum560.subarraySum(TransformUtil.toIntArray("[-1,-1,1]"), 0));
+        System.out.println(subarraySum560.subarraySum(TransformUtil.toIntArray("[-1,-1,1]"), 0) == 1);
     }
 }

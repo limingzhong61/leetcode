@@ -1,8 +1,7 @@
 package codeofli.leetcode.contest.c303;
 
-import codeofli.my.leetcode.StringTransformUtil;
+import codeofli.my.leetcode.TransformUtil;
 
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -39,9 +38,9 @@ public class CountExcellentPairs6127 {
 
     public static void main(String[] args) {
         CountExcellentPairs6127 countExcellentPairs6127 = new CountExcellentPairs6127();
-        System.out.println(countExcellentPairs6127.countExcellentPairs(StringTransformUtil.toIntArray("[1,2,3,1]"), 3));
-        System.out.println(countExcellentPairs6127.countExcellentPairs(StringTransformUtil.toIntArray("[1,2,3,1]"), 3) == 5);
-        System.out.println(countExcellentPairs6127.countExcellentPairs(StringTransformUtil.toIntArray("[5,1,1]"), 10));
-        System.out.println(countExcellentPairs6127.countExcellentPairs(StringTransformUtil.toIntArray("[5,1,1]"), 10) == 0);
+        System.out.println(countExcellentPairs6127.countExcellentPairs(TransformUtil.toIntArray("[1,2,3,1]"), 3));
+        System.out.println(countExcellentPairs6127.countExcellentPairs(TransformUtil.toIntArray("[1,2,3,1]"), 3) == 5);
+        System.out.println(countExcellentPairs6127.countExcellentPairs(TransformUtil.toIntArray("[5,1,1]"), 10));
+        System.out.println(countExcellentPairs6127.countExcellentPairs(TransformUtil.toIntArray("[5,1,1]"), 10) == 0);
     }
 }

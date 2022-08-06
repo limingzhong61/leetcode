@@ -1,6 +1,6 @@
 package codeofli.leetcode.dp.intro.array;
 
-import codeofli.my.leetcode.StringTransformUtil;
+import codeofli.my.leetcode.TransformUtil;
 
 import java.util.Arrays;
 
@@ -83,7 +83,7 @@ public class LengthOfLIS300 {
 
     public static void main(String[] args) {
         LengthOfLIS300 lengthOfLIS300 = new LengthOfLIS300();
-        System.out.println(lengthOfLIS300.lengthOfLIS(StringTransformUtil.toIntArray("[0,1,0,3,2,3]")));
-        System.out.println(lengthOfLIS300.lengthOfLIS(StringTransformUtil.toIntArray("[0,1,0,3,2,3]")) == 4);
+        System.out.println(lengthOfLIS300.lengthOfLIS(TransformUtil.toIntArray("[0,1,0,3,2,3]")));
+        System.out.println(lengthOfLIS300.lengthOfLIS(TransformUtil.toIntArray("[0,1,0,3,2,3]")) == 4);
     }
 }

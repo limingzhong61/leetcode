@@ -1,6 +1,6 @@
 package codeofli.leetcode.graph_parse_ds.find;
 
-import codeofli.my.leetcode.StringTransformUtil;
+import codeofli.my.leetcode.TransformUtil;
 
 public class MinArray11 {
     /**
@@ -58,9 +58,9 @@ public class MinArray11 {
     public static void main(String[] args) {
         MinArray11 minArray11 = new MinArray11();
 
-        System.out.println(minArray11.minArray(StringTransformUtil.toIntArray("[3,4,5,1,2]")) == 1);
+        System.out.println(minArray11.minArray(TransformUtil.toIntArray("[3,4,5,1,2]")) == 1);
 
-        System.out.println(minArray11.minArray(StringTransformUtil.toIntArray("[2,2,2,0,1]")) == 0);
+        System.out.println(minArray11.minArray(TransformUtil.toIntArray("[2,2,2,0,1]")) == 0);
     }
 
 }

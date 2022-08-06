@@ -1,6 +1,6 @@
 package codeofli.my.solution_template.graph_theory;
 
-import codeofli.my.leetcode.StringTransformUtil;
+import codeofli.my.leetcode.TransformUtil;
 
 public class MapDFS {
     /**
@@ -72,9 +72,9 @@ public class MapDFS {
 
     private static void testCase(MapDFS closedIsland1254, String s, int i) {
         System.out.println(closedIsland1254.closedIsland
-                (StringTransformUtil.toIntMatrix(s)));
+                (TransformUtil.toIntMatrix(s)));
         System.out.println(closedIsland1254.closedIsland
-                (StringTransformUtil.toIntMatrix(s)) == i);
+                (TransformUtil.toIntMatrix(s)) == i);
     }
 
 

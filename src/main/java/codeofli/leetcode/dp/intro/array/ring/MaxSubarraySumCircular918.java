@@ -1,6 +1,6 @@
 package codeofli.leetcode.dp.intro.array.ring;
 
-import codeofli.my.leetcode.StringTransformUtil;
+import codeofli.my.leetcode.TransformUtil;
 
 public class MaxSubarraySumCircular918 {
     /**
@@ -63,7 +63,7 @@ public class MaxSubarraySumCircular918 {
     }
 
     private static void testCase(MaxSubarraySumCircular918 maxSubarraySumCircular918, String s, int i) {
-        System.out.println(maxSubarraySumCircular918.maxSubarraySumCircular(StringTransformUtil.toIntArray(s)));
-        System.out.println(maxSubarraySumCircular918.maxSubarraySumCircular(StringTransformUtil.toIntArray(s)) == i);
+        System.out.println(maxSubarraySumCircular918.maxSubarraySumCircular(TransformUtil.toIntArray(s)));
+        System.out.println(maxSubarraySumCircular918.maxSubarraySumCircular(TransformUtil.toIntArray(s)) == i);
     }
 }

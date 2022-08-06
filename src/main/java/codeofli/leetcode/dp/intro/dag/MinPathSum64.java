@@ -1,6 +1,6 @@
 package codeofli.leetcode.dp.intro.dag;
 
-import codeofli.my.leetcode.StringTransformUtil;
+import codeofli.my.leetcode.TransformUtil;
 
 public class MinPathSum64 {
     /**
@@ -54,9 +54,9 @@ public class MinPathSum64 {
 
     public static void main(String[] args) {
         MinPathSum64 minPathSum64 = new MinPathSum64();
-        System.out.println(minPathSum64.minPathSum(StringTransformUtil.toIntMatrix(" [[1,3,1],[1,5,1],[4,2,1]]")));
-        System.out.println(minPathSum64.minPathSum(StringTransformUtil.toIntMatrix(" [[1,3,1],[1,5,1],[4,2,1]]")) == 7);
-        System.out.println(minPathSum64.minPathSum(StringTransformUtil.toIntMatrix(" [[1,2,3],[4,5,6]]")));
-        System.out.println(minPathSum64.minPathSum(StringTransformUtil.toIntMatrix("[[1,2,3],[4,5,6]]")) == 12);
+        System.out.println(minPathSum64.minPathSum(TransformUtil.toIntMatrix(" [[1,3,1],[1,5,1],[4,2,1]]")));
+        System.out.println(minPathSum64.minPathSum(TransformUtil.toIntMatrix(" [[1,3,1],[1,5,1],[4,2,1]]")) == 7);
+        System.out.println(minPathSum64.minPathSum(TransformUtil.toIntMatrix(" [[1,2,3],[4,5,6]]")));
+        System.out.println(minPathSum64.minPathSum(TransformUtil.toIntMatrix("[[1,2,3],[4,5,6]]")) == 12);
     }
 }

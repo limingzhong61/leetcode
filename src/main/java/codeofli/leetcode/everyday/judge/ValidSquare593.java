@@ -1,6 +1,6 @@
 package codeofli.leetcode.everyday.judge;
 
-import codeofli.my.leetcode.StringTransformUtil;
+import codeofli.my.leetcode.TransformUtil;
 
 import java.util.Arrays;
 import java.util.Locale;
@@ -152,15 +152,15 @@ public class ValidSquare593 {
 
     private static void testCase(ValidSquare593 validSquare593, String p1, String p2, String p3, String p4, boolean x) {
         System.out.println(validSquare593.validSquare(
-                StringTransformUtil.toIntArray(p1),
-                StringTransformUtil.toIntArray(p2),
-                StringTransformUtil.toIntArray(p3),
-                StringTransformUtil.toIntArray(p4)));
+                TransformUtil.toIntArray(p1),
+                TransformUtil.toIntArray(p2),
+                TransformUtil.toIntArray(p3),
+                TransformUtil.toIntArray(p4)));
         System.out.println(String.valueOf(validSquare593.validSquare(
-                StringTransformUtil.toIntArray(p1),
-                StringTransformUtil.toIntArray(p2),
-                StringTransformUtil.toIntArray(p3),
-                StringTransformUtil.toIntArray(p4)) == x).toUpperCase(Locale.ROOT));
+                TransformUtil.toIntArray(p1),
+                TransformUtil.toIntArray(p2),
+                TransformUtil.toIntArray(p3),
+                TransformUtil.toIntArray(p4)) == x).toUpperCase(Locale.ROOT));
     }
 
 }

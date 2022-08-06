@@ -1,6 +1,6 @@
 package codeofli.leetcode.everyday;
 
-import codeofli.my.leetcode.StringTransformUtil;
+import codeofli.my.leetcode.TransformUtil;
 
 import java.util.Arrays;
 import java.util.Deque;
@@ -165,8 +165,8 @@ public class AsteroidCollision735 {
     }
 
     private static void testCase(AsteroidCollision735 asteroidCollision735, String s, String s2) {
-        System.out.println(Arrays.toString(asteroidCollision735.asteroidCollision(StringTransformUtil.toIntArray(s))));
-        System.out.println(Arrays.equals(asteroidCollision735.asteroidCollision(StringTransformUtil.toIntArray(s)),
-                StringTransformUtil.toIntArray(s2)));
+        System.out.println(Arrays.toString(asteroidCollision735.asteroidCollision(TransformUtil.toIntArray(s))));
+        System.out.println(Arrays.equals(asteroidCollision735.asteroidCollision(TransformUtil.toIntArray(s)),
+                TransformUtil.toIntArray(s2)));
     }
 }

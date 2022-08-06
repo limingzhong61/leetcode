@@ -1,6 +1,6 @@
 package codeofli.my.solution_template.data_structure;
 
-import codeofli.my.leetcode.StringTransformUtil;
+import codeofli.my.leetcode.TransformUtil;
 
 import java.util.*;
 /**
@@ -97,14 +97,14 @@ public class Trie {
     public static void main(String[] args) {
         codeofli.my.solution_template.data_structure.Trie replaceWords648 = new codeofli.my.solution_template.data_structure.Trie();
 
-        System.out.println(replaceWords648.replaceWords(StringTransformUtil.toStringArrayList("[\"cat\",\"bat\",\"rat\"]"),
+        System.out.println(replaceWords648.replaceWords(TransformUtil.toStringArrayList("[\"cat\",\"bat\",\"rat\"]"),
                 "the cattle was rattled by the battery"));
-        System.out.println(replaceWords648.replaceWords(StringTransformUtil.toStringArrayList("[\"cat\",\"bat\",\"rat\"]"),
+        System.out.println(replaceWords648.replaceWords(TransformUtil.toStringArrayList("[\"cat\",\"bat\",\"rat\"]"),
                 "the cattle was rattled by the battery").equals("the cat was rat by the bat"));
 
-        System.out.println(replaceWords648.replaceWords(StringTransformUtil.toStringArrayList(" [\"a\",\"b\",\"c\"]"),
+        System.out.println(replaceWords648.replaceWords(TransformUtil.toStringArrayList(" [\"a\",\"b\",\"c\"]"),
                 "aadsfasf absbs bbab cadsfafs"));
-        System.out.println(replaceWords648.replaceWords(StringTransformUtil.toStringArrayList("[\"a\",\"b\",\"c\"]"),
+        System.out.println(replaceWords648.replaceWords(TransformUtil.toStringArrayList("[\"a\",\"b\",\"c\"]"),
                 "aadsfasf absbs bbab cadsfafs").equals("a a b c"));
     }
 }

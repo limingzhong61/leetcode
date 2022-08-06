@@ -1,7 +1,6 @@
 package codeofli.my.solution_template.skip_list;
 
-import codeofli.leetcode.data_structure.Skiplist1206;
-import codeofli.my.leetcode.StringTransformUtil;
+import codeofli.my.leetcode.TransformUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -160,9 +159,9 @@ public class SkipList_My {
     }
 
     public static void main(String[] args) {
-        String[] opts = StringTransformUtil.toStringArray("[\"Skiplist\",\"add\",\"add\",\"add\",\"add\"" +
+        String[] opts = TransformUtil.toStringArray("[\"Skiplist\",\"add\",\"add\",\"add\",\"add\"" +
                 ",\"search\",\"erase\",\"search\",\"search\",\"search\"]");
-        int[] vals = StringTransformUtil.toIntArray("[[-1],[0],[5],[2],[1],[0],[5],[2],[3],[2]]");
+        int[] vals = TransformUtil.toIntArray("[[-1],[0],[5],[2],[1],[0],[5],[2],[3],[2]]");
         Skiplist skiplist = new Skiplist();
         for (int i = 1; i < opts.length; i++) {
             if ("add".equals(opts[i])) {

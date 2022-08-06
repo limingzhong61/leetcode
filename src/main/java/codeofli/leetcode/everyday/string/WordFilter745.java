@@ -1,6 +1,6 @@
 package codeofli.leetcode.everyday.string;
 
-import codeofli.my.leetcode.StringTransformUtil;
+import codeofli.my.leetcode.TransformUtil;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -141,8 +141,8 @@ public class WordFilter745 {
     }
 
     private static void testCase(String s1, String s2) {
-        WordFilter wordFilter = new WordFilter(StringTransformUtil.toStringArray(s1));
-        String[] fStr = StringTransformUtil.toStringArray(s2);
+        WordFilter wordFilter = new WordFilter(TransformUtil.toStringArray(s1));
+        String[] fStr = TransformUtil.toStringArray(s2);
         System.out.println(wordFilter.f(fStr[0], fStr[1]));
     }
 }

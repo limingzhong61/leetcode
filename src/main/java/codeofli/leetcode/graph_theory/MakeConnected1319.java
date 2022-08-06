@@ -1,6 +1,6 @@
 package codeofli.leetcode.graph_theory;
 
-import codeofli.my.leetcode.StringTransformUtil;
+import codeofli.my.leetcode.TransformUtil;
 
 public class MakeConnected1319 {
     /**
@@ -63,8 +63,8 @@ public class MakeConnected1319 {
 
     private static void testCase(MakeConnected1319 makeConnected1319, int p1, String p2, int res) {
         System.out.println(makeConnected1319.makeConnected(
-                p1, StringTransformUtil.toIntMatrix(p2)));
+                p1, TransformUtil.toIntMatrix(p2)));
         System.out.println(makeConnected1319.makeConnected(
-                p1, StringTransformUtil.toIntMatrix(p2)) == res);
+                p1, TransformUtil.toIntMatrix(p2)) == res);
     }
 }

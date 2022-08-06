@@ -1,6 +1,6 @@
 package codeofli.leetcode.contest.c303;
 
-import codeofli.my.leetcode.StringTransformUtil;
+import codeofli.my.leetcode.TransformUtil;
 
 import java.util.*;
 
@@ -120,13 +120,13 @@ public class FoodRatings6126 {
     }
 
     public static void main(String[] args) {
-        FoodRatings foodRatings = new FoodRatings(StringTransformUtil.toStringArray("[\"kimchi\",\"miso\",\"sushi\",\"moussaka\",\"ramen\",\"bulgogi\"]"),
-                StringTransformUtil.toStringArray("[\"korean\",\"japanese\",\"japanese\",\"greek\",\"japanese\",\"korean\"]"
-                ), StringTransformUtil.toIntArray("[9,12,8,15,14,7]"));
+        FoodRatings foodRatings = new FoodRatings(TransformUtil.toStringArray("[\"kimchi\",\"miso\",\"sushi\",\"moussaka\",\"ramen\",\"bulgogi\"]"),
+                TransformUtil.toStringArray("[\"korean\",\"japanese\",\"japanese\",\"greek\",\"japanese\",\"korean\"]"
+                ), TransformUtil.toIntArray("[9,12,8,15,14,7]"));
         String s = "[[\"korean\"],[\"japanese\"],[\"sushi\",16],[\"japanese\"],[\"ramen\",16],[\"japanese\"]]";
-        String[] strings = StringTransformUtil.toStringArray(s);
+        String[] strings = TransformUtil.toStringArray(s);
         String opt = "[\"highestRated\",\"highestRated\",\"changeRating\",\"highestRated\",\"changeRating\",\"highestRated\"]";
-        String[] opts = StringTransformUtil.toStringArray(opt);
+        String[] opts = TransformUtil.toStringArray(opt);
         //int i = 0;
         for (int i = 0, j = 0; i < opts.length; i++) {
             if ("highestRated".equals(opts[i])) {

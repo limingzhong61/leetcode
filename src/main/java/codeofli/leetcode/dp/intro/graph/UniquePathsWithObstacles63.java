@@ -1,6 +1,6 @@
 package codeofli.leetcode.dp.intro.graph;
 
-import codeofli.my.leetcode.StringTransformUtil;
+import codeofli.my.leetcode.TransformUtil;
 
 public class UniquePathsWithObstacles63 {
     /**
@@ -41,8 +41,8 @@ public class UniquePathsWithObstacles63 {
 
     private static void testCase(UniquePathsWithObstacles63 uniquePathsWithObstacles63, String original, int x) {
         System.out.println(uniquePathsWithObstacles63.uniquePathsWithObstacles(
-                StringTransformUtil.toIntMatrix(original)));
+                TransformUtil.toIntMatrix(original)));
         System.out.println(uniquePathsWithObstacles63.uniquePathsWithObstacles(
-                StringTransformUtil.toIntMatrix(original)) == x);
+                TransformUtil.toIntMatrix(original)) == x);
     }
 }

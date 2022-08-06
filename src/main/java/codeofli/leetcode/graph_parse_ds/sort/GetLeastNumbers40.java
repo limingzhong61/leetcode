@@ -1,6 +1,6 @@
 package codeofli.leetcode.graph_parse_ds.sort;
 
-import codeofli.my.leetcode.StringTransformUtil;
+import codeofli.my.leetcode.TransformUtil;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -91,22 +91,22 @@ public class GetLeastNumbers40 {
     public static void main(String[] args) {
         GetLeastNumbers40 getLeastNumbers40 = new GetLeastNumbers40();
         System.out.println(Arrays.toString(getLeastNumbers40.getLeastNumbers(
-                StringTransformUtil.toIntArray("[3,2,1]"), 2)));
+                TransformUtil.toIntArray("[3,2,1]"), 2)));
         System.out.println(Arrays.equals(getLeastNumbers40.getLeastNumbers(
-                StringTransformUtil.toIntArray("[3,2,1]"), 2), StringTransformUtil.toIntArray("[2,1]")));
+                TransformUtil.toIntArray("[3,2,1]"), 2), TransformUtil.toIntArray("[2,1]")));
 
         System.out.println(Arrays.toString(getLeastNumbers40.getLeastNumbers(
-                StringTransformUtil.toIntArray("[0,1,2,1]"), 1)));
+                TransformUtil.toIntArray("[0,1,2,1]"), 1)));
         System.out.println(Arrays.equals(getLeastNumbers40.getLeastNumbers(
-                StringTransformUtil.toIntArray("[0,1,2,1]"), 1), StringTransformUtil.toIntArray("[0]")));
+                TransformUtil.toIntArray("[0,1,2,1]"), 1), TransformUtil.toIntArray("[0]")));
 
         System.out.println(Arrays.toString(getLeastNumbers40.getLeastNumbers(
-                StringTransformUtil.toIntArray("[0,0,2,3,2,1,1,2,0,4]"), 10)));
+                TransformUtil.toIntArray("[0,0,2,3,2,1,1,2,0,4]"), 10)));
 
         System.out.println(Arrays.toString(getLeastNumbers40.getLeastNumbers(
-                StringTransformUtil.toIntArray("[0,0,0,2,0,5]"), 0)));
+                TransformUtil.toIntArray("[0,0,0,2,0,5]"), 0)));
         System.out.println(Arrays.equals(getLeastNumbers40.getLeastNumbers(
-                StringTransformUtil.toIntArray("[0,0,0,2,0,5]"), 0), StringTransformUtil.toIntArray("[]")));
+                TransformUtil.toIntArray("[0,0,0,2,0,5]"), 0), TransformUtil.toIntArray("[]")));
 
 
 

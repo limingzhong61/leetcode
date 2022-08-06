@@ -1,6 +1,6 @@
 package codeofli.leetcode.code_ability;
 
-import codeofli.my.leetcode.StringTransformUtil;
+import codeofli.my.leetcode.TransformUtil;
 
 import java.util.Arrays;
 
@@ -53,8 +53,8 @@ public class LargestPerimeter976 {
     }
 
     private static void testCase(LargestPerimeter976 largestPerimeter, String s, int i) {
-        System.out.println(largestPerimeter.largestPerimeter(StringTransformUtil.toIntArray(s)));
-        System.out.println(largestPerimeter.largestPerimeter(StringTransformUtil.toIntArray(s)) == i);
+        System.out.println(largestPerimeter.largestPerimeter(TransformUtil.toIntArray(s)));
+        System.out.println(largestPerimeter.largestPerimeter(TransformUtil.toIntArray(s)) == i);
     }
 
 }

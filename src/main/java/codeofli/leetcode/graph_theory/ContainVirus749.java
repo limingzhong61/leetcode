@@ -1,6 +1,6 @@
 package codeofli.leetcode.graph_theory;
 
-import codeofli.my.leetcode.StringTransformUtil;
+import codeofli.my.leetcode.TransformUtil;
 
 import java.util.*;
 
@@ -279,9 +279,9 @@ public class ContainVirus749 {
     }
 
     private static void testCase(ContainVirus749 containVirus749, String original, int x) {
-        System.out.println(containVirus749.containVirus(StringTransformUtil.toIntMatrix(
+        System.out.println(containVirus749.containVirus(TransformUtil.toIntMatrix(
                 original)));
-        System.out.println(containVirus749.containVirus(StringTransformUtil.toIntMatrix(
+        System.out.println(containVirus749.containVirus(TransformUtil.toIntMatrix(
                 original)) == x);
     }
 }

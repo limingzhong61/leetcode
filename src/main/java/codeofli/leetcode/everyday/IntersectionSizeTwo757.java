@@ -1,6 +1,6 @@
 package codeofli.leetcode.everyday;
 
-import codeofli.my.leetcode.StringTransformUtil;
+import codeofli.my.leetcode.TransformUtil;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -134,8 +134,8 @@ public class IntersectionSizeTwo757 {
 
     private static void testCase(IntersectionSizeTwo757 intersectionSizeTwo, String original, int x) {
         System.out.println(intersectionSizeTwo.intersectionSizeTwo(
-                StringTransformUtil.toIntMatrix(original)));
+                TransformUtil.toIntMatrix(original)));
         System.out.println(intersectionSizeTwo.intersectionSizeTwo(
-                StringTransformUtil.toIntMatrix(original)) == x);
+                TransformUtil.toIntMatrix(original)) == x);
     }
 }

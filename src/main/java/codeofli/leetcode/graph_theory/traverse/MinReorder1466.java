@@ -1,6 +1,6 @@
 package codeofli.leetcode.graph_theory.traverse;
 
-import codeofli.my.leetcode.StringTransformUtil;
+import codeofli.my.leetcode.TransformUtil;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -59,7 +59,7 @@ public class MinReorder1466 {
     }
 
     private static void testCase(MinReorder1466 minReorder1466, int i, String s, int i2) {
-        System.out.println(minReorder1466.minReorder(i, StringTransformUtil.toIntMatrix(s)));
-        System.out.println(minReorder1466.minReorder(i, StringTransformUtil.toIntMatrix(s)) == i2);
+        System.out.println(minReorder1466.minReorder(i, TransformUtil.toIntMatrix(s)));
+        System.out.println(minReorder1466.minReorder(i, TransformUtil.toIntMatrix(s)) == i2);
     }
 }

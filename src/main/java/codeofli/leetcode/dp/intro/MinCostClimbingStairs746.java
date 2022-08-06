@@ -1,6 +1,6 @@
 package codeofli.leetcode.dp.intro;
 
-import codeofli.my.leetcode.StringTransformUtil;
+import codeofli.my.leetcode.TransformUtil;
 
 public class MinCostClimbingStairs746 {
     /**
@@ -23,6 +23,6 @@ public class MinCostClimbingStairs746 {
     public static void main(String[] args) {
         MinCostClimbingStairs746 minCostClimbingStairs746 = new MinCostClimbingStairs746();
         //System.out.println(minCostClimbingStairs746.minCostClimbingStairs(TransformUtil.toIntArray("[10,15,20]")));
-        System.out.println(minCostClimbingStairs746.minCostClimbingStairs(StringTransformUtil.toIntArray(" [1,100,1,1,1,100,1,1,100,1]")));
+        System.out.println(minCostClimbingStairs746.minCostClimbingStairs(TransformUtil.toIntArray(" [1,100,1,1,1,100,1,1,100,1]")));
     }
 }

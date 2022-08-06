@@ -1,6 +1,6 @@
 package codeofli.leetcode.graph_theory.bfs;
 
-import codeofli.my.leetcode.StringTransformUtil;
+import codeofli.my.leetcode.TransformUtil;
 
 import java.util.*;
 
@@ -63,8 +63,8 @@ public class MinMutation433 {
     private static void testCase(MinMutation433 minMutation433, String start, String end, String s, int i) {
 
         System.out.println(minMutation433.minMutation(start, end,
-                StringTransformUtil.toStringArray(s)));
+                TransformUtil.toStringArray(s)));
         System.out.println(minMutation433.minMutation(start, end,
-                StringTransformUtil.toStringArray(s)) == i);
+                TransformUtil.toStringArray(s)) == i);
     }
 }

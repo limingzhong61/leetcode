@@ -1,6 +1,6 @@
 package codeofli.leetcode.code_ability.collection_and_lib;
 
-import codeofli.my.leetcode.StringTransformUtil;
+import codeofli.my.leetcode.TransformUtil;
 
 import java.util.Arrays;
 
@@ -37,9 +37,9 @@ public class SortByBits1356 {
 
     public static void main(String[] args) {
         SortByBits1356 sortByBits1356 = new SortByBits1356();
-        System.out.println(Arrays.toString(sortByBits1356.sortByBits(StringTransformUtil.toIntArray("[0,1,2,3,4,5,6,7,8]"))));
-        System.out.println(Arrays.toString(sortByBits1356.sortByBits(StringTransformUtil.toIntArray("[1024,512,256,128,64,32,16,8,4,2,1]"))));
-        System.out.println(Arrays.equals(sortByBits1356.sortByBits(StringTransformUtil.toIntArray("[1024,512,256,128,64,32,16,8,4,2,1]"))
-                , StringTransformUtil.toIntArray("[1,2,4,8,16,32,64,128,256,512,1024]")));
+        System.out.println(Arrays.toString(sortByBits1356.sortByBits(TransformUtil.toIntArray("[0,1,2,3,4,5,6,7,8]"))));
+        System.out.println(Arrays.toString(sortByBits1356.sortByBits(TransformUtil.toIntArray("[1024,512,256,128,64,32,16,8,4,2,1]"))));
+        System.out.println(Arrays.equals(sortByBits1356.sortByBits(TransformUtil.toIntArray("[1024,512,256,128,64,32,16,8,4,2,1]"))
+                , TransformUtil.toIntArray("[1,2,4,8,16,32,64,128,256,512,1024]")));
     }
 }

@@ -1,6 +1,6 @@
 package codeofli.leetcode.graph_theory.bfs;
 
-import codeofli.my.leetcode.StringTransformUtil;
+import codeofli.my.leetcode.TransformUtil;
 
 import java.util.LinkedList;
 import java.util.Locale;
@@ -55,8 +55,8 @@ public class CanReach1306 {
     }
 
     private static void testCase(CanReach1306 canReach, String s, int i, boolean b) {
-        System.out.println(canReach.canReach(StringTransformUtil.toIntArray(s), i));
-        System.out.println(String.valueOf(canReach.canReach(StringTransformUtil.
+        System.out.println(canReach.canReach(TransformUtil.toIntArray(s), i));
+        System.out.println(String.valueOf(canReach.canReach(TransformUtil.
                 toIntArray(s), i) == b).toUpperCase(Locale.ROOT));
     }
 }

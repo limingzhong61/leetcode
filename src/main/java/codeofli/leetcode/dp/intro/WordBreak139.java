@@ -1,6 +1,6 @@
 package codeofli.leetcode.dp.intro;
 
-import codeofli.my.leetcode.StringTransformUtil;
+import codeofli.my.leetcode.TransformUtil;
 
 import java.util.HashSet;
 import java.util.List;
@@ -129,7 +129,7 @@ public class WordBreak139 {
     }
 
     private static void testCase(WordBreak139 wordBreak139, String applepenapple, String s, boolean b) {
-        System.out.println(wordBreak139.wordBreak(applepenapple, StringTransformUtil.toStringArrayList(s)));
-        System.out.println(String.valueOf(wordBreak139.wordBreak(applepenapple, StringTransformUtil.toStringArrayList(s)) == b).toUpperCase(Locale.ROOT));
+        System.out.println(wordBreak139.wordBreak(applepenapple, TransformUtil.toStringArrayList(s)));
+        System.out.println(String.valueOf(wordBreak139.wordBreak(applepenapple, TransformUtil.toStringArrayList(s)) == b).toUpperCase(Locale.ROOT));
     }
 }

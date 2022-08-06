@@ -1,6 +1,6 @@
 package codeofli.leetcode.dp.intro;
 
-import codeofli.my.leetcode.StringTransformUtil;
+import codeofli.my.leetcode.TransformUtil;
 
 public class NumberOfArithmeticSlices413 {
     /**
@@ -26,9 +26,9 @@ public class NumberOfArithmeticSlices413 {
 
     public static void main(String[] args) {
         NumberOfArithmeticSlices413 numberOfArithmeticSlices413 = new NumberOfArithmeticSlices413();
-        System.out.println(numberOfArithmeticSlices413.numberOfArithmeticSlices(StringTransformUtil.toIntArray("[1,2,3,4]")));
-        System.out.println(numberOfArithmeticSlices413.numberOfArithmeticSlices(StringTransformUtil.toIntArray("[1,2,3,4]")) == 3);
-        System.out.println(numberOfArithmeticSlices413.numberOfArithmeticSlices(StringTransformUtil.toIntArray("[1]")));
-        System.out.println(numberOfArithmeticSlices413.numberOfArithmeticSlices(StringTransformUtil.toIntArray("[1]")) == 0);
+        System.out.println(numberOfArithmeticSlices413.numberOfArithmeticSlices(TransformUtil.toIntArray("[1,2,3,4]")));
+        System.out.println(numberOfArithmeticSlices413.numberOfArithmeticSlices(TransformUtil.toIntArray("[1,2,3,4]")) == 3);
+        System.out.println(numberOfArithmeticSlices413.numberOfArithmeticSlices(TransformUtil.toIntArray("[1]")));
+        System.out.println(numberOfArithmeticSlices413.numberOfArithmeticSlices(TransformUtil.toIntArray("[1]")) == 0);
     }
 }

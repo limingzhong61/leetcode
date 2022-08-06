@@ -1,6 +1,6 @@
 package codeofli.leetcode.dp.intro.graph;
 
-import codeofli.my.leetcode.StringTransformUtil;
+import codeofli.my.leetcode.TransformUtil;
 
 public class MaximalSquare221 {
     /**
@@ -83,9 +83,9 @@ public class MaximalSquare221 {
     }
 
     private static void testCase(MaximalSquare221 maximalSquare221, String original, int x) {
-        System.out.println(maximalSquare221.maximalSquare(StringTransformUtil.toCharMatrix(
+        System.out.println(maximalSquare221.maximalSquare(TransformUtil.toCharMatrix(
                 original)));
-        System.out.println(maximalSquare221.maximalSquare(StringTransformUtil.toCharMatrix(
+        System.out.println(maximalSquare221.maximalSquare(TransformUtil.toCharMatrix(
                 original)) == x);
     }
 }

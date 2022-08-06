@@ -1,7 +1,7 @@
 package codeofli.my.solution_template.graph_theory.map;
 
 import codeofli.leetcode.graph_theory.MaxAreaOfIsland695;
-import codeofli.my.leetcode.StringTransformUtil;
+import codeofli.my.leetcode.TransformUtil;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -65,21 +65,21 @@ public class MapBFSByMove {
         //System.out.println(ints[0][0]);
         MaxAreaOfIsland695 maxAreaOfIsland695 = new MaxAreaOfIsland695();
         System.out.println(maxAreaOfIsland695.maxAreaOfIsland
-                (StringTransformUtil.toIntMatrix("[[0,0,1,0,0,0,0,1,0,0,0,0,0]," +
+                (TransformUtil.toIntMatrix("[[0,0,1,0,0,0,0,1,0,0,0,0,0]," +
                         "[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,1,1,0,1,0,0,0,0,0,0,0,0]," +
                         "[0,1,0,0,1,1,0,0,1,0,1,0,0],[0,1,0,0,1,1,0,0,1,1,1,0,0]," +
                         "[0,0,0,0,0,0,0,0,0,0,1,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0]," +
                         "[0,0,0,0,0,0,0,1,1,0,0,0,0]]\n")));
         System.out.println(maxAreaOfIsland695.maxAreaOfIsland
-                (StringTransformUtil.toIntMatrix("[[0,0,1,0,0,0,0,1,0,0,0,0,0]," +
+                (TransformUtil.toIntMatrix("[[0,0,1,0,0,0,0,1,0,0,0,0,0]," +
                         "[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,1,1,0,1,0,0,0,0,0,0,0,0]," +
                         "[0,1,0,0,1,1,0,0,1,0,1,0,0],[0,1,0,0,1,1,0,0,1,1,1,0,0]," +
                         "[0,0,0,0,0,0,0,0,0,0,1,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0]," +
                         "[0,0,0,0,0,0,0,1,1,0,0,0,0]]\n")) == 6);
 
         System.out.println(maxAreaOfIsland695.maxAreaOfIsland
-                (StringTransformUtil.toIntMatrix("[[0,0,0,0,0,0,0,0]]")));
+                (TransformUtil.toIntMatrix("[[0,0,0,0,0,0,0,0]]")));
         System.out.println(maxAreaOfIsland695.maxAreaOfIsland
-                (StringTransformUtil.toIntMatrix("[[0,0,0,0,0,0,0,0]]")) == 0);
+                (TransformUtil.toIntMatrix("[[0,0,0,0,0,0,0,0]]")) == 0);
     }
 }

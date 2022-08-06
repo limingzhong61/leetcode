@@ -1,6 +1,6 @@
 package codeofli.leetcode.graph_parse_ds.find;
 
-import codeofli.my.leetcode.StringTransformUtil;
+import codeofli.my.leetcode.TransformUtil;
 
 public class findNumberIn2DArray04 {
 
@@ -56,7 +56,7 @@ public class findNumberIn2DArray04 {
     public static void main(String[] args) {
         findNumberIn2DArray04 find04 = new findNumberIn2DArray04();
 
-        System.out.println(find04.findNumberIn2DArray(StringTransformUtil.toIntMatrix("[\n" +
+        System.out.println(find04.findNumberIn2DArray(TransformUtil.toIntMatrix("[\n" +
                 "  [1,   4,  7, 11, 15],\n" +
                 "  [2,   5,  8, 12, 19],\n" +
                 "  [3,   6,  9, 16, 22],\n" +
@@ -64,7 +64,7 @@ public class findNumberIn2DArray04 {
                 "  [18, 21, 23, 26, 30]\n" +
                 "]"), 5));
 
-        System.out.println(find04.findNumberIn2DArray(StringTransformUtil.toIntMatrix("[\n" +
+        System.out.println(find04.findNumberIn2DArray(TransformUtil.toIntMatrix("[\n" +
                 "  [1,   4,  7, 11, 15],\n" +
                 "  [2,   5,  8, 12, 19],\n" +
                 "  [3,   6,  9, 16, 22],\n" +
@@ -72,6 +72,6 @@ public class findNumberIn2DArray04 {
                 "  [18, 21, 23, 26, 30]\n" +
                 "]"), 20));
 
-        System.out.println(find04.findNumberIn2DArray(StringTransformUtil.toIntMatrix("[]"), 0));
+        System.out.println(find04.findNumberIn2DArray(TransformUtil.toIntMatrix("[]"), 0));
     }
 }

@@ -1,6 +1,6 @@
 package codeofli.leetcode.graph_theory;
 
-import codeofli.my.leetcode.StringTransformUtil;
+import codeofli.my.leetcode.TransformUtil;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
@@ -65,9 +65,9 @@ public class AllPathsSourceTarget797 {
 
     public static void main(String[] args) {
         AllPathsSourceTarget797 allPathsSourceTarget797 = new AllPathsSourceTarget797();
-        System.out.println(allPathsSourceTarget797.allPathsSourceTarget(StringTransformUtil.toIntMatrix("[[1,2],[3],[3],[]]")));
+        System.out.println(allPathsSourceTarget797.allPathsSourceTarget(TransformUtil.toIntMatrix("[[1,2],[3],[3],[]]")));
 
-        System.out.println(allPathsSourceTarget797.allPathsSourceTarget(StringTransformUtil.toIntMatrix("[[4,3,1],[3,2,4],[3],[4],[]]")));
+        System.out.println(allPathsSourceTarget797.allPathsSourceTarget(TransformUtil.toIntMatrix("[[4,3,1],[3,2,4],[3],[4],[]]")));
         //System.out.println(allPathsSourceTarget797.allPathsSourceTarget(
         //        TransformString.toIntMatrix("[[4,3,1],[3,2,4],[3],[4],[]]")).equals(TransformString.toIntMatrix("[[0,4],[0,3,4],[0,1,3,4],[0,1,2,3,4],[0,1,4]]")));
     }

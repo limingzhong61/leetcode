@@ -1,6 +1,6 @@
 package codeofli.leetcode.graph_theory.character;
 
-import codeofli.my.leetcode.StringTransformUtil;
+import codeofli.my.leetcode.TransformUtil;
 
 import java.util.*;
 
@@ -50,8 +50,8 @@ public class MaximalNetworkRank1615 {
 
     private static void testCase(MaximalNetworkRank1615 maximalNetworkRank1615, int i, String s,int res) {
         System.out.println(maximalNetworkRank1615.maximalNetworkRank(i,
-                StringTransformUtil.toIntMatrix(s)));
+                TransformUtil.toIntMatrix(s)));
         System.out.println(maximalNetworkRank1615.maximalNetworkRank(i,
-                StringTransformUtil.toIntMatrix(s)) == res);
+                TransformUtil.toIntMatrix(s)) == res);
     }
 }

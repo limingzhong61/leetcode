@@ -1,6 +1,6 @@
 package codeofli.leetcode.math;
 
-import codeofli.my.leetcode.StringTransformUtil;
+import codeofli.my.leetcode.TransformUtil;
 
 import java.util.*;
 
@@ -76,9 +76,9 @@ public class ThreeSum {
 
     public static void main(String[] args) {
         ThreeSum threeSum = new ThreeSum();
-        System.out.println(threeSum.threeSum(StringTransformUtil.toIntArray("[0,0,0,0]")));
-        System.out.println(threeSum.threeSum(StringTransformUtil.toIntArray("[0,0,0,0]")).equals(StringTransformUtil.toDoubleArrayList("[[0, 0, 0]]")));
-        System.out.println(threeSum.threeSum(StringTransformUtil.toIntArray("[-1,0,1,2,-1,-4]")));
-        System.out.println(threeSum.threeSum(StringTransformUtil.toIntArray("[-1,0,1,2,-1,-4]")).equals(StringTransformUtil.toDoubleArrayList("[[-1, -1, 2], [-1, 0, 1]]")));
+        System.out.println(threeSum.threeSum(TransformUtil.toIntArray("[0,0,0,0]")));
+        System.out.println(threeSum.threeSum(TransformUtil.toIntArray("[0,0,0,0]")).equals(TransformUtil.toDoubleArrayList("[[0, 0, 0]]")));
+        System.out.println(threeSum.threeSum(TransformUtil.toIntArray("[-1,0,1,2,-1,-4]")));
+        System.out.println(threeSum.threeSum(TransformUtil.toIntArray("[-1,0,1,2,-1,-4]")).equals(TransformUtil.toDoubleArrayList("[[-1, -1, 2], [-1, 0, 1]]")));
     }
 }

@@ -1,6 +1,6 @@
 package codeofli.leetcode.graph_theory.bfs;
 
-import codeofli.my.leetcode.StringTransformUtil;
+import codeofli.my.leetcode.TransformUtil;
 
 import java.util.*;
 
@@ -105,13 +105,13 @@ public class LadderLength127 {
         LadderLength127 ladderLength127 = new LadderLength127();
 
         System.out.println(ladderLength127.ladderLength("hit", "cog",
-                StringTransformUtil.toStringArrayList("[\"hot\",\"dot\",\"dog\",\"lot\",\"log\",\"cog\"]")));
+                TransformUtil.toStringArrayList("[\"hot\",\"dot\",\"dog\",\"lot\",\"log\",\"cog\"]")));
         System.out.println(ladderLength127.ladderLength("hit", "cog",
-                StringTransformUtil.toStringArrayList("[\"hot\",\"dot\",\"dog\",\"lot\",\"log\",\"cog\"]")) == 0);
+                TransformUtil.toStringArrayList("[\"hot\",\"dot\",\"dog\",\"lot\",\"log\",\"cog\"]")) == 0);
 
         System.out.println(ladderLength127.ladderLength("hit", "cog",
-                StringTransformUtil.toStringArrayList("[\"hot\",\"dot\",\"dog\",\"lot\",\"log\"]")));
+                TransformUtil.toStringArrayList("[\"hot\",\"dot\",\"dog\",\"lot\",\"log\"]")));
         System.out.println(ladderLength127.ladderLength("hit", "cog",
-                StringTransformUtil.toStringArrayList("[\"hot\",\"dot\",\"dog\",\"lot\",\"log\"]")) == 0);
+                TransformUtil.toStringArrayList("[\"hot\",\"dot\",\"dog\",\"lot\",\"log\"]")) == 0);
     }
 }

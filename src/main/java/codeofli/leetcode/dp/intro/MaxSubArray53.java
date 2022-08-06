@@ -1,10 +1,25 @@
 package codeofli.leetcode.dp.intro;
 
-import codeofli.my.leetcode.StringTransformUtil;
+import codeofli.my.leetcode.TransformUtil;
 
 public class MaxSubArray53 {
-
+    /**
+     dp+滚动数组优化
+     dp[i]表示nums[0,i]中以i结尾的最大子序列和值。
+     只用到了i,i-1故用dp1,dp0表示
+     */
     public int maxSubArray(int[] nums) {
+        //1 <= nums.length <= 10^5
+        int dp0 = nums[0],dp1;
+        int maxSub = nums[0];
+        for(int i = 1; i < nums.length; i++){
+            dp1 = Math.max(0,dp0) + nums[i];
+            maxSub = Math.max(maxSub,dp1);
+            dp0 = dp1;
+        }
+        return maxSub;
+    }
+    public int maxSubArray2(int[] nums) {
         //1 <= nums.length <= 10^5
 
         int[] dp = new int[nums.length]; // 表示nums[0,i]中以i结尾的最大子序列和值。
@@ -40,7 +55,7 @@ public class MaxSubArray53 {
         System.out.println(maxSubArray53.maxSubArray(new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4}));
         System.out.println(maxSubArray53.maxSubArray(new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4}) == 6);
 
-        System.out.println(maxSubArray53.maxSubArray(StringTransformUtil.toIntArray("[-2,1]")));
-        System.out.println(maxSubArray53.maxSubArray(StringTransformUtil.toIntArray("[-2,1]")) == 1);
+        System.out.println(maxSubArray53.maxSubArray(TransformUtil.toIntArray("[-2,1]")));
+        System.out.println(maxSubArray53.maxSubArray(TransformUtil.toIntArray("[-2,1]")) == 1);
     }
 }

@@ -1,6 +1,6 @@
 package codeofli.leetcode.everyday;
 
-import codeofli.my.leetcode.StringTransformUtil;
+import codeofli.my.leetcode.TransformUtil;
 
 public class DistanceBetweenBusStops1184 {
 
@@ -26,7 +26,7 @@ public class DistanceBetweenBusStops1184 {
     }
 
     private static void testCase(DistanceBetweenBusStops1184 distanceBetweenBusStops1184, int destination, int x) {
-        System.out.println(distanceBetweenBusStops1184.distanceBetweenBusStops(StringTransformUtil.toIntArray("[1,2,3,4]"), 0, destination));
-        System.out.println(distanceBetweenBusStops1184.distanceBetweenBusStops(StringTransformUtil.toIntArray("[1,2,3,4]"), 0, destination) == x);
+        System.out.println(distanceBetweenBusStops1184.distanceBetweenBusStops(TransformUtil.toIntArray("[1,2,3,4]"), 0, destination));
+        System.out.println(distanceBetweenBusStops1184.distanceBetweenBusStops(TransformUtil.toIntArray("[1,2,3,4]"), 0, destination) == x);
     }
 }

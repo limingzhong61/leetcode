@@ -1,6 +1,6 @@
 package codeofli.leetcode.graph_theory;
 
-import codeofli.my.leetcode.StringTransformUtil;
+import codeofli.my.leetcode.TransformUtil;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -93,8 +93,8 @@ public class EventualSafeNodes802 {
     }
 
     private static void testCase(EventualSafeNodes802 eventualSafeNodes802, String s, String s2) {
-        System.out.println(eventualSafeNodes802.eventualSafeNodes(StringTransformUtil.toIntMatrix(s)));
-        System.out.println(eventualSafeNodes802.eventualSafeNodes(StringTransformUtil.toIntMatrix(s)).equals(
-                StringTransformUtil.toArrayList(s2)));
+        System.out.println(eventualSafeNodes802.eventualSafeNodes(TransformUtil.toIntMatrix(s)));
+        System.out.println(eventualSafeNodes802.eventualSafeNodes(TransformUtil.toIntMatrix(s)).equals(
+                TransformUtil.toArrayList(s2)));
     }
 }

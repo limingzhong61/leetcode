@@ -1,6 +1,6 @@
 package codeofli.leetcode.everyday;
 
-import codeofli.my.leetcode.StringTransformUtil;
+import codeofli.my.leetcode.TransformUtil;
 
 import java.util.*;
 
@@ -106,18 +106,18 @@ public class FindSubstring30 {
         FindSubstring30 findSubstring30 = new FindSubstring30();
 
         System.out.println(findSubstring30.findSubstring(
-                "barfoothefoobarman", StringTransformUtil.toStringArray("[\"foo\",\"bar\"]")));
+                "barfoothefoobarman", TransformUtil.toStringArray("[\"foo\",\"bar\"]")));
 
         System.out.println(findSubstring30.findSubstring(
-                "wordgoodgoodgoodbestword", StringTransformUtil.toStringArray("[\"word\",\"good\",\"best\",\"word\"]")));
+                "wordgoodgoodgoodbestword", TransformUtil.toStringArray("[\"word\",\"good\",\"best\",\"word\"]")));
 
         System.out.println(findSubstring30.findSubstring(
-                "barfoofoobarthefoobarman", StringTransformUtil.toStringArray("[\"bar\",\"foo\",\"the\"]")));
+                "barfoofoobarthefoobarman", TransformUtil.toStringArray("[\"bar\",\"foo\",\"the\"]")));
 
         System.out.println(findSubstring30.findSubstring(
-                "wordgoodgoodgoodbestword", StringTransformUtil.toStringArray("[\"word\",\"good\",\"best\",\"good\"]")));
+                "wordgoodgoodgoodbestword", TransformUtil.toStringArray("[\"word\",\"good\",\"best\",\"good\"]")));
 
         System.out.println(findSubstring30.findSubstring(
-                "aaa", StringTransformUtil.toStringArray("[\"a\",\"a\"]")));
+                "aaa", TransformUtil.toStringArray("[\"a\",\"a\"]")));
     }
 }

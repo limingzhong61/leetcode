@@ -1,6 +1,6 @@
 package codeofli.my.leetcode.test_case;
 
-import codeofli.my.leetcode.StringTransformUtil;
+import codeofli.my.leetcode.TransformUtil;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -69,11 +69,11 @@ public class TestCaseUtil {
 
     private static void testCase(TestCaseUtil possibleBipartition886, int i, String s, boolean b) {
         System.out.println(possibleBipartition886.possibleBipartition(i,
-                StringTransformUtil.toIntMatrix(s)));
+                TransformUtil.toIntMatrix(s)));
         System.out.println(String.valueOf(possibleBipartition886.possibleBipartition(i,
-                StringTransformUtil.toIntMatrix(s)) == b).toUpperCase(Locale.ROOT));
+                TransformUtil.toIntMatrix(s)) == b).toUpperCase(Locale.ROOT));
         if(possibleBipartition886.possibleBipartition(i,
-                StringTransformUtil.toIntMatrix(s)) != b){
+                TransformUtil.toIntMatrix(s)) != b){
             // Declaring ANSI_RESET so that we can reset the color
              final String ANSI_RESET = "\u001B[0m";
             // Declaring the background color

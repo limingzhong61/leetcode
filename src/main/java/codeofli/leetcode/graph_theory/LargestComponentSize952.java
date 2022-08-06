@@ -1,7 +1,7 @@
 package codeofli.leetcode.graph_theory;
 
 
-import codeofli.my.leetcode.StringTransformUtil;
+import codeofli.my.leetcode.TransformUtil;
 
 import java.util.Arrays;
 
@@ -117,6 +117,6 @@ public class LargestComponentSize952 {
     }
     public static void main(String[] args) {
         LargestComponentSize952 largestComponentSize952 = new LargestComponentSize952();
-        System.out.println(largestComponentSize952.largestComponentSize(StringTransformUtil.toIntArray("[4,6,15,35]")));
+        System.out.println(largestComponentSize952.largestComponentSize(TransformUtil.toIntArray("[4,6,15,35]")));
     }
 }
