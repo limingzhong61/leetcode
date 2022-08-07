@@ -2,6 +2,7 @@ package codeofli.my.solution_template.sort;
 
 /**
  * 解题代码，并非正确代码
+ * 对数组进行排序
  */
 public class MergeSort {
     /**

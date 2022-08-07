@@ -1,4 +1,4 @@
-package codeofli.leetcode.contest.test;
+package codeofli.leetcode.contest.c84;
 
 public class MinimumReplacement6144 {
     /**
@@ -12,18 +12,9 @@ public class MinimumReplacement6144 {
         long cnt = 0;
         for (int i = n - 2; i >= 0; i--) {
             if (nums[i] > pre){
-                long pTimes = nums[i] / pre;
-                cnt += pTimes - 1;
-                long y = nums[i] - (pTimes - 1) * pre;
-                if(y == pre){ // 能整除
-                    continue;
-                }
-                if(y % 2 == 0){
-                    pre = y / 2;
-                }else {
-                    pre = y / 2 - 1;
-                }
-                cnt++;
+                long k = (nums[i]-1) / pre;
+                cnt+= k;
+                pre = nums[i] / (k + 1);
             }else{
                 pre = nums[i];
             }

@@ -1,4 +1,4 @@
-package codeofli.leetcode.contest.test;
+package codeofli.leetcode.contest.c84;
 
 import java.util.ArrayList;
 import java.util.HashMap;
