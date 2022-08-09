@@ -12,14 +12,14 @@ public class MissingNumber268 {
         int n = nums.length;
         int total = n * (n + 1) / 2;
         int ans = total;
-        for (int i = 0; i < n; i++) {
-            ans -= nums[i];
+        for (int num : nums) {
+            ans -= num;
         }
         return ans;
     }
 
     /**
-     * leetcode
+     * leetcode：位运算 x^i^i = x, 0^x = x,x^x =0
      * 添加[0,n]的整数，转化为在2n-1个数里找只出现一次的数
      */
     public int missingNumber2(int[] nums) {

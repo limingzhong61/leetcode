@@ -10,27 +10,12 @@ public class CompareVersion165 {
         String[] split1 = version1.split("\\.");
         String[] split2 = version2.split("\\.");
         int i,j;
-        for ( i = 0, j = 0; i < split1.length && j < split2.length; i++, j++) {
-            int a = Integer.parseInt(split1[i]);
-            int b = Integer.parseInt(split2[j]);
+        for ( i = 0, j = 0; i < split1.length || j < split2.length; i++, j++) {
+            int a = i < split1.length ? Integer.parseInt(split1[i]) : 0;
+            int b = j < split2.length ? Integer.parseInt(split2[j]) : 0;
             if (a != b) {
                 return a - b > 0 ? 1 : -1;
             }
-        }
-        int a = 0;
-        while(i != split1.length){
-            a = Integer.parseInt(split1[i]);
-            if(a != 0){
-                return 1;
-            }
-            i++;
-        }
-        while(j != split2.length){
-            a = Integer.parseInt(split2[j]);
-            if(a != 0){
-                return -1;
-            }
-            j++;
         }
         return 0;
     }
