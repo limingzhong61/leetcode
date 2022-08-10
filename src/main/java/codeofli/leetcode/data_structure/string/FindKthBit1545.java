@@ -1,4 +1,4 @@
-package codeofli.leetcode.everyday.string;
+package codeofli.leetcode.data_structure.string;
 
 public class FindKthBit1545 {
     /**

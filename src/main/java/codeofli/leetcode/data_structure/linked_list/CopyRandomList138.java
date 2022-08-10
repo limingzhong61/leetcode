@@ -1,4 +1,4 @@
-package codeofli.leetcode.linkedList;
+package codeofli.leetcode.data_structure.linked_list;
 
 
 public class CopyRandomList138 {

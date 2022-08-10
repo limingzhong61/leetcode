@@ -1,5 +1,7 @@
 package codeofli.leetcode.everyday;
 
+import codeofli.leetcode.data_structure.binary_tree.TreeNode;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;

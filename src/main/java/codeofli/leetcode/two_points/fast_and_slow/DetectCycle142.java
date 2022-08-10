@@ -1,7 +1,9 @@
 package codeofli.leetcode.two_points.fast_and_slow;
 
 
-import codeofli.leetcode.linkedList.ListNode;
+
+
+import codeofli.leetcode.data_structure.linked_list.ListNode;
 
 import java.util.*;
 

@@ -1,4 +1,5 @@
-package codeofli.leetcode.linkedList;
+package codeofli.leetcode.data_structure.linked_list;
+
 
 public class RotateRight61 {
     /**
@@ -8,7 +9,7 @@ public class RotateRight61 {
      */
     public ListNode rotateRight(ListNode head, int k) {
         int length = 0;
-        ListNode  cur = head;
+        ListNode cur = head;
         ListNode tail = head;
         while (cur != null){
             length++;

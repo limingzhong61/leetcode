@@ -1,5 +1,7 @@
 package codeofli.leetcode.graph_parse_ds.two_pointer;
 
+import codeofli.leetcode.data_structure.linked_list.ListNode;
+
 import java.util.List;
 
 public class GetIntersectionNode52 {

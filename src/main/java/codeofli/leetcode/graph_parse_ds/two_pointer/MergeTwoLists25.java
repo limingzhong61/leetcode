@@ -1,5 +1,6 @@
 package codeofli.leetcode.graph_parse_ds.two_pointer;
 
+import codeofli.leetcode.data_structure.linked_list.ListNode;
 import codeofli.my.leetcode.LinkedList;
 
 import java.util.List;

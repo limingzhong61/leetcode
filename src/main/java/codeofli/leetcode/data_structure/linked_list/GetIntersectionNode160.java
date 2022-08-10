@@ -1,4 +1,5 @@
-package codeofli.leetcode.linkedList;
+package codeofli.leetcode.data_structure.linked_list;
+
 
 import java.util.HashSet;
 import java.util.Set;

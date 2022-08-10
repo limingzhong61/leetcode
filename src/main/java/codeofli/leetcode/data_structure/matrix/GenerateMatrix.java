@@ -2,6 +2,9 @@ package codeofli.leetcode.data_structure.matrix;
 
 import codeofli.my.util.matrix.MatrixUtil;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class GenerateMatrix {
     /**
      * 按层模拟
@@ -116,5 +119,6 @@ public class GenerateMatrix {
     public static void main(String[] args) {
         GenerateMatrix generateMatrix = new GenerateMatrix();
         MatrixUtil.printMatrix(generateMatrix.generateMatrix(3));
+        System.out.println(Arrays.deepToString(generateMatrix.generateMatrix(8)));
     }
 }

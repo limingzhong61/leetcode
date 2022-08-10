@@ -1,7 +1,7 @@
 package codeofli.my.leetcode;
 
+import codeofli.leetcode.data_structure.binary_tree.TreeNode;
 import codeofli.leetcode.graph_parse_ds.search_and_recur.Codec37;
-import codeofli.leetcode.graph_parse_ds.search_and_recur.TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;
