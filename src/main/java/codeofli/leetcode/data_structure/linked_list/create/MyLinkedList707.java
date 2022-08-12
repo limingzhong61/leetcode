@@ -1,4 +1,4 @@
-package codeofli.leetcode.data_structure.linked_list;
+package codeofli.leetcode.data_structure.linked_list.create;
 
 public class MyLinkedList707 {
 

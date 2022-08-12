@@ -12,7 +12,7 @@ import java.util.Queue;
 public class EncodeTree2 {
 
     // Encodes a tree to a single string.
-    public String serialize(TreeNode root) {
+    public static String serialize(TreeNode root) {
         StringBuilder sb = new StringBuilder();
         sb.append("[");
         Queue<TreeNode> queue = new LinkedList<>();
@@ -39,7 +39,7 @@ public class EncodeTree2 {
     }
 
     // Decodes your encoded data to tree.
-    public TreeNode deserialize(String data) {
+    public static TreeNode deserialize(String data) {
         data = data.substring(1, data.length() - 1);
         //"[]"
         if (data.equals("")) {
