@@ -1,4 +1,4 @@
-package codeofli.leetcode.data_structure.binary_tree.summary;
+package codeofli.leetcode.data_structure.binary_tree.find;
 
 
 import codeofli.leetcode.data_structure.binary_tree.TreeNode;
@@ -6,16 +6,12 @@ import codeofli.leetcode.data_structure.binary_tree.TreeNode;
 import java.util.HashMap;
 import java.util.HashSet;
 
-public class LowestCommonAncestor {
+public class LowestCommonAncestor236 {
     TreeNode result = null;
 
     /**
+     * 后序遍历，当找到两个结点时为最近公共祖先·
      * p、q不是同一指针
-     *
-     * @param root
-     * @param p
-     * @param q
-     * @return
      */
     public TreeNode lowestCommonAncestor1(TreeNode root, TreeNode p, TreeNode q) {
         find(root, p, q);
@@ -29,18 +25,14 @@ public class LowestCommonAncestor {
         }
         boolean left = find(root.left, p, q);
         boolean right = find(root.right, p, q);
+        if (left && right) { //2
+            result = root;
+            return true;
+        }
         if (root == p || root == q) { // 1
-            // if(root.val == 5){
-            //     // System.out.println("val:5" + left + right );
-            // }
-            
             if (left || right) { //1+1 = 2
                 result = root;
             }
-            return true;
-        } else if (left && right) { //2
-            
-            result = root;
             return true;
         }
         return left || right;  //只可能有1，有二已经有结果了
@@ -62,10 +54,6 @@ public class LowestCommonAncestor {
 
     /**
      * 法二：记录父节点
-     * @param root
-     * @param p
-     * @param q
-     * @return
      */
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         if(root == null) {
