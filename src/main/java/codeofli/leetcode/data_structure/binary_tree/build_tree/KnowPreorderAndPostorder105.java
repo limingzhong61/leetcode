@@ -10,8 +10,6 @@ public class KnowPreorderAndPostorder105 {
      * 迭代版本
      * 前序：中左右，
      * 中序：左中右
-     * @param inorder
-     * @return
      */
     public TreeNode buildTree(int[] preorder, int[] inorder) {
         //用一个栈 stack 来维护「当前节点的所有还没有考虑过右儿子的祖先节点」
