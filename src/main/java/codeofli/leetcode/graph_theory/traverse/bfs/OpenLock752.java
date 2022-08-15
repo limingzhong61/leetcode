@@ -1,4 +1,4 @@
-package codeofli.leetcode.graph_theory.bfs;
+package codeofli.leetcode.graph_theory.traverse.bfs;
 
 import codeofli.my.leetcode.TransformUtil;
 

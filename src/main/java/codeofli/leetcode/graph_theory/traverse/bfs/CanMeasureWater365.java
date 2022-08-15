@@ -1,6 +1,5 @@
-package codeofli.leetcode.graph_theory.bfs;
+package codeofli.leetcode.graph_theory.traverse.bfs;
 
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Locale;
 

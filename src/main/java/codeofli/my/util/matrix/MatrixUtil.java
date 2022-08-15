@@ -26,6 +26,17 @@ public class MatrixUtil {
         System.out.println();
     }
 
+    public static void printMatrix(char[][] a) {
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < a[i].length; j++) {
+                System.out.print(a[i][j] + ",");
+            }
+            System.out.println();
+        }
+        //空行的打印，便于观察
+        System.out.println();
+    }
+
     public static void printMatrix(int[][] a,int row,int col) {
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < col; j++) {
