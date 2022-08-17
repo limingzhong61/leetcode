@@ -1,4 +1,4 @@
-package codeofli.leetcode.bruce_search;
+package codeofli.leetcode.bruce_solution.bruce_search;
 
 public class RepeatedSubstringPattern {
     public boolean repeatedSubstringPattern(String s) {
