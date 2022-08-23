@@ -1,6 +1,7 @@
 package codeofli.my.leetcode;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class TransformUtil {
@@ -27,6 +28,24 @@ public class TransformUtil {
             nums[i] = Integer.parseInt(split[i]);
         }
         return nums;
+    }
+
+    public static long[] toLongArray(String original) {
+        String s = original.replaceAll("\\[", "").
+                replaceAll("\\]", "").
+                // 有可能有空格
+                        replaceAll("\\s+", "").
+                // 特殊的空格
+                        replaceAll(" ", "");
+        if ("".equals(s)) {
+            return new long[0];
+        }
+        String[] split = s.split(",");
+        int[] nums = new int[split.length];
+        for (int i = 0; i < split.length; i++) {
+            nums[i] = Integer.parseInt(split[i]);
+        }
+        return Arrays.stream(nums).mapToLong(a -> (long)a).toArray();
     }
 
     /**
