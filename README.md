@@ -4,6 +4,10 @@
 - 数据结构相关代码： `codeofli.leetcode.data_structure`
     - 链表代码：`data_structure.linked_list`
     - 二叉树代码：`data_structure.binary_tree`
+- 字符串计算 `math.string_calculate`
+  - 字符串加法
+  - 字符串乘法
+  - 字符串表达式
 ## 通用leetcode类结构
 建议都使用一个类就行了，**便于自己生成测试用例**，也能减少重复类
 - 二叉树结点结点类`TreeNode`  

@@ -1,4 +1,4 @@
-package codeofli.leetcode.data_structure.string.expression;
+package codeofli.leetcode.math.string_calculate.expression;
 
 
 public class SolveEquation640 {
