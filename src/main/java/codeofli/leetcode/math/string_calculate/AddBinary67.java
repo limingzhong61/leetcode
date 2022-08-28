@@ -12,8 +12,7 @@ public class AddBinary67 {
             int y = j >= 0 ? b.charAt(j) - '0' : 0;
             int sum = x + y + carry;
             carry = sum / 2;
-            sum = sum % 2;
-            res.append(sum);
+            res.append(sum % 2);
         }
         return res.reverse().toString();
     }
