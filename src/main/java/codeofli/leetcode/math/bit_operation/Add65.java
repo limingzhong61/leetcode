@@ -1,4 +1,4 @@
-package codeofli.leetcode.graph_parse_ds.bit_operation;
+package codeofli.leetcode.math.bit_operation;
 
 public class Add65 {
     public int add(int a, int b) {

@@ -1,4 +1,4 @@
-package codeofli.leetcode.graph_parse_ds.bit_operation;
+package codeofli.leetcode.math.bit_operation;
 
 public class HammingWeight15 {
     // you need to treat n as an unsigned value

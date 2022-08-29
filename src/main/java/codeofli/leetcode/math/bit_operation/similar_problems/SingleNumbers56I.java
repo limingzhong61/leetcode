@@ -1,4 +1,4 @@
-package codeofli.leetcode.graph_parse_ds.bit_operation;
+package codeofli.leetcode.math.bit_operation.similar_problems;
 
 import codeofli.my.leetcode.TransformUtil;
 
