@@ -1,6 +1,6 @@
 package codeofli.leetcode.graph_parse_ds.divide_and_conquer;
 
-import codeofli.leetcode.data_structure.binary_tree.TreeNode;
+import codeofli.leetcode.data_structure.tree.binary_tree.TreeNode;
 
 import java.util.Deque;
 import java.util.HashMap;

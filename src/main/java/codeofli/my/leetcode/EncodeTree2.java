@@ -1,6 +1,6 @@
 package codeofli.my.leetcode;
 
-import codeofli.leetcode.data_structure.binary_tree.TreeNode;
+import codeofli.leetcode.data_structure.tree.binary_tree.TreeNode;
 import codeofli.leetcode.graph_parse_ds.search_and_recur.Codec37;
 
 import java.util.LinkedList;

@@ -1,6 +1,6 @@
 package codeofli.leetcode.graph_theory.short_path_no_weight;
 
-import codeofli.leetcode.data_structure.binary_tree.TreeNode;
+import codeofli.leetcode.data_structure.tree.binary_tree.TreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

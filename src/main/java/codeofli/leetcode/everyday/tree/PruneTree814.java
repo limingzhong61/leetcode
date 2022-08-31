@@ -1,6 +1,6 @@
 package codeofli.leetcode.everyday.tree;
 
-import codeofli.leetcode.data_structure.binary_tree.TreeNode;
+import codeofli.leetcode.data_structure.tree.binary_tree.TreeNode;
 
 public class PruneTree814 {
     /**

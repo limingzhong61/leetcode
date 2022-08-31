@@ -1,6 +1,6 @@
 package codeofli.leetcode.find;
 
-import codeofli.leetcode.data_structure.binary_tree.TreeNode;
+import codeofli.leetcode.data_structure.tree.binary_tree.TreeNode;
 import codeofli.leetcode.data_structure.linked_list.ListNode;
 
 public class IsSubPath1367 {
