@@ -4,7 +4,7 @@ public class HammingWeight15 {
     // you need to treat n as an unsigned value
 
     /**
-     * 位运算优化
+     * 位运算优化，布莱恩BK算法
      */
     public int hammingWeight(int n) {
         int ret = 0;

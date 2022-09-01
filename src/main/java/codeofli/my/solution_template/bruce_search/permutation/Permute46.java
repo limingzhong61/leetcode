@@ -1,14 +1,16 @@
 package codeofli.my.solution_template.bruce_search.permutation;
 
-import java.util.*;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.IntStream;
 
 /**
  * 全排列模板，没有重复元素
  */
-public class Permute {
+public class Permute46 {
 
-    public List<List<Integer>> permuteUnique(int[] nums) {
+    public List<List<Integer>> permute(int[] nums) {
         permutation(nums, 0);
         return res;
     }
@@ -16,7 +18,8 @@ public class Permute {
     List<List<Integer>> res = new ArrayList<>();
 
     /**
-     * 下一次排列：获取全排列
+     * 下一次排列：
+     * 每次选择一个数i作为全排列的第cur个数，然后继续递归生成[cur+1,n]后面的数
      */
     private void permutation(int[] nums, int cur) {
         if (cur == nums.length) {
@@ -44,8 +47,9 @@ public class Permute {
     public static void main(String[] args) {
         Permute permute = new Permute();
         //System.out.println(permute.permuteUnique(TransformUtil.toIntArray("[1,1,2]")));
-        System.out.println(permute.permuteUnique(IntStream.range(0, 9).toArray()).size());
+        System.out.println(permute.permuteUnique(IntStream.range(0, 9).toArray()));
     }
 
 
 }
+
