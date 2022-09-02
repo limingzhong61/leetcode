@@ -1,7 +1,4 @@
 package codeofli.leetcode.data_structure.string;
-
-import codeofli.leetcode.contest.c306.SmallestNumber;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Deque;
@@ -32,7 +29,7 @@ public class DecodeString394 {
                 stack.poll(); // remove '['
                 //反转序列值
                 StringBuilder sb = new StringBuilder();
-                for(String str : list){
+                for (String str : list) {
                     sb.append(str);
                 }
                 stack.push(sb.toString().repeat(Integer.parseInt(stack.poll())));
