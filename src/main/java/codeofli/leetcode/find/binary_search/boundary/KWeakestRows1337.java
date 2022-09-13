@@ -15,22 +15,22 @@ public class KWeakestRows1337 {
             int low = 0, high = n - 1;
             while (low <= high) {
                 int mid = low + (high - low) / 2;
-                if(mat[i][mid]  == 0){
+                if (mat[i][mid] == 0) {
                     high = mid - 1;
-                }else{
+                } else {
                     low = mid + 1;
                 }
-                pairs[i] = new Pair<>(i,low);
+                pairs[i] = new Pair<>(i, low);
             }
         }
-        Arrays.sort(pairs,(a,b) ->{
-            if(Objects.equals(a.val2, b.val2)){
-                return  a.val1 - b.val1;
+        Arrays.sort(pairs, (a, b) -> {
+            if (Objects.equals(a.val2, b.val2)) {
+                return a.val1 - b.val1;
             }
-            return  a.val2 - b.val2;
+            return a.val2 - b.val2;
         });
         int[] res = new int[k];
-        for(int i = 0; i < k; i++){
+        for (int i = 0; i < k; i++) {
             res[i] = pairs[i].val1;
         }
         return res;

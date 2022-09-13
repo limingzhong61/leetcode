@@ -17,7 +17,7 @@ public class Digit {
     /**
      *
      * @param num
-     * @return 返回自然数的每一位数字形成的数组
+     * @return 返回自然数的每一位数字形成的int数组
      */
     public static int[] getNumberDigitArray(int num){
         //int 最多十位
@@ -30,5 +30,13 @@ public class Digit {
             num /= 10;
         } while (num != 0);
         return Arrays.copyOf(nums,index);
+    }
+    /**
+     *
+     * @param num
+     * @return 返回自然数的每一位数字形成的char字符数组
+     */
+    public static char[] getNumberDigitCharArray(int num){
+        return String.valueOf(num).toCharArray();
     }
 }
