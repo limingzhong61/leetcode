@@ -1,4 +1,4 @@
-package codeofli.leetcode.unc_good;
+package codeofli.leetcode.other.easy;
 
 import codeofli.my.leetcode.TransformUtil;
 
