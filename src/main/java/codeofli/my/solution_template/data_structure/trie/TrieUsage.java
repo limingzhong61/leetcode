@@ -1,33 +1,13 @@
-package codeofli.my.solution_template.data_structure;
+package codeofli.my.solution_template.data_structure.trie;
 
 import codeofli.my.leetcode.TransformUtil;
 
-import java.util.*;
-/**
- * 字典树 Trie Tree
- * 用一个hashMap来完成结点间的映射查找，"#"为一个完整字符串的结束标记。
- */
-public class Trie {
+import java.util.Comparator;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
-    Map<Character, Trie> children;
-
-    public Trie() {
-        children = new HashMap<>();
-    }
-
-    public  Trie(List<String> dictionary) {
-        this();
-        for (String word : dictionary) {
-            Trie cur = this;
-            for (int i = 0; i < word.length(); i++) {
-                char c = word.charAt(i);
-                cur.children.putIfAbsent(c, new Trie());
-                cur = cur.children.get(c);
-            }
-            cur.children.putIfAbsent('#', new Trie());
-        }
-    }
-
+public class TrieUsage {
     /**
      * leetcode: 字典树 Trie Tree
      */
@@ -95,7 +75,7 @@ public class Trie {
     }
 
     public static void main(String[] args) {
-        codeofli.my.solution_template.data_structure.Trie replaceWords648 = new codeofli.my.solution_template.data_structure.Trie();
+        TrieUsage replaceWords648 = new TrieUsage();
 
         System.out.println(replaceWords648.replaceWords(TransformUtil.toStringArrayList("[\"cat\",\"bat\",\"rat\"]"),
                 "the cattle was rattled by the battery"));

@@ -32,3 +32,5 @@ import codeofli.leetcode.data_structure.linked_list.ListNode;
 包含一些常用的刷题代码类和刷题工具类在`codeofli.my`包下
 - 刷题模板`codeofli.my.solution_template`
 - 刷题工具类`codeofli.my.util`
+- 常用模板代码：
+  - 字典树Trie: `codeofli.my.solution_template.data_structure.trie.Trie.java`

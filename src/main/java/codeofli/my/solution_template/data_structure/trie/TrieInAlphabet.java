@@ -1,4 +1,4 @@
-package codeofli.my.solution_template.data_structure;
+package codeofli.my.solution_template.data_structure.trie;
 
 
 public class TrieInAlphabet {
