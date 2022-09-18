@@ -18,27 +18,28 @@ public class Trie {
     public  Trie(List<String> dictionary) {
         this();
         for (String word : dictionary) {
-            Trie cur = this;
-            for (int i = 0; i < word.length(); i++) {
-                char c = word.charAt(i);
-                cur.children.putIfAbsent(c, new Trie());
-                cur = cur.children.get(c);
-            }
-            cur.children.putIfAbsent('#', new Trie());
+            insert(word);
         }
     }
-
     public  Trie(String[] dictionary) {
         this();
         for (String word : dictionary) {
-            Trie cur = this;
-            for (int i = 0; i < word.length(); i++) {
-                char c = word.charAt(i);
-                cur.children.putIfAbsent(c, new Trie());
-                cur = cur.children.get(c);
-            }
-            cur.children.putIfAbsent('#', new Trie());
+            insert(word);
         }
+    }
+
+    /**
+     * 在字典树中插入一个字符串
+     * @param word  字符串
+     */
+    private  void insert(String word) {
+        Trie cur = this;
+        for (int i = 0; i < word.length(); i++) {
+            char c = word.charAt(i);
+            cur.children.putIfAbsent(c, new Trie());
+            cur = cur.children.get(c);
+        }
+        cur.children.putIfAbsent('#', new Trie());
     }
 
     public String findRoot(String word, Trie trie) {
