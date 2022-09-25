@@ -1,4 +1,4 @@
-package codeofli.leetcode.contest.ct;
+package codeofli.leetcode.contest.c2022;
 
 public class TemperatureTrend {
     /**

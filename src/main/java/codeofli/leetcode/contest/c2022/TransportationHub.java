@@ -1,6 +1,5 @@
-package codeofli.leetcode.contest.ct;
+package codeofli.leetcode.contest.c2022;
 
-import codeofli.leetcode.data_structure.tree.binary_tree.TreeNode;
 import codeofli.my.leetcode.TransformUtil;
 
 import java.util.*;
