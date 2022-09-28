@@ -23,7 +23,7 @@
 
 
 ```
-- 链表结点结点类`TreeNode`
+- 链表结点结点类`ListNode`
 ```java
 //Definition for a binary tree node.
 import codeofli.leetcode.data_structure.linked_list.ListNode;
