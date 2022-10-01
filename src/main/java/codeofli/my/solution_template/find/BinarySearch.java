@@ -18,44 +18,41 @@ public class BinarySearch {
 
     /**
      * 二分查找>= x的最小值。
+     * F,T 右边界
+     * @return 返回值（arr.length）有可能比数组中所有数字都大
      */
-    private int biggerNumberByBS(int[] arr2, int x) {
-        int low = 0, high = arr2.length - 1;
+    private int biggerNumberIndexByBS(int[] arr, int x) {
+        int low = 0, high = arr.length - 1;
         while (low <= high) {
             int mid = low + (high - low) / 2;
-            if (arr2[mid] >= x) {
+            if (arr[mid] >= x) {
                 high = mid - 1;
             } else {
                 low = mid + 1;
             }
         }
-        if(low == arr2.length){ //有可能比数组中所有数字都大
-            return arr2[arr2.length -1];
-        }
-        return arr2[low];
+        return low;
     }
 
     /**
      * 二分查找<= x的最大值。
-     * @param arr2
-     * @param x
-     * @return
+     *T, F,左边界
      */
-    private int smallerNumberByBS(int[] arr2, int x) {
-        int low = 0, high = arr2.length - 1;
-        int pos  = -1;
+    private int smallerNumberIndexByBS(int[] arr, int x) {
+        int low = 0, high = arr.length - 1;
+        int pos = -1;
         while (low <= high) {
             int mid = low + (high - low) / 2;
-            if (arr2[mid] > x) {
+            if (arr[mid] > x) {
                 high = mid - 1;
             } else { //此时 <= x
                 pos = mid;
                 low = mid + 1;
             }
         }
-        if(pos == -1){ //有可能比数组中所有数字都小
-            return arr2[0];
+        if (pos == -1) { //有可能比数组中所有数字都小
+            return 0;
         }
-        return arr2[pos];
+        return pos;
     }
 }
