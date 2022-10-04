@@ -17,9 +17,9 @@ public class BinarySearch {
     }
 
     /**
-     * 二分查找>= x的最小值。
+     * 二分查找>= x的最小值下标。
      * F,T 右边界
-     * @return 返回值（arr.length）有可能比数组中所有数字都大
+     * @return 返回的index有越界检查，不会越界
      */
     private int biggerNumberIndexByBS(int[] arr, int x) {
         int low = 0, high = arr.length - 1;
@@ -31,14 +31,18 @@ public class BinarySearch {
                 low = mid + 1;
             }
         }
+        if (low == arr.length) { //有可能比数组中所有数字都小
+            return low - 1;
+        }
         return low;
     }
 
     /**
-     * 二分查找<= x的最大值。
+     * 二分查找<= x的最大值下标，。
      *T, F,左边界
+     * @Return 返回的index有越界检查，不会越界
      */
-    private int smallerNumberIndexByBS(int[] arr, int x) {
+    private int smallerNumberIndexByBSWithRangeCheck(int[] arr, int x) {
         int low = 0, high = arr.length - 1;
         int pos = -1;
         while (low <= high) {
