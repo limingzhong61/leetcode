@@ -27,8 +27,26 @@ public class ArraysUtil {
     }
 
     public static void swap(int[] nums,int a,int b){
-        int temp = nums[a];
+        var temp = nums[a];
         nums[a] = nums[b];
         nums[b] = temp;
+    }
+
+    public static void swap(String[] nums,int a,int b){
+        var temp = nums[a];
+        nums[a] = nums[b];
+        nums[b] = temp;
+    }
+
+    /**
+     * 泛型引用类型数组交换
+     */
+    public static <T> void swap(T[] nums,int a,int b){
+        var temp = nums[a];
+        nums[a] = nums[b];
+        nums[b] = temp;
+    }
+
+    public static void main(String[] args) {
     }
 }
