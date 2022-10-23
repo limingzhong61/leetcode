@@ -1,17 +1,15 @@
-package codeofli.leetcode.other.hard;
+package codeofli.leetcode.dp.add_binary_search;
 
 import codeofli.my.leetcode.TransformUtil;
 
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.TreeMap;
 
 /**
  * @author: limingzhong
  * @create: 2022-10-22 9:28
  */
-public class JobScheduling {
+public class JobScheduling1235 {
     /**
      *动态规划+TreeMap
      */
@@ -36,7 +34,7 @@ public class JobScheduling {
     }
 
     public static void main(String[] args) {
-        JobScheduling jobScheduling = new JobScheduling();
+        JobScheduling1235 jobScheduling = new JobScheduling1235();
         System.out.println(jobScheduling.jobScheduling(TransformUtil.toIntArray("[4,2,4,8,2]"),
                 TransformUtil.toIntArray("[5,5,5,10,8]"),
                 TransformUtil.toIntArray("[1,2,8,10,4]")));

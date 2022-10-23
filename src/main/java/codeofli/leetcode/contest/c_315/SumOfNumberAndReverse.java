@@ -1,4 +1,4 @@
-package codeofli.leetcode.contest.c_10_16;
+package codeofli.leetcode.contest.c_315;
 
 public class SumOfNumberAndReverse {
     public boolean sumOfNumberAndReverse(int num) {
