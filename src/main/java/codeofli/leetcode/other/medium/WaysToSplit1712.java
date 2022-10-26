@@ -15,6 +15,6 @@ public class WaysToSplit1712 {
         for(int i = 1; i < n; i++){
             sum[i] = nums[i - 1] + sum[i-1];
         }
-
+        //TODO-limingzhong LiMingzhong 2022/10/26 13:31
     }
 }

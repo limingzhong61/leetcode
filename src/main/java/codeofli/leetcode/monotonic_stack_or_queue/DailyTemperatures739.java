@@ -1,4 +1,4 @@
-package codeofli.leetcode.monotonic_stack;
+package codeofli.leetcode.monotonic_stack_or_queue;
 
 import java.util.Deque;
 import java.util.LinkedList;
