@@ -19,5 +19,6 @@ public class SumSubarrayMins907 {
         for(int i = 0; i < n ; i++){
 
         }
+        return -1;
     }
 }
