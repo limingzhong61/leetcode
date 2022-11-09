@@ -1,4 +1,4 @@
-package codeofli.leetcode.other.loop;
+package codeofli.leetcode.other.old.loop;
 
 import java.util.Arrays;
 

@@ -1,8 +1,6 @@
-package codeofli.leetcode.other.hard;
+package codeofli.leetcode.other.old.hard;
 
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.HashSet;
 
 public class DistinctSubseqII940 {
 

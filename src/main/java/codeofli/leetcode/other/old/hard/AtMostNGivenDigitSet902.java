@@ -1,7 +1,6 @@
-package codeofli.leetcode.other.hard;
+package codeofli.leetcode.other.old.hard;
 
 
-import codeofli.my.IntegerUtil;
 import codeofli.my.leetcode.TransformUtil;
 
 import java.util.*;

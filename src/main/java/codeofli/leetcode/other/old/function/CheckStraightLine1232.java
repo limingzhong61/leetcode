@@ -1,4 +1,4 @@
-package codeofli.leetcode.other.function;
+package codeofli.leetcode.other.old.function;
 
 public class CheckStraightLine1232 {
     /**

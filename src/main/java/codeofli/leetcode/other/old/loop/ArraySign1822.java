@@ -1,4 +1,4 @@
-package codeofli.leetcode.other.loop;
+package codeofli.leetcode.other.old.loop;
 
 public class ArraySign1822 {
     public int arraySign(int[] nums) {

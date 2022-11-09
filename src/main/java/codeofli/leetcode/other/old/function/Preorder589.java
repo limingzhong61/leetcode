@@ -1,4 +1,4 @@
-package codeofli.leetcode.other.function;
+package codeofli.leetcode.other.old.function;
 
 import java.util.ArrayList;
 import java.util.List;

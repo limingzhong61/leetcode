@@ -1,4 +1,4 @@
-package codeofli.leetcode.other.loop;
+package codeofli.leetcode.other.old.loop;
 
 public class AreAlmostEqual {
     public boolean areAlmostEqual(String s1, String s2) {

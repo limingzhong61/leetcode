@@ -1,4 +1,4 @@
-package codeofli.leetcode.other.hard;
+package codeofli.leetcode.other.old.hard;
 
 public class MinSwap801 {
     /**

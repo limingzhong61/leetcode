@@ -1,4 +1,4 @@
-package codeofli.leetcode.other.linked_list_tree;
+package codeofli.leetcode.other.old.linked_list_tree;
 
 // Definition for singly-linked list.
 class ListNode {
