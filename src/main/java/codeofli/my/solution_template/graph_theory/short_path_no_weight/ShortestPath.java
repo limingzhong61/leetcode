@@ -44,10 +44,13 @@ public class ShortestPath {
             for (var item : next) {
                 int nextX = x + item[0];
                 int nextY = y + item[1];
-                if (nextX >= 0 && nextX < m && nextY >= 0 && nextY < n && grid[nextX][nextY] == 1 && !visited[nextX][nextY]  ) {
-                    visited[nextX][nextY] = true;
-                    queue.add(new int[]{nextX, nextY, point[2] + 1});
-                    cntNew--;
+                if (nextX >= 0 && nextX < m && nextY >= 0 && nextY < n) { // boundary check
+                    if(grid[nextX][nextY] == 1 && !visited[nextX][nextY]  ){// state check
+                        visited[nextX][nextY] = true;
+                        queue.add(new int[]{nextX, nextY, point[2] + 1});
+                        cntNew--;
+                    }
+
                 }
             }
         }
