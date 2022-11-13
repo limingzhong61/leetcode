@@ -1,6 +1,5 @@
 package codeofli.leetcode.simulation;
 
-import codeofli.leetcode.find.FindClosestElements658;
 import codeofli.my.leetcode.TransformUtil;
 
 public class FindRotation1886 {

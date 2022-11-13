@@ -1,7 +1,5 @@
 package codeofli.leetcode.other.medium;
 
-import codeofli.leetcode.find.binary_search.max_or_min_judge.MaxFrequency1838;
-
 public class MaxValue1802 {
     /**
      * lc简化计算sum
