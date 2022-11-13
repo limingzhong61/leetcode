@@ -26,16 +26,14 @@ public class MaxPalindromes {
             }
         }
         int dp[] = new int[n];
-        int start = 0;
-        int res = 0;
         for (int i = 0; i < n; i++) {
+            if (i > 0)
+                dp[i] = dp[i - 1];
             for (int j = i - k + 1; j >= 0; j--) {
                 if (f[j][i]) {
                     dp[i] = Math.max(dp[i], dp[j] + 1);
                 }
             }
-            if(i > 0)
-            dp[i] = Math.max(dp[i], dp[i-1]);
         }
         return dp[n - 1];
     }
