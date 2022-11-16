@@ -14,6 +14,6 @@ public class SplitArraySameAverage805 {
     public boolean splitArraySameAverage(int[] nums) {
         int sum = IntStream.of(nums).sum();
         double avg = IntStream.of(nums).average().getAsDouble();
-
+        return true;
     }
 }
