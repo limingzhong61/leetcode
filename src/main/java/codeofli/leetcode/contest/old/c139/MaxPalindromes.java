@@ -1,6 +1,4 @@
-package codeofli.leetcode.contest.c139;
-
-import java.util.Arrays;
+package codeofli.leetcode.contest.old.c139;
 
 public class MaxPalindromes {
     public int maxPalindromes(String s, int k) {

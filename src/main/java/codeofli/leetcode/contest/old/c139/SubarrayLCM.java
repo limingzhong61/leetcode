@@ -1,4 +1,4 @@
-package codeofli.leetcode.contest.c139;
+package codeofli.leetcode.contest.old.c139;
 
 public class SubarrayLCM {
     public int subarrayLCM(int[] nums, int k) {
