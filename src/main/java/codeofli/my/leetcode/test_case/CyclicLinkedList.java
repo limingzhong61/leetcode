@@ -1,6 +1,6 @@
 package codeofli.my.leetcode.test_case;
 
-import codeofli.leetcode.everyday.Node;
+import codeofli.leetcode.other.everyday.Node;
 
 /**
  * 链表
