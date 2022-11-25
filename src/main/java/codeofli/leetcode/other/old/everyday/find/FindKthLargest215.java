@@ -1,6 +1,5 @@
-package codeofli.my.solution_template.find;
+package codeofli.leetcode.other.old.everyday.find;
 
-import codeofli.leetcode.other.old.everyday.find.FindKthLargest215;
 import codeofli.my.leetcode.TransformUtil;
 
 import java.util.PriorityQueue;
@@ -8,7 +7,7 @@ import java.util.PriorityQueue;
 /**
  * 215. 数组中的第K个最大元素
  */
-public class FindKthLargest {
+public class FindKthLargest215 {
     /**
      * 基于快速排序的选择方法
      */
