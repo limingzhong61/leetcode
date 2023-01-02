@@ -1,4 +1,4 @@
-package lmz.leetcode.other.medium;
+package lmz.leetcode.other.medium.old;
 
 public class CheckPowersOfThree1780 {
     public boolean checkPowersOfThree(int n) {
