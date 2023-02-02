@@ -1,6 +1,11 @@
-package lmz.leetcode.other.medium.old;
+package lmz.leetcode.find.binary_search.max_or_min_judge;
 
+/**
+ * @author: limingzhong
+ * @create: 2023-01-04 12:45
+ */
 public class MaxValue1802 {
+
     /**
      * lc简化计算sum
      */
@@ -26,48 +31,44 @@ public class MaxValue1802 {
         return (int)l+1;
     }
     /**
-     * 二分查找：
-     * left - right
-     * true,false, 左边界
+     * 二分查找：注意溢出和上下界的范围
      */
     public int maxValue1(int n, int index, int maxSum) {
-        int left = 1, right = maxSum;
-        while (left <= right) {
-            int mid = left + (right - left) / 2;
+        int low = 1, high = maxSum;
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
             if (check(n, index, maxSum, mid)) {
-                left = mid + 1;
+                low = mid + 1;
             } else {
-                right = mid - 1;
+                high = mid - 1;
             }
         }
-        return right;
+        return high;
     }
 
     private boolean check(int n, int index, int maxSum, int x) {
-        int leftLen = index, rightLen = n - index - 1;
-        long need = x;
-        int leftFillLen = Math.min(leftLen,x -1);
-        int rightFillLen = Math.min(rightLen,x -1);
-        if (leftLen > x - 1) {
-            need += (long) x * (x - 1) / 2;
+        int lLen = index, rLen = n - index - 1;
+        long sum = x; //中间为x,然后依次递减，故两侧最大为x-1
+        sum += getSum(x - 1, lLen);
+        sum += getSum(x - 1, rLen);
+        return sum <= maxSum;
+    }
+
+    private static long getSum(int x, int lLen) {
+        long sum = 0;
+        if (lLen >= x) {
+            sum += (long) x * (x + 1) / 2;
+            sum += lLen - x; // 补齐为1
         } else {
-            need += (long) leftLen * (x - 1 + x - leftLen) / 2;
+            sum += (long) lLen * x + (long) lLen * (lLen - 1) / 2 * (-1);
         }
-        if (rightLen > x - 1) {
-            need += (long) x * (x - 1) / 2;
-        } else {
-            need += (long) rightLen * (x - 1 + x - rightLen) / 2;
-        }
-        if (leftFillLen + rightFillLen + 1 < n) {
-            need += n - leftFillLen - rightFillLen - 1;
-        }
-        return need <= maxSum;
+        return sum;
     }
 
     public static void main(String[] args) {
         MaxValue1802 maxValue1802 = new MaxValue1802();
         //testCase(maxValue1802, 3, 2, 18, 7);
-        testCase(maxValue1802, 4, 0, 4, 1);
+        testCase(maxValue1802, 7, 0, 930041194, 132863030);
     }
 
     private static void testCase(MaxValue1802 maxValue1802, int n, int index, int maxSum, int x) {

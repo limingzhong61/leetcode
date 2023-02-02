@@ -1,4 +1,4 @@
-package lmz.my.math;
+package lmz.my.solution_template.math;
 
 public class FloatEquals {
 

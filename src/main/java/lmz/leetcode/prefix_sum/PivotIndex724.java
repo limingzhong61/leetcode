@@ -1,4 +1,4 @@
-package lmz.leetcode.data_structure.array;
+package lmz.leetcode.prefix_sum;
 
 import java.util.Arrays;
 
