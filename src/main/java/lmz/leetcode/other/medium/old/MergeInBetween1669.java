@@ -1,4 +1,4 @@
-package lmz.leetcode.other.medium;
+package lmz.leetcode.other.medium.old;
 
 import lmz.leetcode.data_structure.linked_list.ListNode;
 

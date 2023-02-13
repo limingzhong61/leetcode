@@ -1,8 +1,7 @@
-package lmz.leetcode.other.medium;
+package lmz.leetcode.other.medium.old;
 
 import lmz.my.leetcode.TransformUtil;
 
-import java.util.Arrays;
 import java.util.PriorityQueue;
 
 /**
