@@ -1,6 +1,6 @@
 package lmz.my.leetcode.test_case;
 
-import lmz.leetcode.other.old.everyday.Node;
+import lmz.leetcode.data_structure.linked_list.lc_structure.Node;
 
 /**
  * 链表

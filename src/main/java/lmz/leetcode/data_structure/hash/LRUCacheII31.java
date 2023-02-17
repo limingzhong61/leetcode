@@ -1,11 +1,10 @@
-package codeofli.leetcode.unc_good;
+package lmz.leetcode.data_structure.hash;
 
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class LRUCache146 {
-    class LRUCache extends LinkedHashMap<Integer, Integer>{
+public class LRUCacheII31 {
+    class LRUCache extends LinkedHashMap<Integer, Integer> {
         private int capacity;
 
         public LRUCache(int capacity) {

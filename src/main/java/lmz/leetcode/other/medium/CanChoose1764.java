@@ -1,4 +1,4 @@
-package codeofli.leetcode.other.medium;
+package lmz.leetcode.other.medium;
 
 public class CanChoose1764 {
     public boolean canChoose(int[][] groups, int[] nums) {

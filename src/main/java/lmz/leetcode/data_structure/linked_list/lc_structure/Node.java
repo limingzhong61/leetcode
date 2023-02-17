@@ -1,4 +1,4 @@
-package lmz.leetcode.other.old.everyday;
+package lmz.leetcode.data_structure.linked_list.lc_structure;
 
 // Definition for a Node.
 public class Node {

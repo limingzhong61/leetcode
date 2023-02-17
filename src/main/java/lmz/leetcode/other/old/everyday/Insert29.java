@@ -1,6 +1,7 @@
 package lmz.leetcode.other.old.everyday;
 
 
+import lmz.leetcode.data_structure.linked_list.lc_structure.Node;
 import lmz.my.leetcode.test_case.CyclicLinkedList;
 
 public class Insert29 {

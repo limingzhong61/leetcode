@@ -1,4 +1,4 @@
-package codeofli.leetcode.graph_theory.grid_map;
+package lmz.leetcode.graph_theory.grid_map;
 
 import java.util.HashMap;
 import java.util.Map;

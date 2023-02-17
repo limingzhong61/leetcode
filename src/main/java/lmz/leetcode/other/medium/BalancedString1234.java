@@ -1,4 +1,4 @@
-package codeofli.leetcode.other.medium;
+package lmz.leetcode.other.medium;
 
 import java.util.HashMap;
 
