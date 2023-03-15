@@ -1,4 +1,4 @@
-package lmz.leetcode.other.medium;
+package lmz.leetcode.other.medium.old;
 
 /**
  * @author: limingzhong
@@ -11,8 +11,11 @@ public class RestoreMatrix {
         for(int i = 0; i < rowLen; i++){
             for(int j = 0; j < colLen; j++){
                 int min = Math.min(rowSum[i],colSum[j]);
-
+                res[i][j] = min;
+                rowSum[i] -= min;
+                colSum[j] -= min;
             }
         }
+        return res;
     }
 }
