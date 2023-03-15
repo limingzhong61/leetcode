@@ -1,4 +1,4 @@
-package lmz.leetcode.other.easy;
+package lmz.leetcode.other.easy.old;
 
 import java.util.Arrays;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package lmz.leetcode.other.easy;
+package lmz.leetcode.other.easy.old;
 
 public class IsAnagramII032 {
     public boolean isAnagram(String s, String t) {

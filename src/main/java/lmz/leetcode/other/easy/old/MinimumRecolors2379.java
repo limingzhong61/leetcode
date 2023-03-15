@@ -1,4 +1,4 @@
-package lmz.leetcode.other.easy;
+package lmz.leetcode.other.easy.old;
 
 public class MinimumRecolors2379 {
     public int minimumRecolors(String blocks, int k) {
