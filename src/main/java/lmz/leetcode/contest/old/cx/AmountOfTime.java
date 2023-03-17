@@ -1,6 +1,6 @@
 package lmz.leetcode.contest.old.cx;
 
-import lmz.leetcode.data_structure.tree.binary_tree.TreeNode;
+import lmz.leetcode.data_structure.tree.binary_tree.normal.TreeNode;
 
 import java.util.HashMap;
 import java.util.HashSet;

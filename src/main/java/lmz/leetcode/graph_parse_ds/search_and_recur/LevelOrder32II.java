@@ -1,6 +1,6 @@
 package lmz.leetcode.graph_parse_ds.search_and_recur;
 
-import lmz.leetcode.data_structure.tree.binary_tree.TreeNode;
+import lmz.leetcode.data_structure.tree.binary_tree.normal.TreeNode;
 
 import java.util.*;
 

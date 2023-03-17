@@ -1,4 +1,4 @@
-package lmz.leetcode.data_structure.tree.binary_tree;
+package lmz.leetcode.data_structure.tree.binary_tree.normal;
 
 /**
  * @author: limingzhong

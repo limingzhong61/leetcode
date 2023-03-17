@@ -1,6 +1,6 @@
 package lmz.leetcode.graph_theory.short_path_no_weight;
 
-import lmz.leetcode.data_structure.tree.binary_tree.TreeNode;
+import lmz.leetcode.data_structure.tree.binary_tree.normal.TreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

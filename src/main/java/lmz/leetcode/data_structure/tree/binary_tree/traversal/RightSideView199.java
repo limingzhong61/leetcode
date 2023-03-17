@@ -1,6 +1,6 @@
 package lmz.leetcode.data_structure.tree.binary_tree.traversal;
 
-import lmz.leetcode.data_structure.tree.binary_tree.TreeNode;
+import lmz.leetcode.data_structure.tree.binary_tree.normal.TreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

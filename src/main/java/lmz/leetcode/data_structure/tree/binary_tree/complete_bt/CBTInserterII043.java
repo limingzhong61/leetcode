@@ -1,6 +1,6 @@
 package lmz.leetcode.data_structure.tree.binary_tree.complete_bt;
 
-import lmz.leetcode.data_structure.tree.binary_tree.TreeNode;
+import lmz.leetcode.data_structure.tree.binary_tree.normal.TreeNode;
 
 import java.util.ArrayDeque;
 import java.util.Queue;

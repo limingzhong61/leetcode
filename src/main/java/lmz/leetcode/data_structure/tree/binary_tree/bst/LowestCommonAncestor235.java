@@ -2,7 +2,7 @@ package lmz.leetcode.data_structure.tree.binary_tree.bst;
 
 //import codeofli.leetcode.data_structure.binary_tree.TreeNode;
 
-import lmz.leetcode.data_structure.tree.binary_tree.TreeNode;
+import lmz.leetcode.data_structure.tree.binary_tree.normal.TreeNode;
 
 public class LowestCommonAncestor235 {
     /**

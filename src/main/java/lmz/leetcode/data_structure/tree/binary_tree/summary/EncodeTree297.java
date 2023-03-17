@@ -1,7 +1,7 @@
 package lmz.leetcode.data_structure.tree.binary_tree.summary;
 
 
-import lmz.leetcode.data_structure.tree.binary_tree.TreeNode;
+import lmz.leetcode.data_structure.tree.binary_tree.normal.TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;

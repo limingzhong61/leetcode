@@ -1,6 +1,6 @@
 package lmz.leetcode.find;
 
-import lmz.leetcode.data_structure.tree.binary_tree.TreeNode;
+import lmz.leetcode.data_structure.tree.binary_tree.normal.TreeNode;
 import lmz.leetcode.data_structure.linked_list.ListNode;
 
 public class IsSubPath1367 {

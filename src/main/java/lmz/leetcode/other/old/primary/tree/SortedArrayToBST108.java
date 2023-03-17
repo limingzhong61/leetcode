@@ -1,7 +1,7 @@
 package lmz.leetcode.other.old.primary.tree;
 
 
-import lmz.leetcode.data_structure.tree.binary_tree.TreeNode;
+import lmz.leetcode.data_structure.tree.binary_tree.normal.TreeNode;
 
 public class SortedArrayToBST108 {
     /**

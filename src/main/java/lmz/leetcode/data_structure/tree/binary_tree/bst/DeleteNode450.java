@@ -1,6 +1,6 @@
 package lmz.leetcode.data_structure.tree.binary_tree.bst;
 
-import lmz.leetcode.data_structure.tree.binary_tree.TreeNode;
+import lmz.leetcode.data_structure.tree.binary_tree.normal.TreeNode;
 import lmz.my.leetcode.EncodeTree2;
 
 public class DeleteNode450 {
