@@ -1,6 +1,6 @@
 package lmz.leetcode.unc_good.sub_array_count;
 
-import lmz.my.leetcode.TransformUtil;
+import lmz.leetcode.bruce_solution.bruce_search.my.leetcode.TransformUtil;
 
 public class CountSubarrays2444 {
     /**

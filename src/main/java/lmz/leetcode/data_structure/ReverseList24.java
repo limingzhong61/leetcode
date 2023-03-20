@@ -2,7 +2,7 @@ package lmz.leetcode.data_structure;
 
 
 import lmz.leetcode.data_structure.linked_list.ListNode;
-import lmz.my.leetcode.LinkedList;
+import lmz.leetcode.bruce_solution.bruce_search.my.leetcode.LinkedList;
 
 public class ReverseList24 {
     /**

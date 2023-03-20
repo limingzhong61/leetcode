@@ -1,7 +1,7 @@
 package lmz.leetcode.other.old.everyday.code_ability;
 
-import lmz.my.leetcode.TransformUtil;
-import lmz.my.util.equals.EqualsUtil;
+import lmz.leetcode.bruce_solution.bruce_search.my.leetcode.TransformUtil;
+import lmz.leetcode.bruce_solution.bruce_search.my.util.equals.EqualsUtil;
 
 import java.util.*;
 

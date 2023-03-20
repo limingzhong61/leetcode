@@ -1,6 +1,8 @@
 package lmz.leetcode.bruce_solution.bruce_search.permutation;
 
 
+import lmz.leetcode.bruce_solution.bruce_search.my.solution_template.bruce_search.permutation.Permute;
+
 import java.util.*;
 import java.util.stream.IntStream;
 
@@ -44,7 +46,7 @@ public class Permute46 {
     }
 
     public static void main(String[] args) {
-        lmz.my.solution_template.bruce_search.permutation.Permute permute = new lmz.my.solution_template.bruce_search.permutation.Permute();
+        Permute permute = new Permute();
         //System.out.println(permute.permuteUnique(TransformUtil.toIntArray("[1,1,2]")));
         System.out.println(permute.permuteUnique(IntStream.range(0, 9).toArray()));
     }

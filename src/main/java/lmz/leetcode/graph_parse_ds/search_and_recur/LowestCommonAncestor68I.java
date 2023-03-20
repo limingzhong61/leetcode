@@ -1,7 +1,7 @@
 package lmz.leetcode.graph_parse_ds.search_and_recur;
 
 import lmz.leetcode.data_structure.tree.binary_tree.normal.TreeNode;
-import lmz.my.leetcode.EncodeTree;
+import lmz.leetcode.bruce_solution.bruce_search.my.leetcode.EncodeTree;
 
 import java.util.ArrayList;
 import java.util.List;

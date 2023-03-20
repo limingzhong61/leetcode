@@ -1,6 +1,6 @@
 package lmz.leetcode.contest.old.c85;
 
-import lmz.my.leetcode.TransformUtil;
+import lmz.leetcode.bruce_solution.bruce_search.my.leetcode.TransformUtil;
 
 public class ShiftingLetters {
     public String shiftingLetters(String s, int[][] shifts) {

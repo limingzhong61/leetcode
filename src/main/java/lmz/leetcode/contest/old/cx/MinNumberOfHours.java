@@ -1,6 +1,6 @@
 package lmz.leetcode.contest.old.cx;
 
-import lmz.my.leetcode.TransformUtil;
+import lmz.leetcode.bruce_solution.bruce_search.my.leetcode.TransformUtil;
 
 public class MinNumberOfHours {
     public int minNumberOfHours(int initialEnergy, int initialExperience, int[] energy, int[] experience) {

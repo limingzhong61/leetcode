@@ -1,6 +1,6 @@
 package lmz.leetcode.other.old.intro.array;
 
-import lmz.my.leetcode.TransformUtil;
+import lmz.leetcode.bruce_solution.bruce_search.my.leetcode.TransformUtil;
 
 public class MaxProfit309 {
 

@@ -1,6 +1,6 @@
 package lmz.leetcode.find.binary_search.max_or_min_judge;
 
-import lmz.my.leetcode.TransformUtil;
+import lmz.leetcode.bruce_solution.bruce_search.my.leetcode.TransformUtil;
 
 import java.util.Arrays;
 

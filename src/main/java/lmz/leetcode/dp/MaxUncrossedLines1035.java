@@ -1,6 +1,6 @@
 package lmz.leetcode.dp;
 
-import lmz.my.leetcode.TransformUtil;
+import lmz.leetcode.bruce_solution.bruce_search.my.leetcode.TransformUtil;
 
 public class MaxUncrossedLines1035 {
     /**

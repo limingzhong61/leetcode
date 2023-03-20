@@ -1,6 +1,6 @@
 package lmz.leetcode.contest.old;
 
-import lmz.my.leetcode.TransformUtil;
+import lmz.leetcode.bruce_solution.bruce_search.my.leetcode.TransformUtil;
 
 public class CalculateTax {
     public double calculateTax(int[][] brackets, int income) {

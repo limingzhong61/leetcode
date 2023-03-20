@@ -1,6 +1,6 @@
 package lmz.leetcode.data_structure.string;
 
-import lmz.my.leetcode.TransformUtil;
+import lmz.leetcode.bruce_solution.bruce_search.my.leetcode.TransformUtil;
 
 import java.util.HashMap;
 import java.util.Map;

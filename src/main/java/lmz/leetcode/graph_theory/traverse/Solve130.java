@@ -1,7 +1,7 @@
 package lmz.leetcode.graph_theory.traverse;
 
-import lmz.my.leetcode.TransformUtil;
-import lmz.my.util.matrix.MatrixUtil;
+import lmz.leetcode.bruce_solution.bruce_search.my.leetcode.TransformUtil;
+import lmz.leetcode.bruce_solution.bruce_search.my.util.matrix.MatrixUtil;
 
 import java.util.Arrays;
 import java.util.LinkedList;

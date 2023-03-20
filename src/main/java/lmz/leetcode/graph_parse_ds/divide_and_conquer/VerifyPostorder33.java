@@ -1,6 +1,6 @@
 package lmz.leetcode.graph_parse_ds.divide_and_conquer;
 
-import lmz.my.leetcode.TransformUtil;
+import lmz.leetcode.bruce_solution.bruce_search.my.leetcode.TransformUtil;
 
 import java.util.Deque;
 import java.util.LinkedList;

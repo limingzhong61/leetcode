@@ -1,6 +1,6 @@
 package lmz.leetcode.graph_parse_ds.dp;
 
-import lmz.my.util.matrix.MatrixUtil;
+import lmz.leetcode.bruce_solution.bruce_search.my.util.matrix.MatrixUtil;
 
 import java.util.*;
 
