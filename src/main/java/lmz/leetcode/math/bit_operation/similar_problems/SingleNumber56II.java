@@ -1,6 +1,6 @@
 package lmz.leetcode.math.bit_operation.similar_problems;
 
-import lmz.leetcode.bruce_solution.bruce_search.my.leetcode.TransformUtil;
+import lmz.my.leetcode.TransformUtil;
 
 public class SingleNumber56II {
     /**

@@ -1,7 +1,7 @@
 package lmz.leetcode.data_structure.tree.binary_tree.bst;
 
 import lmz.leetcode.data_structure.tree.binary_tree.normal.TreeNode;
-import lmz.leetcode.bruce_solution.bruce_search.my.leetcode.EncodeTree2;
+import lmz.my.leetcode.EncodeTree2;
 
 public class DeleteNode450 {
     /**

@@ -1,6 +1,6 @@
 package lmz.leetcode.graph_theory;
 
-import lmz.leetcode.bruce_solution.bruce_search.my.leetcode.TransformUtil;
+import lmz.my.leetcode.TransformUtil;
 
 public class NumIslands200 {
     public int numIslands(char[][] grid) {

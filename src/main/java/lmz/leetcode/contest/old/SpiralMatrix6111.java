@@ -1,8 +1,8 @@
 package lmz.leetcode.contest.old;
 
 import lmz.leetcode.data_structure.linked_list.ListNode;
-import lmz.leetcode.bruce_solution.bruce_search.my.leetcode.LinkedList;
-import lmz.leetcode.bruce_solution.bruce_search.my.util.matrix.MatrixUtil;
+import lmz.my.leetcode.LinkedList;
+import lmz.my.util.matrix.MatrixUtil;
 //Definition for singly-linked list.
 // class ListNode {
 //    int val;

@@ -1,6 +1,6 @@
 package lmz.leetcode;
 
-import lmz.leetcode.bruce_solution.bruce_search.my.leetcode.TransformUtil;
+import lmz.my.leetcode.TransformUtil;
 
 class Solution {
     static final int mod = (int)1e9 + 7;

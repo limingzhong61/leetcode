@@ -1,6 +1,6 @@
 package lmz.leetcode.find.binary_search.max_or_min_judge;
 
-import lmz.leetcode.bruce_solution.bruce_search.my.leetcode.TransformUtil;
+import lmz.my.leetcode.TransformUtil;
 
 public class MinSpeedOnTime1870 {
     /**

@@ -1,6 +1,6 @@
 package lmz.leetcode.contest.old.c318;
 
-import lmz.leetcode.bruce_solution.bruce_search.my.leetcode.TransformUtil;
+import lmz.my.leetcode.TransformUtil;
 
 import java.util.Arrays;
 import java.util.List;

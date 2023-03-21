@@ -1,6 +1,6 @@
 package lmz.leetcode.graph_parse_ds.search_and_recur;
 
-import lmz.leetcode.bruce_solution.bruce_search.my.leetcode.EncodeTreeByNode;
+import lmz.my.leetcode.EncodeTreeByNode;
 
 
 public class TreeToDoublyList36 {

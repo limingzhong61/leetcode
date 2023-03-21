@@ -1,6 +1,6 @@
 package lmz.leetcode.other.old.intro;
 
-import lmz.leetcode.bruce_solution.bruce_search.my.leetcode.TransformUtil;
+import lmz.my.leetcode.TransformUtil;
 
 public class CanJump55 {
     /**

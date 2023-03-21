@@ -1,7 +1,7 @@
 package lmz.leetcode.bruce_solution.bruce_search.permutation;
 
 
-import lmz.leetcode.bruce_solution.bruce_search.my.solution_template.bruce_search.permutation.Permute;
+import lmz.my.solution_template.bruce_search.permutation.Permute;
 
 import java.util.*;
 import java.util.stream.IntStream;

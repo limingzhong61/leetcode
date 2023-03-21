@@ -1,6 +1,6 @@
 package lmz.leetcode.graph_theory.traverse.bfs;
 
-import lmz.leetcode.bruce_solution.bruce_search.my.leetcode.TransformUtil;
+import lmz.my.leetcode.TransformUtil;
 
 import java.util.HashSet;
 import java.util.LinkedList;

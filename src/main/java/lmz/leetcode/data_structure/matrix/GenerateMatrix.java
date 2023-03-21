@@ -1,6 +1,6 @@
 package lmz.leetcode.data_structure.matrix;
 
-import lmz.leetcode.bruce_solution.bruce_search.my.util.matrix.MatrixUtil;
+import lmz.my.util.matrix.MatrixUtil;
 
 import java.util.Arrays;
 

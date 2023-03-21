@@ -1,7 +1,7 @@
 package lmz.leetcode.other.hard;
 
 
-import lmz.leetcode.bruce_solution.bruce_search.my.leetcode.TransformUtil;
+import lmz.my.leetcode.TransformUtil;
 
 import java.util.*;
 

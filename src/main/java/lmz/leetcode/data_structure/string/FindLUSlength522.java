@@ -1,6 +1,6 @@
 package lmz.leetcode.data_structure.string;
 
-import lmz.leetcode.bruce_solution.bruce_search.my.leetcode.TransformUtil;
+import lmz.my.leetcode.TransformUtil;
 
 public class FindLUSlength522 {
     /**
