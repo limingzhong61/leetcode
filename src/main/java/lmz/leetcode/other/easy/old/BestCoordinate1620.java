@@ -15,7 +15,7 @@ public class BestCoordinate1620 {
         for (int x = 0; x <= 50; x++) {
             for (int y = 0; y <= 50; y++) {
                 int q = 0;
-                for (var tower : towers) {
+                for (int[] tower : towers) {
                     double d = Math.sqrt((x - tower[0]) * (x - tower[0]) + (y - tower[1]) * (y - tower[1]));
                     if(d <= radius){
                         q += Math.floor((tower[2]) / ( 1 + d));
