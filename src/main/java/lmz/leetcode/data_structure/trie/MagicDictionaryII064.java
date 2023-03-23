@@ -1,41 +1,31 @@
 package lmz.leetcode.data_structure.trie;
 
-
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.TreeMap;
 
-/**
- * @author: limingzhong
- * @create: 2023-03-22 14:07
- */
 public class MagicDictionaryII064 {
     class MagicDictionary {
         Trie trie = new Trie();
-
-        /**
-         * Initialize your data structure here.
-         */
+        /** Initialize your data structure here. */
         public MagicDictionary() {
 
         }
 
         public void buildDict(String[] dictionary) {
-            for (var s : dictionary) {
+            for(var s : dictionary){
                 trie.insert(s);
             }
         }
 
         public boolean search(String searchWord) {
-            return search1(trie, searchWord, 0, 1);
+            return search1(trie,searchWord,0,1);
         }
 
         private boolean search1(Trie cur, String searchWord, int idx, int cnt) {
             if (idx == searchWord.length()) {
-                return true;
+                return cnt == 0 && cur.children.containsKey('#');
             }
-
             for (var entry : cur.children.entrySet()) {
                 if (entry.getKey() == searchWord.charAt(idx)) {
                     if (search1(cur.children.get(searchWord.charAt(idx)), searchWord, idx + 1, cnt)) {
@@ -56,7 +46,6 @@ public class MagicDictionaryII064 {
      */
     class Trie {
         final char endChar = '#';
-        char c;
         Map<Character, Trie> children;
 
         public Trie() {
@@ -94,7 +83,6 @@ public class MagicDictionaryII064 {
 
         /**
          * 找到字符串s在字典树trie中的最短前缀串
-         *
          * @param trie
          * @param s
          * @return 找到返回最短前缀串，没有返回null
