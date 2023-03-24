@@ -3,16 +3,17 @@ package lmz.my.solution_template.data_structure.linked_list;
 import lmz.leetcode.data_structure.linked_list.ListNode;
 
 /**
+ * 链表算法工具类
  * @author: limingzhong
  * @create: 2023-02-01 17:49
  */
-public class LinkedList {
+public class LinkedListUtil {
 
     /**
      * 快慢指针找到链表中的中点
      * 偶数为中间两位中的后一位。
      */
-    private ListNode findMid(ListNode head) {
+    public static ListNode findMid(ListNode head) {
         ListNode fast = head, slow = head;
         while (fast != null) {
             fast = fast.next;
@@ -45,7 +46,7 @@ public class LinkedList {
      * @param head 头结点有值
      * @return 链表长度
      */
-    private int length(ListNode head) {
+    public static int length(ListNode head) {
         int len = 0;
         ListNode cur = head;
         while (cur != null) {
@@ -60,7 +61,7 @@ public class LinkedList {
      * 按照升序归并两个单链表
      * 思路：归并
      */
-    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+    public static ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         ListNode dummy = new ListNode(0); //哑结点(充当头结点)便于操作
         ListNode cur = dummy;
         while(list1 != null && list2 != null){

@@ -4,27 +4,61 @@ import lmz.leetcode.data_structure.linked_list.ListNode;
 
 /**
  * 链表归并排序
+ *
  * @author: limingzhong
  * @create: 2023-03-24 10:18
  */
 public class SortListII077 {
     /**
+     * 归并排序
      * 自底向上 bottom to up
      * time O( nlogn) ; space O(1)
      */
-    /**
-     * 链表中节点的数目在范围 [0, 5 * 10^4] 内
-     * nlogn
-     */
-    public ListNode mergeSortList(ListNode head) {
+    public ListNode sortList(ListNode head) {
         int len = length(head);
+        ListNode dummyHead = new ListNode(0);
+        dummyHead.next = head;
         for (int cutLen = 1; cutLen < len; cutLen *= 2) {
+            ListNode prev = dummyHead, cur = dummyHead.next;
+            while (cur != null) {
+                ListNode h1 = cur;
+                //截取cutLen
+                for (int i = 1; i < cutLen && cur.next != null; i++) {
+                    cur = cur.next;
+                }
+                // no need to merge because the `h2` is None.
+                ListNode h2 = cur.next;
+                // 断链，h1---cur形成链表
+                cur.next = null;
 
+                cur = h2;
+                if(cur != null){
+                    for (int i = 1; i < cutLen && cur.next != null; i++) {
+                        cur = cur.next;
+                    }
+                }
+
+
+                ListNode next = null;
+                if (cur != null) {
+                    next = cur.next;
+                    cur.next = null;
+                }
+
+                ListNode merged = mergeTwoLists(h1, h2);
+                prev.next = merged;
+                while (prev.next != null) {
+                    prev = prev.next;
+                }
+                cur = next;
+            }
         }
+        return dummyHead.next;
     }
 
     /**
      * 获取链表长度
+     *
      * @param head 头结点有值
      * @return 链表长度
      */
@@ -53,7 +87,7 @@ public class SortListII077 {
         ListNode left = sortList1(head);
         ListNode right = sortList1(midHead);
 
-        return mergeTwoLists1(left, right);
+        return mergeTwoLists(left, right);
     }
 
     /**
@@ -77,7 +111,7 @@ public class SortListII077 {
      * 按照升序归并两个单链表
      * 思路：归并
      */
-    public ListNode mergeTwoLists1(ListNode list1, ListNode list2) {
+    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         ListNode dummy = new ListNode(0); //哑结点(充当头结点)便于操作
         ListNode cur = dummy;
         while (list1 != null && list2 != null) {

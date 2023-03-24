@@ -1,6 +1,9 @@
 package lmz.my.solution_template.sort.linked_list;
 
 import lmz.leetcode.data_structure.linked_list.ListNode;
+import lmz.my.solution_template.data_structure.linked_list.LinkedListUtil;
+
+import static lmz.my.solution_template.data_structure.linked_list.LinkedListUtil.mergeTwoLists;
 
 /**
  * @author: limingzhong
@@ -16,7 +19,7 @@ public class MergeSort {
         // 注意终止条件：当结点只有一个或者没有时直接返回
         if (head == null || head.next == null)
             return head;
-        ListNode mid = findMid(head);
+        ListNode mid = LinkedListUtil.findMid(head);
         //断开链表
         ListNode midHead = mid.next;
         mid.next = null;
@@ -27,42 +30,49 @@ public class MergeSort {
     }
 
     /**
-     * 快慢指针找到链表中的中点
-     *
-     * @param head 头结点有值
-     * @return 链表中点；偶数为中间两位中的前一位。
+     * 归并排序
+     * 自底向上 bottom to up
+     * time O( nlogn) ; space O(1)
      */
-    private ListNode findMid(ListNode head) {
-        if (head == null || head.next == null)
-            return head;
-        ListNode fast = head.next, slow = head;
-        while (fast != null && fast.next != null) {
-            slow = slow.next;
-            fast = fast.next.next;
-        }
-        return slow;
-    }
+    public ListNode mergeSortList0(ListNode head) {
+        int len = LinkedListUtil.length(head);
+        ListNode dummyHead = new ListNode(0);
+        dummyHead.next = head;
+        for (int cutLen = 1; cutLen < len; cutLen *= 2) {
+            ListNode prev = dummyHead, cur = dummyHead.next;
+            while (cur != null) {
+                ListNode h1 = cur;
+                //截取cutLen
+                for (int i = 1; i < cutLen && cur.next != null; i++) {
+                    cur = cur.next;
+                }
+                // no need to merge because the `h2` is None.
+                ListNode h2 = cur.next;
+                // 断链，h1---cur形成链表
+                cur.next = null;
 
-    /**
-     * 按照升序归并两个单链表
-     * 思路：归并
-     */
-    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
-        ListNode dummy = new ListNode(0); //哑结点(充当头结点)便于操作
-        ListNode cur = dummy;
-        while (list1 != null && list2 != null) {
-            if (list1.val < list2.val) {
-                cur.next = list1;
-                cur = cur.next;
-                list1 = list1.next;
-            } else {
-                cur.next = list2;
-                cur = cur.next;
-                list2 = list2.next;
+                cur = h2;
+                if(cur != null){
+                    for (int i = 1; i < cutLen && cur.next != null; i++) {
+                        cur = cur.next;
+                    }
+                }
+
+
+                ListNode next = null;
+                if (cur != null) {
+                    next = cur.next;
+                    cur.next = null;
+                }
+
+                ListNode merged = mergeTwoLists(h1, h2);
+                prev.next = merged;
+                while (prev.next != null) {
+                    prev = prev.next;
+                }
+                cur = next;
             }
         }
-        //处理剩余结点
-        cur.next = list1 != null ? list1 : list2;
-        return dummy.next;
+        return dummyHead.next;
     }
 }
