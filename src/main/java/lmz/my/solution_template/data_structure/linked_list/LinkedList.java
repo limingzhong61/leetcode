@@ -1,4 +1,4 @@
-package lmz.my.solution_template.data_structure.linked_list.find;
+package lmz.my.solution_template.data_structure.linked_list;
 
 import lmz.leetcode.data_structure.linked_list.ListNode;
 
@@ -40,12 +40,27 @@ public class LinkedList {
         return prev;
     }
 
+    /**
+     * 获取链表长度
+     * @param head 头结点有值
+     * @return 链表长度
+     */
+    private int length(ListNode head) {
+        int len = 0;
+        ListNode cur = head;
+        while (cur != null) {
+            len++;
+            cur = cur.next;
+        }
+        return len;
+    }
+
 
     /**
      * 按照升序归并两个单链表
      * 思路：归并
      */
-    public ListNode mergeTwoLists1(ListNode list1, ListNode list2) {
+    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         ListNode dummy = new ListNode(0); //哑结点(充当头结点)便于操作
         ListNode cur = dummy;
         while(list1 != null && list2 != null){

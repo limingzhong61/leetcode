@@ -17,18 +17,18 @@ public class FindKthLargest {
     }
 
     private int partition(int[] nums, int loc, int low, int high) {
-        int pivot = low;
+        int pivot = nums[low];
         int preLow = low, preHigh = high;
         while (low < high) {
-            while (low < high && nums[high] >= nums[pivot]) {
+            while (low < high && nums[high] >= pivot) {
                 high--;
             }
-            while (low < high && nums[low] <= nums[pivot]) {
+            while (low < high && nums[low] <= pivot) {
                 low++;
             }
             swap(nums, low, high);
         }
-        swap(nums, pivot, low);
+        swap(nums, preLow, low);
         if (low == loc) {
             return nums[low];
         } else if (low > loc) {

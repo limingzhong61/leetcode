@@ -36,7 +36,7 @@ public class Trie {
      *
      * @param word 字符串
      */
-    private void insert(String word) {
+    public void insert(String word) {
         Trie cur = this;
         for (int i = 0; i < word.length(); i++) {
             char c = word.charAt(i);
