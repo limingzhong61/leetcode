@@ -18,7 +18,6 @@ public class Main
             a = cin.nextInt();
             b = cin.nextInt();
 
-
             Solution s = new Solution();
             int c = s.addab(a, b);
             System.out.println(c);
