@@ -7,40 +7,37 @@ import java.util.Scanner;
 public class Main {
     public static void main(String args[]) {
         Scanner cin = new Scanner(System.in);
-        int n;
+        int n, m, k;
         while (cin.hasNextInt()) {
             n = cin.nextInt();
-            int[] x = new int[n + 1];
-            int[] y = new int[n + 1];
-            int[] z = new int[n + 1];
-            for (int i = 1; i <= n; i++) {
-                x[i] = cin.nextInt();
+            m = cin.nextInt();
+            k = cin.nextInt();
+            boolean[][] map = new boolean[n + 1][m + 1];
+            int[][] ks = new int[k][2];
+            int minLen = Integer.MAX_VALUE;
+            for (int i = 0; i < k; i++) {
+                ks[i][0] = cin.nextInt();
+                ks[i][1] = cin.nextInt();
+                map[ks[i][0]][ks[i][1]] = true;
             }
-            for (int i = 1; i <= n; i++) {
-                y[i] = cin.nextInt();
-            }
-            for (int i = 1; i <= n; i++) {
-                z[i] = cin.nextInt();
-            }
-            long[] ms = new long[n + 1];
-            int minF = Integer.MAX_VALUE;
-            for (int i = 1; i <= n; i++) {
-                minF = Math.min(minF, z[i]);
-                if(x[i] == y[i]){
-                    ms[i] = 0;
-                    continue;
-                }
-                ms[i] = ms[i - 1];
-                if (x[i] > y[i]) {
-                    ms[i] = (long) (x[i] - y[i]) * minF;
-                }
-            }
+            int x1, x2, y1, y2;
+            x1 = cin.nextInt();
+            y1 = cin.nextInt();
+            x2 = cin.nextInt();
+            y2 = cin.nextInt();
 
-            int m = cin.nextInt();
-            for (int k = 0; k < m; k++) {
-                int q = cin.nextInt();
-                System.out.printf("%d ", ms[q]);
+            for (int i = 0; i < k; i++) {
+                minLen = getMinLen(minLen, x1, y1, ks[i]);
+                minLen = getMinLen(minLen, x2, y2, ks[i]);
             }
+            System.out.println(minLen);
         }
+    }
+
+    private static int getMinLen(int minLen, int x1, int y1, int[] ks) {
+        int a = Math.abs(x1 - ks[0]);
+        int b = Math.abs(y1 - ks[1]);
+        minLen = Math.min(minLen, a + b);
+        return minLen;
     }
 }

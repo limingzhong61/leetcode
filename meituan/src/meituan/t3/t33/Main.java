@@ -1,7 +1,7 @@
-package meituan.t3;
-//package main
-//注意不要添加包名称，否则会报错。
+package meituan.t3.t33;
 
+
+import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -31,7 +31,12 @@ public class Main {
                     //long bagCnt = sum / m;
                     //if (sum % m != 0) bagCnt++; // 有多余的需要放
                     int len = i - j + 1; // 装入水果数量
-                    f[i] = Math.min(f[i], (f[j - 1] + s + len * (long) Math.floor((u + v) * 1.0 / 2)));
+                    BigDecimal x1 = BigDecimal.valueOf(u);
+                    BigDecimal x2 = BigDecimal.valueOf(v);
+                    BigDecimal res1 = x1.add(x2).divide(BigDecimal.valueOf(2));
+                    long res = Long.valueOf(res1.toBigInteger().toString());
+                    res = (long) Math.floor(res);
+                    f[i] = Math.min(f[i], (f[j - 1] + s + len * res));
                 }
             }
             System.out.println(f[n]);
