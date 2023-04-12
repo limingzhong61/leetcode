@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-package meituan;
-=======
-package baidu;
->>>>>>> f0707b453829379a33caafde07df465824c3cc1b
+package template;
 //package main
 //注意不要添加包名称，否则会报错。
 
-import java.util.*;
+import java.util.Scanner;
 class Solution {
     public int addab(int a, int b) {
         return a+b;

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 package meituan.t5;
+=======
+package baidu.t5;
+>>>>>>> f0707b453829379a33caafde07df465824c3cc1b
 //package main
 //注意不要添加包名称，否则会报错。
 
@@ -13,6 +17,7 @@ public class Main {
         int n;
         while (cin.hasNextInt()) {
             n = cin.nextInt();
+<<<<<<< HEAD
             ArrayList<Integer>[] g = new ArrayList[n + 1];
             boolean[] visited = new boolean[n + 1];
             for (int i = 1; i <= n; i++) {
@@ -49,10 +54,13 @@ public class Main {
 
             }
             System.out.println(cnt);
+=======
+>>>>>>> f0707b453829379a33caafde07df465824c3cc1b
         }
 
     }
 
+<<<<<<< HEAD
     private static boolean dfs(ArrayList<Integer>[] g, boolean[] visited, int v, HashSet<Character> set, char[] color) {
 
         visited[v] = true;
@@ -69,4 +77,6 @@ public class Main {
         }
         return false;
     }
+=======
+>>>>>>> f0707b453829379a33caafde07df465824c3cc1b
 }

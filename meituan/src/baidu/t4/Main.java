@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 package meituan.t4;
+=======
+package baidu.t4;
+>>>>>>> f0707b453829379a33caafde07df465824c3cc1b
 //package main
 //注意不要添加包名称，否则会报错。
 
@@ -12,6 +16,7 @@ public class Main {
             n = cin.nextInt();
             m = cin.nextInt();
             k = cin.nextInt();
+<<<<<<< HEAD
             boolean[][] map = new boolean[n + 1][m + 1];
             int[][] ks = new int[k][2];
             int minLen = Integer.MAX_VALUE;
@@ -40,4 +45,9 @@ public class Main {
         minLen = Math.min(minLen, a + b);
         return minLen;
     }
+=======
+        }
+    }
+
+>>>>>>> f0707b453829379a33caafde07df465824c3cc1b
 }

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-package meituan.quick_read;
-=======
-package baidu.quick_read;
->>>>>>> f0707b453829379a33caafde07df465824c3cc1b
+package template.quick_read;
 
 /**
  * @author: limingzhong
