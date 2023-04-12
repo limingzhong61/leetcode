@@ -1,4 +1,4 @@
-package template.t2;
+package ali.t2;
 //package main
 //注意不要添加包名称，否则会报错。
 

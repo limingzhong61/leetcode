@@ -4,15 +4,15 @@ package template.t4;
 
 import java.util.Scanner;
 
+
 public class Main {
     public static void main(String args[]) {
         Scanner cin = new Scanner(System.in);
-        int n, m, k;
+        int n;
         while (cin.hasNextInt()) {
             n = cin.nextInt();
-            m = cin.nextInt();
-            k = cin.nextInt();
-        }
-    }
 
+        }
+
+    }
 }
