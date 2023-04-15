@@ -6,8 +6,8 @@ package lmz.leetcode.other.medium;
  */
 public class IsRobotBounded1041 {
     class Solution {
-
         public boolean isRobotBounded(String instructions) {
+            
             int n = instructions.length();
             var map = new int[n+1][n+1];
             // 北，东，南，西 顺时针
