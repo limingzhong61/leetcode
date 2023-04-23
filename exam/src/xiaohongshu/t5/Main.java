@@ -1,4 +1,4 @@
-package template.t4;
+package xiaohongshu.t5;
 //package main
 //注意不要添加包名称，否则会报错。
 
