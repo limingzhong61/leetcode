@@ -1,4 +1,4 @@
-package lmz.leetcode.two_points.slide_window;
+package lmz.leetcode.two_pointer.same_direction_aka_slide_window;
 
 import java.util.stream.IntStream;
 
@@ -7,6 +7,31 @@ import java.util.stream.IntStream;
  * @create: 2023-01-07 10:26
  */
 public class MinOperations1658 {
+    class Solution {
+        /**
+         * 同向双指针: 固定r,移动 left
+         * 将左右两端为x，改为中间为 sum(nums[i]) - x;
+         */
+        public int minOperations(int[] nums, int x) {
+            int n = nums.length,left = 0,sum = 0;
+            int maxLen = -1;
+            int target = IntStream.of(nums).sum() - x;
+            if(target < 0) return -1; // sum < x
+            else if(target == 0) return n;
+            for(int right =0; right < n; right++){
+                sum += nums[right];
+                while(sum > target){
+                    sum -= nums[left++];
+                }
+                if(sum == target){
+                    maxLen = Math.max(maxLen,right - left + 1);
+                    // System.out.printf("%d,%d,%d\n",left,right,maxLen);
+                }
+            }
+            return maxLen == -1 ? -1 : n -  maxLen;
+        }
+    }
+
     /**
      * 滑动窗口找中间最长的片段使得sum(片段)=sum(nums)-x
      */

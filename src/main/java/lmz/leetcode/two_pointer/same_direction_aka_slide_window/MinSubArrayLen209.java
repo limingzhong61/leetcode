@@ -1,8 +1,40 @@
-package lmz.leetcode.data_structure.array_and_strings.two_pointer;
+package lmz.leetcode.two_pointer.same_direction_aka_slide_window;
 
 import java.util.Arrays;
 
 public class MinSubArrayLen209 {
+    class Solution {
+        /**
+         * 同向双指针: 固定右端点，枚举左端点
+         */
+        public int minSubArrayLen(int target, int[] nums) {
+            int n = nums.length;
+            int left = 0,sum = 0,ans = Integer.MAX_VALUE;
+            for(int right = 0; right < n; right++){
+                sum += nums[right];
+                while(sum >= target){ // 满足要求
+                    ans = Math.min(ans,right - left + 1);
+                    sum -= nums[left];
+                    left++;
+
+                }
+            }
+            return  ans == Integer.MAX_VALUE ? 0 : ans;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
     /**
      * leetcode:前缀和+滑动窗口
      */

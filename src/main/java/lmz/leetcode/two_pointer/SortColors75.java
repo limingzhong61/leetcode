@@ -1,4 +1,4 @@
-package lmz.leetcode.two_points;
+package lmz.leetcode.two_pointer;
 
 import lmz.my.leetcode.TransformUtil;
 

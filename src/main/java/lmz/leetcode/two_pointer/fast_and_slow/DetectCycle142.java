@@ -1,4 +1,4 @@
-package lmz.leetcode.two_points.fast_and_slow;
+package lmz.leetcode.two_pointer.fast_and_slow;
 
 
 

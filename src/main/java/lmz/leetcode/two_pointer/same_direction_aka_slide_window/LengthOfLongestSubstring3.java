@@ -1,8 +1,32 @@
-package lmz.leetcode.two_points;
+package lmz.leetcode.two_pointer.same_direction_aka_slide_window;
 
 import java.util.Arrays;
+import java.util.HashMap;
 
 public class LengthOfLongestSubstring3 {
+    class Solution {
+        /**
+         * 同向双指针： r固定，枚举左端点
+         */
+        public int lengthOfLongestSubstring(String s) {
+            int n = s.length(),left = 0,res = 0;
+            HashMap<Character,Integer> counter = new HashMap<>();
+            char[] cs = s.toCharArray();    // 转换成 char[] 加快效率（忽略带来的空间消耗）
+            for(int right = 0; right < n; right++){
+                char c = s.charAt(right);
+                counter.put(c,counter.getOrDefault(c,0)+1);
+                while(counter.get(c) > 1){
+                    counter.put(cs[left],counter.get(cs[left]) - 1);
+                    left++;
+                }
+                res = Math.max(res,right - left + 1);
+            }
+            return res;
+        }
+    }
+
+
+
     /**
      * 双指针：left，right表示不重复的区间[left,right]
      * len = right - left + 1;

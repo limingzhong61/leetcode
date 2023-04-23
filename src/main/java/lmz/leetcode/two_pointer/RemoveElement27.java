@@ -1,4 +1,4 @@
-package lmz.leetcode.data_structure.array_and_strings.two_pointer;
+package lmz.leetcode.two_pointer;
 
 public class RemoveElement27 {
     /**

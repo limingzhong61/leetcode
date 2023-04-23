@@ -1,4 +1,4 @@
-package lmz.leetcode.two_points.slide_window;
+package lmz.leetcode.two_pointer.same_direction_aka_slide_window;
 
 import java.util.Arrays;
 import java.util.Locale;

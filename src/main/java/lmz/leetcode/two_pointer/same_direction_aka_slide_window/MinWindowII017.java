@@ -1,9 +1,4 @@
-package lmz.leetcode.two_points.slide_window;
-
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+package lmz.leetcode.two_pointer.same_direction_aka_slide_window;
 
 /**
  * @author: limingzhong
