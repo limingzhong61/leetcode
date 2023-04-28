@@ -26,11 +26,12 @@ public class Merge {
         ArrayList<int[]> list = new ArrayList<>();
         list.add(new int[]{intervals[0][0],intervals[0][1]});
         for(int i = 1; i < n; i++){
-            int[] a = intervals[i];
-            int[] b = list.get(list.size()-1);
-            if(a[1] >= b[0] && b[1] >= a[0]){
-                list.remove(list.size()-1);
-                list.add(new int[]{Math.min(a[0],b[0]),Math.max(a[1],b[1])});
+            int[] a = list.get(list.size()-1);
+            int[] b = intervals[i];
+            // 因为a[0] <= b[0]所以 a[0] <= b[1]
+            if(a[1] >= b[0]){
+                //list.set(list.size()-1,new int[]{Math.min(b[0],b[0]),Math.max(b[1],b[1])});
+                list.get(list.size()-1)[1] = Math.max(b[1],a[1]);
             }else{
                 list.add(intervals[i]);
             }

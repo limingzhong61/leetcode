@@ -20,7 +20,7 @@ public class Merge56 {
             int left = intervals[i][0], right = intervals[i][1];
             if (merged.get(merged.size() - 1)[1] < left) { //不相交
                 merged.add(new int[]{left, right});
-            } else {//不相交
+            } else {
                 merged.get(merged.size() - 1)[1] = Math.max(merged.get(merged.size() - 1)[1], right);
             }
         }
