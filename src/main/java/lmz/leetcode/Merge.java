@@ -38,12 +38,12 @@ public class Merge {
         return list.toArray(new int[0][0]);
     }
 
-    //public static void main(String[] args) {
-    //    Merge merge = new Merge();
-    //    System.out.println(Arrays.deepToString(merge.merge(TransformUtil.toIntMatrix("[[2,3],[4,5],[6,7],[8,9],[1,10]]"))));
-    //    System.out.println(Arrays.deepToString(merge.merge(TransformUtil.toIntMatrix("[[1,3],[2,6],[8,10],[15,18]]"))));
-    //    System.out.println(Arrays.deepToString(merge.merge(TransformUtil.toIntMatrix("[[1,4],[4,5]]"))));
-    //    System.out.println(Arrays.deepToString(merge.merge(TransformUtil.toIntMatrix("[[1,4]]"))));
-    //    System.out.println(Arrays.deepToString(merge.merge(new int[0][0])));
-    //}
+    public static void main(String[] args) {
+        Merge merge = new Merge();
+        System.out.println(Arrays.deepToString(merge.merge(TransformUtil.toIntMatrix("[[2,3],[4,5],[6,7],[8,9],[1,10]]"))));
+        System.out.println(Arrays.deepToString(merge.merge(TransformUtil.toIntMatrix("[[1,3],[2,6],[8,10],[15,18]]"))));
+        System.out.println(Arrays.deepToString(merge.merge(TransformUtil.toIntMatrix("[[1,4],[4,5]]"))));
+        System.out.println(Arrays.deepToString(merge.merge(TransformUtil.toIntMatrix("[[1,4]]"))));
+        System.out.println(Arrays.deepToString(merge.merge(new int[0][0])));
+    }
 }
