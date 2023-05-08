@@ -1,4 +1,4 @@
-package lmz.leetcode.two_pointer;
+package lmz.leetcode.two_pointer.opposite_direction;
 
 import java.util.Arrays;
 import java.util.HashMap;
