@@ -9,15 +9,19 @@ import java.util.Scanner;
  * @create: 2023-04-22 13:39
  */
 public class Test {
-    public void longestArithSeqLength(int[] nums) {
-        Scanner cin = new Scanner(System.in);
-        int a, b;
-        while (cin.hasNextInt()) {
-            a = cin.nextInt();
-            b = cin.nextInt();
+    public static void main(String[] args) {
+        System.out.println(Math.round(11.5));
+        System.out.println(Math.round(-11.5));
+        String s = "xx";
+        s.toUpperCase();
+        System.out.println(s);
+        Double x = 1.2;
+    }
 
-            System.out.println(a);
-        }
-        //cin.close();
+    Test() {
+    }
+
+    Test(String a) {
+        this();
     }
 }
