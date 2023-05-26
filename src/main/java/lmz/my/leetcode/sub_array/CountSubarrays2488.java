@@ -1,4 +1,4 @@
-package lmz.leetcode.sub_array;
+package lmz.my.leetcode.sub_array;
 
 import java.util.HashMap;
 import java.util.Map;
