@@ -1,8 +1,5 @@
 package lmz.my.solution_template.data_structure.trie;
 
-import lmz.leetcode.data_structure.trie.ReplaceWordsII063;
-import lmz.leetcode.data_structure.trie.TrieII062;
-
 import java.util.*;
 
 /**

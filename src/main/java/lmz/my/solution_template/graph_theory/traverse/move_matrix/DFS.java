@@ -36,7 +36,7 @@ public class DFS {
     }
 
     public static void main(String[] args) {
-        lmz.leetcode.graph_theory.NumIslands200 numIslands200 = new lmz.leetcode.graph_theory.NumIslands200();
+        lmz.algorithm.graph_theory.NumIslands200 numIslands200 = new lmz.algorithm.graph_theory.NumIslands200();
         System.out.println(numIslands200.numIslands(TransformUtil.toCharMatrix("[\n" +
                 "  [\"1\",\"1\",\"1\",\"1\",\"0\"],\n" +
                 "  [\"1\",\"1\",\"0\",\"1\",\"0\"],\n" +

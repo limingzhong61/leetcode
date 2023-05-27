@@ -1,6 +1,6 @@
 package lmz.my.solution_template.math;
 
-import lmz.leetcode.math.FractionAddition592;
+import lmz.algorithm.math.FractionAddition592;
 
 /**
  * 分数加减运算

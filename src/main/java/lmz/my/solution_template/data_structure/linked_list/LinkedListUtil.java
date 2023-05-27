@@ -1,6 +1,6 @@
 package lmz.my.solution_template.data_structure.linked_list;
 
-import lmz.leetcode.data_structure.linked_list.ListNode;
+import lmz.algorithm.data_structure.linked_list.ListNode;
 
 /**
  * 链表算法工具类

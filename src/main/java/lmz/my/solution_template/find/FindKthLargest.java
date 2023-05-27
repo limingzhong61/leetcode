@@ -1,6 +1,6 @@
 package lmz.my.solution_template.find;
 
-import lmz.leetcode.find.FindKthLargest215;
+import lmz.algorithm.find.FindKthLargest215;
 import lmz.my.leetcode.TransformUtil;
 
 import java.util.PriorityQueue;

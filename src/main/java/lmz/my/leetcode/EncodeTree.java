@@ -1,6 +1,6 @@
 package lmz.my.leetcode;
 
-import lmz.leetcode.data_structure.tree.binary_tree.normal.TreeNode;
+import lmz.algorithm.data_structure.tree.binary_tree.normal.TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;
