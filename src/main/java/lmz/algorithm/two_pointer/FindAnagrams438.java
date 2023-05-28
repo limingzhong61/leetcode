@@ -1,33 +1,51 @@
 package lmz.algorithm.two_pointer;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class FindAnagrams438 {
     /**
-     * 23.5.28
+     * 23.5.28：双指针
      * s 和 p 仅包含小写字母
      */
     public List<Integer> findAnagrams(String s, String p) {
+        List<Integer> ans = new ArrayList<>();
         if(s.length() < p.length()){
-            return null;
+            return ans;
         }
         int letterCnt = 26;
         int[] cntP = new int[letterCnt];
         for(char c : p.toCharArray()){
-            cntP[c - 'p']++;
+            cntP[c - 'a']++;
         }
-        int[] cntS = new int[letterCnt];
+        int[] cntS = Arrays.copyOfRange(cntP,0,letterCnt);
         int lenP = p.length();
         char[] cs = s.toCharArray();
         for(int i = 0; i < lenP; i++){
-            cntS[cs[i] -'a']++;
+            cntS[cs[i] -'a']--;
         }
-        
 
+        if (check(cntS)) {
+            ans.add(0);
+        }
+        for(int i = 0; i < cs.length - lenP; i++){
+            cntS[cs[i] -'a']++;
+            cntS[cs[i + lenP] -'a']--;
+            if (check(cntS)) {
+                ans.add(i+1);
+            }
+        }
+        return ans;
 
-
-
+    }
+    boolean check(int[] a) {
+        for (int i : a) {
+            if (i != 0) {
+                return false;
+            }
+        }
+        return true;
     }
 
     /**
@@ -60,12 +78,5 @@ public class FindAnagrams438 {
         return res;
     }
 
-    boolean check(int[] a) {
-        for (int i : a) {
-            if (i != 0) {
-                return false;
-            }
-        }
-        return true;
-    }
+
 }
