@@ -7,7 +7,7 @@ import java.util.Set;
  * @author: limingzhong
  * @create: 2023-02-05 10:40
  */
-public class VowelStrings {
+public class VowelStrings2559 {
     /**
      * 前缀和
      */
