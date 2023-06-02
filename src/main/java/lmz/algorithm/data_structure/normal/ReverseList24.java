@@ -1,7 +1,7 @@
 package lmz.algorithm.data_structure.normal;
 
 
-import lmz.algorithm.data_structure.linked_list.ListNode;
+import lmz.algorithm.data_structure.linked_list.util.ListNode;
 import lmz.my.leetcode.LinkedList;
 
 public class ReverseList24 {

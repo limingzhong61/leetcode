@@ -1,5 +1,7 @@
 package lmz.algorithm.data_structure.linked_list;
 
+import lmz.algorithm.data_structure.linked_list.util.ListNode;
+
 public class SwapPairs24 {
     public ListNode swapPairs(ListNode head) {
     //    0 <= Node.val <= 100

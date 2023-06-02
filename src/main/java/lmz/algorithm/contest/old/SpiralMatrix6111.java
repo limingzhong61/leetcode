@@ -1,6 +1,6 @@
 package lmz.algorithm.contest.old;
 
-import lmz.algorithm.data_structure.linked_list.ListNode;
+import lmz.algorithm.data_structure.linked_list.util.ListNode;
 import lmz.my.leetcode.LinkedList;
 import lmz.my.util.matrix.MatrixUtil;
 //Definition for singly-linked list.

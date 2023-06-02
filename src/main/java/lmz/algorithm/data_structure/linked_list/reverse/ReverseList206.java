@@ -1,6 +1,27 @@
-package lmz.algorithm.data_structure.linked_list;
+package lmz.algorithm.data_structure.linked_list.reverse;
 
+import lmz.algorithm.data_structure.linked_list.util.ListNode;
+
+/**
+ *
+ * lc : ReverseListII024
+ */
 public class ReverseList206 {
+    /**
+     * 迭代逆置
+     */
+    public ListNode reverseList(ListNode head) {
+        ListNode pre = null;
+        ListNode cur = head;
+        while(cur != null){
+            ListNode next = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = next;
+        }
+        return pre;
+    }
+
     /**
      * my:递归逆置
      */
@@ -20,7 +41,7 @@ public class ReverseList206 {
     /**
      * my:迭代逆置
      */
-    public ListNode reverseList(ListNode head) {
+    public ListNode reverseList2(ListNode head) {
         ListNode preNode = null;
         while (head != null){
             ListNode temp = head.next;
@@ -29,6 +50,5 @@ public class ReverseList206 {
             head = temp;
         }
         return preNode; //preNode为尾结点
-
     }
 }

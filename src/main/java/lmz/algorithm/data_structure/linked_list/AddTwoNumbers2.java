@@ -1,6 +1,8 @@
 package lmz.algorithm.data_structure.linked_list;
 
 
+import lmz.algorithm.data_structure.linked_list.util.ListNode;
+
 public class AddTwoNumbers2 {
     /**
      * 迭代添加：优化

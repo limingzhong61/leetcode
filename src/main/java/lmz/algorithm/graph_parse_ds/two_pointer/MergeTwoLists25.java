@@ -1,6 +1,6 @@
 package lmz.algorithm.graph_parse_ds.two_pointer;
 
-import lmz.algorithm.data_structure.linked_list.ListNode;
+import lmz.algorithm.data_structure.linked_list.util.ListNode;
 
 public class MergeTwoLists25 {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {

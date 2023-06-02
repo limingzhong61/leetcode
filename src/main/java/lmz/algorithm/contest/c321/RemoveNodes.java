@@ -1,6 +1,6 @@
 package lmz.algorithm.contest.c321;
 
-import lmz.algorithm.data_structure.linked_list.ListNode;
+import lmz.algorithm.data_structure.linked_list.util.ListNode;
 
 public class RemoveNodes {
     ListNode dummyHead;

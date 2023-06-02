@@ -3,7 +3,7 @@ package lmz.algorithm.two_pointer.fast_and_slow;
 
 
 
-import lmz.algorithm.data_structure.linked_list.ListNode;
+import lmz.algorithm.data_structure.linked_list.util.ListNode;
 
 import java.util.*;
 

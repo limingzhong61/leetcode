@@ -1,5 +1,6 @@
-package lmz.algorithm.data_structure.linked_list;
+package lmz.algorithm.data_structure.linked_list.reverse;
 
+import lmz.algorithm.data_structure.linked_list.util.ListNode;
 import lmz.my.leetcode.LinkedList;
 
 
@@ -7,7 +8,7 @@ public class ReverseKGroup25 {
     /**
      * leetcode代码
      */
-    public ListNode reverseKGroup2(ListNode head, int k) {
+    public ListNode reverseKGroup(ListNode head, int k) {
         ListNode hair = new ListNode(0);
         hair.next = head;
         ListNode pre = hair;
@@ -34,6 +35,57 @@ public class ReverseKGroup25 {
 
         return hair.next;
     }
+    /**
+     * List
+     */
+    public ListNode reverseKGroup3(ListNode head, int k) {
+        ListNode dummy = new ListNode(0, head);
+        ListNode cur = dummy;
+        ListNode curList = dummy;
+        int i = 0;
+        ListNode head1 = dummy.next;
+        for (; cur != null; ) {
+            ListNode next = cur.next;
+            if ((i != 0 && i % k == 0 )) {
+                cur.next = null; //断链
+                ListNode tail = head1; // 逆置后head变为tail
+                // System.out.println(head1.val);
+                // System.out.println(tail.val);
+                // System.out.println("---");
+                head1 = reverseList(head1);
+                curList.next = head1;
+                curList = tail;
+                head1 = next; //重置下一段链表的头结点
+            }
+            i++;
+            cur = next;
+        }
+        curList.next = head1; // 最后一段可能不满足k个的
+        return dummy.next;
+    }
+
+
+    /**
+     * 迭代逆置链表
+     * @param head
+     * @return 逆置后的链表头结点
+     */
+    public ListNode reverseList(ListNode head) {
+        ListNode pre = null;
+        ListNode cur = head;
+        while(cur != null){
+            ListNode next = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = next;
+        }
+        return pre;
+    }
+
+
+
+
+
 
     public ListNode[] myReverse(ListNode head, ListNode tail) {
         ListNode prev = tail.next;
@@ -50,14 +102,14 @@ public class ReverseKGroup25 {
     /**
      * List
      */
-    public ListNode reverseKGroup(ListNode head, int k) {
+    public ListNode reverseKGroup1(ListNode head, int k) {
         ListNode dummyHead = new ListNode(); //哑结点
         dummyHead.next = head;
         //1 <= k <= n <= 5000
 
         ListNode cur = head;
         int len = 0; //统计长度
-        while(cur != null){
+        while (cur != null) {
             len++;
             cur = cur.next;
         }
@@ -66,7 +118,7 @@ public class ReverseKGroup25 {
         ListNode pre = dummyHead;
         cur = head;
         int index = 0;
-        for(int i = 0; i < reverseCnt; ){
+        for (int i = 0; i < reverseCnt; ) {
             ListNode next = cur.next;
             cur.next = pre;
             if (index % k == k - 1) { // k个结点逆置完
@@ -76,7 +128,7 @@ public class ReverseKGroup25 {
                 startPre = start; //重新记录逆置的k个结点的前一个结点
                 pre = startPre; //pre结点变更
                 i++;
-            }else{
+            } else {
                 pre = cur;
             }
             index++;
@@ -88,6 +140,7 @@ public class ReverseKGroup25 {
 
     public static void main(String[] args) {
         ReverseKGroup25 reverseKGroup25 = new ReverseKGroup25();
-        reverseKGroup25.reverseKGroup(LinkedList.StrToLinkedList2("[1,2,3,4,5]"),2);
+        reverseKGroup25.reverseKGroup(LinkedList.StrToLinkedList2("[1,2,3,4,5]"), 2);
     }
+
 }

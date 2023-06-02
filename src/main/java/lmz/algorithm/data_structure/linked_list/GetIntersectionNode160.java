@@ -1,6 +1,8 @@
 package lmz.algorithm.data_structure.linked_list;
 
 
+import lmz.algorithm.data_structure.linked_list.util.ListNode;
+
 import java.util.HashSet;
 import java.util.Set;
 

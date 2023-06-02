@@ -1,6 +1,6 @@
 package lmz.my.leetcode;
 
-import lmz.algorithm.data_structure.linked_list.ListNode;
+import lmz.algorithm.data_structure.linked_list.util.ListNode;
 
 /**
  * 链表

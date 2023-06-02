@@ -1,5 +1,7 @@
 package lmz.algorithm.data_structure.linked_list;
 
+import lmz.algorithm.data_structure.linked_list.util.ListNode;
+
 import java.util.PriorityQueue;
 
 public class MergeKLists23 {

@@ -1,5 +1,7 @@
 package lmz.algorithm.data_structure.linked_list;
 
+import lmz.algorithm.data_structure.linked_list.util.ListNode;
+
 public class DeleteDuplicates {
     /**
      * 给定一个已排序的链表的头 head ， 删除所有重复的元素，使每个元素只出现一次 。

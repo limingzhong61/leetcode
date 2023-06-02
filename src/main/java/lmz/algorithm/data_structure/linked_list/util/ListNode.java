@@ -1,4 +1,4 @@
-package lmz.algorithm.data_structure.linked_list;
+package lmz.algorithm.data_structure.linked_list.util;
 
 /**
  * leetcode:
@@ -9,14 +9,14 @@ public class ListNode {
     public int val;
     public ListNode next;
 
-    ListNode() {
+    public ListNode() {
     }
 
     public ListNode(int val) {
         this.val = val;
     }
 
-    ListNode(int val, ListNode next) {
+    public ListNode(int val, ListNode next) {
         this.val = val;
         this.next = next;
     }

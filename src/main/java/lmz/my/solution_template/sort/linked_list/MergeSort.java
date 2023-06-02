@@ -1,6 +1,6 @@
 package lmz.my.solution_template.sort.linked_list;
 
-import lmz.algorithm.data_structure.linked_list.ListNode;
+import lmz.algorithm.data_structure.linked_list.util.ListNode;
 import lmz.my.solution_template.data_structure.linked_list.LinkedListUtil;
 
 import static lmz.my.solution_template.data_structure.linked_list.LinkedListUtil.mergeTwoLists;

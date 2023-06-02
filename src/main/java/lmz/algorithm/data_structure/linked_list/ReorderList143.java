@@ -1,5 +1,7 @@
 package lmz.algorithm.data_structure.linked_list;
 
+import lmz.algorithm.data_structure.linked_list.util.ListNode;
+
 public class ReorderList143 {
     /**
      * leetcode:快慢指针求链表中点

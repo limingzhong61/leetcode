@@ -1,6 +1,6 @@
 package lmz.algorithm.data_structure.linked_list.delete;
 
-import lmz.algorithm.data_structure.linked_list.ListNode;
+import lmz.algorithm.data_structure.linked_list.util.ListNode;
 
 /**
  * @author: limingzhong

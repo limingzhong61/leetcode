@@ -1,5 +1,7 @@
 package lmz.algorithm.data_structure.linked_list;
 
+import lmz.algorithm.data_structure.linked_list.util.ListNode;
+
 public class DeleteNode237 {
     /**
      * 给定当前结点指针，删除当前结点

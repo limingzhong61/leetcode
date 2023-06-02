@@ -1,6 +1,6 @@
 package lmz.algorithm.data_structure.linked_list.merge_sort;
 
-import lmz.algorithm.data_structure.linked_list.ListNode;
+import lmz.algorithm.data_structure.linked_list.util.ListNode;
 
 /**
  * 链表归并排序

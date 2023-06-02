@@ -1,6 +1,6 @@
 package lmz.algorithm.find.dynamic_find.priority_queue;
 
-import lmz.algorithm.data_structure.linked_list.ListNode;
+import lmz.algorithm.data_structure.linked_list.util.ListNode;
 
 import java.util.PriorityQueue;
 
