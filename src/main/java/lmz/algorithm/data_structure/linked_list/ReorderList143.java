@@ -54,49 +54,4 @@ public class ReorderList143 {
         }
     }
 
-    public void reorderList1(ListNode head) {
-        // 链表的长度范围为 [1, 5 * 104]
-        ListNode cur = head;
-        int len = 0;
-        while (cur != null) {
-            cur = cur.next;
-            len++;
-        }
-        if(len == 1){ //不需要reorder
-            return;
-        }
-        int mid = len / 2 + 1; //因为逆置只需要后半段
-        ListNode preMid = head;
-        ListNode midNode = head.next;
-        for (int i = 2; i < mid; i++) {
-            preMid = midNode;
-            midNode = midNode.next;
-        }
-        preMid.next = null; // 将前半段置为一个链表
-        //逆置后半段
-        ListNode pre = midNode;
-
-        cur = midNode.next;
-        midNode.next = null;
-        while (cur != null) {
-            ListNode next = cur.next;
-            cur.next = pre;
-            pre = cur;
-            cur = next;
-        }
-        ListNode right = pre;
-        ListNode left = head;
-        cur = new ListNode();
-        while(left != null && right != null){
-            cur.next = left;
-            left = left.next;
-            cur = cur.next;
-            cur.next = right;
-            right = right.next;
-            cur = cur.next;
-        }
-        if(left != null){
-            cur.next = left.next;
-        }
-    }
 }

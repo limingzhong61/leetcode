@@ -3,13 +3,30 @@ package lmz.algorithm.data_structure.linked_list.delete;
 import lmz.algorithm.data_structure.linked_list.util.ListNode;
 
 public class RemoveNthFromEnd19 {
+    /**
+     * 关键在于找到倒数第n个结点的前一个结点:
+     * 双指针,两个指针间隔倒数的个数
+     */
+    public ListNode removeNthFromEnd(ListNode head, int n) {
+        ListNode dummy = new ListNode(0,head);
+        ListNode nPre = dummy,cur = head;
+        for(int i = 0; i < n; i++){
+            cur = cur.next;
+        }
+        while (cur != null){
+            cur = cur.next;
+            nPre = nPre.next;
+        }
+        nPre.next = nPre.next.next;
+        return  dummy.next;
+    }
 
     /**
      * my
      * 关键在于找到倒数第n个结点的前一个结点:
      * 双指针,两个指针间隔倒数的个数
      */
-    public ListNode removeNthFromEnd1(ListNode head, int n) {
+    public ListNode removeNthFromEnd3(ListNode head, int n) {
         ListNode fast = head;
 
         //移动n次
@@ -59,7 +76,7 @@ public class RemoveNthFromEnd19 {
      * 递归删除链表
      */
     int cnt = 0;
-    public ListNode removeNthFromEnd(ListNode head, int n) {
+    public ListNode removeNthFromEnd1(ListNode head, int n) {
         if(head == null) return null;
         head.next = removeNthFromEnd(head.next,n);
         cnt++;

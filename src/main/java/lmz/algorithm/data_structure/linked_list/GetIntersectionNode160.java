@@ -13,16 +13,14 @@ public class GetIntersectionNode160 {
      * 两个指针共同遍历m+n,
      */
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
-        if (headA == null || headB == null) {
-            return null;
+        ListNode curA = headA,curB = headB;
+        while(curA != curB){
+            curA = curA == null ? headB : curA.next;
+            curB = curB == null ? headA : curB.next;
         }
-        ListNode pA = headA, pB = headB;
-        while (pA != pB) {
-            pA = pA == null ? headB : pA.next;
-            pB = pB == null ? headA : pB.next;
-        }
-        return pA;
+        return curA;
     }
+
 
     /**
      * leetcode:hash表
@@ -42,48 +40,7 @@ public class GetIntersectionNode160 {
         return null;
     }
 
-    /**
-     * 分别获取headA和B的长度m，n
-     * sub = m -n ,长指针的先移动sub长度，然后两个一起移动，两者相等则为相交结点
-     */
-    public ListNode getIntersectionNode1(ListNode headA, ListNode headB) {
-        int lengthA = getLinkedListLength(headA);
-        int lengthB = getLinkedListLength(headB);
-        ListNode maxList,minList;
-        int subLength = 0;
-        if(lengthA > lengthB){
-            subLength = lengthA - lengthB;
-            maxList = headA;
-            minList = headB;
-        }else{
-            subLength = lengthB - lengthA;
-            maxList = headB;
-            minList = headA;
-        }
-        System.out.println(subLength);
-        while(subLength != 0){
-            maxList = minList.next;
-            subLength--;
-        }
-        //现在maxList和minList指针后面的结点长度是一样的
-        while (maxList != null){
-            if(maxList == minList){
-                return minList;
-            }
-            maxList = maxList.next;
-            minList = minList.next;
-        }
-        return null;
-    }
-    private int getLinkedListLength(ListNode head){
-        ListNode cur = head;
-        int length = 0;
-        while(cur != null){
-            length++;
-            cur = cur.next;
-        }
-        return length;
-    }
+
 
 
     public static void main(String[] args) {
