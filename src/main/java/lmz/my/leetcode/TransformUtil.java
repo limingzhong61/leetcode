@@ -1,5 +1,7 @@
 package lmz.my.leetcode;
 
+import lmz.algorithm.data_structure.linked_list.util.ListNode;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -12,6 +14,11 @@ public class TransformUtil {
                 replaceAll("\"", "'");
     }
 
+    /**
+     *
+     * @param original "[4,2,1,3]"
+     * @return
+     */
     public static int[] toIntArray(String original) {
         String s = original.replaceAll("\\[", "").
                 replaceAll("\\]", "").
@@ -234,5 +241,22 @@ public class TransformUtil {
             nums[i] = Boolean.parseBoolean(split[i]);
         }
         return nums;
+    }
+
+    /**
+     * @param format  "[4,2,1,3]"
+     *
+     * @return leetcode 结构的链表
+     */
+    public static ListNode toLinkedList(String format) {
+        ListNode dummy = new ListNode();
+        ListNode cur = dummy;
+        int[] nums = toIntArray(format);
+        for(int x : nums){
+            cur.next = new ListNode(x);
+            cur = cur.next;
+        }
+        cur.next = null;
+        return  dummy.next;
     }
 }
