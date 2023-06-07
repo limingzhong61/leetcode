@@ -7,6 +7,43 @@ import java.util.List;
 
 public class IsPalindrome234 {
     /**
+     * 进阶：你能否用 O(n) 时间复杂度和 O(1) 空间复杂度解决此题？
+     */
+    public boolean isPalindrome(ListNode head) {
+        int size = getSize(head);
+        int half = size / 2;
+        // 翻转前半部分
+        ListNode pre = null,cur = head;
+        for(int i = 0; i < half; i++){
+            ListNode next = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = next;
+        }
+        if(size % 2 == 1){ // 奇数跳过中间节点
+            cur = cur.next;
+        }
+        // 此时pre为前一段链表的头结点
+        for(;cur != null && cur.val == pre.val; cur = cur.next,pre = pre.next);
+        return cur == null &&pre == null;
+    }
+
+    /**
+     * 获取链表的长度
+     *
+     * @param head
+     * @return 链表长度
+     */
+    private int getSize(ListNode head) {
+        int size = 0;
+        for (ListNode cur = head; cur != null; cur = cur.next) {
+            size++;
+        }
+        return size;
+    }
+
+
+    /**
      * my:
      * 用list记录值，然后判断即可；
      * 时间：O(n),空间O(n)
@@ -65,7 +102,7 @@ public class IsPalindrome234 {
      */
     public ListNode frontNode; //全局变量
 
-    public boolean isPalindrome(ListNode head) {
+    public boolean isPalindrome3(ListNode head) {
         frontNode = head;
         return recursivelyCheck(head);
     }

@@ -1,14 +1,50 @@
-package lmz.algorithm.data_structure.linked_list;
+package lmz.algorithm.data_structure.linked_list.merge_sort;
 
 import lmz.algorithm.data_structure.linked_list.util.ListNode;
 
+import java.util.List;
 import java.util.PriorityQueue;
 
 public class MergeKLists23 {
     /**
-     * 分治合并：O(knlogn)
+     * 利用最小堆合并
      */
     public ListNode mergeKLists(ListNode[] lists) {
+        PriorityQueue<ListNode> pq = new PriorityQueue<>((a,b)->a.val - b.val);
+        for(int i = 0; i < lists.length; i++){
+            if(lists[i] != null)
+                pq.add(lists[i]);
+        }
+        ListNode dummy = new ListNode();
+        ListNode cur = dummy;
+        while(!pq.isEmpty()){
+            ListNode node = pq.poll();
+            cur.next = node;
+            cur = cur.next;
+            if(node.next != null){
+                pq.add(node.next);
+            }
+        }
+        cur.next = null;
+        return dummy.next;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /**
+     * 分治合并：O(knlogn)
+     */
+    public ListNode mergeKLists4(ListNode[] lists) {
         //0 <= len <= 10^4
         if (lists.length == 0) {
             return null;

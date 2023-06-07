@@ -1,5 +1,7 @@
 package lmz.algorithm.data_structure.linked_list.util;
 
+import lmz.my.leetcode.TransformUtil;
+
 /**
  * 链表工具类
  * @author: limingzhong
@@ -12,7 +14,7 @@ public class ListNodeUtil {
      * @param head
      * @return 逆置后的链表头结点
      */
-    public ListNode reverseList(ListNode head) {
+    public ListNode reverse(ListNode head) {
         ListNode pre = null;
         ListNode cur = head;
         while(cur != null){
@@ -76,5 +78,24 @@ public class ListNodeUtil {
             p.next = p1;
         }
         return dummy.next;
+    }
+
+    /**
+     * 获取链表的长度
+     *
+     * @param head
+     * @return 链表长度
+     */
+    private int getSize(ListNode head) {
+        int size = 0;
+
+        for (ListNode cur = head; cur != null; cur = cur.next) {
+            size++;
+        }
+        return size;
+    }
+
+    void print(ListNode list) {
+        System.out.println(list.toString());
     }
 }
