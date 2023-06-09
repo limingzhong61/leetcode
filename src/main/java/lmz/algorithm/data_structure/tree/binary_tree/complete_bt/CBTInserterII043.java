@@ -1,6 +1,6 @@
 package lmz.algorithm.data_structure.tree.binary_tree.complete_bt;
 
-import lmz.algorithm.data_structure.tree.binary_tree.normal.TreeNode;
+import lmz.algorithm.data_structure.tree.binary_tree.un_sorted.TreeNode;
 
 import java.util.ArrayDeque;
 import java.util.Queue;

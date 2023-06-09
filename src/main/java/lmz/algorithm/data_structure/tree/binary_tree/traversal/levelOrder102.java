@@ -1,17 +1,53 @@
 package lmz.algorithm.data_structure.tree.binary_tree.traversal;
 
 
-import lmz.algorithm.data_structure.tree.binary_tree.normal.TreeNode;
+import lmz.algorithm.data_structure.tree.binary_tree.un_sorted.TreeNode;
 
 import java.util.*;
 
-public class levelOrder {
+public class levelOrder102 {
+    /**
+     * 层次遍历
+     * 利用队列长度
+     */
+    public List<List<Integer>> levelOrder(TreeNode root) {
+        List<List<Integer>> res = new ArrayList<>();
+        Queue<TreeNode> queue = new LinkedList<>();
+        if(root == null){
+            return res;
+        }
+        queue.offer(root);
+        while(!queue.isEmpty()){
+            List<Integer> level = new ArrayList<>();
+            int currentLevelSize = queue.size();
+            for(int i = 0; i < currentLevelSize; i++){
+                root = queue.poll();
+                level.add(root.val);
+                if(root.left != null){
+                    queue.offer(root.left);
+                }
+                if(root.right != null){
+                    queue.offer(root.right);
+                }
+            }
+            res.add(level);
+        }
+        return res;
+    }
+
+
+
+
+
+
+
+
     /**
      * 我的结题思路，用lastRight标记一层的最右结点（即结束结点）
      * @param root
      * @return
      */
-    public List<List<Integer>> levelOrder(TreeNode root) {
+    public List<List<Integer>> levelOrder1(TreeNode root) {
         List<List<Integer>> res = new ArrayList<>();
         Deque<TreeNode> deque = new LinkedList<>();
         if(root == null){
@@ -41,28 +77,4 @@ public class levelOrder {
         return res;
     }
 
-    public List<List<Integer>> levelOrder2(TreeNode root) {
-        List<List<Integer>> res = new ArrayList<>();
-        Queue<TreeNode> queue = new LinkedList<>();
-        if(root == null){
-            return res;
-        }
-        queue.offer(root);
-        while(!queue.isEmpty()){
-            List<Integer> level = new ArrayList<>();
-            int currentLevelSize = queue.size();
-            for(int i = 0; i < currentLevelSize; i++){
-                root = queue.poll();
-                level.add(root.val);
-                if(root.left != null){
-                    queue.offer(root.left);
-                }
-                if(root.right != null){
-                    queue.offer(root.right);
-                }
-            }
-            res.add(level);
-        }
-        return res;
-    }
 }

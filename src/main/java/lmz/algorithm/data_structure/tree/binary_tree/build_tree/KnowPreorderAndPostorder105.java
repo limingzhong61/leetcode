@@ -1,7 +1,7 @@
 package lmz.algorithm.data_structure.tree.binary_tree.build_tree;
 
 
-import lmz.algorithm.data_structure.tree.binary_tree.normal.TreeNode;
+import lmz.algorithm.data_structure.tree.binary_tree.un_sorted.TreeNode;
 
 import java.util.*;
 

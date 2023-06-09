@@ -1,10 +1,10 @@
-package lmz.algorithm.data_structure.tree.binary_tree.normal;
+package lmz.algorithm.data_structure.tree.binary_tree.un_sorted;
 
 
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class maxDepth {
+public class maxDepth104 {
     /**
      * 递归版本
      *

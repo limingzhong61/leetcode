@@ -1,4 +1,4 @@
-package lmz.algorithm.data_structure.tree.binary_tree.normal;
+package lmz.algorithm.data_structure.tree.binary_tree.un_sorted;
 
 public class IsSubtree572 {
     /**

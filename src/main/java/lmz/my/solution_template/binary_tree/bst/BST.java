@@ -1,6 +1,6 @@
 package lmz.my.solution_template.binary_tree.bst;
 
-import lmz.algorithm.data_structure.tree.binary_tree.normal.TreeNode;
+import lmz.algorithm.data_structure.tree.binary_tree.un_sorted.TreeNode;
 
 public class BST {
     /**

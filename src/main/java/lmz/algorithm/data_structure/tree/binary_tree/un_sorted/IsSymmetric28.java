@@ -1,6 +1,4 @@
-package lmz.algorithm.graph_parse_ds.search_and_recur;
-
-import lmz.algorithm.data_structure.tree.binary_tree.normal.TreeNode;
+package lmz.algorithm.data_structure.tree.binary_tree.un_sorted;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -17,18 +15,13 @@ public class IsSymmetric28 {
         return dfs(root.left, root.right);
     }
 
-    private boolean dfs(TreeNode left, TreeNode right) {
-        if (left == null && right == null) {
-            return true;
+    public boolean dfs(TreeNode p, TreeNode q) {
+        if(p == null || q == null ){
+            return p == q;// 只有pq 都空才行
         }
-        if (left == null || right == null) {
-            return false;
-        }
-        if(left.val != right.val){
-            return false;
-        }
-        return dfs(left.left, right.right) && dfs(left.right, right.left);
+        return p.val == q.val && dfs(p.left,q.right) && dfs(p.right,q.left);
     }
+
 
     /**
      * 迭代：遍历

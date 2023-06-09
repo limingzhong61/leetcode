@@ -1,6 +1,6 @@
 package lmz.algorithm.graph_theory.short_path_no_weight;
 
-import lmz.algorithm.data_structure.tree.binary_tree.normal.TreeNode;
+import lmz.algorithm.data_structure.tree.binary_tree.un_sorted.TreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

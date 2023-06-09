@@ -1,6 +1,6 @@
 package lmz.algorithm.data_structure.tree.binary_tree.traversal;
 
-import lmz.algorithm.data_structure.tree.binary_tree.normal.TreeNode;
+import lmz.algorithm.data_structure.tree.binary_tree.un_sorted.TreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -31,6 +31,7 @@ public class RightSideView199 {
         dfs(root.right,depth+1);
         dfs(root.left,depth+1);
     }
+
 
     /**
      * BFS:层次遍历，每一层最后一个结点为右边结点能看见的

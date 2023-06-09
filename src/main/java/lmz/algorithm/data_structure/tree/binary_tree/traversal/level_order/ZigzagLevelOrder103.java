@@ -1,11 +1,44 @@
 package lmz.algorithm.data_structure.tree.binary_tree.traversal.level_order;
 
-import lmz.algorithm.data_structure.tree.binary_tree.normal.TreeNode;
+import lmz.algorithm.data_structure.tree.binary_tree.un_sorted.TreeNode;
 import lmz.my.leetcode.EncodeTree;
 
 import java.util.*;
 
 public class ZigzagLevelOrder103 {
+    /**
+     * leetcode: 利用奇数偶数层翻转
+     */
+    public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+        List<List<Integer>> ans = new ArrayList<>();
+        if (root == null) {
+            return ans;
+        }
+        Queue<TreeNode> q = new LinkedList<>();
+        q.add(root);
+        boolean leftOrder = true;
+        while (!q.isEmpty()) {
+            int size = q.size();
+            ArrayList<Integer> levelList = new ArrayList<>(size);
+            for (int i = 0; i < size; i++) { //从左到右遍历
+                TreeNode node = q.poll();
+                levelList.add(node.val);
+                if (node.left != null) {
+                    q.add(node.left);
+                }
+                if (node.right != null) {
+                    q.add(node.right);
+                }
+            }
+            if(!leftOrder){
+                Collections.reverse(levelList);
+            }
+            ans.add(new LinkedList<Integer>(levelList));
+            leftOrder = !leftOrder;
+        }
+        return ans;
+    }
+
     /**
      * leetcode:
      * 在层次遍历的基础上添加一个双端队列遍历deque用于存储z字遍历结果：即
@@ -16,7 +49,7 @@ public class ZigzagLevelOrder103 {
      * 如果从右至左，我们每次将被遍历到的元素插入至双端队列deque的头部。
      * 每次获得的deque形成的list就是答案
      */
-    public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+    public List<List<Integer>> zigzagLevelOrder2(TreeNode root) {
         List<List<Integer>> res = new ArrayList<>();
         if (root == null) {
             return res;

@@ -2,7 +2,7 @@ package lmz.algorithm.data_structure.tree.binary_tree.traversal;
 
 
 
-import lmz.algorithm.data_structure.tree.binary_tree.normal.TreeNode;
+import lmz.algorithm.data_structure.tree.binary_tree.un_sorted.TreeNode;
 
 import java.util.ArrayList;
 import java.util.Deque;

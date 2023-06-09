@@ -1,26 +1,23 @@
 package lmz.algorithm.other.old.primary.tree;
 
 
-import lmz.algorithm.data_structure.tree.binary_tree.normal.TreeNode;
+import lmz.algorithm.data_structure.tree.binary_tree.un_sorted.TreeNode;
 
 public class SortedArrayToBST108 {
     /**
-     * my:递归版本
-     * 思路：每次取[start,end]中间的数，然后递归至start ==end 结束
+     * 将有序数组转换为二叉搜索树
      */
     public TreeNode sortedArrayToBST(int[] nums) {
-        return buildBST(nums,0,nums.length-1);
+        return bulidTree(nums,0,nums.length-1);
     }
 
-    public TreeNode buildBST(int[] nums, int start, int end) {
-        if (start > end) { //size == 0
-            return null;
-        }
-        //1 <= nums.length <= 10^4
-        int mid = (end + start) / 2;
-        TreeNode left = buildBST(nums,start,mid-1);
-        TreeNode right = buildBST(nums,mid+1,end);
-        TreeNode root = new TreeNode(nums[mid], left,right);
-        return  root;
+    private TreeNode bulidTree(int[] nums, int left, int right) {
+        if(left > right) return  null;
+        // if(left == right) return  new TreeNode(nums[left]);
+        int mid = (left + right) / 2;
+        TreeNode node = new TreeNode(nums[mid]);
+        node.left = bulidTree(nums,left,mid-1);
+        node.right = bulidTree(nums,mid + 1,right);
+        return node;
     }
 }

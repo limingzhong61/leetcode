@@ -1,6 +1,6 @@
 package lmz.algorithm.graph_parse_ds.divide_and_conquer;
 
-import lmz.algorithm.data_structure.tree.binary_tree.normal.TreeNode;
+import lmz.algorithm.data_structure.tree.binary_tree.un_sorted.TreeNode;
 
 import java.util.Deque;
 import java.util.HashMap;
