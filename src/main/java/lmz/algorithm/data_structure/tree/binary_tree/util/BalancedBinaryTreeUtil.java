@@ -1,7 +1,5 @@
 package lmz.algorithm.data_structure.tree.binary_tree.util;
 
-import lmz.algorithm.data_structure.tree.binary_tree.un_sorted.TreeNode;
-
 /**
  * @author: limingzhong
  * @create: 2023-06-07 11:59

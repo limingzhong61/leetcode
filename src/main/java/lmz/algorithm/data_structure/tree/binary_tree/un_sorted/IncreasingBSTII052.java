@@ -1,5 +1,7 @@
 package lmz.algorithm.data_structure.tree.binary_tree.un_sorted;
 
+import lmz.algorithm.data_structure.tree.binary_tree.util.TreeNode;
+
 public class IncreasingBSTII052 {
     TreeNode p;
     public TreeNode increasingBST(TreeNode root) {

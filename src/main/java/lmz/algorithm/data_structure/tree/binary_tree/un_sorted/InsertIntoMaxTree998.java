@@ -1,5 +1,7 @@
 package lmz.algorithm.data_structure.tree.binary_tree.un_sorted;
 
+import lmz.algorithm.data_structure.tree.binary_tree.util.TreeNode;
+
 public class InsertIntoMaxTree998 {
     /**
      * 题目的意思是本来构造最大数的数组是A，在A中找出最大的值当做根，最大值左边的值为左子树，右边的数组为右子树。

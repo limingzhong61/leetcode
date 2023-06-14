@@ -1,6 +1,6 @@
 package lmz.algorithm.data_structure.tree.binary_tree.bst;
 
-import lmz.algorithm.data_structure.tree.binary_tree.un_sorted.TreeNode;
+import lmz.algorithm.data_structure.tree.binary_tree.util.TreeNode;
 import lmz.my.leetcode.EncodeTree2;
 
 public class DeleteNode450 {

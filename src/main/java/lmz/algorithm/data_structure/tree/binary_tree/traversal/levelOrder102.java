@@ -1,7 +1,7 @@
 package lmz.algorithm.data_structure.tree.binary_tree.traversal;
 
 
-import lmz.algorithm.data_structure.tree.binary_tree.un_sorted.TreeNode;
+import lmz.algorithm.data_structure.tree.binary_tree.util.TreeNode;
 
 import java.util.*;
 

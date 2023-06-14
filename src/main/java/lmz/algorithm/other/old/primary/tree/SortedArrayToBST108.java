@@ -1,7 +1,7 @@
 package lmz.algorithm.other.old.primary.tree;
 
 
-import lmz.algorithm.data_structure.tree.binary_tree.un_sorted.TreeNode;
+import lmz.algorithm.data_structure.tree.binary_tree.util.TreeNode;
 
 public class SortedArrayToBST108 {
     /**

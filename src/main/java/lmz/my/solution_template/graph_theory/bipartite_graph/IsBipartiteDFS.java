@@ -43,7 +43,7 @@ public class IsBipartiteDFS {
     }
 
     public static void main(String[] args) {
-        lmz.algorithm.graph_theory.character.IsBipartite785 isBipartite785 = new lmz.algorithm.graph_theory.character.IsBipartite785();
+        lmz.algorithm.graph.character.IsBipartite785 isBipartite785 = new lmz.algorithm.graph.character.IsBipartite785();
 
         System.out.println(isBipartite785.isBipartite(TransformUtil.toIntMatrix("[[1,2,3],[0,2],[0,1,3],[0,2]]")));
         System.out.println((String.valueOf(isBipartite785.isBipartite(TransformUtil.toIntMatrix(

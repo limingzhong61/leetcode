@@ -1,7 +1,7 @@
 package lmz.algorithm.data_structure.tree.binary_tree.find;
 
 
-import lmz.algorithm.data_structure.tree.binary_tree.un_sorted.TreeNode;
+import lmz.algorithm.data_structure.tree.binary_tree.util.TreeNode;
 
 import java.util.HashMap;
 import java.util.HashSet;

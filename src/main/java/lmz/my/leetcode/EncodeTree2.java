@@ -1,6 +1,6 @@
 package lmz.my.leetcode;
 
-import lmz.algorithm.data_structure.tree.binary_tree.un_sorted.TreeNode;
+import lmz.algorithm.data_structure.tree.binary_tree.util.TreeNode;
 import lmz.algorithm.graph_parse_ds.search_and_recur.Codec37;
 
 import java.util.LinkedList;

@@ -1,6 +1,6 @@
 package lmz.algorithm.other.old.everyday.tree;
 
-import lmz.algorithm.data_structure.tree.binary_tree.un_sorted.TreeNode;
+import lmz.algorithm.data_structure.tree.binary_tree.util.TreeNode;
 
 public class PruneTree814 {
     /**

@@ -1,6 +1,6 @@
 package lmz.algorithm.contest.old.c139;
 
-import lmz.algorithm.data_structure.tree.binary_tree.un_sorted.TreeNode;
+import lmz.algorithm.data_structure.tree.binary_tree.util.TreeNode;
 import lmz.my.leetcode.TransformUtil;
 
 import java.util.*;

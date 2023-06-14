@@ -1,6 +1,6 @@
 package lmz.algorithm.contest.old.cx;
 
-import lmz.algorithm.data_structure.tree.binary_tree.un_sorted.TreeNode;
+import lmz.algorithm.data_structure.tree.binary_tree.util.TreeNode;
 
 import java.util.HashMap;
 import java.util.HashSet;

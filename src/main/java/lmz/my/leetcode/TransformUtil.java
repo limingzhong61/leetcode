@@ -1,10 +1,9 @@
 package lmz.my.leetcode;
 
 import lmz.algorithm.data_structure.linked_list.util.ListNode;
+import lmz.algorithm.data_structure.tree.binary_tree.util.TreeNode;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class TransformUtil {
 
@@ -15,7 +14,6 @@ public class TransformUtil {
     }
 
     /**
-     *
      * @param original "[4,2,1,3]"
      * @return
      */
@@ -52,7 +50,7 @@ public class TransformUtil {
         for (int i = 0; i < split.length; i++) {
             nums[i] = Integer.parseInt(split[i]);
         }
-        return Arrays.stream(nums).mapToLong(a -> (long)a).toArray();
+        return Arrays.stream(nums).mapToLong(a -> (long) a).toArray();
     }
 
     /**
@@ -65,7 +63,7 @@ public class TransformUtil {
         }
 
         String substring = original.substring(1, original.length() - 1);
-        if("".equals(substring)){
+        if ("".equals(substring)) {
             return new int[0][0];
         }
         //先统一为：[5,3],[4,0],[2,1],
@@ -78,7 +76,6 @@ public class TransformUtil {
         }
         return matrix;
     }
-
 
 
     /**
@@ -149,7 +146,6 @@ public class TransformUtil {
     }
 
     /**
-     *
      * @param original 输入格式："[\"foo\",\"bar\"]"
      * @return
      */
@@ -169,6 +165,7 @@ public class TransformUtil {
         int[] ints = toIntArray(original);
         return getArrayList(ints);
     }
+
     public static ArrayList<List<Integer>> toDoubleArrayList(String original) {
         ArrayList<List<Integer>> res = new ArrayList<>();
         if ("".equals(original)) {
@@ -176,12 +173,12 @@ public class TransformUtil {
         }
 
         String substring = original.substring(1, original.length() - 1);
-        if("".equals(substring)){
+        if ("".equals(substring)) {
             return res;
         }
         //先统一为：[5,3],[4,0],[2,1],
         String[] split = (substring + ",").split("],");
-        for(var item : split){
+        for (var item : split) {
             int[] ints = toIntArray(item);
             res.add(getArrayList(ints));
         }
@@ -191,12 +188,13 @@ public class TransformUtil {
 
     /**
      * int[] -> ArrayList<Integer>
+     *
      * @param ints int[]
      * @return
      */
     private static ArrayList<Integer> getArrayList(int[] ints) {
         ArrayList<Integer> list = new ArrayList<>(ints.length);
-        for(int item : ints){
+        for (int item : ints) {
             list.add(item);
         }
         return list;
@@ -204,12 +202,13 @@ public class TransformUtil {
 
     /**
      * String[] -> ArrayList<String>
+     *
      * @param strings String[]
      * @return
      */
     private static ArrayList<String> ToArrayList(String[] strings) {
         ArrayList<String> list = new ArrayList<>(strings.length);
-        for(String item : strings){
+        for (String item : strings) {
             list.add(item);
         }
         return list;
@@ -222,6 +221,7 @@ public class TransformUtil {
 
     /**
      * input format: [true,true,true,false,false]
+     *
      * @param original
      * @return
      */
@@ -243,20 +243,47 @@ public class TransformUtil {
         return nums;
     }
 
-    /**
-     * @param format  "[4,2,1,3]"
-     *
-     * @return leetcode 结构的链表
-     */
+
     public static ListNode toLinkedList(String format) {
         ListNode dummy = new ListNode();
         ListNode cur = dummy;
         int[] nums = toIntArray(format);
-        for(int x : nums){
+        for (int x : nums) {
             cur.next = new ListNode(x);
             cur = cur.next;
         }
         cur.next = null;
-        return  dummy.next;
+        return dummy.next;
+    }
+
+    /**
+     * @param format 完全二叉树的形式"[10,5,-3,3,2,null,11,3,-2,null,1]"
+     * @return leetcode 结构的链表
+     */
+    public static TreeNode toBinaryTree(String format) {
+        String[] a = toStringArray(format);
+        int n = a.length;
+        TreeNode root = toTreeNode(a[0]);
+        Queue<TreeNode> q = new ArrayDeque<>();
+        q.add(root);
+        int idx = 1;
+        while (!q.isEmpty() && idx < n) {
+            int size = q.size();
+            for (int i = 0; i < size; i++) {
+                TreeNode node = q.poll();
+                node.left = toTreeNode(a[idx++]);
+                if (node.left != null)
+                    q.add(node.left);
+                node.right = toTreeNode(a[idx++]);
+                if (node.right != null)
+                    q.add(node.right);
+            }
+        }
+        return root;
+    }
+
+    private static TreeNode toTreeNode(String s) {
+        if ("null".equals(s)) return null;
+        return new TreeNode(Integer.parseInt(s));
     }
 }

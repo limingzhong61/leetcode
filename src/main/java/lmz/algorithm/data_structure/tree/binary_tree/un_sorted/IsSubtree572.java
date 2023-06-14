@@ -1,5 +1,7 @@
 package lmz.algorithm.data_structure.tree.binary_tree.un_sorted;
 
+import lmz.algorithm.data_structure.tree.binary_tree.util.TreeNode;
+
 public class IsSubtree572 {
     /**
      * leetcode:深度优先搜索序列上做串匹配

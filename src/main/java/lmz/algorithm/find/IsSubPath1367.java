@@ -1,6 +1,6 @@
 package lmz.algorithm.find;
 
-import lmz.algorithm.data_structure.tree.binary_tree.un_sorted.TreeNode;
+import lmz.algorithm.data_structure.tree.binary_tree.util.TreeNode;
 import lmz.algorithm.data_structure.linked_list.util.ListNode;
 
 public class IsSubPath1367 {
