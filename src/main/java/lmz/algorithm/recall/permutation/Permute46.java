@@ -1,4 +1,4 @@
-package lmz.algorithm.search.permutation;
+package lmz.algorithm.recall.permutation;
 
 
 import lmz.my.solution_template.bruce_search.permutation.Permute;

@@ -1,4 +1,4 @@
-package lmz.algorithm.search.subsets;
+package lmz.algorithm.recall.subsets;
 
 import lmz.my.leetcode.TransformUtil;
 

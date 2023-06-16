@@ -1,4 +1,4 @@
-package lmz.algorithm.search.permutation;
+package lmz.algorithm.recall.permutation;
 
 import lmz.my.leetcode.TransformUtil;
 

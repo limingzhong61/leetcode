@@ -1,4 +1,4 @@
-package lmz.algorithm.search;
+package lmz.algorithm.recall;
 
 public class RepeatedSubstringPattern {
     public boolean repeatedSubstringPattern(String s) {

@@ -1,4 +1,4 @@
-package lmz.algorithm.search;
+package lmz.algorithm.recall;
 
 import java.util.ArrayList;
 import java.util.List;

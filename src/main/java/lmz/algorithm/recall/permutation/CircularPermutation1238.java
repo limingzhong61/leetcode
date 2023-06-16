@@ -1,4 +1,4 @@
-package lmz.algorithm.search.permutation;
+package lmz.algorithm.recall.permutation;
 
 import java.util.ArrayList;
 import java.util.List;
