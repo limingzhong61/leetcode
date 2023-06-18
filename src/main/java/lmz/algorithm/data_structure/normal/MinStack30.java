@@ -1,5 +1,6 @@
 package lmz.algorithm.data_structure.normal;
 
+import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.LinkedList;
 
@@ -10,8 +11,8 @@ import java.util.LinkedList;
  *
  */
 class MinStack {
-    Deque<Integer> stack = new LinkedList<>();
-    Deque<Integer> minStack = new LinkedList<>();
+    Deque<Integer> stack = new ArrayDeque<>();
+    Deque<Integer> minStack = new ArrayDeque<>();
     public MinStack() {
         stack.push(-1);
         minStack.push(Integer.MAX_VALUE);

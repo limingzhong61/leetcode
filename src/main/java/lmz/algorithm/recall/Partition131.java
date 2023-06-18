@@ -9,41 +9,40 @@ import java.util.List;
  * @create: 2023-06-15 22:37
  */
 public class Partition131 {
-    char[] cs;
-    List<List<String>> ans;
+    List<List<String>> ans = new ArrayList<>();
     int n = 0;
 
     /**
      * 假设每对相邻字符之间有个逗号，那么就看每个逗号是选还是不选。
      */
     public List<List<String>> partition(String s) {
-        cs = s.toCharArray();
-        n = cs.length;
-        dfs(0);
-        Iterator<List<String>> iterator = ans.iterator();
-        while(iterator.hasNext()){
-            List<String> next = iterator.next();
-            if(next.size() == 0) iterator.remove();
-        }
+        n = s.length();
+        this.s = s;
+        dfs(0, 0);
         return ans;
     }
 
-    StringBuilder path = new StringBuilder();
-
-    private void dfs(int i) {
+    List<String> path = new ArrayList<>();
+    private String s;
+    private boolean isPalindrome(int left, int right) {
+        while (left < right)
+            if (s.charAt(left++) != s.charAt(right--))
+                return false;
+        return true;
+    }
+    private void dfs(int i, int start) {
         if (i == n) {
-            for (int a = 0, b = cs.length - 1; a < b; a++, b--) {
-                if (path.charAt(a) != path.charAt(b)) return;
-            }
-            List<String> list = new ArrayList<>();
-            list.add(path.toString());
-            ans.add(list);
+            ans.add(new ArrayList<>(path)); // 固定答案
+            return;
         }
-        // 不选
-        dfs(i + 1);
-        // 选
-        path.append(cs[i]);
-        dfs(i + 1);
-        path.deleteCharAt(path.length()-1); // 恢复现场
+        // 不选 i 和 i+1 之间的逗号（i=n-1 时右边没有逗号）
+        if (i < n - 1)
+            dfs(i + 1, start);
+        // 选 i 和 i+1 之间的逗号
+        if(isPalindrome(start, i)){
+            path.add(s.substring(start, i + 1));
+            dfs(i + 1, i + 1);
+            path.remove(path.size() - 1); // 恢复现场
+        }
     }
 }

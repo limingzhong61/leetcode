@@ -1,49 +1,21 @@
-package lmz.algorithm.recall.permutation;
+package lmz.util.recall;
 
 
 import lmz.my.solution_template.bruce_search.permutation.Permute;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.IntStream;
 
 /**
  * 全排列模板，没有重复元素
  */
-public class Permute46 {
-    private int[] nums;
-    private List<Integer> path;
-    private boolean[] onPath;   // 标记位置i是否被选取
-    private final List<List<Integer>> ans = new ArrayList<>();
-
-    public List<List<Integer>> permute(int[] nums) {
-        this.nums = nums;
-        path = Arrays.asList(new Integer[nums.length]);
-        onPath = new boolean[nums.length];
-        dfs(0);
-        return ans;
-    }
-
-    private void dfs(int i) {
-        if (i == nums.length) {
-            ans.add(new ArrayList<>(path));
-            return;
-        }
-        for (int j = 0; j < nums.length; ++j) {
-            if (!onPath[j]) {
-                path.set(i, nums[j]);
-                onPath[j] = true;
-                dfs(i + 1);
-                onPath[j] = false; // 恢复现场
-            }
-        }
-    }
-
-
+public class PermuteUtil {
     /**
      * 下一次排列：
      * 每次选择一个数i作为全排列的第cur个数，然后继续递归生成[cur+1,n]后面的数
      */
-    public List<List<Integer>> permute1(int[] nums) {
+    public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> res = new ArrayList<>();
         permutation(nums, 0,res);
         return res;
@@ -70,6 +42,7 @@ public class Permute46 {
         nums[a] = nums[b];
         nums[b] = temp;
     }
+
 
     public static void main(String[] args) {
         Permute permute = new Permute();

@@ -269,11 +269,12 @@ public class TransformUtil {
         int idx = 1;
         while (!q.isEmpty() && idx < n) {
             int size = q.size();
-            for (int i = 0; i < size; i++) {
+            for (int i = 0; i < size && idx < n; i++) {
                 TreeNode node = q.poll();
                 node.left = toTreeNode(a[idx++]);
                 if (node.left != null)
                     q.add(node.left);
+                if(idx >= n) break;
                 node.right = toTreeNode(a[idx++]);
                 if (node.right != null)
                     q.add(node.right);

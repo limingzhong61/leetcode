@@ -1,4 +1,4 @@
-package lmz.algorithm.data_structure.array_and_strings.summary;
+package lmz.algorithm.data_structure.normal.array_and_strings.summary;
 
 public class FindMin153 {
     /**

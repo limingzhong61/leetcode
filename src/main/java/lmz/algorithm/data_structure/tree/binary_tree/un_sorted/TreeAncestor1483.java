@@ -1,4 +1,4 @@
-package lmz.algorithm.data_structure.tree.binary_tree;
+package lmz.algorithm.data_structure.tree.binary_tree.un_sorted;
 
 import java.util.ArrayList;
 import java.util.Collections;

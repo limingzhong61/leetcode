@@ -1,4 +1,4 @@
-package lmz.algorithm.data_structure.array_and_strings.strings;
+package lmz.algorithm.data_structure.string;
 
 import java.util.Arrays;
 import java.util.Collections;

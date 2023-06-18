@@ -11,7 +11,21 @@ import java.util.Scanner;
  */
 public class Test {
     public static void main(String[] args) {
-        HashMap<Object, Object> objectObjectHashMap = new HashMap<>();
+        System.out.println(f());
+    }
+
+    private static int f() {
+        int i;
+        try {
+            i = 1;
+            return i;
+        }catch (RuntimeException e){
+            i = 2;
+        }finally {
+            i = 3;
+            return 3;
+        }
+        //return i;
     }
 
     Test() {

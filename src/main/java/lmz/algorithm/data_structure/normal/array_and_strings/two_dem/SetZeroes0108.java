@@ -1,4 +1,4 @@
-package lmz.algorithm.data_structure.array_and_strings.two_dem;
+package lmz.algorithm.data_structure.normal.array_and_strings.two_dem;
 
 import java.util.HashSet;
 import java.util.Set;
