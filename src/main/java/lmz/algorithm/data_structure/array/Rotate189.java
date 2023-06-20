@@ -1,22 +1,6 @@
-package lmz.algorithm.other.old.primary.arrays;
+package lmz.algorithm.data_structure.array;
 
 public class Rotate189 {
-    /**
-     * my1:
-     * 利用额外的数组
-     *
-     * @param nums
-     * @param k
-     */
-    public void rotate2(int[] nums, int k) {
-        int n = nums.length;
-        int[] newNums = new int[n];
-        k = k % n;//k很大，但n轮后就是原数组
-        System.arraycopy(nums, 0, newNums, 0, n);
-        for (int i = 0; i < n; i++) {
-            nums[(i+k)%n] = newNums[i];
-        }
-    }
 
     /**
      * 法二：用3次逆置达到数组移动k位。
@@ -46,6 +30,25 @@ public class Rotate189 {
             nums[end] = temp;
         }
     }
+
+    /**
+     * my1:
+     * 利用额外的数组
+     *
+     * @param nums
+     * @param k
+     */
+    public void rotate2(int[] nums, int k) {
+        int n = nums.length;
+        int[] newNums = new int[n];
+        k = k % n;//k很大，但n轮后就是原数组
+        System.arraycopy(nums, 0, newNums, 0, n);
+        for (int i = 0; i < n; i++) {
+            nums[(i+k)%n] = newNums[i];
+        }
+    }
+
+
 
     /**
      * 方法二：环状替换
