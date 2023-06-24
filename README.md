@@ -1,6 +1,13 @@
 # leetcode刷题代码
 ## 代码目录
-  
+- 常用工具类放置：`lmz/util`
+- 解题模板放置：`lmz/util/solution_template`  
+
+### 解题模板放置
+`lmz/util/solution_template`
+
+
+### 做过的题模板放置
 - 数据结构相关代码： `lmz.algorithm.data_structure`
     - 链表代码：`data_structure.linked_list`
     - 二叉树代码：`data_structure.binary_tree`

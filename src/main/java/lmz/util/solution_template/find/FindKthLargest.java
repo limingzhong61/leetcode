@@ -1,5 +1,6 @@
-package lmz.algorithm.find;
+package lmz.util.solution_template.find;
 
+import lmz.algorithm.find.FindKthLargest215;
 import lmz.my.leetcode.TransformUtil;
 
 import java.util.PriorityQueue;
@@ -7,29 +8,27 @@ import java.util.PriorityQueue;
 /**
  * 215. 数组中的第K个最大元素
  */
-public class FindKthLargest215 {
+public class FindKthLargest {
     /**
-     * 数组中的第K个最大元素
      * 基于快速排序的选择方法
      */
     public int findKthLargest(int[] nums, int k) {
-        // 第k大等于下标为 数组长度n - k
         return partition(nums, nums.length - k, 0, nums.length - 1);
     }
 
     private int partition(int[] nums, int loc, int low, int high) {
-        int pivot = low;
+        int pivot = nums[low];
         int preLow = low, preHigh = high;
         while (low < high) {
-            while (low < high && nums[high] >= nums[pivot]) {
+            while (low < high && nums[high] >= pivot) {
                 high--;
             }
-            while (low < high && nums[low] <= nums[pivot]) {
+            while (low < high && nums[low] <= pivot) {
                 low++;
             }
             swap(nums, low, high);
         }
-        swap(nums, pivot, low);
+        swap(nums, preLow, low);
         if (low == loc) {
             return nums[low];
         } else if (low > loc) {

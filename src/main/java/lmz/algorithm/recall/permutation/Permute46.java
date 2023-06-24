@@ -1,7 +1,7 @@
 package lmz.algorithm.recall.permutation;
 
 
-import lmz.my.solution_template.bruce_search.permutation.Permute;
+import lmz.util.solution_template.bruce_search.permutation.Permute;
 
 import java.util.*;
 import java.util.stream.IntStream;

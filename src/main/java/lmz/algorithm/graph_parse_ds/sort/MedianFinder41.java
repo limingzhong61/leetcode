@@ -102,38 +102,4 @@ public class MedianFinder41 {
             }
         }
     }
-
-    /**
-     * my:每次findMid前sort，时间超时
-     */
-    class MedianFinder1 {
-        List<Integer> list = new ArrayList<>();
-
-        public MedianFinder1() {
-
-        }
-
-        public void addNum(int num) {
-            list.add(num);
-        }
-
-        public double findMedian() {
-            list.sort(new Comparator<Integer>() {
-                @Override
-                public int compare(Integer a, Integer b) {
-                    return a - b;
-                }
-            });
-            int size = list.size();
-            if (size == 0) {
-                return 0;
-            }
-            if ((size & 1) == 1) {
-                return list.get(size / 2);
-            } else {
-                int mid = size / 2;
-                return (list.get(mid) + list.get(mid - 1)) / 2.0;
-            }
-        }
-    }
 }
