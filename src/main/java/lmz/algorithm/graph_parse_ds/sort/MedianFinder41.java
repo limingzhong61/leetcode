@@ -6,13 +6,13 @@ public class MedianFinder41 {
     /**
      * leetcode
      */
-    class MedianFinder {
+    class MedianFinder1 {
         TreeMap<Integer, Integer> nums;
         int n;
         int[] left;
         int[] right;
 
-        public MedianFinder() {
+        public MedianFinder1() {
             nums = new TreeMap<Integer, Integer>();
             n = 0;
             left = new int[2];
@@ -74,31 +74,30 @@ public class MedianFinder41 {
      * 【小顶堆顶的最小值】所有大于【大顶堆的堆顶的最大值】元素的最小值。
      * 小顶堆同理
      */
-    class MedianFinder2 {
-        Queue<Integer> minHeap = new PriorityQueue<>(); // 小顶堆，保存较大的一半
-        Queue<Integer> maxHeap = new PriorityQueue<>((a, b) -> b - a);; // 大顶堆，保存较小的一半
-
-        public MedianFinder2() { }
+    class MedianFinder {
+        //维护双堆
+        // 大根堆（小的，左半边）和 小根堆 （大的，右半边），左边size >= 右边size
+        Queue<Integer> leftMaxHeap = new PriorityQueue<>((a, b) -> b - a);; // 大顶堆，保存较小的一半
+        Queue<Integer> rightMinHeap = new PriorityQueue<>(); // 小顶堆，保存较大的一半
+        public MedianFinder() {
+        }
 
         public void addNum(int num) {
-            //先大顶堆添加
-            if(maxHeap.size() <= minHeap.size()){
-                minHeap.add(num);
-                maxHeap.add(minHeap.poll());
-            }else{
-                maxHeap.add(num);
-                minHeap.add(maxHeap.poll());
+            if(leftMaxHeap.size() == rightMinHeap.size()){
+                rightMinHeap.add(num);
+                leftMaxHeap.add(rightMinHeap.poll()); //添加右边最小的。
+            }else{ // leftSize > rightSize
+                leftMaxHeap.add(num);
+                rightMinHeap.add(leftMaxHeap.poll()); //添加左边最大的。
             }
+            // System.out.printf("%d,%d\n",leftMaxHeap.peek(), rightMinHeap.peek());
         }
 
         public double findMedian() {
-            if(maxHeap.size() == 0){
-                return 0;
-            }
-            if(maxHeap.size() > minHeap.size()){
-                return maxHeap.peek();
+            if(leftMaxHeap.size() > rightMinHeap.size()){
+                return leftMaxHeap.peek();
             }else{
-                return (minHeap.peek() + maxHeap.peek()) / 2.0;
+                return (leftMaxHeap.peek() + rightMinHeap.peek()) / 2.0;
             }
         }
     }
