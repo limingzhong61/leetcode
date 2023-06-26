@@ -1,6 +1,10 @@
-package lmz.algorithm.contest.c321;
+package lmz.algorithm.other.easy;
 
-public class PivotInteger {
+/**
+ * @author: limingzhong
+ * @create: 2023-06-26 13:04
+ */
+public class PivotInteger2485 {
     public int pivotInteger(int n) {
         int left = 0,right = n *(n+1) /2;
         for(int i = 1; i <= n; i++){
