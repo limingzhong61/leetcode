@@ -1,4 +1,4 @@
-package lmz.algorithm.other.old.intro;
+package lmz.algorithm.dp;
 
 public class Rob198 {
 
