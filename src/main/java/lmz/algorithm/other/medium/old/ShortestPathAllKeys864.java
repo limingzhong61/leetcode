@@ -49,7 +49,7 @@ public class ShortestPathAllKeys864 {
                 if (nextX >= 0 && nextX < m && nextY >= 0 && nextY < n && grid[nextX].charAt(nextY) != '#' && !visited[nextX][nextY][state]) {
                     char charAt = grid[nextX].charAt(nextY);
                     int nextState = state;
-                    if (Character.isUpperCase(charAt) && (state & (1 <<( charAt - 'test.A'))) == 0) { // lock
+                    if (Character.isUpperCase(charAt) && (state & (1 <<( charAt - '0'))) == 0) { // lock
                             continue;
                     }else if (Character.isLowerCase(charAt)) { // key
                         int cIdx = charAt - 'a';
