@@ -1,4 +1,4 @@
-//package lmz.leetcode.other.medium.old;
+//package lmz.leetcode.other.medium.exam.old;
 //
 //import java.util.*;
 //
