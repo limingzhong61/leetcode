@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class AppTest 
 {
     /**
-     * Rigorous Test :-)
+     * Rigorous test.Test :-)
      */
     @Test
     public void shouldAnswerWithTrue()

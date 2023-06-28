@@ -1,6 +1,6 @@
 package lmz.my.leetcode;
 
-import lmz.algorithm.graph_parse_ds.search_and_recur.Node;
+import lmz.algorithm.other.search_and_recur.Node;
 
 import java.util.LinkedList;
 import java.util.Queue;

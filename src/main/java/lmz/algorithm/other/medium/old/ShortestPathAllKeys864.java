@@ -49,7 +49,7 @@ public class ShortestPathAllKeys864 {
                 if (nextX >= 0 && nextX < m && nextY >= 0 && nextY < n && grid[nextX].charAt(nextY) != '#' && !visited[nextX][nextY][state]) {
                     char charAt = grid[nextX].charAt(nextY);
                     int nextState = state;
-                    if (Character.isUpperCase(charAt) && (state & (1 <<( charAt - 'A'))) == 0) { // lock
+                    if (Character.isUpperCase(charAt) && (state & (1 <<( charAt - 'test.A'))) == 0) { // lock
                             continue;
                     }else if (Character.isLowerCase(charAt)) { // key
                         int cIdx = charAt - 'a';
@@ -65,8 +65,8 @@ public class ShortestPathAllKeys864 {
 
     public static void main(String[] args) {
         ShortestPathAllKeys864 shortestPathAllKeys864 = new ShortestPathAllKeys864();
-        //System.out.println(shortestPathAllKeys864.shortestPathAllKeys(TransformUtil.toStringArray("[\"@.a..\",\"###.#\",\"b.A.B\"]")));
-        System.out.println(shortestPathAllKeys864.shortestPathAllKeys(TransformUtil.toStringArray("[\"@...a\",\".###A\",\"b.BCc\"]")));
+        //System.out.println(shortestPathAllKeys864.shortestPathAllKeys(TransformUtil.toStringArray("[\"@.a..\",\"###.#\",\"b.test.A.B\"]")));
+        System.out.println(shortestPathAllKeys864.shortestPathAllKeys(TransformUtil.toStringArray("[\"@...a\",\".###test.A\",\"b.BCc\"]")));
     }
 
 }

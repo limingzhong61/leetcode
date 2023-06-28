@@ -56,7 +56,7 @@ public class NumDecodings91 {
         testCase(numDecodings91, "1123", 5);
         testCase(numDecodings91, "10011", 0);
         testCase(numDecodings91, "301", 0);
-        //System.out.println((char) (11 + 'A'));
+        //System.out.println((char) (11 + 'test.A'));
     }
 
     private static void testCase(NumDecodings91 numDecodings91, String s, int i) {

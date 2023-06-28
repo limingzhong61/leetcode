@@ -48,7 +48,7 @@ public class CherryPickup741 {
     }
 
     private int f(int[][] grid, int[][][][] dp, int x1, int y1, int x2, int y2) {
-        //if (x1 == n - 1 && y1 == n - 1) { //A、B同时到达终点 && x2 == n - 1 && y2 == n - 1
+        //if (x1 == n - 1 && y1 == n - 1) { //test.A、B同时到达终点 && x2 == n - 1 && y2 == n - 1
         //    return grid[n - 1][n - 1];
         //}
         if (dp[x1][y1][x2][y2] != -1) {
@@ -59,7 +59,7 @@ public class CherryPickup741 {
                 {1, 0}, {0, 1}
         };
         int cnt = 0,res = Integer.MIN_VALUE;
-        if (x1 == x2 && y1 == y2) { // A,B在同一位置
+        if (x1 == x2 && y1 == y2) { // test.A,B在同一位置
             cnt +=  grid[x1][y1];
         } else {
             cnt +=  grid[x1][y1] + grid[x2][y2];

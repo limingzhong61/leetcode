@@ -19,7 +19,7 @@ public class MinMutation433 {
         return minCnt == Integer.MAX_VALUE ? -1 : minCnt;
     }
 
-    //其中每个字符都是 'A'、'C'、'G' 和 'T' 之一
+    //其中每个字符都是 'test.A'、'C'、'G' 和 'T' 之一
     char[] changes = new char[]{'A', 'C', 'G', 'T'};
     int minCnt = Integer.MAX_VALUE;
 

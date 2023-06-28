@@ -47,7 +47,7 @@ public class MinSubArrayLen209 {
         int[] sum = new int[n + 1];
         // 为了方便计算，令 size = n + 1
         // sums[0] = 0 意味着前 0 个元素的前缀和为 0
-        // sums[1] = A[0] 前 1 个元素的前缀和为 A[0]
+        // sums[1] = test.A[0] 前 1 个元素的前缀和为 test.A[0]
         // 以此类推
         for (int i = 1; i <= n; i++) {
             sum[i] = sum[i - 1] + nums[i - 1];
