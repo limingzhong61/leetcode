@@ -1,21 +1,28 @@
 # leetcode刷题代码
 ## 代码目录
-  
-- 数据结构相关代码： `lmz.leetcode.data_structure`
+- 常用工具类放置：`lmz/util`
+- 解题模板放置：`lmz/util/solution_template`  
+
+### 解题模板放置
+`lmz/util/solution_template`
+
+
+### 做过的题模板放置
+- 数据结构相关代码： `lmz.algorithm.data_structure`
     - 链表代码：`data_structure.linked_list`
     - 二叉树代码：`data_structure.binary_tree`
-- 查找相关代码：`lmz.leetcode.find`
-    - 二分查找 `lmz.leetcode.find.binary_search`
+- 查找相关代码：`lmz.algorithm.find`
+    - 二分查找 `lmz.algorithm.find.binary_search`
 - 字符串计算 `math.string_calculate`
   - 字符串加法
   - 字符串乘法
   - 字符串表达式
 - 数学
-  - 位运算 `lmz.leetcode.math.bit_operation`
-- 状态压缩 `lmz.leetcode.status_compression`
-- 图 `lmz.leetcode.graph_theory`
-  - 单源无权图最短路`lmz.leetcode.graph_theory.short_path_no_weight`
-    - 多源无权图最短路`lmz.leetcode.graph_theory.short_path_no_weight.multi_source`
+  - 位运算 `lmz.algorithm.math.bit_operation`
+- 状态压缩 `lmz.algorithm.status_compression`
+- 图 `lmz.algorithm.graph`
+  - 单源无权图最短路`lmz.algorithm.graph.short_path_no_weight`
+    - 多源无权图最短路`lmz.algorithm.graph.short_path_no_weight.multi_source`
 ## 通用leetcode类结构
 建议都使用一个类就行了，**便于自己生成测试用例**，也能减少重复类
 - 二叉树结点结点类`TreeNode`
