@@ -9,6 +9,7 @@ public class UniquePaths62 {
     public int uniquePaths(int m, int n) {
         long res = 1;
         for (int x = n, y = 1; y < m; x++, y++) {
+            System.out.printf("%d,%d",x,y);
             res = x * res / y;
         }
         return (int) res;

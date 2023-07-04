@@ -1,10 +1,42 @@
 package lmz.algorithm.data_structure.normal;
 
+import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.LinkedList;
 import java.util.Queue;
 
 public class MaxQueue59 {
+
+    class MaxQueue {
+        Queue<Integer> q = new ArrayDeque<>();
+        Deque<Integer> dq = new ArrayDeque<>();
+        public MaxQueue() {
+
+        }
+
+        public int max_value() {
+            return dq.pollFirst();
+        }
+
+        public void push_back(int value) {
+            q.add(value);
+            dq.addLast(value);
+        }
+
+        public int pop_front() {
+            dq.pollLast();
+            return q.poll();
+        }
+    }
+
+/**
+ * Your MaxQueue object will be instantiated and called as such:
+ * MaxQueue obj = new MaxQueue();
+ * int param_1 = obj.max_value();
+ * obj.push_back(value);
+ * int param_3 = obj.pop_front();
+ */
+
     /**
      * 思路：维护一个单调的双端队列
      */

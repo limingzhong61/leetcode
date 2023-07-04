@@ -3,6 +3,9 @@ package lmz.algorithm.data_structure.normal;
 import java.util.Deque;
 import java.util.LinkedList;
 
+/**
+ * 剑指 Offer 09. 用两个栈实现队列
+ */
 public class CQueue09 {
     /**
      * leetcode

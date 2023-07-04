@@ -23,7 +23,7 @@ public class MaxSlidingWindow59 {
         for (int i = 0; i < k; i++) {
             //队列不为空时，当前值与队列尾部值比较，如果大于，删除队列尾部值
             //一直循环删除到队列中的值都大于当前值，或者删到队列为空
-            while (!deque.isEmpty() && nums[i] > deque.peekLast())  deque.removeLast();
+            while (!deque.isEmpty() && nums[i] > deque.peekLast()) deque.removeLast();
             //执行完上面的循环后，队列中要么为空，要么值都比当前值大，然后就把当前值添加到队列中
             deque.addLast(nums[i]);
         }
@@ -31,14 +31,14 @@ public class MaxSlidingWindow59 {
         int cnt = 0;
         ans[cnt++] = deque.getFirst();
         //k区间形成
-        for(int i = k; i < n; i++){
+        for (int i = k; i < n; i++) {
             //如果将要删除的nums[i-k]是之前k区间的最大值，那么说明此时首位值已经不再区间内了，需要删除
-            if(deque.getFirst() == nums[i-k]){
+            if (deque.getFirst() == nums[i - k]) {
                 deque.removeFirst();
             }
             //删除队列中比当前值小的值，因为我们只需要获得当前k区间的最大值[i-k+1,k]
             //这样能保存队列非递减有序
-            while(!deque.isEmpty() && deque.getLast() < nums[i]){
+            while (!deque.isEmpty() && deque.getLast() < nums[i]) {
                 deque.removeLast();
             }
             deque.addLast(nums[i]);
@@ -51,31 +51,25 @@ public class MaxSlidingWindow59 {
      * 找出所有滑动窗口里的最大值。
      * <p>
      * 你可以假设 k 总是有效的，在输入数组不为空的情况下，1 ≤ k ≤ 输入数组的大小。
-     * leetcode:使用优先队列,使用二元组<val,index>存储元素，index用于删除不在k中的元素
-     * 只需要清除不在滑动窗口内的元素。只需要清除堆顶即可，因为只需要最大值在滑动窗口内即可。
+     *
+     * 使用优先队列,使用index存储元素，排序使用nums[idx]排序
+     * 只需要清除堆顶不在滑动窗口内的元素（idx <= i -k）。只需要清除堆顶即可，取堆顶为答案， 因为只需要保证堆顶在滑动窗口内， 将不在滑动窗口的最大值剔除即可；
      */
     public int[] maxSlidingWindow1(int[] nums, int k) {
         int n = nums.length;
-        if (n == 0) {
-            return new int[0];
+        PriorityQueue<Integer> pq = new PriorityQueue<>(k,(a,b) -> nums[b] - nums[a]);
+        for(int i = 0; i < k; i++){
+            pq.add(i);
         }
-        PriorityQueue<int[]> pq = new PriorityQueue<int[]>(new Comparator<int[]>() {
-            public int compare(int[] pair1, int[] pair2) {
-                return pair1[0] != pair2[0] ? pair2[0] - pair1[0] : pair2[1] - pair1[1];
-            }
-        });
-        for (int i = 0; i < k; ++i) {
-            pq.offer(new int[]{nums[i], i});
-        }
-        int[] ans = new int[n - k + 1];
-        ans[0] = pq.peek()[0];
-        for (int i = k; i < n; ++i) {
-            pq.offer(new int[]{nums[i], i});
-            // 清除不在滑动窗口内的元素。只需要清除堆顶即可，因为只需要最大值在滑动窗口内即可。
-            while (pq.peek()[1] <= i - k) {
+        int[] ans = new int[n-k+1];
+        int idx = 0;
+        ans[idx++] = nums[pq.peek()];
+        for(int i = k; i < n; i++){
+            pq.add(i);
+            while(pq.peek() <= i -k){ // 堆顶的元素已经超过了滑动窗口的位置
                 pq.poll();
             }
-            ans[i - k + 1] = pq.peek()[0];
+            ans[idx++] = nums[pq.peek()];
         }
         return ans;
     }
