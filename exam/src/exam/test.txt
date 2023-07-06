@@ -1,0 +1,10 @@
+name:王小明,age:10,gender:male,height:133cm,weight:35kgage:28,height:177cm,
+name:张小白,weight:80kg,gender:male
+gender:female,height:166cm,weight:46kg,
+name:昌小红,age:21gender:male,
+name:李雷,age:22,weight:61kg,height:173cm
+height:157cm,
+name:汪雪,age:30,gender:female,weight:52kg
+height:185cm,gender:male,weight:78kg,
+name:赵虎,age:22age:25,height:169cm,
+name:钱多多,gender:male,weight:75kg

@@ -1,0 +1,6 @@
+
+name:王小明,age:10,gender:male,height:133cm,weight:35kg
+
+age:28,height:177cm,name:张小白,weight:80kg,gender:male
+
+gender:female,height:166cm,weight:46kg,name:吕小红,age:21

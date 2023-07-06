@@ -7,27 +7,6 @@ import java.util.Queue;
 
 public class MaxQueue59 {
 
-    class MaxQueue {
-        Queue<Integer> q = new ArrayDeque<>();
-        Deque<Integer> dq = new ArrayDeque<>();
-        public MaxQueue() {
-
-        }
-
-        public int max_value() {
-            return dq.pollFirst();
-        }
-
-        public void push_back(int value) {
-            q.add(value);
-            dq.addLast(value);
-        }
-
-        public int pop_front() {
-            dq.pollLast();
-            return q.poll();
-        }
-    }
 
 /**
  * Your MaxQueue object will be instantiated and called as such:
