@@ -1,4 +1,4 @@
-package com.lmz.algorithm.other.old.dp;
+package com.lmz.algorithm.other.pointer_to_offer;
 
 import com.lmz.my.util.matrix.MatrixUtil;
 
@@ -9,7 +9,7 @@ public class IsMatch19 {
      * dp:
      * dp[0][0] = true： 代表两个空字符串能够匹配。
      */
-    public boolean isMatch(String s, String p) {
+    public boolean isMatch3(String s, String p) {
         int n = s.length() + 1;
         int m = p.length() + 1;
         boolean[][] dp = new boolean[n][m];
@@ -110,52 +110,42 @@ public class IsMatch19 {
         dp[i][tempJ] = dp[i][j] = (s.length() == i && j == p.length()) ? 1 : -1;
         return dp[i][j] == 1;
     }
-    ///**
-    // * 思路： 搜索
-    // * 遇到".*" 或者s[i] == p[j] && p[j+1] == '*'有两种走法
-    // * recur(i + 1, j, s, p) || recur(i, j + 2, s, p);
-    // * "abcd" ".*d"
-    // * "aaa" "ab*a*c*a"
-    // */
-    //public boolean isMatch2(String s, String p) {
-    //    return recur(0, 0, s, p);
-    //}
-    //
-    //private boolean recur(int i, int j, String s, String p) {
-    //    while (i < s.length() && j < p.length()) {
-    //        if (p.charAt(j) == '.') {
-    //            //".*"
-    //            if (j < p.length() - 1 && p.charAt(j + 1) == '*') {
-    //                return recur(i + 1, j, s, p) || recur(i, j + 2, s, p);
-    //            } else {
-    //                i++;
-    //                j++;
-    //            }
-    //        } else {
-    //            //"[]*"
-    //            if (j < p.length() - 1 && p.charAt(j + 1) == '*') {
-    //                if (s.charAt(i) == p.charAt(j)) {
-    //                    return recur(i + 1, j, s, p) || recur(i, j + 2, s, p);
-    //                }else{ //不匹配
-    //                    j += 2;
-    //                }
-    //            } else if (s.charAt(i) == p.charAt(j)) {
-    //                i++;
-    //                j++;
-    //            } else {
-    //                return false;
-    //            }
-    //        }
-    //    }
-    //    //可能以"([]*){n}"结尾
-    //    while (j < p.length() - 1 && p.charAt(j + 1) == '*') {
-    //        j += 2;
-    //    }
-    //    return s.length() == i && j == p.length();
-    //}
 
+    /**
+     f[i][j] 代表 A 的前 i 个和 B的前 j 个能否匹配
+     */
+    public boolean isMatch(String A, String B) {
+        int n = A.length();
+        int m = B.length();
+        boolean[][] f = new boolean[n + 1][m + 1];
 
-    //public boolean
+        for (int i = 0; i <= n; i++) {
+            for (int j = 0; j <= m; j++) {
+                //分成空正则和非空正则两种
+                if (j == 0) {
+                    f[i][j] = i == 0;
+                } else {
+                    //非空正则分为两种情况 * 和 非*
+                    if (B.charAt(j - 1) != '*') {
+                        if (i > 0 && (A.charAt(i - 1) == B.charAt(j - 1) || B.charAt(j - 1) == '.')) {
+                            f[i][j] = f[i - 1][j - 1];
+                        }
+                    } else {
+                        //碰到 * 了，分为看和不看两种情况
+                        //不看
+                        if (j >= 2) {
+                            f[i][j] |= f[i][j - 2];
+                        }
+                        //看
+                        if (i >= 1 && j >= 2 && (A.charAt(i - 1) == B.charAt(j - 2) || B.charAt(j - 2) == '.')) {
+                            f[i][j] |= f[i - 1][j];
+                        }
+                    }
+                }
+            }
+        }
+        return f[n][m];
+    }
 
     public static void main(String[] args) {
         IsMatch19 isMatch19 = new IsMatch19();

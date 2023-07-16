@@ -9,7 +9,7 @@ public class ReversePairs51 {
      * leetcode: 树状数组
      * 每次只需要计算两个归并小分组中的后一个，中的每一个数的逆序对个数就行了
      */
-    public int reversePairs(int[] nums) {
+    public int reversePairs1(int[] nums) {
         int n = nums.length;
         int[] tmp = new int[n];
         System.arraycopy(nums, 0, tmp, 0, n);
@@ -31,53 +31,55 @@ public class ReversePairs51 {
 
     /**
      * 利用归并排序
+     * 归并统计逆序对
      * 每次只需要计算两个归并小分组中的后一个，中的每一个数的逆序对个数就行了
      */
-    int[] copied;
-    int[] sorted;
-    int cnt = 0;
-
-    public int reversePairs1(int[] nums) {
-        sorted = nums;
-        cnt = 0;
-        copied = new int[nums.length];
-        mergeSortCnt(0, nums.length-1);
-        return cnt;
+    int count = 0;
+    int[] temp;
+    public int reversePairs(int[] nums) {
+        temp = new int[nums.length];
+        mergeSort(nums,0,nums.length-1);
+        System.out.println(Arrays.toString(nums));
+        return count;
     }
 
-    private void mergeSortCnt(int start, int end) {
-        if (start >= end) {
-            return;
-        }
-        int half = start + (end - start) / 2;
-        mergeSortCnt(start, half);
-        mergeSortCnt(half + 1, end);
-        merge(start,half, end);
+    void mergeSort(int[] nums,int left,int right){
+        if(left >= right) return;
+        int mid = left + (right -left)/2; //开始递归划分
+        mergeSort(nums,left,mid);       //归并排序左部分    [left,mid]
+        mergeSort(nums,mid+1,right);        //归并排序右部分    [mid+1,right]
+
+        merge(nums,left,mid,right);         //合并
     }
 
-    private void merge(int start,int half, int end) {
-        int index = start;
+    void merge(int[] nums,int left,int mid,int right){
+        int i = left; //左部分首元素
+        int j = mid+1;  //右部分首元素
+        int idx = left;
 
-        //复制数组用于比较
-        for(int i = start; i <= end;i++){
-            copied[i] = sorted[i];
-        }
-        int i,j;
-        for (i = start, j = half + 1; i <= half && j <= end; ) {
-            //采用小于等于时，归并排序才是一个稳定的排序
-            if (copied[i] <= copied[j]) {
-                sorted[index++] = copied[i++];
-            } else {
-                cnt += half - i + 1;
-                sorted[index++] = copied[j++];
+
+        while(i <= mid && j <= right){//在范围之内
+            if(nums[i] <= nums[j]){
+                temp[idx++] = nums[i++];
+            }else{
+                //  nums[i] > nums[j],包含i
+                count += mid - i + 1;//只需要这行代码
+                temp[idx++] = nums[j++];
             }
         }
-        for (;i <= half; i++) {
-            sorted[index++] = copied[i];
+        while(i <= mid ){   //左边还剩
+            temp[idx++] = nums[i++];
         }
-        for (;j <= end; j++) {
-            sorted[index++] = copied[j];
+        while(j <= right){  //右边还剩
+            temp[idx++] = nums[j++];
         }
+        // System.out.println(Arrays.toString(nums));
+        //将temp中的元素  全部都copy到原数组里边去
+        idx = left;
+        while(left <= right){
+            nums[left++] = temp[idx++];
+        }
+        // System.out.println(Arrays.toString(nums));
     }
 
     public static void main(String[] args) {

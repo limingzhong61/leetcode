@@ -6,10 +6,11 @@ import com.lmz.util.solution_template.data_structure.linked_list.LinkedListUtil;
 import static com.lmz.util.solution_template.data_structure.linked_list.LinkedListUtil.mergeTwoLists;
 
 /**
+ * 链表的归并排序
  * @author: limingzhong
  * @create: 2023-03-24 10:54
  */
-public class MergeSort {
+public class LinkedListMergeSort {
     /**
      * 归并排序：自顶向下
      * 链表中节点的数目在范围 [0, 5 * 10^4] 内

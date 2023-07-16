@@ -4,7 +4,7 @@ public class FindNthDigit44 {
     /**
      * leetcode 优化代码
      */
-    public int findNthDigit(int n) {
+    public int findNthDigit1(int n) {
         int digit = 1;
         long start = 1;
         long count = 9;
@@ -19,55 +19,54 @@ public class FindNthDigit44 {
     }
 
 
-    public int findNthDigit1(int n) {
-        if (n < 10) {
-            return n;
+    /**
+     * 确定 n 所在数字的位数 ，记为 digit ；
+     * 确定 n 所在的 数字 ，记为 num ；
+     * 确定 n 是 num 中的哪一数位，并返回结果。
+     */
+    public int findNthDigit(int n) {
+        //确定n所在数字的位数 ，记为digit；
+        // 位数为digit时，sum 表示当前 的位数，start表示位数为digit时开始的位置
+        int digit = 1;
+        long  start = 1,count = 9;
+        while (n > count) {
+            n -= count;     // 减去 digit时相应的位数
+            digit++;    //1,2,3...
+            start *= 10;    //1,10,100...
+
+            count = digit * start * 9;// 当前digit位数时的个数；
+            //System.out.printf("%d,%d,%d\n", digit, count, start);
         }
-        //计算n的真正的位数
-        int digitCnt = 1;
-        long digitSum = 10;
-        long lastDigitSum = 0;
-        long base = 90;
-        //每一轮的个数总和
+
+        // 确定n所在的数字 ，记为 num ；
         /**
-         *,1：0-10
-         *,2：10-10 + 90*2
-         * 3：10 + 90*2-10 + 90*2+900*3
+         * 此时n表示从digit位开始数字的个数，如，1,10,100...
+         * 1-digit 为 第一个，digit+1——digit*2 为第二个，故需要
+         * (n - 1) / digit 计算出 num
          */
-        //找到最大位数
-        while (n >= digitSum) {
-            digitCnt++;
-            lastDigitSum = digitSum;
-            digitSum += base * digitCnt;
-            base *= 10;
-        }
-        /**
-         * 现在 n 介于 lastDigitSum，digitSum
-         * 位数为 digitCnt;
-         */
-        long diff = n - lastDigitSum;
-        /**
-         * 差值/当前位数+当前基础（10|100,1000）
-         * 找到当前真实的值num
-         */
-        int num = (int) (diff / digitCnt) + (int) Math.pow(10, digitCnt - 1);
-        int digitIndex = (int) diff % digitCnt;
-        //在num中取出对应的位数
-        int ans =(num / (int)(Math.pow(10, digitCnt - digitIndex - 1))) % 10;
-        return ans;
+        long num = start + (n - 1) / digit;
+
+        // 字符串从0开始
+        String s = String.valueOf(num);
+        return s.charAt((n - 1) % digit) - '0';
     }
 
 
     public static void main(String[] args) {
         FindNthDigit44 findNthDigit44 = new FindNthDigit44();
 
-        System.out.println(findNthDigit44.findNthDigit(11));
-        System.out.println(findNthDigit44.findNthDigit(11) == 0);
+        testCase(findNthDigit44, 1000000000, 1);
 
-        System.out.println(findNthDigit44.findNthDigit(3));
-        System.out.println(findNthDigit44.findNthDigit(3) == 3);
 
-        System.out.println(findNthDigit44.findNthDigit(10));
-        System.out.println(findNthDigit44.findNthDigit(10) == 1);
+        testCase(findNthDigit44, 10, 1);
+        testCase(findNthDigit44, 11, 0);
+
+        testCase(findNthDigit44, 3, 3);
+
+    }
+
+    private static void testCase(FindNthDigit44 findNthDigit44, int n, int x) {
+        System.out.println(findNthDigit44.findNthDigit(n));
+        System.out.println(findNthDigit44.findNthDigit(n) == x);
     }
 }

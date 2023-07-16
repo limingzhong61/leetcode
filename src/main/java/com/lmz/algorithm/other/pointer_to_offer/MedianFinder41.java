@@ -1,7 +1,10 @@
-package com.lmz.algorithm.other.old.sort;
+package com.lmz.algorithm.other.pointer_to_offer;
 
 import java.util.*;
 
+/**
+ * 剑指offer
+ */
 public class MedianFinder41 {
     /**
      * leetcode

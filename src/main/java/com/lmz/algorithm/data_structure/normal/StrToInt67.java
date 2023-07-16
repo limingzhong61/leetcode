@@ -7,7 +7,7 @@ public class StrToInt67 {
      * -2147483648
      * res > 2147483647 就越界了（2147483647正常计算就行了）
      */
-    public int strToInt(String str) {
+    public int strToInt1(String str) {
 
         // 跳过空格
         int index = 0;
@@ -15,7 +15,7 @@ public class StrToInt67 {
             index++;
         }
         //空串|空格字符串
-        if(str.length() == index){
+        if (str.length() == index) {
             return 0;
         }
         int res = 0;
@@ -81,6 +81,49 @@ public class StrToInt67 {
                     if (res > Integer.MAX_VALUE) {
                         return Integer.MAX_VALUE;
                     }
+                }
+            } else {
+                return (int) res * symbol;
+            }
+        }
+        return (int) res * symbol;
+    }
+
+    /**
+     * 模拟： 用long判断是否越界
+     */
+    public int strToInt(String str) {
+        // 跳过空格
+        int index = 0;
+        while (index < str.length() && str.charAt(index) == ' ') {
+            index++;
+        }
+        long res = 0;
+        int symbol = 1;
+        boolean hasSymbol = false;
+        boolean hasNumber = false;
+        for (int i = index; i < str.length(); i++) {
+            if (str.charAt(i) == '-') {
+                //两个符号位,错误格式
+                if (hasSymbol || hasNumber) {
+                    return (int) res * symbol;
+                }
+                symbol = -1;
+                hasSymbol = true;
+            } else if (str.charAt(i) == '+') {
+                //两个符号位,错误格式
+                if (hasSymbol || hasNumber) {
+                    return (int) res * symbol;
+                }
+                hasSymbol = true;
+            } else if (Character.isDigit(str.charAt(i))) {
+                hasNumber = true;
+                res = res * 10 + str.charAt(i) - '0';
+                //数值越界判断
+                if (symbol == -1 || -res < (long) Integer.MIN_VALUE) { // 负值越界
+                    return Integer.MIN_VALUE;
+                } else if(res > Integer.MAX_VALUE){
+                    return Integer.MAX_VALUE;
                 }
             } else {
                 return (int) res * symbol;

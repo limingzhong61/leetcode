@@ -2,13 +2,20 @@ package com.lmz.algorithm.other.old.sort;
 
 import com.lmz.my.leetcode.TransformUtil;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 
 public class MinNumber {
+
+
+
+
     /**
      * leetcode: 关键在于：(o1, o2) -> (o1 + o2).compareTo(o2 + o1)
      */
@@ -122,29 +129,44 @@ public class MinNumber {
         return ans;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InvocationTargetException, NoSuchMethodException, IllegalAccessException {
         MinNumber minNumber = new MinNumber();
 
-        System.out.println(minNumber.minNumber(TransformUtil.toIntArray("[10,2]")));
-        System.out.println(minNumber.minNumber(TransformUtil.toIntArray("[10,2]")).equals("102") );
+        testCase(minNumber, "[128,12]", "12128");
+        testCase(minNumber, "[10,2]", "102");
 
-        System.out.println(minNumber.minNumber(TransformUtil.toIntArray("[3,30,34,5,9]")));
-        System.out.println(minNumber.minNumber(TransformUtil.toIntArray("[3,30,34,5,9]")).equals("3033459"));
+        testCase(minNumber, "[3,30,34,5,9]", "3033459");
 
-        System.out.println(minNumber.minNumber(TransformUtil.toIntArray("[3,30,34,5,9,0]")));
-        System.out.println(minNumber.minNumber(TransformUtil.toIntArray("[3,30,34,5,9,0]")).equals("03033459"));
+        testCase(minNumber, "[3,30,34,5,9,0]", "03033459");
 
-        System.out.println(minNumber.minNumber(TransformUtil.toIntArray("[0,0,10,100,303]")));
-        System.out.println(minNumber.minNumber(TransformUtil.toIntArray("[0,0]")).equals("00"));
+        testCase(minNumber, "[0,0,10,100,303]", "0010010303");
 
-        System.out.println(minNumber.minNumber(TransformUtil.toIntArray("[121,12]")));
-        System.out.println(minNumber.minNumber(TransformUtil.toIntArray("[121,12] ")).equals("12112"));
+        testCase(minNumber, "[121,12]", "12112");
 
-        System.out.println(minNumber.minNumber(TransformUtil.toIntArray("[824,938,1399,5607,6973,5703,9609,4398,8247]")));
-        System.out.println(minNumber.minNumber
-                (TransformUtil.toIntArray("[824,938,1399,5607,6973,5703,9609,4398,8247] ")).equals(
-                "1399439856075703697382478249389609"));
+        testCase(minNumber,  "[824,938,1399,5607,6973,5703,9609,4398,8247] ", "1399439856075703697382478249389609");
+        //testCase(minNumber,minNumber.getClass(),"minNumber",new Object[]{TransformUtil.toIntArray("[121,12]")},new Class<?>[]{int[].class},
+        //        "12112",String.class
+        //       );
     }
 
+    private static void testCase(MinNumber minNumber, String original, String result) {
+        System.out.println(minNumber.minNumber(TransformUtil.toIntArray(original)));
+        System.out.println(minNumber.minNumber(TransformUtil.toIntArray(original)).equals(result) );
+        //System.err.println(minNumber.minNumber(TransformUtil.toIntArray(original)).equals(result) );
+    }
+
+    private static <T,R> boolean testCase(Object o,T targetClass,final String methodName,Object[] args,Class<?>[] argsTypes,
+                                        Object result,R resultType) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+        T t = (T) o;
+        Class<?> clazz = t.getClass();
+        Method declaredMethod = clazz.getDeclaredMethod(methodName, argsTypes);
+        R result1 = (R) declaredMethod.invoke(o, args);
+        if(result1.equals(result)){
+            System.out.println(Arrays.toString(args));
+            System.out.println(result);
+            return true;
+        }
+        return false;
+    }
 
 }
