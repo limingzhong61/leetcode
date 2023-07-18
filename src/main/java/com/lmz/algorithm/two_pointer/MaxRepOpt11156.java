@@ -1,4 +1,4 @@
-package com.lmz.algorithm.dp;
+package com.lmz.algorithm.two_pointer;
 
 import java.util.stream.IntStream;
 
@@ -8,10 +8,36 @@ import java.util.stream.IntStream;
  */
 public class MaxRepOpt11156 {
     /**
+     * lc:双指针
+     * 用哈希表或数组 cnt 统计字符串 text中每个字符出现的次数。
+     */
+    public int maxRepOpt1(String text) {
+        //1 <= text.length <= 20000
+        char[] cs = text.toCharArray();
+        int n = cs.length;
+        int[] cnt = new int[26];
+
+        for (char c : cs) {
+            cnt[c - 'a']++;
+        }
+        int ans = 1;
+        for(int left = 0;left < n; left++){
+            int right = left;
+            while(right < n && cs[right] == cs[left]) right++;
+            // 找到第一个不为 cs[left]的值
+            right++;
+            while(right < n && cs[right] == cs[left]) right++;
+            ans = Math.max(ans,Math.min(right - left,cnt[cs[left] - 'a']));
+
+        }
+        return ans;
+    }
+
+    /**
      * @param text
      * @return
      */
-    public int maxRepOpt1(String text) {
+    public int maxRepOpt1_1(String text) {
         int n = text.length();
         final int letterLen = 26;
         int[][] f0 = new int[n][letterLen];

@@ -1,4 +1,4 @@
-package com.lmz.algorithm.graph.short_path_no_weight;
+package com.lmz.algorithm.graph.short_path.no_weight;
 
 import com.lmz.leetcode.binary_tree.po.TreeNode;
 

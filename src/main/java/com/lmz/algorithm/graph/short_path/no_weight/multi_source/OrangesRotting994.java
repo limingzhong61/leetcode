@@ -1,21 +1,17 @@
-package com.lmz.util.solution_template.graph.short_path_no_weight;
+package com.lmz.algorithm.graph.short_path.no_weight.multi_source;
 
 import java.util.LinkedList;
 import java.util.Queue;
 
-/**
- * 没有权重的图计算最短路
- * 多源最短路径-多源BFS
- */
-public class ShortestPath {
+public class OrangesRotting994 {
     /**
-     * 多源最短路径-多源BFS
+     * 多源最短路径-BFS
      *
      * 值 0 代表空单元格；
      * 值 1 代表新鲜橘子；
      * 值 2 代表腐烂的橘子。
      */
-    public int shortestPath(int[][] grid) {
+    public int orangesRotting(int[][] grid) {
         int m = grid.length, n = grid[0].length;
         boolean[][] visited = new boolean[m][n];
         //右下左上（顺时针）移动数组
@@ -44,13 +40,10 @@ public class ShortestPath {
             for (var item : next) {
                 int nextX = x + item[0];
                 int nextY = y + item[1];
-                if (nextX >= 0 && nextX < m && nextY >= 0 && nextY < n) { // boundary check
-                    if(grid[nextX][nextY] == 1 && !visited[nextX][nextY]  ){// state check
-                        visited[nextX][nextY] = true;
-                        queue.add(new int[]{nextX, nextY, point[2] + 1});
-                        cntNew--;
-                    }
-
+                if (nextX >= 0 && nextX < m && nextY >= 0 && nextY < n && grid[nextX][nextY] == 1 && !visited[nextX][nextY]  ) {
+                    visited[nextX][nextY] = true;
+                    queue.add(new int[]{nextX, nextY, point[2] + 1});
+                    cntNew--;
                 }
             }
         }
@@ -59,4 +52,7 @@ public class ShortestPath {
         }
         return maxDist;
     }
+
+    
+    
 }
