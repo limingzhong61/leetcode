@@ -1,4 +1,4 @@
-package test;
+package test.old;
 
 import java.util.Arrays;
 
@@ -16,13 +16,13 @@ public class QuickSort {
     }
 
     private int partition(int[] nums, int left, int right) {
-        int pIdx = left, preLeft = left;
+        int pIdx = left;
         while (left < right) {
             while (left < right && nums[pIdx] <= nums[right]) right--;
             while (left < right && nums[pIdx] >= nums[left]) left++;
             swap(nums, left, right);
         }
-        swap(nums, preLeft, left);
+        swap(nums, pIdx, left);
         return left;
     }
 
