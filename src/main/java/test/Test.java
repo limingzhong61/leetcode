@@ -6,6 +6,7 @@ import java.io.InputStream;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Scanner;
+import java.util.stream.IntStream;
 
 /**
  * @author: limingzhong
@@ -13,6 +14,7 @@ import java.util.Scanner;
  */
 public class Test {
     public static void main(String[] args) {
+        int x = Math.floor(Math.sqrt(i));
         System.out.println(f());
     }
 
