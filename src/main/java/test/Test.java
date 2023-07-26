@@ -14,7 +14,6 @@ import java.util.stream.IntStream;
  */
 public class Test {
     public static void main(String[] args) {
-        int x = Math.floor(Math.sqrt(i));
         System.out.println(f());
     }
 
