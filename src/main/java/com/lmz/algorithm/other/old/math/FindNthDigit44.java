@@ -24,7 +24,7 @@ public class FindNthDigit44 {
      * 确定 n 所在的 数字 ，记为 num ；
      * 确定 n 是 num 中的哪一数位，并返回结果。
      */
-    public int findNthDigit(int n) {
+    public int findNthDigit2(int n) {
         //确定n所在数字的位数 ，记为digit；
         // 位数为digit时，sum 表示当前 的位数，start表示位数为digit时开始的位置
         int digit = 1;
@@ -51,6 +51,35 @@ public class FindNthDigit44 {
         return s.charAt((n - 1) % digit) - '0';
     }
 
+    public int findNthDigit(int n) {
+        if(n < 10) return n;
+        long len = 1,cnt = 9;
+        long totol = len * cnt; // 最开始10个
+        /*  2, 90
+            3, 900
+            4, 999
+        */
+        while(n > totol){
+            long next = totol + (len+1) * (cnt * 10);
+            if(next > n) break;
+            totol = next;
+            len++;
+            cnt *= 10;
+        }
+        len++;
+        n -= totol; //在第len位中多了多少位
+        long start = 1;
+        for(int i = 1; i < len; i++){
+            start *= 10;
+        }
+
+        long step = n / len;
+        // 向上取整
+        if(n % len != 0) step++;
+        long value = step - 1 + start;
+        System.out.printf("%d,%d,%d,%d\n",n,totol,start,value);
+        return String.valueOf(value).charAt((int) ((n - 1) % len)) - '0';
+    }
 
     public static void main(String[] args) {
         FindNthDigit44 findNthDigit44 = new FindNthDigit44();

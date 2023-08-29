@@ -10,15 +10,15 @@ import java.util.Arrays;
 public class ShortPathUtil {
     /**
      * 有向图
-     * djistra 算法
+     * Dijkstra 算法
      */
-    static class Djistra {
+    static class Dijkstra {
         private static final int INF = Integer.MAX_VALUE / 2;    // 防止更新最短路时加法溢出
         //0 <= edges.length <= n * (n - 1),有可能是稠密图
         int[][] g;
         int n;
 
-        public Djistra(int n, int[][] edges) {
+        public Dijkstra(int n, int[][] edges) {
             this.n = n;
             g = new int[n][n];  // 邻接矩阵（初始化为无穷大，表示 i 到 j 没有边）
             for (int i = 0; i < n; ++i)

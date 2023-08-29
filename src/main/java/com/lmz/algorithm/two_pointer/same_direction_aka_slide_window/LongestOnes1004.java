@@ -7,21 +7,22 @@ package com.lmz.algorithm.two_pointer.same_direction_aka_slide_window;
 public class LongestOnes1004 {
     class Solution {
         /**
-         * 同向双指针
+         双指针: 同向双指针，滑动窗口
+         right 主动右移,left被动移动
          */
         public int longestOnes(int[] nums, int k) {
-            int n = nums.length,left = 0;
-
-            int cnt = 0,res = 0;
-            for(int right = 0; right < n; right++){
+            int cnt = 0,ans = 0;
+            //right 主动右移,left被动移动
+            // 统计[left,right)区间内0的个数
+            for(int left = 0,right = 0; right < nums.length; right++){
                 if(nums[right] == 0) cnt++;
                 while(cnt > k){
-                    if(nums[left++] == 0) cnt--;
+                    if(nums[left] == 0) cnt--;
+                    left++;
                 }
-                res = Math.max(res,right - left + 1);
-                //System.out.printf("%d,%d,%d\n",left,right,res);
+                ans =Math.max(ans,right - left + 1);
             }
-            return res;
+            return ans;
         }
     }
 }

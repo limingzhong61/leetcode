@@ -8,83 +8,40 @@ import java.util.stream.Stream;
 public class Main {
     public static void main(String args[]) {
         Scanner cin = new Scanner(System.in);
-        List<Person> list = new ArrayList<>();
-        while (cin.hasNextLine()) {
-            String line = cin.nextLine();
-            String[] split = line.split(",");
-
-            String[] result = new String[split.length];
-            int idx = 0;
-            for(String s : split){
-                StringBuilder sb = new StringBuilder();
-                for(int j = s.length() - 1; j >= 0; j--){
-                    if(s.charAt(j) != ':'){
-                        sb.append(s.charAt(j));
-                    }
-                    result[idx++] = sb.toString();
-                }
+        int n = cin.nextInt();
+        int[][] task = new int[n][2];
+        PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> {
+            if (a[0] == b[0]) {
+                return b[0] - b[1];
             }
-
-            Person person = new Person(result[0], Integer.valueOf(result[1]), result[2], Integer.valueOf(result[3].substring(0,result[3].length()-2)),
-                    Integer.valueOf(result[4].substring(0,result[4].length()-2)));
-            list.add(person);
-        }
-        List<Person> collect = list.stream().filter(p -> p.age >= 18).collect(Collectors.toList());
-        System.out.println(collect);
-        int max = list.get(0).age,min = list.get(0).age;
-        double avg = 0;
-        for(int i = 0; i < list.size(); i++){
-            max = Math.max(max,list.get(i).age);
-            avg += list.get(i).age;
-            min = Math.max(min,list.get(i).age);
-        }
-        avg /= list.size();
-        System.out.printf("%f,%d,%d\n",avg,min,max);
-
-
-        // 4
-        list.sort((a,b) ->{
-            if(a.age == b.age){
-                return  b.height - a.height;
-            }
-            return b.age - a.age;
+            return a[0] - b[0];
         });
-
-        System.out.println(list);
-
-        // 5
-        int maxId = 0;
-        for(int i = 0; i < list.size(); i++){
-            if(list.get(i).gender.equals("female") && list.get(i).age > list.get(maxId).age){
-                maxId = i;
-            }
+        TreeSet<Integer> treeSet = new TreeSet<>();
+        for (int i = 0; i < n; i++) {
+            int start = cin.nextInt();
+            int end = cin.nextInt();
+            pq.add(new int[]{start, end, i + 1});
+            treeSet.add(start);
         }
-        System.out.println(list.get(maxId).age);
-
-
-        // 6
-        List<Person> filters = list.stream().filter(p -> p.age >= 20 && p.age <= 25 && p.weight >= 60 && p.weight < 80
-        ).toList();
-        filters.sort((a,b) -> b.height - a.height);
-        System.out.println(filters.get(1));
-        System.out.println(filters.get(2));
-    }
-
-
-}
-
-class Person {
-    String name;
-    Integer age;
-    String gender;
-    Integer height;
-    Integer weight;
-
-    public Person(String name, Integer age, String gender, Integer height, Integer weight) {
-        this.name = name;
-        this.age = age;
-        this.gender = gender;
-        this.height = height;
-        this.weight = weight;
+        int startTime = 0;
+        while (!pq.isEmpty()) {
+            int[] t = pq.poll();
+            startTime = Math.max(t[0], startTime);
+            int endTime = startTime + t[1];
+            Integer higher = treeSet.higher(startTime);
+            if (higher != null) {
+                if (endTime <= higher) {
+                    System.out.printf("%d,%d\n", t[2], endTime);
+                } else {
+                    t[1] -= higher - t[0];
+                    t[0] = higher;
+                    endTime = higher;
+                    pq.add(t);
+                }
+            } else {
+                System.out.printf("%d,%d\n", t[2], endTime);
+            }
+            startTime = endTime;
+        }
     }
 }

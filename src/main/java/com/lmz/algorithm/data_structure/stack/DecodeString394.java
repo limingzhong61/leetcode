@@ -1,12 +1,15 @@
 package com.lmz.algorithm.data_structure.stack;
 
 import java.util.*;
+import java.util.stream.IntStream;
 
 public class DecodeString394 {
+
+
     /**
-     * 优化版本： 在 [ [ 之间之后存在一个数字digit和字符串res，则每次以此为分割即可
+     * 优化版本： 在 “[” “[” 之间之后存在一个数字digit和字符串res，则每次以此为分割即可
      * 在 [ ] 之间只会有一个字符串
-     * 在遇到] 时， res =  strStack.poll() +  res * time;
+     * 在遇到 ] 时， res =  strStack.poll() +  res * time;
      * 栈操作: 括号匹配加强版
      * 一个数字栈，一个字符串栈
      * 字符串栈：每遇到一个右括号就解决的左括号之前的匹配
@@ -18,7 +21,7 @@ public class DecodeString394 {
         char[] cs = s.toCharArray();
         int digit = 0;
         StringBuilder res = new StringBuilder();
-        for (int i = 0; i < n;i++ ) {
+        for (int i = 0; i < n; i++) {
             //碰到括号，重置 记录digit和当前sb，归零。
             if (cs[i] == '[') { // 是数字
                 numStack.push(digit);
@@ -28,12 +31,12 @@ public class DecodeString394 {
             } else if (cs[i] == ']') {
                 //出最近的一个左括号入的digit ,当前res进行计算不入栈
                 int time = numStack.pop();
-                 res.append(res.toString().repeat(time-1));
+                res.append(res.toString().repeat(time - 1));
                 //与括号外合并
-                 res.insert(0,strStack.poll());
+                res.insert(0, strStack.poll());
             } else if (Character.isLetter(cs[i])) {
                 res.append(cs[i]);
-            }else if(Character.isDigit(cs[i])){
+            } else if (Character.isDigit(cs[i])) {
                 digit = digit * 10 + cs[i] - '0';
             }
 
@@ -92,12 +95,16 @@ public class DecodeString394 {
 
     public static void main(String[] args) {
         DecodeString394 decodeString394 = new DecodeString394();
-        //System.out.println(decodeString394.decodeString("3[a]2[bc]"));
-        //System.out.println(decodeString394.decodeString("3[a]2[bc]").equals("aaabcbc"));
-        //System.out.println(decodeString394.decodeString("3[a2[c]]"));
-        //System.out.println(decodeString394.decodeString("23[abc]33[cd]ef"));
-        //System.out.println(decodeString394.decodeString("100[leetcode]"));
-        System.out.println(decodeString394.decodeString("3[z]2[2[y]pq4[2[jk]e1[f]]]ef"));
-        System.out.println(decodeString394.decodeString("3[z]2[2[y]pq4[2[jk]e1[f]]]ef").equals("zzzyypqjkjkefjkjkefjkjkefjkjkefyypqjkjkefjkjkefjkjkefjkjkefef"));
+        testCase(decodeString394, "3[a2[c]]", "accaccacc");
+        testCase(decodeString394, "3[a]2[bc]", "aaabcbc");
+
+        System.out.println(decodeString394.decodeString("23[abc]33[cd]ef"));
+        System.out.println(decodeString394.decodeString("100[leetcode]"));
+        testCase(decodeString394, "3[z]2[2[y]pq4[2[jk]e1[f]]]ef", "zzzyypqjkjkefjkjkefjkjkefjkjkefyypqjkjkefjkjkefjkjkefjkjkefef");
+    }
+
+    private static void testCase(DecodeString394 decodeString394, String s, String aaabcbc) {
+        System.out.println(decodeString394.decodeString(s));
+        System.out.println(decodeString394.decodeString(s).equals(aaabcbc));
     }
 }

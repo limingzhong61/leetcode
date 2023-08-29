@@ -21,6 +21,7 @@ public class MergeSort {
 
     void mergeSort(int[] nums,int left,int right){
         if(left >= right) return;
+        //因为mid一直向下取整，则一定会偏向于left,所以左边[left,mid]，右边[mid+1,right];
         int mid = left + (right -left)/2; //开始递归划分
         mergeSort(nums,left,mid);       //归并排序左部分    [left,mid]
         mergeSort(nums,mid+1,right);        //归并排序右部分    [mid+1,right]

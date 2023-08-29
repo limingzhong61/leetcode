@@ -3,8 +3,11 @@ package com.lmz.my.leetcode;
 
 import com.lmz.algorithm.data_structure.linked_list.util.ListNode;
 import com.lmz.leetcode.binary_tree.po.TreeNode;
+import org.testng.annotations.Test;
 
 import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class TransformUtil {
 
@@ -151,15 +154,41 @@ public class TransformUtil {
      * @return
      */
     public static String[] toStringArray(String original) {
-        String s = original.replaceAll("\\[", "").
-                replaceAll("\\]", "").
-                replaceAll(" ", "")
-                .replaceAll("\"", "");
+        String s = original.replaceAll("\\[\"", "").
+                replaceAll("\"\\]", "");
+                // 保留空格
+                //replaceAll(" ", "").
         if ("".equals(s)) {
             return new String[0];
         }
-        String[] split = s.split(",");
+        //["class test{", "public: ", "   int x = 1;", "   /*double y = 1;*/", "   char c;", "};"] 中可能存在空格 “_
+        // 分隔符形式 {","} 或者 {“, "}
+        String[] split = s.split("\", ?\"");
         return split;
+    }
+
+    @Test
+    void TestToStringArray() {
+        String original = "[\"class test{\",\"public: \",\"   int x = 1;\",\"   \",\"   char c;\",\"};\"]";
+        System.out.println(original);
+        String[] trans = TransformUtil.toStringArray(original);
+        System.out.println(TransformUtil.toString(trans));
+        System.out.println(TransformUtil.toString(trans).equals(original));
+    }
+
+    private static String toString(String[] trans) {
+        return "[" + Stream.of(trans).map(s -> "\"" + s + "\"").collect(Collectors.joining(",")) + "]";
+    }
+
+    /**
+     * 将字符list转为leetcode形式的字符串
+     * "[\"class test{\",\"public: \",\"   int x = 1;\",\"   \",\"   char c;\",\"};\"]"
+     *
+     * @param trans
+     * @return
+     */
+    public static String toString(List<String> trans) {
+        return "[" + trans.stream().map(s -> "\"" + s + "\"").collect(Collectors.joining(",")) + "]";
     }
 
     public static ArrayList<Integer> toArrayList(String original) {
@@ -275,7 +304,7 @@ public class TransformUtil {
                 node.left = toTreeNode(a[idx++]);
                 if (node.left != null)
                     q.add(node.left);
-                if(idx >= n) break;
+                if (idx >= n) break;
                 node.right = toTreeNode(a[idx++]);
                 if (node.right != null)
                     q.add(node.right);

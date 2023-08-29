@@ -11,7 +11,7 @@ public class Search33 {
      *
      * 通过不断的用Mid二分，根据定理二，将整个数组划分成顺序区间和乱序区间，然后利用定理一判断target是否在顺序区间，如果在顺序区间，下次循环就直接取顺序区间，如果不在，那么下次循环就取乱序区间。
      */
-    public int search(int[] nums, int target) {
+    public int search1(int[] nums, int target) {
         int n = nums.length;
         if (n == 0) {
             return -1;
@@ -48,7 +48,32 @@ public class Search33 {
         testCase(search33, "[1]", 0, -1);
         testCase(search33, "[3,1]", 1, 1);
     }
-
+    public int search(int[] nums, int target) {
+        int left =0,right = nums.length;
+        int rightVal = nums[right-1];
+        while(left <= right){
+            int mid = (left + right) / 2;
+            System.out.printf("%d,%d,%d\n",left,right,mid);
+            if(nums[mid] < rightVal){ // 在右边
+                if(nums[mid] < target){ // 在右边
+                    left = mid+1;
+                }else if(nums[mid] > target){
+                    right = mid;
+                }else{
+                    return mid;
+                }
+            }else{ // 左边
+                if(nums[mid] > target){ // 在左边
+                    right = mid - 1;
+                }else if(nums[mid] < target){
+                    left = mid;
+                }else{
+                    return mid;
+                }
+            }
+        }
+        return -1;
+    }
     private static void testCase(Search33 search33, String original, int target, int x) {
         System.out.println(search33.search(TransformUtil.toIntArray(original), target));
         System.out.println(search33.search(TransformUtil.toIntArray(original), target) == x);

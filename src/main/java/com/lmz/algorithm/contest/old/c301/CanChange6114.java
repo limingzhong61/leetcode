@@ -1,83 +1,74 @@
 package com.lmz.algorithm.contest.old.c301;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
+/**
+ * https://leetcode.cn/problems/move-pieces-to-obtain-a-string/solutions/1658923/nao-jin-ji-zhuan-wan-pythonjavacgo-by-en-9sqt/
+ */
 public class CanChange6114 {
+    /**
+     根据相对位置分析，要想start能变成target，需要满足以下三个条件：
+
+     1 去除下划线之后，两个串应该是相等的；
+     2 start中的L与target中的L是一一对应的，而L不能向右移动，所以target中第i个L绝对不能在start中第i个L的右边；
+     3 start中的R与target中的R是一一对应的，而R不能向左移动，所以target中第i个R绝对不能在start中第i个R的左边。
+
+     */
+    /**
+     思路简单：
+     两遍扫描，第一次扫描得到字符串start与target的下标不是'_'的下标数组，
+     第二遍直接扫描得到的下标数组：有以下三种情况
+     1.如果字符不想等，直接返回false
+     2.字符相等且是'L'，只需判断start的下标是否小于target的下标
+     3.字符相等且是'R'，只需判断start的下标是否大于target的下标
+     */
     public boolean canChange(String start, String target) {
-        char[] startChars = start.toCharArray();
-        char[] targetChars = target.toCharArray();
-        //n == start.length == target.length
-        int n = startChars.length;
-        for (int i = 0; i < n; ) {
-            if (startChars[i] != targetChars[i]) {
-                if (startChars[i] == '_') {
-                    if (targetChars[i] == 'L') {
-                        for (int j = i + 1; j < n; j++) {
-                            if (startChars[j] == 'L') {
-                                swap(startChars, i, j);
-                                if (startChars[i] == targetChars[i]) {
-                                    break;
-                                }
-                            }
-                        }
-                        if (startChars[i] != targetChars[i]) {
-                            return false;
-                        }
-                    } else {
+        List<Integer>list1=getList(start);
+        List<Integer>list2=getList(target);
+        if(list1.size()!=list2.size()){
+            return false;
+        }
+        for(int i=0;i<list1.size();i++){
+            int ind1=list1.get(i);
+            int ind2=list2.get(i);
+            char ch1=start.charAt(ind1);
+            char ch2=target.charAt(ind2);
+            if(ch1!=ch2){
+                return false;
+            }else{
+                if(ch1=='L'){
+                    if(ind1<ind2){
                         return false;
                     }
-                } else if (startChars[i] == 'R') { //
-                    if (targetChars[i] == '_') {
-
-                        if (i + 1 < n && startChars[i + 1] == '_') { // "R_"
-                            swap(startChars, i, i + 1);
-                        } else if(i + 1 < n && startChars[i + 1] == 'R') { // "RR_","RRR...__"
-                            int j = i+1;
-                            //find next '_'
-                            for(; j < n; j++){
-                                if(startChars[j] == 'R'){ //"RRR...__"
-                                    continue;
-                                }else if(startChars[j] == '_'){
-                                    break;
-                                }else { // 'L'
-                                    return false;
-                                }
-                            }
-                            swap(startChars,i,j);
-                        } else {
-                            return false;
-                        }
+                }else{
+                    if(ind1>ind2){
+                        return false;
                     }
-                } else {
-                    return false;
                 }
             }
-
-            i++;
         }
         return true;
     }
-
-    private void swap(char[] startChars, int i, int j) {
-        char temp = startChars[i];
-        startChars[i] = startChars[j];
-        startChars[j] = temp;
+    public List<Integer> getList(String s){
+        List<Integer>res=new ArrayList<>();
+        for(int i=0;i<s.length();i++){
+            if(s.charAt(i)!='_'){
+                res.add(i);
+            }
+        }
+        return res;
     }
 
-    public static void main(String[] args) {
-        CanChange6114 canChange6114 = new CanChange6114();
-        testCase(canChange6114, "_L__R__R_", "L______RR", true);
-        testCase(canChange6114, "R_L_", "__LR", false);
-        testCase(canChange6114, "_R", "R_", false);
-        testCase(canChange6114, "RRRR_", "_RRRR", true);
-        testCase(canChange6114, "_", "L", false);
-        testCase(canChange6114, "___LLL", "LLL___", true);
-        testCase(canChange6114, "R___L_RR_R_______L_____R__________RLL__",
-                "___RLR_R_RLR____L___LL___R_L____LRLRL__", false);
-    }
 
-    private static void testCase(CanChange6114 canChange6114, String l__r__r_, String l______rr, boolean b) {
-        System.out.println(canChange6114.canChange(l__r__r_, l______rr));
-        System.out.println(String.valueOf(canChange6114.canChange(l__r__r_, l______rr) == b).toUpperCase(Locale.ROOT));
+    private static void testCase(CanChange6114 canChange6114, String start, String target, boolean b) {
+        System.out.println(canChange6114.canChange(start, target));
+        boolean result = canChange6114.canChange(start, target) == b;
+        System.out.println(String.valueOf(result).toUpperCase(Locale.ROOT));
+        if(!result){
+            System.out.println(start);
+            System.out.println(target);
+        }
     }
 }
