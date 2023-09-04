@@ -1,4 +1,4 @@
-package com.lmz.algorithm.p.p_1000;
+package com.lmz.algorithm.p.p_1000_2000;
 
 /**
  * @author: limingzhong
