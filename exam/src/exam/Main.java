@@ -9,39 +9,46 @@ public class Main {
     public static void main(String args[]) {
         Scanner cin = new Scanner(System.in);
         int n = cin.nextInt();
-        int[][] task = new int[n][2];
-        PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> {
+        int[][] time = new int[n][2];
+        for (int i = 0; i < n; i++) {
+            time[i][0] = cin.nextInt();
+            time[i][1] = cin.nextInt();
+        }
+        Arrays.sort(time, (a, b) -> {
             if (a[0] == b[0]) {
-                return b[0] - b[1];
+                return a[1] - b[1];
             }
             return a[0] - b[0];
         });
-        TreeSet<Integer> treeSet = new TreeSet<>();
+        int ans = 0;
         for (int i = 0; i < n; i++) {
-            int start = cin.nextInt();
-            int end = cin.nextInt();
-            pq.add(new int[]{start, end, i + 1});
-            treeSet.add(start);
-        }
-        int startTime = 0;
-        while (!pq.isEmpty()) {
-            int[] t = pq.poll();
-            startTime = Math.max(t[0], startTime);
-            int endTime = startTime + t[1];
-            Integer higher = treeSet.higher(startTime);
-            if (higher != null) {
-                if (endTime <= higher) {
-                    System.out.printf("%d,%d\n", t[2], endTime);
-                } else {
-                    t[1] -= higher - t[0];
-                    t[0] = higher;
-                    endTime = higher;
-                    pq.add(t);
+            //int start = time[i][0];
+            int end = time[i][1];
+            int cnt = 1;
+            for (int j = i + 1; j < n; j++) {
+                if (time[j][0] >= end) {
+                    cnt++;
+                    end = time[j][1];
+                    //System.out.printf("[%d,%d], ", time[j][0], time[j][1]);
                 }
-            } else {
-                System.out.printf("%d,%d\n", t[2], endTime);
             }
-            startTime = endTime;
+            ans = Math.max(ans, cnt);
+            //System.out.println();
         }
+        System.out.println(ans);
     }
 }
+/**
+ * 11
+ * 6 9
+ * 10 14
+ * 11 15
+ * 5 11
+ * 10 12
+ * 13 16
+ * 7 18
+ * 17 19
+ * 13 17
+ * 8 10
+ * 8 13
+ */
