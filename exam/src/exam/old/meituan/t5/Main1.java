@@ -1,4 +1,4 @@
-package exam.meituan.t5;
+package exam.old.meituan.t5;
 
 
 import java.util.Scanner;

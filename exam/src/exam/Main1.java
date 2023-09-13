@@ -17,22 +17,32 @@ import java.util.Scanner;
 public class Main1 {
     public static void main(String args[]) {
         Scanner cin = new Scanner(System.in);
-        int t = cin.nextInt();
-        for (int i = 0; i < t; i++) {
-            int l = cin.nextInt(), r = cin.nextInt(), m = cin.nextInt();
-            int lNeed = Math.min(m - l,r), rNeed = Math.max(m - r,l);
-            int lCnt = (Math.max(lNeed, l) - Math.min(lNeed, l) + 1) / 2;
-            int rCnt = 0;
-            if (rNeed > 0)
-                rCnt = (r - rNeed + 1) / 2;
-            System.out.println(Math.max(lCnt, rCnt));
+        int n = cin.nextInt();
+        int[] a = new int[n];
+        for (int i = 0; i < n; i++) {
+            a[i] = cin.nextInt();
         }
+        long ans = 0;
+        long mod = 1_000_000_000 + 7;
+        for (int i = 0; i < n; i++) {
+            int l = i;
+            int r = n - i - 1;
+            long t = (((long) (i+1) * (i+2)) / 2) % mod;
+            t = ((t * a[i]) % mod * (r + 1)) % mod;
+            ans = (ans + t) % mod;
+            //for (int j = 0; j <= i; j++) {
+            //    long dis = i - j + 1;
+            //    long t = ((dis * a[i]) % mod * (r + 1)) % mod;
+            //    ans = (ans + t) % mod;
+            //}
+        }
+        System.out.println(ans);
     }
 }
 /**
-  4
-3 7 9
-1 2 4
-1 11 12
-12345 98765 56789
+ * 4
+ * 3 7 9
+ * 1 2 4
+ * 1 11 12
+ * 12345 98765 56789
  */
