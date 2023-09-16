@@ -1,80 +1,97 @@
-//<<<<<<< HEAD
-//package meituan.t3;
-////package main
-////注意不要添加包名称，否则会报错。
-//
-//import java.util.Arrays;
-//import java.util.HashSet;
-//import java.util.Scanner;
-//import java.util.Set;
-//
-//public class exam.Main {
-//    public static void main(String args[]) {
-//        Scanner cin = new Scanner(System.in);
-//        int n, m, s;
-//        while (cin.hasNextInt()) {
-//            n = cin.nextInt();
-//            m = cin.nextInt();
-//            s = cin.nextInt();
-//            int[] nums = new int[n + 1];
-//            for (int i = 1; i <= n; i++) {
-//                nums[i] = cin.nextInt();
-//            }
-//            // f表示[0,i]的最小值
-//            long[] f = new long[n + 1];
-//            Arrays.fill(f, Long.MAX_VALUE);
-//            f[0] = 0;
-//            for (int i = 1; i <= n; i++) {
-//                int u = -1, v = Integer.MAX_VALUE;
-//                //long sum = 0;
-//                for (int j = i; j >= 1; j--) {
-//                    u = Math.max(u, nums[j]);
-//                    v = Math.min(v, nums[j]);
-//                    //sum += nums[j];
-//                    //long bagCnt = sum / m;
-//                    //if (sum % m != 0) bagCnt++; // 有多余的需要放
-//                    int len = i - j + 1; // 装入水果数量
-//                    f[i] = Math.min(f[i], (f[j - 1] + s + len * (long) Math.floor((u + v) * 1.0 / 2)));
-//                }
-//            }
-//            System.out.println(f[n]);
-//        }
-//    }
-//}
-//=======
-//package baidu.t3;
-//// 本题为考试单行多行输入输出规范示例，无需提交，不计分。
-//
-//import java.util.HashSet;
-//import java.util.Scanner;
-//import java.util.Set;
-//
-//public class exam.Main {
-//    public static void main(String[] args) {
-//        Scanner in = new Scanner(System.in);
-//        while (in.hasNextInt()) {// 注意，如果输入是多个测试用例，请通过while循环处理多个测试用例
-//            int n = in.nextInt();
-//            Set<String> set = new HashSet<>();
-//            String line1 = in.nextLine();
-//            for(int i = 0; i < n; i++){
-//                String line = in.nextLine();
-//
-//                //String s = line.replaceAll("\\w+[,\\\\)]", "");
-//                String[] split = line.split("[ ,\\\\(]");
-//                StringBuilder sb = new StringBuilder();
-//                sb.append(split[1]);
-//                for(int j = 2; j < split.length;j+= 2){
-//                    sb.append(split[j]);
-//                }
-//                if(!set.contains(sb.toString())){
-//                    set.add(sb.toString());
-//                    System.out.println("Yes");
-//                }else{
-//                    System.out.println("No");
-//                }
-//            }
-//        }
-//    }
-//}
-//
-//>>>>>>> f0707b453829379a33caafde07df465824c3cc1b
+package exam.old.baidu.t3;
+
+
+import java.util.HashSet;
+import java.util.Scanner;
+
+// 注意类名必须为 Main, 不要有任何 package xxx 信息
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int q = in.nextInt();
+        HashSet<String> set = new HashSet<>();
+        HashSet<String> fNameSet = new HashSet<>();
+        for(int k = 0; k < q; k++){
+            int op = in.nextInt();
+            in.nextLine();
+            String f = in.nextLine();
+            // 去掉 “）”
+            f = f.substring(0,f.length() - 1);
+            //System.out.println(f);
+            if(op == 1){
+
+                String[] split = f.split("[ (,]");
+                StringBuilder sb = new StringBuilder();
+                sb.append(split[1]);
+                String fName = split[1];
+                fNameSet.add(fName);
+                for(int i = 2; i < split.length - 1; i+= 2){
+                    sb.append("-").append(split[i]);
+                }
+                if(set.contains(sb.toString())){
+                    System.out.printf("method %s is already defined.",fName);
+                }else{
+                    set.add(sb.toString());
+                    System.out.println("ok.");
+                }
+                //System.out.println();
+                //System.out.println(fName);
+                //System.out.println(sb.toString());
+                //System.out.println();
+            }else{
+
+                StringBuilder sb = new StringBuilder();
+                String[] split = f.split("[\\(,]");
+                sb.append(split[0]);
+                String fName = split[0];
+                for(int i = 1; i < split.length; i++){
+                    sb.append("-").append(split[i]);
+                }
+                //System.out.println();
+                //System.out.println(fName);
+                //System.out.println(sb.toString());
+                //System.out.println();
+                if(!fNameSet.contains(fName)){
+                    System.out.printf("cannot find symbol %s.\n",fName);
+                }else if(!set.contains(sb.toString())){
+                    System.out.printf("method %s cannot be applied to given types.\n",fName);
+                }else{
+                    System.out.println("ok.");
+                }
+            }
+        }
+
+        System.out.println();
+    }
+}
+/**
+7
+1
+int f(int x)
+1
+int g(int x,String s)
+2
+f()
+1
+void f(double x,double y)
+2
+f(double,double)
+2
+solve(int,String)
+1
+void f(int y)
+
+
+
+ */
+
+
+/**
+ok.
+ok.
+method f cannot be applied to given types.
+ok.
+ok.
+cannot find symbol solve.
+method f is already defined.
+ */

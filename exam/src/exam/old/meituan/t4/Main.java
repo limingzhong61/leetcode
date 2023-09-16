@@ -1,43 +1,49 @@
 package exam.old.meituan.t4;
-//package main
-//注意不要添加包名称，否则会报错。
+
+
+
 
 import java.util.Scanner;
 
+// 注意类名必须为 Main, 不要有任何 package xxx 信息
 public class Main {
-    public static void main(String args[]) {
-        Scanner cin = new Scanner(System.in);
-        int n, m, k;
-        while (cin.hasNextInt()) {
-            n = cin.nextInt();
-            m = cin.nextInt();
-            k = cin.nextInt();
-            boolean[][] map = new boolean[n + 1][m + 1];
-            int[][] ks = new int[k][2];
-            int minLen = Integer.MAX_VALUE;
-            for (int i = 0; i < k; i++) {
-                ks[i][0] = cin.nextInt();
-                ks[i][1] = cin.nextInt();
-                map[ks[i][0]][ks[i][1]] = true;
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int m = in.nextInt();
+        int[] a = new int[n];
+        a[0] = 1;
+        int diff = 1;
+        StringBuilder sb = new StringBuilder();
+        sb.append(a[0]).append(' ');
+        //System.out.printf("%d ", a[0]);
+        for(int i = 1; i < n; i++){
+            int next = a[i-1] + diff;
+            // 需要填的个数
+            int need = n - i;
+            // 后面全为1可填充的最大长度, next,next+1...
+            int needMax =  next + need - 1;
+            if(m >= needMax){
+                a[i] = a[i-1] + diff;
+                diff++;
+            }else{
+                for(int j = i; j < n; j++){
+                    a[j] = a[j-1] + 1;
+                    //System.out.printf("%d ", a[j]);
+                    sb.append(a[j]).append(' ');
+                }
+                break;
             }
-            int x1, x2, y1, y2;
-            x1 = cin.nextInt();
-            y1 = cin.nextInt();
-            x2 = cin.nextInt();
-            y2 = cin.nextInt();
-
-            for (int i = 0; i < k; i++) {
-                minLen = getMinLen(minLen, x1, y1, ks[i]);
-                minLen = getMinLen(minLen, x2, y2, ks[i]);
-            }
-            System.out.println(minLen);
+            //System.out.printf("%d ", a[i]);
+            sb.append(a[i]).append(' ');
         }
-    }
-
-    private static int getMinLen(int minLen, int x1, int y1, int[] ks) {
-        int a = Math.abs(x1 - ks[0]);
-        int b = Math.abs(y1 - ks[1]);
-        minLen = Math.min(minLen, a + b);
-        return minLen;
+        System.out.println(sb.toString());
     }
 }
+/**
+ 4 12
+ 1 2 4 5
+
+
+ 4 4
+ */
