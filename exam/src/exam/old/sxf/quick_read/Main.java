@@ -1,4 +1,4 @@
-package exam.sxf.quick_read;
+package exam.old.sxf.quick_read;
 
 /**
  * @author: limingzhong

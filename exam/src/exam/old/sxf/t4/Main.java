@@ -1,4 +1,4 @@
-package exam.sxf.t4;
+package exam.old.sxf.t4;
 
 import java.util.Scanner;
 

@@ -3,6 +3,7 @@ package exam;//package main
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.stream.Stream;
 
 /**
  * 6
@@ -15,27 +16,39 @@ import java.util.Scanner;
  * 10 100
  */
 public class Main2 {
-    public static void main(String args[]) {
-        Scanner cin = new Scanner(System.in);
-        String s = cin.next();
-        char[] cs = s.toCharArray();
-        int n = cs.length;
-        int left = 0,ans = 0;
-        for (int i = 0; i <= n - 3; i++) {
-            if (s.startsWith("110", i)) {
-                ans = Math.max(ans, i + 1 - left + 1);
-                left = i + 1;
-            }
-
+    public static int ans(int[] values, int h) {
+        int max = 0;
+        for (int x : values) {
+            max = Math.max(max, x);
         }
-        ans = Math.max(ans, n - left);
-        System.out.println(ans);
+        int left = 0, right = max + 1;
+        while (left < right) {
+            int mid = left + (right - left) / 2;
+            int need = 0;
+            for (int x : values) {
+                need += x / mid;
+                if (x % mid != 0) need++;
+            }
+            if (need > h) {
+                left = mid + 1;
+            } else {
+                right = mid;
+            }
+        }
+        return left;
+    }
+
+    public static void main(String args[]) {
+        StringBuilder sb = new StringBuilder();
+        System.out.println(Math.round(0.99));
+        System.out.println((int) 0.09);
+        System.out.println(ans(new int[]{3,6,7,11},8));
     }
 }
 /**
- 1101010110010110
- 8
- 110
- 2
- 110000
+ * 1101010110010110
+ * 8
+ * 110
+ * 2
+ * 110000
  */

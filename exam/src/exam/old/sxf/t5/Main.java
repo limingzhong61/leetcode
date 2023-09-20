@@ -1,4 +1,4 @@
-package exam.sxf.t5;
+package exam.old.sxf.t5;
 //package main
 //注意不要添加包名称，否则会报错。
 
