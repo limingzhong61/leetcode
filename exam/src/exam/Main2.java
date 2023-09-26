@@ -16,39 +16,39 @@ import java.util.stream.Stream;
  * 10 100
  */
 public class Main2 {
-    public static int ans(int[] values, int h) {
-        int max = 0;
-        for (int x : values) {
-            max = Math.max(max, x);
-        }
-        int left = 0, right = max + 1;
-        while (left < right) {
-            int mid = left + (right - left) / 2;
-            int need = 0;
-            for (int x : values) {
-                need += x / mid;
-                if (x % mid != 0) need++;
-            }
-            if (need > h) {
-                left = mid + 1;
-            } else {
-                right = mid;
-            }
-        }
-        return left;
-    }
 
     public static void main(String args[]) {
-        StringBuilder sb = new StringBuilder();
-        System.out.println(Math.round(0.99));
-        System.out.println((int) 0.09);
-        System.out.println(ans(new int[]{3,6,7,11},8));
+        //System.out.println(String.valueOf(Long.MAX_VALUE).length());
+        Scanner cin = new Scanner(System.in);
+        int n = cin.nextInt();
+        int m = cin.nextInt();
+        long[] l= new long[n+1];
+        long[] r= new long[n+1];
+        long[] x= new long[n+1];
+
+        for(int i = 0; i < n; i++){
+            l[i] = cin.nextLong();
+            r[i] = cin.nextLong();
+            x[i] = cin.nextLong();
+        }
+
+        for(int i = 0; i < m; i++){
+            long p = cin.nextInt();
+            long res = 0;
+            for(int j = 0; j <= m; j++){
+                if(l[j] <= p && p <= r[j]){
+                    res ^=  x[j];
+                }
+            }
+            System.out.println(res);
+        }
+
     }
 }
 /**
- * 1101010110010110
- * 8
- * 110
- * 2
- * 110000
+ 2 2
+ 1 5 1
+ 3 7 2
+ 4
+ 6
  */
