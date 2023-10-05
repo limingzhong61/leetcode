@@ -16,13 +16,15 @@ import java.util.Scanner;
  */
 public class Main1 {
     public static void main(String args[]) {
-        Scanner cin = new Scanner(System.in);
-        int n = cin.nextInt();
-        System.out.printf("%d次\n", n);
-        System.out.println("Copy All");
-        for (int i = 1; i < n; i++) {
-            System.out.println("Paste");
-        }
+        int len = 7;
+        int[] a = new int[]{1,3,4,5};
+        solution(len,a);
+    }
+
+    private static void solution(int len,int[] a) {
+        Arrays.sort(a);
+
+
     }
 }
 /**

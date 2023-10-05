@@ -1,4 +1,4 @@
-package exam.mhy.quick_read;
+package exam.old.mhy.quick_read;
 
 /**
  * @author: limingzhong

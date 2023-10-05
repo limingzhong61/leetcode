@@ -1,4 +1,4 @@
-package exam.mhy.t4;
+package exam.old.mhy.t4;
 //package main
 //注意不要添加包名称，否则会报错。
 
