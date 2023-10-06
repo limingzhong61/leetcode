@@ -1,4 +1,4 @@
-package exam.ali.dwy.t5;
+package exam.old.ali.dwy.t4;
 //package main
 //注意不要添加包名称，否则会报错。
 
