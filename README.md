@@ -1,4 +1,6 @@
 # leetcode刷题代码
+## leetcode 账号
+https://leetcode.cn/u/nicolas-2/
 ## 代码目录
 - 常用工具类放置：`lmz/util`
 - 解题模板放置：`lmz/util/solution_template`  
