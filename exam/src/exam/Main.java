@@ -7,48 +7,42 @@ import java.util.stream.Stream;
 
 public class Main {
     public static void main(String args[]) {
-        Scanner cin = new Scanner(System.in);
-        int n = cin.nextInt();
-        int[][] time = new int[n][2];
-        for (int i = 0; i < n; i++) {
-            time[i][0] = cin.nextInt();
-            time[i][1] = cin.nextInt();
-        }
-        Arrays.sort(time, (a, b) -> {
-            if (a[0] == b[0]) {
-                return a[1] - b[1];
-            }
-            return a[0] - b[0];
-        });
-        int ans = 0;
-        for (int i = 0; i < n; i++) {
-            //int start = time[i][0];
-            int end = time[i][1];
-            int cnt = 1;
-            for (int j = i + 1; j < n; j++) {
-                if (time[j][0] >= end) {
-                    cnt++;
-                    end = time[j][1];
-                    //System.out.printf("[%d,%d], ", time[j][0], time[j][1]);
+        Scanner in = new Scanner(System.in);
+        String s = in.next();
+        int m = in.nextInt();
+
+        char[] cs = s.toCharArray();
+
+        char startChar = cs[0];
+        int n = cs.length;
+        int ans = 1;
+        for(int i = 1; i < n; ){
+            int useM = m * 2;
+            if(m > 0 && i + m < n){
+                int cnt = 0;
+                for(int j = 0; j < m; j++){
+                    cnt += Math.abs(cs[i] - cs[i-1])+ 1;
+                    i++;
                 }
+                ans += Math.min(useM, cnt);
+            }else{
+                ans += Math.abs(cs[i] - cs[i-1]) + 1;
+                i++;
             }
-            ans = Math.max(ans, cnt);
-            //System.out.println();
         }
         System.out.println(ans);
     }
 }
 /**
- * 11
- * 6 9
- * 10 14
- * 11 15
- * 5 11
- * 10 12
- * 13 16
- * 7 18
- * 17 19
- * 13 17
- * 8 10
- * 8 13
+ CCCCC 3
+ 5
+
+ ABA 0
+ 5
+
+ ADDA 2
+ 9
+
+ ACAC 2
+ 8
  */
