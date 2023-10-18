@@ -1,6 +1,6 @@
 package com.lmz.util.solution_template.skip_list;
 
-import com.lmz.my.leetcode.TransformUtil;
+import com.lmz.algorithm_learning.leetcode.TransformUtil;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,7 +1,7 @@
 package com.lmz.util.solution_template;
 
-import com.lmz.my.leetcode.TransformUtil;
-import com.lmz.my.util.equals.EqualsUtil;
+import com.lmz.algorithm_learning.leetcode.TransformUtil;
+import com.lmz.algorithm_learning.util.equals.EqualsUtil;
 
 import java.util.ArrayList;
 import java.util.List;

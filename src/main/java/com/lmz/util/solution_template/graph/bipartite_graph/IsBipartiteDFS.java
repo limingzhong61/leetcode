@@ -1,7 +1,7 @@
 package com.lmz.util.solution_template.graph.bipartite_graph;
 
-import com.lmz.algorithm.graph.character.IsBipartite785;
-import com.lmz.my.leetcode.TransformUtil;
+import com.lmz.algorithm_practice.graph.character.IsBipartite785;
+import com.lmz.algorithm_learning.leetcode.TransformUtil;
 
 import java.util.HashMap;
 import java.util.Locale;

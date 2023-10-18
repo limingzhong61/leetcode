@@ -7,10 +7,10 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String args[]) {
-        Scanner cin = new Scanner(System.in);
+        Scanner in = new Scanner(System.in);
         int n;
-        while (cin.hasNextInt()) {
-            n = cin.nextInt();
+        while (in.hasNextInt()) {
+            n = in.nextInt();
 
         }
 

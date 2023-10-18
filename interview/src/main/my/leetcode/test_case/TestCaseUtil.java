@@ -1,6 +1,6 @@
-package com.lmz.my.leetcode.test_case;
+package com.lmz.algorithm_learning.leetcode.test_case;
 
-import com.lmz.my.leetcode.TransformUtil;
+import com.lmz.algorithm_learning.leetcode.TransformUtil;
 
 import java.util.ArrayList;
 import java.util.HashMap;

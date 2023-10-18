@@ -1,7 +1,7 @@
 package com.lmz.util.solution_template.graph.map;
 
-import com.lmz.algorithm.graph.MaxAreaOfIsland695;
-import com.lmz.my.leetcode.TransformUtil;
+import com.lmz.algorithm_practice.graph.MaxAreaOfIsland695;
+import com.lmz.algorithm_learning.leetcode.TransformUtil;
 
 import java.util.LinkedList;
 import java.util.Queue;

@@ -1,4 +1,4 @@
-package com.lmz.my;
+package com.lmz.algorithm_learning;
 
 import java.util.Arrays;
 import java.util.HashMap;

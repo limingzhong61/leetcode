@@ -1,7 +1,7 @@
-package com.lmz.my.leetcode;
+package com.lmz.algorithm_learning.leetcode;
 
-import com.lmz.algorithm.data_structure.linked_list.util.ListNode;
-import com.lmz.algorithm.data_structure.tree.binary_tree.util.TreeNode;
+import com.lmz.algorithm_practice.data_structure.linked_list.util.ListNode;
+import com.lmz.algorithm_practice.data_structure.tree.binary_tree.util.TreeNode;
 
 import java.util.*;
 

@@ -1,6 +1,6 @@
 package com.lmz.util.solution_template.find;
 
-import com.lmz.my.leetcode.TransformUtil;
+import com.lmz.algorithm_learning.leetcode.TransformUtil;
 
 import java.util.ArrayDeque;
 import java.util.PriorityQueue;

@@ -1,4 +1,4 @@
-package com.lmz.my.leetcode;
+package com.lmz.algorithm_learning.leetcode;
 
 import com.com.lmz.algorithm.other.old.search_and_recur.Node;
 

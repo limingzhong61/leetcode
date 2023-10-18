@@ -9,40 +9,56 @@ public class Main {
     public static void main(String args[]) {
         Scanner in = new Scanner(System.in);
         String s = in.next();
-        int m = in.nextInt();
-
-        char[] cs = s.toCharArray();
-
-        char startChar = cs[0];
-        int n = cs.length;
-        int ans = 1;
-        for(int i = 1; i < n; ){
-            int useM = m * 2;
-            if(m > 0 && i + m < n){
-                int cnt = 0;
-                for(int j = 0; j < m; j++){
-                    cnt += Math.abs(cs[i] - cs[i-1])+ 1;
-                    i++;
-                }
-                ans += Math.min(useM, cnt);
-            }else{
-                ans += Math.abs(cs[i] - cs[i-1]) + 1;
-                i++;
-            }
+        String[] split = s.replaceAll("\\[|\\]", "").split(",");
+        int n = split.length - 1;
+        int k = Integer.parseInt(split[n]);
+        Deque<Integer> a= new ArrayDeque<>();
+        for (int i = 0; i < n; i++) {
+            a.add(Integer.parseInt(split[i]));
         }
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+        dfs(a,pq,k);
+
         System.out.println(ans);
+    }
+    static  int ans = 0;
+    private static void dfs(Deque<Integer> a, PriorityQueue<Integer> pq, int k) {
+        //System.out.println(k);
+        if(k == 1){
+            int sum = 0;
+            while(!pq.isEmpty()){
+                sum += pq.poll();
+            }
+            ans =  Math.max(ans,sum);
+
+            return;
+        }
+        if(!pq.isEmpty() && pq.peek() < 0){
+            int x = pq.poll();
+            a.addLast(x);
+            dfs(a,pq,k-1);
+            pq.add(x);
+            a.removeLast();
+
+            a.addFirst(x);
+            dfs(a,pq,k-1);
+            pq.add(x);
+            a.removeFirst();
+        }
+
+        int x = a.removeLast();
+        pq.add(x);
+        dfs(a,pq,k-1);
+        pq.remove(x);
+        a.addLast(x);
+
+        x = a.removeFirst();
+        pq.add(x);
+        dfs(a,pq,k-1);
+        pq.remove(x);
+        a.addFirst(x);
     }
 }
 /**
- CCCCC 3
- 5
-
- ABA 0
- 5
-
- ADDA 2
- 9
-
- ACAC 2
- 8
+ [-10,8,2,1,2,6],4
  */

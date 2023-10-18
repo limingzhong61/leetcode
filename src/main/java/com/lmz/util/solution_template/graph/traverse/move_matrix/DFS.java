@@ -1,7 +1,7 @@
 package com.lmz.util.solution_template.graph.traverse.move_matrix;
 
-import com.lmz.algorithm.graph.NumIslands200;
-import com.lmz.my.leetcode.TransformUtil;
+import com.lmz.algorithm_practice.graph.NumIslands200;
+import com.lmz.algorithm_learning.leetcode.TransformUtil;
 
 /**
  * 上下左右：移动矩阵的dfs遍历
