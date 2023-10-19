@@ -1,6 +1,6 @@
 package com.lmz.util.solution_template.graph.traverse.move_matrix;
 
-import com.lmz.algorithm_practice.graph.NumIslands200;
+import com.lmz.leetcode.practice.graph.NumIslands200;
 import com.lmz.algorithm_learning.leetcode.TransformUtil;
 
 /**

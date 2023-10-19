@@ -1,8 +1,8 @@
 package com.lmz.algorithm_learning.leetcode;
 
 
-import com.lmz.algorithm_practice.data_structure.linked_list.util.ListNode;
-import com.lmz.leetcode.binary_tree.po.TreeNode;
+import com.lmz.leetcode.practice.data_structure.linked_list.util.ListNode;
+import com.lmz.leetcode.data_structure.binary_tree.po.TreeNode;
 import org.testng.annotations.Test;
 
 import java.util.*;

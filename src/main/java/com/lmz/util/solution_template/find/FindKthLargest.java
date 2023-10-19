@@ -1,7 +1,7 @@
 package com.lmz.util.solution_template.find;
 
 import com.lmz.algorithm_learning.leetcode.TransformUtil;
-import com.lmz.algorithm_practice.find.FindKthLargest215;
+import com.lmz.leetcode.practice.find.FindKthLargest215;
 
 import java.util.PriorityQueue;
 

@@ -1,6 +1,6 @@
 package com.lmz.util.solution_template.binary_tree.bst;
 
-import com.lmz.leetcode.binary_tree.po.TreeNode;
+import com.lmz.leetcode.data_structure.binary_tree.po.TreeNode;
 
 public class BST {
     /**

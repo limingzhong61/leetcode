@@ -1,6 +1,6 @@
 package com.lmz.util.solution_template.graph.bipartite_graph;
 
-import com.lmz.algorithm_practice.graph.character.IsBipartite785;
+import com.lmz.leetcode.practice.graph.character.IsBipartite785;
 import com.lmz.algorithm_learning.leetcode.TransformUtil;
 
 import java.util.HashMap;

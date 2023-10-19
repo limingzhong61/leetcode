@@ -1,6 +1,6 @@
 package com.lmz.util.solution_template.math;
 
-import com.lmz.algorithm_practice.math.FractionAddition592;
+import com.lmz.leetcode.practice.math.FractionAddition592;
 
 /**
  * 分数加减运算

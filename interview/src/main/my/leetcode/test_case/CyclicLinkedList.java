@@ -1,6 +1,6 @@
 package com.lmz.algorithm_learning.leetcode.test_case;
 
-import com.lmz.algorithm_practice.data_structure.linked_list.lc_structure.Node;
+import com.lmz.leetcode_practice.data_structure.linked_list.lc_structure.Node;
 
 /**
  * 链表

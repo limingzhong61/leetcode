@@ -1,6 +1,6 @@
 package com.lmz.algorithm_learning.leetcode;
 
-import com.lmz.algorithm_practice.dp.Rob231;
+import com.lmz.leetcode_practice.dp.Rob231;
 
 /**
  * @author: limingzhong

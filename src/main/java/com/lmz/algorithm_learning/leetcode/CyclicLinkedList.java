@@ -1,6 +1,6 @@
 package com.lmz.algorithm_learning.leetcode;
 
-import com.lmz.algorithm_practice.data_structure.linked_list.util.ListNode;
+import com.lmz.leetcode.practice.data_structure.linked_list.util.ListNode;
 
 /**
  * 链表
