@@ -1,6 +1,6 @@
 package com.lmz.algorithm_learning.leetcode;
 
-import com.lmz.leetcode.practice.other.old.search_and_recur.Node;
+import com.lmz.leetcode.practice.p.old.search_and_recur.Node;
 
 import java.util.LinkedList;
 import java.util.Queue;

@@ -1,6 +1,6 @@
 package com.lmz.algorithm_learning.leetcode;
 
-import com.lmz.leetcode.practice.other.old.search_and_recur.Codec37;
+import com.lmz.leetcode.practice.p.old.search_and_recur.Codec37;
 import com.lmz.leetcode.data_structure.binary_tree.po.TreeNode;
 
 import java.util.LinkedList;
