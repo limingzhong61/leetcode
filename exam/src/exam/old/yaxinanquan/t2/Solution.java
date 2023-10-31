@@ -1,4 +1,4 @@
-package exam.yaxinanquan.t2;
+package exam.old.yaxinanquan.t2;
 
 import java.util.*;
 

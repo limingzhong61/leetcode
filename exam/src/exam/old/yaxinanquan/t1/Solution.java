@@ -1,9 +1,4 @@
-package exam.yaxinanquan.t1;
-
-
-import com.sun.javafx.scene.transform.TransformUtils;
-
-import java.util.*;
+package exam.old.yaxinanquan.t1;
 
 
 public class Solution {
