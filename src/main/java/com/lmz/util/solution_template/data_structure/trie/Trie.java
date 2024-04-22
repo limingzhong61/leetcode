@@ -6,7 +6,7 @@ import java.util.*;
  * 字典树模板 Trie Tree
  * 用一个hashMap来完成结点间的映射查找，一个boolean表示一个完整字符串的结束标记。
  */
-class Trie {
+public class Trie {
     //该结点是否是一个串的结束
     boolean isEnd;
     //字符映射

@@ -13,8 +13,7 @@ import java.util.stream.IntStream;
  * @create: 2023-04-22 13:39
  */
 public class Test {
-    public static void main(String[] args) {
-        System.out.println(f());
+    public static void main(String[] args){
     }
 
     private static int f() {
