@@ -13,7 +13,6 @@ public class Trie208 {
         //字符映射
         HashMap<Character,Trie> map = new HashMap<>();
         public Trie() {
-
         }
 
         public void insert(String word) {
@@ -28,12 +27,10 @@ public class Trie208 {
         public boolean search(String word) {
             Trie cur = this;
             for(char c : word.toCharArray()){
-                System.out.println(c);
-                if(cur.map.containsKey(c)){
-                    cur = cur.map.get(c);
-                }else{
+                if(!cur.map.containsKey(c)){
                     return false;
                 }
+                cur = cur.map.get(c);
             }
             return cur.isEnd;
         }
@@ -41,11 +38,10 @@ public class Trie208 {
         public boolean startsWith(String prefix) {
             Trie cur = this;
             for(char c : prefix.toCharArray()){
-                if(cur.map.containsKey(c)){
-                    cur = cur.map.get(c);
-                }else{
+                if(!cur.map.containsKey(c)){
                     return false;
                 }
+                cur = cur.map.get(c);
             }
             return true;
         }
